@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbx-cQ-e6A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Application Patching View Controller-->
+        <scene sceneID="Nls-Za-Ulg">
+            <objects>
+                <viewController id="GNJ-HI-TXZ" customClass="ApplicationPatchingViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bkr-Yq-eef"/>
+                        <viewControllerLayoutGuide type="bottom" id="dha-cL-m59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aoG-mJ-icw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-61-FWh">
+                                <rect key="frame" x="8" y="72" width="359" height="116.5"/>
+                                <string key="text">The advantage of patching an application is that once a change has been made in the application’s binary, its permanent. Try various challenges to patch this application      mentioned under Start Challenge.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-AR-1sa">
+                                <rect key="frame" x="16" y="196" width="343" height="30"/>
+                                <state key="normal" title="Read an article on Binary Patching"/>
+                                <connections>
+                                    <action selector="readArticle1Tapped:" destination="GNJ-HI-TXZ" eventType="touchUpInside" id="ASg-WI-xZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo8-zf-EPJ">
+                                <rect key="frame" x="16" y="234" width="343" height="30"/>
+                                <state key="normal" title="Application Patching with Hopper"/>
+                                <connections>
+                                    <action selector="readArticle2Tapped:" destination="GNJ-HI-TXZ" eventType="touchUpInside" id="poP-o9-baW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTb-Zz-DKJ">
+                                <rect key="frame" x="115.5" y="272" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0pZ-Hv-cWv" kind="show" id="B2O-FZ-EUV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="deJ-61-FWh" firstAttribute="top" secondItem="bkr-Yq-eef" secondAttribute="bottom" constant="8" id="4zb-hF-rBJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nRx-AR-1sa" secondAttribute="trailing" id="BR7-SF-22o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mo8-zf-EPJ" secondAttribute="trailing" id="QFp-kX-F7q"/>
+                            <constraint firstItem="nRx-AR-1sa" firstAttribute="top" secondItem="deJ-61-FWh" secondAttribute="bottom" constant="8" id="Sif-dP-Gnp"/>
+                            <constraint firstItem="nRx-AR-1sa" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leadingMargin" id="UT9-yK-9Ae"/>
+                            <constraint firstItem="deJ-61-FWh" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leading" constant="8" id="dGS-CP-jCi"/>
+                            <constraint firstAttribute="trailing" secondItem="deJ-61-FWh" secondAttribute="trailing" constant="8" id="erP-cL-v6L"/>
+                            <constraint firstItem="Mo8-zf-EPJ" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leadingMargin" id="lzQ-VS-dBn"/>
+                            <constraint firstItem="qTb-Zz-DKJ" firstAttribute="centerX" secondItem="aoG-mJ-icw" secondAttribute="centerX" id="oXS-4Y-eQx"/>
+                            <constraint firstItem="Mo8-zf-EPJ" firstAttribute="top" secondItem="nRx-AR-1sa" secondAttribute="bottom" constant="8" id="tYF-FL-SgY"/>
+                            <constraint firstItem="qTb-Zz-DKJ" firstAttribute="top" secondItem="Mo8-zf-EPJ" secondAttribute="bottom" constant="8" id="z6x-el-Pgd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="auv-Rt-v27">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="O6Q-u5-QMQ">
+                            <connections>
+                                <action selector="menuTapped:" destination="GNJ-HI-TXZ" id="GtN-cE-Pdu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JW-Lg-gRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="-215.44227886056973"/>
+        </scene>
+        <!--Application Patching Details View Controller-->
+        <scene sceneID="upo-kO-vbb">
+            <objects>
+                <viewController id="0pZ-Hv-cWv" customClass="ApplicationPatchingDetailsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Mp-4F-woo"/>
+                        <viewControllerLayoutGuide type="bottom" id="UhB-9B-lIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQD-88-2Zv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patch the method below to always allow    the user to log in regardless of the input." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAg-rD-PvA">
+                                <rect key="frame" x="16" y="72" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDr-84-hYr">
+                                <rect key="frame" x="16" y="121" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caW-Mp-e5E">
+                                <rect key="frame" x="16" y="159" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG5-UU-CQd">
+                                <rect key="frame" x="135" y="197" width="105" height="30"/>
+                                <state key="normal" title="Login Method 1"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="0pZ-Hv-cWv" eventType="touchUpInside" id="ef4-V3-Bvt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patch this check for a jailbroken device to always return that the device is not jailbroken" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdE-i8-tco">
+                                <rect key="frame" x="16" y="235" width="343" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCF-JB-6qX">
+                                <rect key="frame" x="119.5" y="304" width="136" height="30"/>
+                                <state key="normal" title="Check For Jailbreak"/>
+                                <connections>
+                                    <action selector="jailbreakTestTapped:" destination="0pZ-Hv-cWv" eventType="touchUpInside" id="4yV-Gd-Z6o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patch the method below to always show an alert with the message &quot;I Love Apple&quot; instead of &quot;I love Google&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXv-qg-btm">
+                                <rect key="frame" x="16" y="342" width="343" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb8-nc-CNj">
+                                <rect key="frame" x="150" y="411" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertTapped:" destination="0pZ-Hv-cWv" eventType="touchUpInside" id="6uf-4m-TdL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patch the method below to not kill your application." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neY-JK-mgU">
+                                <rect key="frame" x="16" y="449" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rha-vG-JYV">
+                                <rect key="frame" x="137" y="498" width="101" height="30"/>
+                                <state key="normal" title="Kill Application"/>
+                                <connections>
+                                    <action selector="killApplicationTapped:" destination="0pZ-Hv-cWv" eventType="touchUpInside" id="iAk-0m-bv7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CG5-UU-CQd" firstAttribute="top" secondItem="caW-Mp-e5E" secondAttribute="bottom" constant="8" id="6ZY-Yd-ZJZ"/>
+                            <constraint firstItem="RXv-qg-btm" firstAttribute="trailing" secondItem="lQD-88-2Zv" secondAttribute="trailingMargin" id="C1K-7I-pmE"/>
+                            <constraint firstItem="neY-JK-mgU" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="C5j-7Y-KCa"/>
+                            <constraint firstItem="wAg-rD-PvA" firstAttribute="top" secondItem="7Mp-4F-woo" secondAttribute="bottom" constant="8" id="Eoz-1I-zkL"/>
+                            <constraint firstItem="RXv-qg-btm" firstAttribute="top" secondItem="uCF-JB-6qX" secondAttribute="bottom" constant="8" id="Kvr-Tg-v4y"/>
+                            <constraint firstItem="rha-vG-JYV" firstAttribute="centerX" secondItem="lQD-88-2Zv" secondAttribute="centerX" id="QtW-wz-sac"/>
+                            <constraint firstItem="CG5-UU-CQd" firstAttribute="centerX" secondItem="lQD-88-2Zv" secondAttribute="centerX" id="W5F-0X-KBh"/>
+                            <constraint firstItem="neY-JK-mgU" firstAttribute="trailing" secondItem="lQD-88-2Zv" secondAttribute="trailingMargin" id="Y89-x9-itm"/>
+                            <constraint firstItem="caW-Mp-e5E" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="bH9-6J-S5A"/>
+                            <constraint firstItem="jb8-nc-CNj" firstAttribute="top" secondItem="RXv-qg-btm" secondAttribute="bottom" constant="8" id="e90-8Z-E8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UdE-i8-tco" secondAttribute="trailing" id="eM9-Jq-2jD"/>
+                            <constraint firstItem="caW-Mp-e5E" firstAttribute="top" secondItem="PDr-84-hYr" secondAttribute="bottom" constant="8" id="eto-ky-vvm"/>
+                            <constraint firstItem="wAg-rD-PvA" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="ffN-Zz-jhT"/>
+                            <constraint firstItem="neY-JK-mgU" firstAttribute="top" secondItem="jb8-nc-CNj" secondAttribute="bottom" constant="8" id="gTs-aU-LWW"/>
+                            <constraint firstItem="uCF-JB-6qX" firstAttribute="top" secondItem="UdE-i8-tco" secondAttribute="bottom" constant="8" id="hnw-hV-pAD"/>
+                            <constraint firstItem="RXv-qg-btm" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="hzW-zY-9Ol"/>
+                            <constraint firstItem="PDr-84-hYr" firstAttribute="top" secondItem="wAg-rD-PvA" secondAttribute="bottom" constant="8" id="i6N-Kd-TgI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PDr-84-hYr" secondAttribute="trailing" id="imV-xw-dpP"/>
+                            <constraint firstItem="UdE-i8-tco" firstAttribute="top" secondItem="CG5-UU-CQd" secondAttribute="bottom" constant="8" id="nqU-a2-gHu"/>
+                            <constraint firstItem="UdE-i8-tco" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="pGJ-Y4-skZ"/>
+                            <constraint firstItem="jb8-nc-CNj" firstAttribute="centerX" secondItem="lQD-88-2Zv" secondAttribute="centerX" id="tTt-NR-JVn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wAg-rD-PvA" secondAttribute="trailing" id="tXO-Jf-pHg"/>
+                            <constraint firstItem="rha-vG-JYV" firstAttribute="top" secondItem="neY-JK-mgU" secondAttribute="bottom" constant="8" id="wVf-Cz-v3m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="caW-Mp-e5E" secondAttribute="trailing" id="wmC-gu-wfW"/>
+                            <constraint firstItem="PDr-84-hYr" firstAttribute="leading" secondItem="lQD-88-2Zv" secondAttribute="leadingMargin" id="xXA-WD-zFA"/>
+                            <constraint firstItem="uCF-JB-6qX" firstAttribute="centerX" secondItem="lQD-88-2Zv" secondAttribute="centerX" id="zLc-k3-r0s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="caW-Mp-e5E" id="qNq-NW-Sb0"/>
+                        <outlet property="usernameTextField" destination="PDr-84-hYr" id="4WI-NC-MOo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZt-oT-sQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309.5999999999999" y="-215.44227886056973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3BC-F7-HoK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbx-cQ-e6A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Adl-9q-9Rf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GNJ-HI-TXZ" kind="relationship" relationship="rootViewController" id="D9o-p7-QVr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oav-jv-6NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="-215"/>
+        </scene>
+    </scenes>
+</document>

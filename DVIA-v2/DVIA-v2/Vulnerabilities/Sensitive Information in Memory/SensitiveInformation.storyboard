@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPP-l3-b70">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sensitive Information View Controller-->
+        <scene sceneID="YLh-v8-1xL">
+            <objects>
+                <viewController id="xe4-YI-Q67" customClass="SensitiveInformationViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5A-hI-suQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="R6z-M8-UZ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MgN-rC-vRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-9M-UsC">
+                                <rect key="frame" x="16" y="72" width="343" height="123"/>
+                                <string key="text">Some applications store sensitive information in the memory of the application even when it's not required. This could happen when the developer creates properties or instance variables that might contain confidential information but forgets to remove them after they have been used.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMf-LT-LTe">
+                                <rect key="frame" x="115.5" y="225" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xOd-VV-mzq" kind="show" id="yj4-xE-0W6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YMf-LT-LTe" firstAttribute="centerX" secondItem="MgN-rC-vRS" secondAttribute="centerX" id="HZJ-yE-PtM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sh6-9M-UsC" secondAttribute="trailing" id="JEo-Sv-wXT"/>
+                            <constraint firstItem="Sh6-9M-UsC" firstAttribute="top" secondItem="X5A-hI-suQ" secondAttribute="bottom" constant="8" id="NYi-Gg-aTN"/>
+                            <constraint firstItem="Sh6-9M-UsC" firstAttribute="leading" secondItem="MgN-rC-vRS" secondAttribute="leadingMargin" id="Pda-w3-zXa"/>
+                            <constraint firstItem="YMf-LT-LTe" firstAttribute="top" secondItem="Sh6-9M-UsC" secondAttribute="bottom" constant="30" id="hEl-NA-USh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hWt-i4-gbC">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="DNe-YC-ChW">
+                            <connections>
+                                <action selector="menuTapped:" destination="xe4-YI-Q67" id="udD-8v-WDP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcM-hz-3tG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447.19999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Azn-xv-i2g">
+            <objects>
+                <viewController id="xOd-VV-mzq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NGs-Ae-ydW"/>
+                        <viewControllerLayoutGuide type="bottom" id="14g-gQ-yW0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kYC-Fl-tog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzv-M3-xvf">
+                                <rect key="frame" x="16" y="72" width="343" height="143.5"/>
+                                <string key="text">Let's assume this is some application that a user has logged in to already and is happily navigating. It is possible that the user's credentials, access token, or some other confidential information is still stored in the memory of the application and hence accessible to an attacker. Your task is to find out the following things.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) A couple of properties with the name &quot;Password&quot; &amp; &quot;Username&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-7W-OTy">
+                                <rect key="frame" x="16" y="223" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) An instance variable named &quot;passwd&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZI-w1-b0D">
+                                <rect key="frame" x="16" y="264" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lzv-M3-xvf" secondAttribute="trailing" id="5OE-Jd-YhA"/>
+                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="top" secondItem="NGs-Ae-ydW" secondAttribute="bottom" constant="8" id="DGW-Pu-V2M"/>
+                            <constraint firstItem="YZI-w1-b0D" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="Sjy-Rq-E29"/>
+                            <constraint firstItem="YZI-w1-b0D" firstAttribute="top" secondItem="VWu-7W-OTy" secondAttribute="bottom" constant="8" id="Zvx-Gl-GMz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VWu-7W-OTy" secondAttribute="trailing" id="bXo-RF-bcQ"/>
+                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="e67-FC-SDy"/>
+                            <constraint firstItem="VWu-7W-OTy" firstAttribute="top" secondItem="Lzv-M3-xvf" secondAttribute="bottom" constant="8" id="fKJ-8o-dYi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YZI-w1-b0D" secondAttribute="trailing" id="i2c-z5-hXk"/>
+                            <constraint firstItem="VWu-7W-OTy" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="o4e-K7-6sL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmq-Zd-4NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kUX-I1-Ane">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qPP-l3-b70" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vwI-Pj-w8I">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xe4-YI-Q67" kind="relationship" relationship="rootViewController" id="jF0-Fg-XO8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sg-dp-WKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="131"/>
+        </scene>
+    </scenes>
+</document>

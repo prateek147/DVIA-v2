@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-NG-GS4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Client Side Injection View Controller-->
+        <scene sceneID="ITM-x8-s00">
+            <objects>
+                <viewController id="1EQ-53-rsS" customClass="ClientSideInjectionViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NBC-0G-xI9"/>
+                        <viewControllerLayoutGuide type="bottom" id="WGN-ia-kBI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckF-OH-ZpU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-Nq-IwT">
+                                <rect key="frame" x="16" y="64" width="343" height="101.5"/>
+                                <string key="text">Client side injections occur when the input to the application is not validated properly. Because the code is injected on the client side, it is possible to call native functions in the device and perform malicious activities. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ida-iq-sIb">
+                                <rect key="frame" x="115" y="215.5" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jmF-8F-pzQ" kind="show" id="CYj-Sc-yc1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sko-Nq-IwT" firstAttribute="leading" secondItem="ckF-OH-ZpU" secondAttribute="leadingMargin" id="2PP-Uf-cGj"/>
+                            <constraint firstItem="ida-iq-sIb" firstAttribute="centerX" secondItem="ckF-OH-ZpU" secondAttribute="centerX" id="Bs8-Eb-zQv"/>
+                            <constraint firstItem="Sko-Nq-IwT" firstAttribute="top" secondItem="NBC-0G-xI9" secondAttribute="bottom" id="Kjz-6C-wOk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sko-Nq-IwT" secondAttribute="trailing" id="Qu7-Up-grN"/>
+                            <constraint firstItem="ida-iq-sIb" firstAttribute="top" secondItem="Sko-Nq-IwT" secondAttribute="bottom" constant="50" id="wrs-Jh-hE1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wcq-4Q-QCH">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="5Cy-mu-j0I">
+                            <connections>
+                                <action selector="menuTapped:" destination="1EQ-53-rsS" id="hlz-4f-9fc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0W-48-onX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="154.27286356821591"/>
+        </scene>
+        <!--Client Side Injection Detail View Controller-->
+        <scene sceneID="tZ6-kf-XTO">
+            <objects>
+                <viewController id="jmF-8F-pzQ" customClass="ClientSideInjectionDetailViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JtQ-Fy-eeH"/>
+                        <viewControllerLayoutGuide type="bottom" id="v45-mk-XEs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EOp-Jo-qEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-z5-GCv">
+                                <rect key="frame" x="16" y="72" width="343" height="81.5"/>
+                                <string key="text">The text field below takes an input name, adds it to an html file and displays it to you in the UIWebView below. Your task is to perform the following tasks via injection.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your name?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FVV-tP-dce">
+                                <rect key="frame" x="16" y="161" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Perform Injection to show a simple alert with the message &quot;Hello World&quot;." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cig-mc-hLL">
+                                <rect key="frame" x="16" y="307" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) Perform Injection to open mail app and compose a mail with a predefined sender email, subject, and body." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVF-9Y-w88">
+                                <rect key="frame" x="16" y="340.5" width="343" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3) Perform Injection to open twitter app and compose a tweet." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-pB-h5F">
+                                <rect key="frame" x="16" y="391" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4) Perform Injection to open phone app and call a number." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvW-fB-N8F">
+                                <rect key="frame" x="16" y="424.5" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-L1-5cm">
+                                <rect key="frame" x="16" y="199" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DhW-du-mmw"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hvW-fB-N8F" secondAttribute="trailing" id="0sL-Af-G2D"/>
+                            <constraint firstItem="zME-z5-GCv" firstAttribute="top" secondItem="JtQ-Fy-eeH" secondAttribute="bottom" constant="8" id="2hl-PJ-5wf"/>
+                            <constraint firstItem="hvW-fB-N8F" firstAttribute="top" secondItem="lfZ-pB-h5F" secondAttribute="bottom" id="2nQ-b8-Zrb"/>
+                            <constraint firstItem="FVV-tP-dce" firstAttribute="top" secondItem="zME-z5-GCv" secondAttribute="bottom" constant="8" id="6Vz-h1-ft4"/>
+                            <constraint firstItem="3Xi-L1-5cm" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="86i-M2-LZF"/>
+                            <constraint firstItem="zME-z5-GCv" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="C2v-hb-TGf"/>
+                            <constraint firstItem="cig-mc-hLL" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="Km6-kB-NwI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cig-mc-hLL" secondAttribute="trailing" id="LUM-lT-g6L"/>
+                            <constraint firstItem="FVV-tP-dce" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="T14-7D-GL9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FVV-tP-dce" secondAttribute="trailing" id="Tur-Vt-WOu"/>
+                            <constraint firstItem="cig-mc-hLL" firstAttribute="top" secondItem="3Xi-L1-5cm" secondAttribute="bottom" constant="8" id="YU5-yw-DZH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zME-z5-GCv" secondAttribute="trailing" id="a6U-Gd-YXB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fVF-9Y-w88" secondAttribute="trailing" id="bIl-7w-7Bb"/>
+                            <constraint firstItem="hvW-fB-N8F" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="gvq-od-UqR"/>
+                            <constraint firstItem="3Xi-L1-5cm" firstAttribute="top" secondItem="FVV-tP-dce" secondAttribute="bottom" constant="8" id="onU-zt-ycI"/>
+                            <constraint firstItem="lfZ-pB-h5F" firstAttribute="top" secondItem="fVF-9Y-w88" secondAttribute="bottom" id="qfD-kr-13H"/>
+                            <constraint firstItem="fVF-9Y-w88" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="rjd-kZ-rdW"/>
+                            <constraint firstItem="lfZ-pB-h5F" firstAttribute="leading" secondItem="EOp-Jo-qEE" secondAttribute="leadingMargin" id="s5s-hL-48d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lfZ-pB-h5F" secondAttribute="trailing" id="w8x-Dc-gcw"/>
+                            <constraint firstItem="fVF-9Y-w88" firstAttribute="top" secondItem="cig-mc-hLL" secondAttribute="bottom" id="xSE-GO-KMY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Xi-L1-5cm" secondAttribute="trailing" id="zUW-ea-37M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="FVV-tP-dce" id="jd6-Mx-bTl"/>
+                        <outlet property="webView" destination="3Xi-L1-5cm" id="PDg-Mg-jYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yh9-JL-7Y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.5999999999999" y="152.47376311844079"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="luf-2D-O4t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d4y-NG-GS4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wY9-vI-Jb2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1EQ-53-rsS" kind="relationship" relationship="rootViewController" id="obo-94-ndJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQs-Cn-Qvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="154"/>
+        </scene>
+    </scenes>
+</document>

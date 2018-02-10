@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'DVIA-v2' do
+    pod 'Parse'
+    pod 'GoogleAnalytics'
+    pod 'RealmSwift'
+    pod 'couchbase-lite-ios'
+    pod 'Flurry-iOS-SDK/FlurrySDK'
+end
+

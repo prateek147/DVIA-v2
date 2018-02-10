@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b91-A9-42w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Transport Layer Protection View Controller-->
+        <scene sceneID="Ck0-39-0dH">
+            <objects>
+                <viewController id="RbF-hp-Dde" customClass="TransportLayerProtectionViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fV0-i8-qoe"/>
+                        <viewControllerLayoutGuide type="bottom" id="0W9-ft-ywt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BnA-6G-QMX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-eG-Owi">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <string key="text">There are three ways to send data over the network, use HTTP, use HTTPs, or use SSL/Cert pinning to check a hardcoded certificate against the certificate provided by the server to prevent MITM attacks. Your task is to intercept the information being sent over the network when the "Send" button is tapped in all the three cases.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZE-fD-uLm">
+                                <rect key="frame" x="32" y="93" width="310" height="30"/>
+                                <state key="normal" title="Read an article on Transport Layer protection"/>
+                                <connections>
+                                    <action selector="readArticleTapped:" destination="RbF-hp-Dde" eventType="touchUpInside" id="bDh-cF-bao"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a fake Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIh-Xu-u4Z">
+                                <rect key="frame" x="36" y="131" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eis-Ab-XWf">
+                                <rect key="frame" x="289" y="131" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="dqA-zn-8v7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a fake Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgm-TS-INM">
+                                <rect key="frame" x="36" y="169" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-FJ-ybF">
+                                <rect key="frame" x="121.5" y="207" width="132" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="SEND OVER HTTP">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendOverHTTPTapped:" destination="RbF-hp-Dde" eventType="touchUpInside" id="J29-Kd-8Nm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruz-HZ-aRV">
+                                <rect key="frame" x="117" y="245" width="141" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="SEND OVER HTTPS">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendOverHTTPSTapped:" destination="RbF-hp-Dde" eventType="touchUpInside" id="FPo-se-kMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au8-Ai-FA9">
+                                <rect key="frame" x="56" y="283" width="263" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="SEND USING CERTIFICATE PINNING">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendUsingSSLPinning:" destination="RbF-hp-Dde" eventType="touchUpInside" id="2zD-c0-wSe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rgm-TS-INM" secondAttribute="trailing" constant="20" id="0GC-wf-nO5"/>
+                            <constraint firstItem="KZE-fD-uLm" firstAttribute="centerX" secondItem="BnA-6G-QMX" secondAttribute="centerX" id="1Ze-ue-9eh"/>
+                            <constraint firstItem="eis-Ab-XWf" firstAttribute="top" secondItem="KZE-fD-uLm" secondAttribute="bottom" constant="8" id="3mU-iX-eac"/>
+                            <constraint firstItem="KZE-fD-uLm" firstAttribute="top" secondItem="pHe-eG-Owi" secondAttribute="bottom" constant="8" id="6Ku-fT-9fy"/>
+                            <constraint firstItem="au8-Ai-FA9" firstAttribute="centerX" secondItem="BnA-6G-QMX" secondAttribute="centerX" id="7DL-Zy-TuA"/>
+                            <constraint firstItem="AIh-Xu-u4Z" firstAttribute="top" secondItem="KZE-fD-uLm" secondAttribute="bottom" constant="8" id="BAm-0K-3Mp"/>
+                            <constraint firstItem="rgm-TS-INM" firstAttribute="top" secondItem="AIh-Xu-u4Z" secondAttribute="bottom" constant="8" id="HLV-im-cWN"/>
+                            <constraint firstItem="pHe-eG-Owi" firstAttribute="top" secondItem="fV0-i8-qoe" secondAttribute="bottom" id="LTj-yK-p6m"/>
+                            <constraint firstItem="8aj-FJ-ybF" firstAttribute="centerX" secondItem="BnA-6G-QMX" secondAttribute="centerX" id="SvR-h4-1Bm"/>
+                            <constraint firstItem="pHe-eG-Owi" firstAttribute="leading" secondItem="BnA-6G-QMX" secondAttribute="leadingMargin" id="Tdo-Z1-N44"/>
+                            <constraint firstItem="AIh-Xu-u4Z" firstAttribute="leading" secondItem="BnA-6G-QMX" secondAttribute="leadingMargin" constant="20" id="Yxo-yf-Jhl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eis-Ab-XWf" secondAttribute="trailing" constant="20" id="ala-8w-aZh"/>
+                            <constraint firstItem="au8-Ai-FA9" firstAttribute="top" secondItem="ruz-HZ-aRV" secondAttribute="bottom" constant="8" id="cQN-7K-m4S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pHe-eG-Owi" secondAttribute="trailing" id="hcZ-J5-Dn4"/>
+                            <constraint firstItem="rgm-TS-INM" firstAttribute="leading" secondItem="BnA-6G-QMX" secondAttribute="leadingMargin" constant="20" id="lie-xQ-F2W"/>
+                            <constraint firstItem="ruz-HZ-aRV" firstAttribute="top" secondItem="8aj-FJ-ybF" secondAttribute="bottom" constant="8" id="oC0-EZ-VpK"/>
+                            <constraint firstItem="eis-Ab-XWf" firstAttribute="leading" secondItem="AIh-Xu-u4Z" secondAttribute="trailing" constant="10" id="rBs-yG-3rc"/>
+                            <constraint firstItem="ruz-HZ-aRV" firstAttribute="centerX" secondItem="BnA-6G-QMX" secondAttribute="centerX" id="xhg-Dq-74R"/>
+                            <constraint firstItem="8aj-FJ-ybF" firstAttribute="top" secondItem="rgm-TS-INM" secondAttribute="bottom" constant="8" id="xtF-K4-p6S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7zI-ej-nh8">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="UKd-w6-jcx">
+                            <connections>
+                                <action selector="menuTapped:" destination="RbF-hp-Dde" id="73u-Ui-avR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CVVTextField" destination="eis-Ab-XWf" id="DgV-vc-ZUG"/>
+                        <outlet property="cardNumberTextField" destination="AIh-Xu-u4Z" id="PDB-Te-K4Q"/>
+                        <outlet property="nameOnCardTextField" destination="rgm-TS-INM" id="iFd-zr-KKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaM-XD-6Yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511.19999999999999" y="367.46626686656674"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1kc-uL-xh1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b91-A9-42w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nAw-OD-00g">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RbF-hp-Dde" kind="relationship" relationship="rootViewController" id="FbU-i3-HBp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuL-w8-Nqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="367"/>
+        </scene>
+    </scenes>
+</document>

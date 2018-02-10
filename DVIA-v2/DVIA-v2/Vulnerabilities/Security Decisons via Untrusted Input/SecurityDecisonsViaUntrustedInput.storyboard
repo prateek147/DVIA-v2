@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bgI-cs-tS5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Security Decisons Via Untrusted Input View Controller-->
+        <scene sceneID="iYm-Cb-PKv">
+            <objects>
+                <viewController id="fXG-le-hwg" customClass="SecurityDecisonsViaUntrustedInputViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gaS-AA-wuc"/>
+                        <viewControllerLayoutGuide type="bottom" id="xXx-yl-Qh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tNl-aO-Lcc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-Pz-jlT">
+                                <rect key="frame" x="11" y="64" width="353" height="93"/>
+                                <string key="text">This kind of vulnerability occurs when sensitive actions are performed without proper validation of the input or authorization check on the user.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-dy-CUU">
+                                <rect key="frame" x="115" y="182" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0aZ-MG-Mhg" kind="show" id="XQd-LJ-gQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zq2-Pz-jlT" firstAttribute="top" secondItem="gaS-AA-wuc" secondAttribute="bottom" id="0vn-PM-2oQ"/>
+                            <constraint firstAttribute="trailing" secondItem="zq2-Pz-jlT" secondAttribute="trailing" constant="11" id="Evd-li-FAr"/>
+                            <constraint firstItem="Bst-dy-CUU" firstAttribute="centerX" secondItem="tNl-aO-Lcc" secondAttribute="centerX" id="HiF-sk-Z53"/>
+                            <constraint firstItem="zq2-Pz-jlT" firstAttribute="leading" secondItem="tNl-aO-Lcc" secondAttribute="leading" constant="11" id="OYD-ck-XDA"/>
+                            <constraint firstItem="Bst-dy-CUU" firstAttribute="top" secondItem="zq2-Pz-jlT" secondAttribute="bottom" constant="25" id="zdY-c5-5B7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Zr-SN-GCO">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="XZI-YK-lq6">
+                            <connections>
+                                <action selector="menuTapped:" destination="fXG-le-hwg" id="QRa-br-P95"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIs-9C-fjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="293.70314842578711"/>
+        </scene>
+        <!--Security Decisions View Untrusted Input Detail View Controller-->
+        <scene sceneID="iP2-jf-HbA">
+            <objects>
+                <viewController id="0aZ-MG-Mhg" customClass="SecurityDecisionsViewUntrustedInputDetailViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kCP-4S-3on"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYk-g9-ZOd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dzi-aC-diF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBA-fY-gLt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVr-Gf-HUc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="795"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-dN-9g4">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="aTc-i7-RIx"/>
+                                                </constraints>
+                                                <string key="text">Let's assume this is an application like Skype that can call any number. This application also allows other applications to interact with it using URL schemes. However, there is no validation or prompt shown to the user before actually making the call. So any malicious application can call a number using this vulnerability without the validation of the user. Your task is to call a random number without using this application through IPC (url schemes).</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-d5-N3d">
+                                                <rect key="frame" x="87" y="360" width="201" height="30"/>
+                                                <state key="normal" title="Read article on URL schemes"/>
+                                                <connections>
+                                                    <action selector="URLSchemeButtonTapped:" destination="0aZ-MG-Mhg" eventType="touchUpInside" id="Xkh-UM-T2Q"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number to call" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-5A-wFw">
+                                                <rect key="frame" x="87" y="398" width="201" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhu-1p-VZi">
+                                                <rect key="frame" x="172" y="436" width="30" height="30"/>
+                                                <state key="normal" title="Call"/>
+                                                <connections>
+                                                    <action selector="callButtonTapped:" destination="0aZ-MG-Mhg" eventType="touchUpInside" id="vBs-vV-G0n"/>
+                                                </connections>
+                                            </button>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seriously?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-4x-bgK">
+                                                <rect key="frame" x="148" y="474" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="aQq-4x-bgK" secondAttribute="bottom" constant="300" id="13W-nq-d9R"/>
+                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="top" secondItem="j0m-d5-N3d" secondAttribute="bottom" constant="8" id="7jc-T2-b3g"/>
+                                            <constraint firstItem="j0m-d5-N3d" firstAttribute="top" secondItem="9o6-dN-9g4" secondAttribute="bottom" constant="10" id="S93-LM-jtc"/>
+                                            <constraint firstItem="j0m-d5-N3d" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="Zdb-p6-AVg"/>
+                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="top" secondItem="lLE-5A-wFw" secondAttribute="bottom" constant="8" id="djm-bl-JA7"/>
+                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="width" secondItem="j0m-d5-N3d" secondAttribute="width" id="gLu-3S-EtE"/>
+                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="hug-rW-gTM"/>
+                                            <constraint firstItem="9o6-dN-9g4" firstAttribute="top" secondItem="GVr-Gf-HUc" secondAttribute="top" id="k4X-cV-ZC4"/>
+                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="lXz-Rf-KMJ"/>
+                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="nJ7-eJ-gUk"/>
+                                            <constraint firstItem="9o6-dN-9g4" firstAttribute="leading" secondItem="GVr-Gf-HUc" secondAttribute="leading" id="q9e-2i-6bJ"/>
+                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="top" secondItem="Vhu-1p-VZi" secondAttribute="bottom" constant="8" id="qdE-BI-AQO"/>
+                                            <constraint firstAttribute="trailing" secondItem="9o6-dN-9g4" secondAttribute="trailing" id="tk9-ee-MtY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GVr-Gf-HUc" secondAttribute="bottom" id="65J-fy-5PG"/>
+                                    <constraint firstItem="GVr-Gf-HUc" firstAttribute="leading" secondItem="XBA-fY-gLt" secondAttribute="leading" id="IqY-zy-xOM"/>
+                                    <constraint firstItem="GVr-Gf-HUc" firstAttribute="width" secondItem="XBA-fY-gLt" secondAttribute="width" id="Mma-Eb-xeq"/>
+                                    <constraint firstItem="GVr-Gf-HUc" firstAttribute="top" secondItem="XBA-fY-gLt" secondAttribute="top" id="VFx-mu-RqP"/>
+                                    <constraint firstAttribute="trailing" secondItem="GVr-Gf-HUc" secondAttribute="trailing" id="lKD-XU-9wR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QYk-g9-ZOd" firstAttribute="top" secondItem="XBA-fY-gLt" secondAttribute="bottom" id="A8B-RM-I4X"/>
+                            <constraint firstAttribute="trailing" secondItem="XBA-fY-gLt" secondAttribute="trailing" id="RWl-ae-dC1"/>
+                            <constraint firstItem="XBA-fY-gLt" firstAttribute="leading" secondItem="Dzi-aC-diF" secondAttribute="leading" id="fkX-lj-JiC"/>
+                            <constraint firstItem="XBA-fY-gLt" firstAttribute="top" secondItem="kCP-4S-3on" secondAttribute="bottom" id="ppX-La-Rot"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callStatusLabel" destination="aQq-4x-bgK" id="Kr1-AV-Ieo"/>
+                        <outlet property="enterNumberTextField" destination="lLE-5A-wFw" id="wq8-5q-U3U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxM-qd-W9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9wD-0S-cO7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bgI-cs-tS5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Map-yr-QQG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fXG-le-hwg" kind="relationship" relationship="rootViewController" id="dPI-2I-MNQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-ym-fpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="294"/>
+        </scene>
+    </scenes>
+</document>

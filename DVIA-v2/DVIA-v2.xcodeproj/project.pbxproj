@@ -1,0 +1,1855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */; };
+		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
+		F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F26202FA4DD00A3A757 /* Home.storyboard */; };
+		F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */; };
+		F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */; };
+		F6DE6F7B202FA4DE00A3A757 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2A202FA4DD00A3A757 /* Storyboards.swift */; };
+		F6DE6F7C202FA4DE00A3A757 /* DVIAUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2B202FA4DD00A3A757 /* DVIAUtilities.swift */; };
+		F6DE6F7D202FA4DE00A3A757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */; };
+		F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */; };
+		F6DE6F7F202FA4DE00A3A757 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F31202FA4DD00A3A757 /* LearnViewController.swift */; };
+		F6DE6F80202FA4DE00A3A757 /* LearniOSApplicationSecurity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F32202FA4DD00A3A757 /* LearniOSApplicationSecurity.storyboard */; };
+		F6DE6F81202FA4DE00A3A757 /* MenuCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F34202FA4DD00A3A757 /* MenuCellItem.swift */; };
+		F6DE6F82202FA4DE00A3A757 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F36202FA4DD00A3A757 /* SideMenuViewController.swift */; };
+		F6DE6F83202FA4DE00A3A757 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F38202FA4DD00A3A757 /* SideMenuTableViewCell.swift */; };
+		F6DE6F84202FA4DE00A3A757 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F3A202FA4DD00A3A757 /* RootViewController.swift */; };
+		F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F3B202FA4DD00A3A757 /* Root.storyboard */; };
+		F6DE6F86202FA4DE00A3A757 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F3D202FA4DD00A3A757 /* Constants.swift */; };
+		F6DE6F88202FA4DE00A3A757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F3F202FA4DE00A3A757 /* Assets.xcassets */; };
+		F6DE6FA7202FA53900A3A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6FA6202FA53900A3A757 /* Foundation.framework */; };
+		F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6FA8202FA6E400A3A757 /* Info.plist */; };
+		F6E64504202FBB6700884A43 /* YapDatabaseConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64411202FBB6700884A43 /* YapDatabaseConnection.m */; };
+		F6E64505202FBB6700884A43 /* YapDatabaseTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64413202FBB6700884A43 /* YapDatabaseTransaction.m */; };
+		F6E64506202FBB6700884A43 /* YapDatabaseConnectionState.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64416202FBB6700884A43 /* YapDatabaseConnectionState.m */; };
+		F6E64507202FBB6700884A43 /* YapMemoryTable.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64418202FBB6700884A43 /* YapMemoryTable.m */; };
+		F6E64508202FBB6700884A43 /* YapDatabaseConnectionDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6441A202FBB6700884A43 /* YapDatabaseConnectionDefaults.m */; };
+		F6E64509202FBB6700884A43 /* YapNull.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6441B202FBB6700884A43 /* YapNull.m */; };
+		F6E6450A202FBB6700884A43 /* YapDatabaseStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6441E202FBB6700884A43 /* YapDatabaseStatement.m */; };
+		F6E6450B202FBB6700884A43 /* NSDictionary+YapDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64422202FBB6700884A43 /* NSDictionary+YapDatabase.m */; };
+		F6E6450C202FBB6700884A43 /* YapDebugDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64425202FBB6700884A43 /* YapDebugDictionary.m */; };
+		F6E6450D202FBB6700884A43 /* YapRowidSet.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6E64426202FBB6700884A43 /* YapRowidSet.mm */; };
+		F6E6450E202FBB6700884A43 /* YapTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64429202FBB6700884A43 /* YapTouch.m */; };
+		F6E6450F202FBB6700884A43 /* YapDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6442A202FBB6700884A43 /* YapDatabaseManager.m */; };
+		F6E64510202FBB6700884A43 /* YapDatabaseLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6442C202FBB6700884A43 /* YapDatabaseLogging.m */; };
+		F6E64511202FBB6700884A43 /* YapDatabaseSearchResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64432202FBB6700884A43 /* YapDatabaseSearchResultsView.m */; };
+		F6E64512202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64435202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.m */; };
+		F6E64513202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64436202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.m */; };
+		F6E64514202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64437202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.m */; };
+		F6E64515202FBB6700884A43 /* YapDatabaseSearchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6443A202FBB6700884A43 /* YapDatabaseSearchQueue.m */; };
+		F6E64516202FBB6700884A43 /* YapDatabaseCloudKitOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6443E202FBB6700884A43 /* YapDatabaseCloudKitOptions.m */; };
+		F6E64517202FBB6700884A43 /* YapDatabaseCloudKitTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6443F202FBB6700884A43 /* YapDatabaseCloudKitTypes.m */; };
+		F6E64518202FBB6700884A43 /* YDBCKMappingTableInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64442202FBB6700884A43 /* YDBCKMappingTableInfo.m */; };
+		F6E64519202FBB6700884A43 /* YDBCKAttachRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64443202FBB6700884A43 /* YDBCKAttachRequest.m */; };
+		F6E6451A202FBB6700884A43 /* YDBCKChangeRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64448202FBB6700884A43 /* YDBCKChangeRecord.m */; };
+		F6E6451B202FBB6700884A43 /* YDBCKRecordTableInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6444B202FBB6700884A43 /* YDBCKRecordTableInfo.m */; };
+		F6E6451C202FBB6700884A43 /* YDBCKChangeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6444C202FBB6700884A43 /* YDBCKChangeQueue.m */; };
+		F6E6451D202FBB6700884A43 /* YDBCKMergeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64451202FBB6700884A43 /* YDBCKMergeInfo.m */; };
+		F6E6451E202FBB6700884A43 /* YDBCKRecordInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64453202FBB6700884A43 /* YDBCKRecordInfo.m */; };
+		F6E6451F202FBB6700884A43 /* YDBCKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64455202FBB6700884A43 /* YDBCKRecord.m */; };
+		F6E64520202FBB6700884A43 /* YDBCKChangeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64456202FBB6700884A43 /* YDBCKChangeSet.m */; };
+		F6E64521202FBB6700884A43 /* YapDatabaseCloudKitTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64459202FBB6700884A43 /* YapDatabaseCloudKitTransaction.m */; };
+		F6E64522202FBB6700884A43 /* YapDatabaseCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6445B202FBB6700884A43 /* YapDatabaseCloudKit.m */; };
+		F6E64523202FBB6700884A43 /* YapDatabaseCloudKitConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6445C202FBB6700884A43 /* YapDatabaseCloudKitConnection.m */; };
+		F6E64524202FBB6700884A43 /* YapDatabaseExtensionTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64460202FBB6700884A43 /* YapDatabaseExtensionTransaction.m */; };
+		F6E64525202FBB6700884A43 /* YapDatabaseExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64463202FBB6700884A43 /* YapDatabaseExtension.m */; };
+		F6E64526202FBB6700884A43 /* YapDatabaseExtensionConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64464202FBB6700884A43 /* YapDatabaseExtensionConnection.m */; };
+		F6E64527202FBB6700884A43 /* YapDatabaseFilteredViewConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6446B202FBB6700884A43 /* YapDatabaseFilteredViewConnection.m */; };
+		F6E64528202FBB6700884A43 /* YapDatabaseFilteredViewTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6446C202FBB6700884A43 /* YapDatabaseFilteredViewTypes.m */; };
+		F6E64529202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6446D202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.m */; };
+		F6E6452A202FBB6700884A43 /* YapDatabaseFilteredView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6446E202FBB6700884A43 /* YapDatabaseFilteredView.m */; };
+		F6E6452B202FBB6700884A43 /* YapDatabaseHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64473202FBB6700884A43 /* YapDatabaseHooks.m */; };
+		F6E6452C202FBB6700884A43 /* YapDatabaseHooksTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64476202FBB6700884A43 /* YapDatabaseHooksTransaction.m */; };
+		F6E6452D202FBB6700884A43 /* YapDatabaseHooksConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64477202FBB6700884A43 /* YapDatabaseHooksConnection.m */; };
+		F6E6452E202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6447C202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m */; };
+		F6E6452F202FBB6700884A43 /* YapDatabaseSecondaryIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6447D202FBB6700884A43 /* YapDatabaseSecondaryIndex.m */; };
+		F6E64530202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6447E202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m */; };
+		F6E64531202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64483202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.m */; };
+		F6E64532202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64485202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m */; };
+		F6E64533202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64488202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m */; };
+		F6E64534202FBB6700884A43 /* YapDatabaseViewOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6448A202FBB6700884A43 /* YapDatabaseViewOptions.m */; };
+		F6E64535202FBB6700884A43 /* YapDatabaseViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64491202FBB6700884A43 /* YapDatabaseViewState.m */; };
+		F6E64536202FBB6700884A43 /* YapDatabaseViewPageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64493202FBB6700884A43 /* YapDatabaseViewPageMetadata.m */; };
+		F6E64537202FBB6700884A43 /* YapDatabaseViewPage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6E64496202FBB6700884A43 /* YapDatabaseViewPage.mm */; };
+		F6E64538202FBB6700884A43 /* YapDatabaseViewConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64499202FBB6700884A43 /* YapDatabaseViewConnection.m */; };
+		F6E64539202FBB6700884A43 /* YapDatabaseViewRangeOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6449C202FBB6700884A43 /* YapDatabaseViewRangeOptions.m */; };
+		F6E6453A202FBB6700884A43 /* YapDatabaseViewChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6449F202FBB6700884A43 /* YapDatabaseViewChange.m */; };
+		F6E6453B202FBB6700884A43 /* YapDatabaseViewMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A0202FBB6700884A43 /* YapDatabaseViewMappings.m */; };
+		F6E6453C202FBB6700884A43 /* YapDatabaseViewTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A1202FBB6700884A43 /* YapDatabaseViewTransaction.m */; };
+		F6E6453D202FBB6700884A43 /* YapDatabaseViewTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A2202FBB6700884A43 /* YapDatabaseViewTypes.m */; };
+		F6E6453E202FBB6700884A43 /* YapDatabaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A5202FBB6700884A43 /* YapDatabaseView.m */; };
+		F6E6453F202FBB6700884A43 /* YapDatabaseRelationshipTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A8202FBB6700884A43 /* YapDatabaseRelationshipTransaction.m */; };
+		F6E64540202FBB6700884A43 /* YapDatabaseRelationshipConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644A9202FBB6700884A43 /* YapDatabaseRelationshipConnection.m */; };
+		F6E64541202FBB6700884A43 /* YapDatabaseRelationshipOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644AD202FBB6700884A43 /* YapDatabaseRelationshipOptions.m */; };
+		F6E64542202FBB6700884A43 /* YapDatabaseRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644AF202FBB6700884A43 /* YapDatabaseRelationship.m */; };
+		F6E64543202FBB6700884A43 /* YapDatabaseRelationshipEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644B3202FBB6700884A43 /* YapDatabaseRelationshipEdge.m */; };
+		F6E64544202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644B7202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.m */; };
+		F6E64545202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644B8202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.m */; };
+		F6E64546202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644B9202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.m */; };
+		F6E64547202FBB6700884A43 /* YapDatabaseFullTextSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644BD202FBB6700884A43 /* YapDatabaseFullTextSearch.m */; };
+		F6E64548202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644C0202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m */; };
+		F6E64549202FBB6700884A43 /* YapMurmurHash.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644C3202FBB6700884A43 /* YapMurmurHash.m */; };
+		F6E6454A202FBB6700884A43 /* YapCollectionKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644C5202FBB6700884A43 /* YapCollectionKey.m */; };
+		F6E6454B202FBB6700884A43 /* YapDatabaseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644C6202FBB6700884A43 /* YapDatabaseQuery.m */; };
+		F6E6454C202FBB6700884A43 /* YapSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644C8202FBB6700884A43 /* YapSet.m */; };
+		F6E6454D202FBB6700884A43 /* YapCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CA202FBB6700884A43 /* YapCache.m */; };
+		F6E6454E202FBB6700884A43 /* YapWhitelistBlacklist.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CD202FBB6700884A43 /* YapWhitelistBlacklist.m */; };
+		F6E6454F202FBB6700884A43 /* YapDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CF202FBB6700884A43 /* YapDatabase.m */; };
+		F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644D1202FBB6700884A43 /* LICENSE.txt */; };
+		F6E64551202FBB6700884A43 /* YapDatabaseOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */; };
+		F6E64552202FBB6700884A43 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644D7202FBB6700884A43 /* RNCryptor.m */; };
+		F6E64553202FBB6700884A43 /* RNOpenSSLCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644DD202FBB6700884A43 /* RNOpenSSLCryptor.m */; };
+		F6E64554202FBB6700884A43 /* RNOpenSSLEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644DF202FBB6700884A43 /* RNOpenSSLEncryptor.m */; };
+		F6E64555202FBB6700884A43 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644E0202FBB6700884A43 /* RNDecryptor.m */; };
+		F6E64556202FBB6700884A43 /* RNOpenSSLDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644E1202FBB6700884A43 /* RNOpenSSLDecryptor.m */; };
+		F6E64557202FBB6700884A43 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644E2202FBB6700884A43 /* RNEncryptor.m */; };
+		F6E64558202FBB6700884A43 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644E3202FBB6700884A43 /* RNCryptorEngine.m */; };
+		F6E64559202FBB6700884A43 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644E6202FBB6700884A43 /* DDTTYLogger.m */; };
+		F6E6455A202FBB6700884A43 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644EA202FBB6700884A43 /* DDASLLogger.m */; };
+		F6E6455B202FBB6700884A43 /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644EC202FBB6700884A43 /* CLIColor.m */; };
+		F6E6455C202FBB6700884A43 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644F0202FBB6700884A43 /* DDContextFilterLogFormatter.m */; };
+		F6E6455D202FBB6700884A43 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644F1202FBB6700884A43 /* DDDispatchQueueLogFormatter.m */; };
+		F6E6455E202FBB6700884A43 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644F4202FBB6700884A43 /* DDMultiFormatter.m */; };
+		F6E6455F202FBB6700884A43 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644F6202FBB6700884A43 /* README.txt */; };
+		F6E64560202FBB6700884A43 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644F7202FBB6700884A43 /* DDLog.m */; };
+		F6E64561202FBB6800884A43 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */; };
+		F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644FB202FBB6700884A43 /* LICENSE.txt */; };
+		F6E64563202FBB6800884A43 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FC202FBB6700884A43 /* DDFileLogger.m */; };
+		F6E64564202FBB6800884A43 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */; };
+		F6E64565202FBB6800884A43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64500202FBB6700884A43 /* PDKeychainBindingsController.m */; };
+		F6E64566202FBB6800884A43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64503202FBB6700884A43 /* PDKeychainBindings.m */; };
+		F6E645AE202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64569202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift */; };
+		F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6456A202FBC6000884A43 /* ApplicationPatching.storyboard */; };
+		F6E645B0202FBC6000884A43 /* ApplicationPatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6456B202FBC6000884A43 /* ApplicationPatchingViewController.swift */; };
+		F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6456D202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard */; };
+		F6E645B2202FBC6000884A43 /* AttackingThirdPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6456F202FBC6000884A43 /* AttackingThirdPartyViewController.swift */; };
+		F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E64571202FBC6000884A43 /* RuntimeManipulation.storyboard */; };
+		F6E645B4202FBC6000884A43 /* RuntimeManipulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64573202FBC6000884A43 /* RuntimeManipulationViewController.swift */; };
+		F6E645B5202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64574202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift */; };
+		F6E645B6202FBC6000884A43 /* LoginValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64576202FBC6000884A43 /* LoginValidate.m */; };
+		F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E64579202FBC6000884A43 /* TransportLayerProtection.storyboard */; };
+		F6E645B8202FBC6000884A43 /* TransportLayerProtectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6457B202FBC6000884A43 /* TransportLayerProtectionViewController.swift */; };
+		F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6457D202FBC6000884A43 /* SensitiveInformation.storyboard */; };
+		F6E645BA202FBC6000884A43 /* SensitiveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6457F202FBC6000884A43 /* SensitiveInformationViewController.swift */; };
+		F6E645BB202FBC6000884A43 /* DeviceLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64582202FBC6000884A43 /* DeviceLogsViewController.swift */; };
+		F6E645BC202FBC6000884A43 /* KeystrokeLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64583202FBC6000884A43 /* KeystrokeLoggingViewController.swift */; };
+		F6E645BD202FBC6000884A43 /* SideChannelDataLeakageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64584202FBC6000884A43 /* SideChannelDataLeakageViewController.swift */; };
+		F6E645BE202FBC6000884A43 /* CookiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64585202FBC6000884A43 /* CookiesViewController.swift */; };
+		F6E645BF202FBC6000884A43 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64586202FBC6000884A43 /* PasteboardViewController.swift */; };
+		F6E645C0202FBC6000884A43 /* SetSharedCookies.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64588202FBC6000884A43 /* SetSharedCookies.m */; };
+		F6E645C1202FBC6000884A43 /* AppScreenshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6458A202FBC6000884A43 /* AppScreenshotViewController.swift */; };
+		F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6458B202FBC6000884A43 /* SideChannelDataLeakage.storyboard */; };
+		F6E645C3202FBC6000884A43 /* ClientSideInjection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6458D202FBC6000884A43 /* ClientSideInjection.storyboard */; };
+		F6E645C4202FBC6000884A43 /* ClientSideInjectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6458F202FBC6000884A43 /* ClientSideInjectionViewController.swift */; };
+		F6E645C5202FBC6000884A43 /* ClientSideInjectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64590202FBC6000884A43 /* ClientSideInjectionDetailViewController.swift */; };
+		F6E645C6202FBC6000884A43 /* YapDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64593202FBC6000884A43 /* YapDatabaseViewController.swift */; };
+		F6E645C7202FBC6000884A43 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64594202FBC6000884A43 /* CoreDataViewController.swift */; };
+		F6E645C8202FBC6000884A43 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64595202FBC6000884A43 /* WebkitViewController.swift */; };
+		F6E645C9202FBC6000884A43 /* PListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64596202FBC6000884A43 /* PListViewController.swift */; };
+		F6E645CA202FBC6000884A43 /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64597202FBC6000884A43 /* KeychainViewController.swift */; };
+		F6E645CB202FBC6000884A43 /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64598202FBC6000884A43 /* UserDefaultsViewController.swift */; };
+		F6E645CC202FBC6000884A43 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64599202FBC6000884A43 /* RealmViewController.swift */; };
+		F6E645CD202FBC6000884A43 /* InsecureDataStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6459A202FBC6000884A43 /* InsecureDataStorageViewController.swift */; };
+		F6E645CE202FBC6000884A43 /* CouchbaseLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6459B202FBC6000884A43 /* CouchbaseLiteViewController.swift */; };
+		F6E645CF202FBC6000884A43 /* InsecureDataStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E6459C202FBC6000884A43 /* InsecureDataStorage.storyboard */; };
+		F6E645D0202FBC6000884A43 /* BrokenCryptographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6459F202FBC6000884A43 /* BrokenCryptographyViewController.swift */; };
+		F6E645D1202FBC6000884A43 /* BrokenCryptographyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645A0202FBC6000884A43 /* BrokenCryptographyDetailsViewController.swift */; };
+		F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E645A1202FBC6000884A43 /* BrokenCryptography.storyboard */; };
+		F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E645A3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard */; };
+		F6E645D4202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645A5202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift */; };
+		F6E645D5202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645A6202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift */; };
+		F6E645D6202FBC6000884A43 /* JailbreakDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */; };
+		F6E645D7202FBC6000884A43 /* JailbreakDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645AA202FBC6000884A43 /* JailbreakDetectionViewController.swift */; };
+		F6E645D8202FBC6000884A43 /* JailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E645AD202FBC6000884A43 /* JailbreakDetection.m */; };
+		F6E645E2202FBCAB00884A43 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DB202FBCAB00884A43 /* RealmUser.swift */; };
+		F6E645E3202FBCAB00884A43 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DD202FBCAB00884A43 /* CoreDataStack.swift */; };
+		F6E645E4202FBCAB00884A43 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DE202FBCAB00884A43 /* User+CoreDataProperties.swift */; };
+		F6E645E5202FBCAB00884A43 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DF202FBCAB00884A43 /* User+CoreDataClass.swift */; };
+		F6E645E6202FBCAB00884A43 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6E645E0202FBCAB00884A43 /* Model.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
+		92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVIA_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
+		F65AC867202FA37500E4088A /* DVIA-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVIA-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DVIA_v2.xcdatamodel; sourceTree = "<group>"; };
+		F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVIA-v2-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6DE6F26202FA4DD00A3A757 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		F6DE6F2A202FA4DD00A3A757 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		F6DE6F2B202FA4DD00A3A757 /* DVIAUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVIAUtilities.swift; sourceTree = "<group>"; };
+		F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6DE6F31202FA4DD00A3A757 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		F6DE6F32202FA4DD00A3A757 /* LearniOSApplicationSecurity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearniOSApplicationSecurity.storyboard; sourceTree = "<group>"; };
+		F6DE6F34202FA4DD00A3A757 /* MenuCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellItem.swift; sourceTree = "<group>"; };
+		F6DE6F36202FA4DD00A3A757 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		F6DE6F38202FA4DD00A3A757 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		F6DE6F3A202FA4DD00A3A757 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F6DE6F3C202FA4DD00A3A757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
+		F6DE6F3D202FA4DD00A3A757 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F6DE6F3F202FA4DE00A3A757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6DE6FA6202FA53900A3A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6DE6FA8202FA6E400A3A757 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E64411202FBB6700884A43 /* YapDatabaseConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseConnection.m; sourceTree = "<group>"; };
+		F6E64412202FBB6700884A43 /* YapDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabase.h; sourceTree = "<group>"; };
+		F6E64413202FBB6700884A43 /* YapDatabaseTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseTransaction.m; sourceTree = "<group>"; };
+		F6E64415202FBB6700884A43 /* YapRowidSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapRowidSet.h; sourceTree = "<group>"; };
+		F6E64416202FBB6700884A43 /* YapDatabaseConnectionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseConnectionState.m; sourceTree = "<group>"; };
+		F6E64417202FBB6700884A43 /* NSDictionary+YapDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YapDatabase.h"; sourceTree = "<group>"; };
+		F6E64418202FBB6700884A43 /* YapMemoryTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapMemoryTable.m; sourceTree = "<group>"; };
+		F6E64419202FBB6700884A43 /* YapDebugDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDebugDictionary.h; sourceTree = "<group>"; };
+		F6E6441A202FBB6700884A43 /* YapDatabaseConnectionDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseConnectionDefaults.m; sourceTree = "<group>"; };
+		F6E6441B202FBB6700884A43 /* YapNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapNull.m; sourceTree = "<group>"; };
+		F6E6441C202FBB6700884A43 /* YapDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseManager.h; sourceTree = "<group>"; };
+		F6E6441D202FBB6700884A43 /* YapTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapTouch.h; sourceTree = "<group>"; };
+		F6E6441E202FBB6700884A43 /* YapDatabaseStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseStatement.m; sourceTree = "<group>"; };
+		F6E6441F202FBB6700884A43 /* YapDatabaseLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseLogging.h; sourceTree = "<group>"; };
+		F6E64420202FBB6700884A43 /* YapDatabasePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabasePrivate.h; sourceTree = "<group>"; };
+		F6E64421202FBB6700884A43 /* YapDatabaseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseString.h; sourceTree = "<group>"; };
+		F6E64422202FBB6700884A43 /* NSDictionary+YapDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YapDatabase.m"; sourceTree = "<group>"; };
+		F6E64423202FBB6700884A43 /* YapDatabaseConnectionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseConnectionState.h; sourceTree = "<group>"; };
+		F6E64424202FBB6700884A43 /* YapDatabaseConnectionDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseConnectionDefaults.h; sourceTree = "<group>"; };
+		F6E64425202FBB6700884A43 /* YapDebugDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDebugDictionary.m; sourceTree = "<group>"; };
+		F6E64426202FBB6700884A43 /* YapRowidSet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YapRowidSet.mm; sourceTree = "<group>"; };
+		F6E64427202FBB6700884A43 /* YapMemoryTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapMemoryTable.h; sourceTree = "<group>"; };
+		F6E64428202FBB6700884A43 /* YapDatabaseStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseStatement.h; sourceTree = "<group>"; };
+		F6E64429202FBB6700884A43 /* YapTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapTouch.m; sourceTree = "<group>"; };
+		F6E6442A202FBB6700884A43 /* YapDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseManager.m; sourceTree = "<group>"; };
+		F6E6442B202FBB6700884A43 /* YapNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapNull.h; sourceTree = "<group>"; };
+		F6E6442C202FBB6700884A43 /* YapDatabaseLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseLogging.m; sourceTree = "<group>"; };
+		F6E6442D202FBB6700884A43 /* YapDatabaseOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseOptions.h; sourceTree = "<group>"; };
+		F6E64430202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchResultsViewConnection.h; sourceTree = "<group>"; };
+		F6E64431202FBB6700884A43 /* YapDatabaseSearchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchQueue.h; sourceTree = "<group>"; };
+		F6E64432202FBB6700884A43 /* YapDatabaseSearchResultsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSearchResultsView.m; sourceTree = "<group>"; };
+		F6E64434202FBB6700884A43 /* YapDatabaseSearchResultsViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchResultsViewPrivate.h; sourceTree = "<group>"; };
+		F6E64435202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSearchResultsViewTransaction.m; sourceTree = "<group>"; };
+		F6E64436202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSearchResultsViewOptions.m; sourceTree = "<group>"; };
+		F6E64437202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSearchResultsViewConnection.m; sourceTree = "<group>"; };
+		F6E64438202FBB6700884A43 /* YapDatabaseSearchQueuePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchQueuePrivate.h; sourceTree = "<group>"; };
+		F6E64439202FBB6700884A43 /* YapDatabaseSearchResultsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchResultsView.h; sourceTree = "<group>"; };
+		F6E6443A202FBB6700884A43 /* YapDatabaseSearchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSearchQueue.m; sourceTree = "<group>"; };
+		F6E6443B202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchResultsViewOptions.h; sourceTree = "<group>"; };
+		F6E6443C202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSearchResultsViewTransaction.h; sourceTree = "<group>"; };
+		F6E6443E202FBB6700884A43 /* YapDatabaseCloudKitOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseCloudKitOptions.m; sourceTree = "<group>"; };
+		F6E6443F202FBB6700884A43 /* YapDatabaseCloudKitTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseCloudKitTypes.m; sourceTree = "<group>"; };
+		F6E64440202FBB6700884A43 /* YapDatabaseCloudKitTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKitTransaction.h; sourceTree = "<group>"; };
+		F6E64442202FBB6700884A43 /* YDBCKMappingTableInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKMappingTableInfo.m; sourceTree = "<group>"; };
+		F6E64443202FBB6700884A43 /* YDBCKAttachRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKAttachRequest.m; sourceTree = "<group>"; };
+		F6E64444202FBB6700884A43 /* YDBCKChangeRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKChangeRecord.h; sourceTree = "<group>"; };
+		F6E64445202FBB6700884A43 /* YDBCKRecordTableInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKRecordTableInfo.h; sourceTree = "<group>"; };
+		F6E64446202FBB6700884A43 /* YDBCKChangeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKChangeQueue.h; sourceTree = "<group>"; };
+		F6E64447202FBB6700884A43 /* YDBCKMappingTableInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKMappingTableInfo.h; sourceTree = "<group>"; };
+		F6E64448202FBB6700884A43 /* YDBCKChangeRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKChangeRecord.m; sourceTree = "<group>"; };
+		F6E64449202FBB6700884A43 /* YapDatabaseCloudKitPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKitPrivate.h; sourceTree = "<group>"; };
+		F6E6444A202FBB6700884A43 /* YDBCKAttachRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKAttachRequest.h; sourceTree = "<group>"; };
+		F6E6444B202FBB6700884A43 /* YDBCKRecordTableInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKRecordTableInfo.m; sourceTree = "<group>"; };
+		F6E6444C202FBB6700884A43 /* YDBCKChangeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKChangeQueue.m; sourceTree = "<group>"; };
+		F6E6444D202FBB6700884A43 /* YapDatabaseCloudKitConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKitConnection.h; sourceTree = "<group>"; };
+		F6E6444E202FBB6700884A43 /* YapDatabaseCloudKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKit.h; sourceTree = "<group>"; };
+		F6E64450202FBB6700884A43 /* YDBCKRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKRecord.h; sourceTree = "<group>"; };
+		F6E64451202FBB6700884A43 /* YDBCKMergeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKMergeInfo.m; sourceTree = "<group>"; };
+		F6E64452202FBB6700884A43 /* YDBCKChangeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKChangeSet.h; sourceTree = "<group>"; };
+		F6E64453202FBB6700884A43 /* YDBCKRecordInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKRecordInfo.m; sourceTree = "<group>"; };
+		F6E64454202FBB6700884A43 /* YDBCKMergeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKMergeInfo.h; sourceTree = "<group>"; };
+		F6E64455202FBB6700884A43 /* YDBCKRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKRecord.m; sourceTree = "<group>"; };
+		F6E64456202FBB6700884A43 /* YDBCKChangeSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBCKChangeSet.m; sourceTree = "<group>"; };
+		F6E64457202FBB6700884A43 /* YDBCKRecordInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBCKRecordInfo.h; sourceTree = "<group>"; };
+		F6E64458202FBB6700884A43 /* YapDatabaseCloudKitOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKitOptions.h; sourceTree = "<group>"; };
+		F6E64459202FBB6700884A43 /* YapDatabaseCloudKitTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseCloudKitTransaction.m; sourceTree = "<group>"; };
+		F6E6445A202FBB6700884A43 /* YapDatabaseCloudKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseCloudKitTypes.h; sourceTree = "<group>"; };
+		F6E6445B202FBB6700884A43 /* YapDatabaseCloudKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseCloudKit.m; sourceTree = "<group>"; };
+		F6E6445C202FBB6700884A43 /* YapDatabaseCloudKitConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseCloudKitConnection.m; sourceTree = "<group>"; };
+		F6E6445E202FBB6700884A43 /* YapDatabaseExtensionConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseExtensionConnection.h; sourceTree = "<group>"; };
+		F6E6445F202FBB6700884A43 /* YapDatabaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseExtension.h; sourceTree = "<group>"; };
+		F6E64460202FBB6700884A43 /* YapDatabaseExtensionTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseExtensionTransaction.m; sourceTree = "<group>"; };
+		F6E64462202FBB6700884A43 /* YapDatabaseExtensionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseExtensionPrivate.h; sourceTree = "<group>"; };
+		F6E64463202FBB6700884A43 /* YapDatabaseExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseExtension.m; sourceTree = "<group>"; };
+		F6E64464202FBB6700884A43 /* YapDatabaseExtensionConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseExtensionConnection.m; sourceTree = "<group>"; };
+		F6E64465202FBB6700884A43 /* YapDatabaseExtensionTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseExtensionTransaction.h; sourceTree = "<group>"; };
+		F6E64467202FBB6700884A43 /* YapDatabaseFilteredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFilteredView.h; sourceTree = "<group>"; };
+		F6E64468202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFilteredViewTransaction.h; sourceTree = "<group>"; };
+		F6E6446A202FBB6700884A43 /* YapDatabaseFilteredViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFilteredViewPrivate.h; sourceTree = "<group>"; };
+		F6E6446B202FBB6700884A43 /* YapDatabaseFilteredViewConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFilteredViewConnection.m; sourceTree = "<group>"; };
+		F6E6446C202FBB6700884A43 /* YapDatabaseFilteredViewTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFilteredViewTypes.m; sourceTree = "<group>"; };
+		F6E6446D202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFilteredViewTransaction.m; sourceTree = "<group>"; };
+		F6E6446E202FBB6700884A43 /* YapDatabaseFilteredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFilteredView.m; sourceTree = "<group>"; };
+		F6E6446F202FBB6700884A43 /* YapDatabaseFilteredViewTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFilteredViewTypes.h; sourceTree = "<group>"; };
+		F6E64470202FBB6700884A43 /* YapDatabaseFilteredViewConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFilteredViewConnection.h; sourceTree = "<group>"; };
+		F6E64472202FBB6700884A43 /* YapDatabaseHooksConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseHooksConnection.h; sourceTree = "<group>"; };
+		F6E64473202FBB6700884A43 /* YapDatabaseHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseHooks.m; sourceTree = "<group>"; };
+		F6E64475202FBB6700884A43 /* YapDatabaseHooksPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseHooksPrivate.h; sourceTree = "<group>"; };
+		F6E64476202FBB6700884A43 /* YapDatabaseHooksTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseHooksTransaction.m; sourceTree = "<group>"; };
+		F6E64477202FBB6700884A43 /* YapDatabaseHooksConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseHooksConnection.m; sourceTree = "<group>"; };
+		F6E64478202FBB6700884A43 /* YapDatabaseHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseHooks.h; sourceTree = "<group>"; };
+		F6E64479202FBB6700884A43 /* YapDatabaseHooksTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseHooksTransaction.h; sourceTree = "<group>"; };
+		F6E6447B202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexOptions.h; sourceTree = "<group>"; };
+		F6E6447C202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndexHandler.m; sourceTree = "<group>"; };
+		F6E6447D202FBB6700884A43 /* YapDatabaseSecondaryIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndex.m; sourceTree = "<group>"; };
+		F6E6447E202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndexConnection.m; sourceTree = "<group>"; };
+		F6E6447F202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexSetup.h; sourceTree = "<group>"; };
+		F6E64481202FBB6700884A43 /* YapDatabaseSecondaryIndexPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexPrivate.h; sourceTree = "<group>"; };
+		F6E64482202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexTransaction.h; sourceTree = "<group>"; };
+		F6E64483202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndexOptions.m; sourceTree = "<group>"; };
+		F6E64484202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexHandler.h; sourceTree = "<group>"; };
+		F6E64485202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndexSetup.m; sourceTree = "<group>"; };
+		F6E64486202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndexConnection.h; sourceTree = "<group>"; };
+		F6E64487202FBB6700884A43 /* YapDatabaseSecondaryIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseSecondaryIndex.h; sourceTree = "<group>"; };
+		F6E64488202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseSecondaryIndexTransaction.m; sourceTree = "<group>"; };
+		F6E6448A202FBB6700884A43 /* YapDatabaseViewOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewOptions.m; sourceTree = "<group>"; };
+		F6E6448B202FBB6700884A43 /* YapDatabaseViewTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewTransaction.h; sourceTree = "<group>"; };
+		F6E6448C202FBB6700884A43 /* YapDatabaseViewTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewTypes.h; sourceTree = "<group>"; };
+		F6E6448E202FBB6700884A43 /* YapDatabaseViewMappingsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewMappingsPrivate.h; sourceTree = "<group>"; };
+		F6E6448F202FBB6700884A43 /* YapDatabaseViewPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewPage.h; sourceTree = "<group>"; };
+		F6E64490202FBB6700884A43 /* YapDatabaseViewPageMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewPageMetadata.h; sourceTree = "<group>"; };
+		F6E64491202FBB6700884A43 /* YapDatabaseViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewState.m; sourceTree = "<group>"; };
+		F6E64492202FBB6700884A43 /* YapDatabaseViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewPrivate.h; sourceTree = "<group>"; };
+		F6E64493202FBB6700884A43 /* YapDatabaseViewPageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewPageMetadata.m; sourceTree = "<group>"; };
+		F6E64494202FBB6700884A43 /* YapDatabaseViewRangeOptionsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewRangeOptionsPrivate.h; sourceTree = "<group>"; };
+		F6E64495202FBB6700884A43 /* YapDatabaseViewChangePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewChangePrivate.h; sourceTree = "<group>"; };
+		F6E64496202FBB6700884A43 /* YapDatabaseViewPage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YapDatabaseViewPage.mm; sourceTree = "<group>"; };
+		F6E64497202FBB6700884A43 /* YapDatabaseViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewState.h; sourceTree = "<group>"; };
+		F6E64498202FBB6700884A43 /* YapDatabaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseView.h; sourceTree = "<group>"; };
+		F6E64499202FBB6700884A43 /* YapDatabaseViewConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewConnection.m; sourceTree = "<group>"; };
+		F6E6449B202FBB6700884A43 /* YapDatabaseViewChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewChange.h; sourceTree = "<group>"; };
+		F6E6449C202FBB6700884A43 /* YapDatabaseViewRangeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewRangeOptions.m; sourceTree = "<group>"; };
+		F6E6449D202FBB6700884A43 /* YapDatabaseViewMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewMappings.h; sourceTree = "<group>"; };
+		F6E6449E202FBB6700884A43 /* YapDatabaseViewRangeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewRangeOptions.h; sourceTree = "<group>"; };
+		F6E6449F202FBB6700884A43 /* YapDatabaseViewChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewChange.m; sourceTree = "<group>"; };
+		F6E644A0202FBB6700884A43 /* YapDatabaseViewMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewMappings.m; sourceTree = "<group>"; };
+		F6E644A1202FBB6700884A43 /* YapDatabaseViewTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewTransaction.m; sourceTree = "<group>"; };
+		F6E644A2202FBB6700884A43 /* YapDatabaseViewTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseViewTypes.m; sourceTree = "<group>"; };
+		F6E644A3202FBB6700884A43 /* YapDatabaseViewOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewOptions.h; sourceTree = "<group>"; };
+		F6E644A4202FBB6700884A43 /* YapDatabaseViewConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseViewConnection.h; sourceTree = "<group>"; };
+		F6E644A5202FBB6700884A43 /* YapDatabaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseView.m; sourceTree = "<group>"; };
+		F6E644A7202FBB6700884A43 /* YapDatabaseRelationshipNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipNode.h; sourceTree = "<group>"; };
+		F6E644A8202FBB6700884A43 /* YapDatabaseRelationshipTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseRelationshipTransaction.m; sourceTree = "<group>"; };
+		F6E644A9202FBB6700884A43 /* YapDatabaseRelationshipConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseRelationshipConnection.m; sourceTree = "<group>"; };
+		F6E644AB202FBB6700884A43 /* YapDatabaseRelationshipEdgePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipEdgePrivate.h; sourceTree = "<group>"; };
+		F6E644AC202FBB6700884A43 /* YapDatabaseRelationshipPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipPrivate.h; sourceTree = "<group>"; };
+		F6E644AD202FBB6700884A43 /* YapDatabaseRelationshipOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseRelationshipOptions.m; sourceTree = "<group>"; };
+		F6E644AE202FBB6700884A43 /* YapDatabaseRelationshipEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipEdge.h; sourceTree = "<group>"; };
+		F6E644AF202FBB6700884A43 /* YapDatabaseRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseRelationship.m; sourceTree = "<group>"; };
+		F6E644B0202FBB6700884A43 /* YapDatabaseRelationshipConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipConnection.h; sourceTree = "<group>"; };
+		F6E644B1202FBB6700884A43 /* YapDatabaseRelationshipTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipTransaction.h; sourceTree = "<group>"; };
+		F6E644B2202FBB6700884A43 /* YapDatabaseRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationship.h; sourceTree = "<group>"; };
+		F6E644B3202FBB6700884A43 /* YapDatabaseRelationshipEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseRelationshipEdge.m; sourceTree = "<group>"; };
+		F6E644B4202FBB6700884A43 /* YapDatabaseRelationshipOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseRelationshipOptions.h; sourceTree = "<group>"; };
+		F6E644B6202FBB6700884A43 /* YapDatabaseFullTextSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearch.h; sourceTree = "<group>"; };
+		F6E644B7202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFullTextSearchHandler.m; sourceTree = "<group>"; };
+		F6E644B8202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFullTextSearchTransaction.m; sourceTree = "<group>"; };
+		F6E644B9202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFullTextSearchSnippetOptions.m; sourceTree = "<group>"; };
+		F6E644BA202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearchConnection.h; sourceTree = "<group>"; };
+		F6E644BC202FBB6700884A43 /* YapDatabaseFullTextSearchPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearchPrivate.h; sourceTree = "<group>"; };
+		F6E644BD202FBB6700884A43 /* YapDatabaseFullTextSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFullTextSearch.m; sourceTree = "<group>"; };
+		F6E644BE202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearchHandler.h; sourceTree = "<group>"; };
+		F6E644BF202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearchSnippetOptions.h; sourceTree = "<group>"; };
+		F6E644C0202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseFullTextSearchConnection.m; sourceTree = "<group>"; };
+		F6E644C1202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseFullTextSearchTransaction.h; sourceTree = "<group>"; };
+		F6E644C3202FBB6700884A43 /* YapMurmurHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapMurmurHash.m; sourceTree = "<group>"; };
+		F6E644C4202FBB6700884A43 /* YapWhitelistBlacklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapWhitelistBlacklist.h; sourceTree = "<group>"; };
+		F6E644C5202FBB6700884A43 /* YapCollectionKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapCollectionKey.m; sourceTree = "<group>"; };
+		F6E644C6202FBB6700884A43 /* YapDatabaseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseQuery.m; sourceTree = "<group>"; };
+		F6E644C7202FBB6700884A43 /* YapCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapCache.h; sourceTree = "<group>"; };
+		F6E644C8202FBB6700884A43 /* YapSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapSet.m; sourceTree = "<group>"; };
+		F6E644C9202FBB6700884A43 /* YapMurmurHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapMurmurHash.h; sourceTree = "<group>"; };
+		F6E644CA202FBB6700884A43 /* YapCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapCache.m; sourceTree = "<group>"; };
+		F6E644CB202FBB6700884A43 /* YapDatabaseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseQuery.h; sourceTree = "<group>"; };
+		F6E644CC202FBB6700884A43 /* YapCollectionKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapCollectionKey.h; sourceTree = "<group>"; };
+		F6E644CD202FBB6700884A43 /* YapWhitelistBlacklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapWhitelistBlacklist.m; sourceTree = "<group>"; };
+		F6E644CE202FBB6700884A43 /* YapSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapSet.h; sourceTree = "<group>"; };
+		F6E644CF202FBB6700884A43 /* YapDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabase.m; sourceTree = "<group>"; };
+		F6E644D0202FBB6700884A43 /* YapDatabaseConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseConnection.h; sourceTree = "<group>"; };
+		F6E644D1202FBB6700884A43 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseOptions.m; sourceTree = "<group>"; };
+		F6E644D3202FBB6700884A43 /* YapDatabaseTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseTransaction.h; sourceTree = "<group>"; };
+		F6E644D5202FBB6700884A43 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
+		F6E644D6202FBB6700884A43 /* RNOpenSSLEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLEncryptor.h; sourceTree = "<group>"; };
+		F6E644D7202FBB6700884A43 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
+		F6E644D8202FBB6700884A43 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
+		F6E644D9202FBB6700884A43 /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		F6E644DA202FBB6700884A43 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
+		F6E644DB202FBB6700884A43 /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
+		F6E644DC202FBB6700884A43 /* RNOpenSSLDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLDecryptor.h; sourceTree = "<group>"; };
+		F6E644DD202FBB6700884A43 /* RNOpenSSLCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLCryptor.m; sourceTree = "<group>"; };
+		F6E644DE202FBB6700884A43 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		F6E644DF202FBB6700884A43 /* RNOpenSSLEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLEncryptor.m; sourceTree = "<group>"; };
+		F6E644E0202FBB6700884A43 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
+		F6E644E1202FBB6700884A43 /* RNOpenSSLDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLDecryptor.m; sourceTree = "<group>"; };
+		F6E644E2202FBB6700884A43 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
+		F6E644E3202FBB6700884A43 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
+		F6E644E4202FBB6700884A43 /* RNOpenSSLCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLCryptor.h; sourceTree = "<group>"; };
+		F6E644E6202FBB6700884A43 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		F6E644E7202FBB6700884A43 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		F6E644E8202FBB6700884A43 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		F6E644E9202FBB6700884A43 /* DDASLLogCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogCapture.h; sourceTree = "<group>"; };
+		F6E644EA202FBB6700884A43 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		F6E644EC202FBB6700884A43 /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
+		F6E644ED202FBB6700884A43 /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
+		F6E644EE202FBB6700884A43 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		F6E644F0202FBB6700884A43 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		F6E644F1202FBB6700884A43 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		F6E644F2202FBB6700884A43 /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
+		F6E644F3202FBB6700884A43 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F6E644F4202FBB6700884A43 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
+		F6E644F5202FBB6700884A43 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		F6E644F6202FBB6700884A43 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F6E644F7202FBB6700884A43 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		F6E644F8202FBB6700884A43 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		F6E644F9202FBB6700884A43 /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
+		F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		F6E644FB202FBB6700884A43 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6E644FC202FBB6700884A43 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		F6E644FD202FBB6700884A43 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
+		F6E64500202FBB6700884A43 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
+		F6E64501202FBB6700884A43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
+		F6E64502202FBB6700884A43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
+		F6E64503202FBB6700884A43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
+		F6E64569202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPatchingDetailsViewController.swift; sourceTree = "<group>"; };
+		F6E6456A202FBC6000884A43 /* ApplicationPatching.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ApplicationPatching.storyboard; sourceTree = "<group>"; };
+		F6E6456B202FBC6000884A43 /* ApplicationPatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPatchingViewController.swift; sourceTree = "<group>"; };
+		F6E6456D202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AttackingThirdPartyLibraries.storyboard; sourceTree = "<group>"; };
+		F6E6456F202FBC6000884A43 /* AttackingThirdPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackingThirdPartyViewController.swift; sourceTree = "<group>"; };
+		F6E64571202FBC6000884A43 /* RuntimeManipulation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RuntimeManipulation.storyboard; sourceTree = "<group>"; };
+		F6E64573202FBC6000884A43 /* RuntimeManipulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeManipulationViewController.swift; sourceTree = "<group>"; };
+		F6E64574202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeManipulationDetailsViewController.swift; sourceTree = "<group>"; };
+		F6E64576202FBC6000884A43 /* LoginValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginValidate.m; sourceTree = "<group>"; };
+		F6E64577202FBC6000884A43 /* LoginValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginValidate.h; sourceTree = "<group>"; };
+		F6E64579202FBC6000884A43 /* TransportLayerProtection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TransportLayerProtection.storyboard; sourceTree = "<group>"; };
+		F6E6457B202FBC6000884A43 /* TransportLayerProtectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportLayerProtectionViewController.swift; sourceTree = "<group>"; };
+		F6E6457D202FBC6000884A43 /* SensitiveInformation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SensitiveInformation.storyboard; sourceTree = "<group>"; };
+		F6E6457F202FBC6000884A43 /* SensitiveInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensitiveInformationViewController.swift; sourceTree = "<group>"; };
+		F6E64582202FBC6000884A43 /* DeviceLogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceLogsViewController.swift; sourceTree = "<group>"; };
+		F6E64583202FBC6000884A43 /* KeystrokeLoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystrokeLoggingViewController.swift; sourceTree = "<group>"; };
+		F6E64584202FBC6000884A43 /* SideChannelDataLeakageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideChannelDataLeakageViewController.swift; sourceTree = "<group>"; };
+		F6E64585202FBC6000884A43 /* CookiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesViewController.swift; sourceTree = "<group>"; };
+		F6E64586202FBC6000884A43 /* PasteboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
+		F6E64588202FBC6000884A43 /* SetSharedCookies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetSharedCookies.m; sourceTree = "<group>"; };
+		F6E64589202FBC6000884A43 /* SetSharedCookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSharedCookies.h; sourceTree = "<group>"; };
+		F6E6458A202FBC6000884A43 /* AppScreenshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScreenshotViewController.swift; sourceTree = "<group>"; };
+		F6E6458B202FBC6000884A43 /* SideChannelDataLeakage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideChannelDataLeakage.storyboard; sourceTree = "<group>"; };
+		F6E6458D202FBC6000884A43 /* ClientSideInjection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientSideInjection.storyboard; sourceTree = "<group>"; };
+		F6E6458F202FBC6000884A43 /* ClientSideInjectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSideInjectionViewController.swift; sourceTree = "<group>"; };
+		F6E64590202FBC6000884A43 /* ClientSideInjectionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSideInjectionDetailViewController.swift; sourceTree = "<group>"; };
+		F6E64593202FBC6000884A43 /* YapDatabaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YapDatabaseViewController.swift; sourceTree = "<group>"; };
+		F6E64594202FBC6000884A43 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		F6E64595202FBC6000884A43 /* WebkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
+		F6E64596202FBC6000884A43 /* PListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListViewController.swift; sourceTree = "<group>"; };
+		F6E64597202FBC6000884A43 /* KeychainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
+		F6E64598202FBC6000884A43 /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewController.swift; sourceTree = "<group>"; };
+		F6E64599202FBC6000884A43 /* RealmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
+		F6E6459A202FBC6000884A43 /* InsecureDataStorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsecureDataStorageViewController.swift; sourceTree = "<group>"; };
+		F6E6459B202FBC6000884A43 /* CouchbaseLiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouchbaseLiteViewController.swift; sourceTree = "<group>"; };
+		F6E6459C202FBC6000884A43 /* InsecureDataStorage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InsecureDataStorage.storyboard; sourceTree = "<group>"; };
+		F6E6459F202FBC6000884A43 /* BrokenCryptographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrokenCryptographyViewController.swift; sourceTree = "<group>"; };
+		F6E645A0202FBC6000884A43 /* BrokenCryptographyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrokenCryptographyDetailsViewController.swift; sourceTree = "<group>"; };
+		F6E645A1202FBC6000884A43 /* BrokenCryptography.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrokenCryptography.storyboard; sourceTree = "<group>"; };
+		F6E645A3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecurityDecisonsViaUntrustedInput.storyboard; sourceTree = "<group>"; };
+		F6E645A5202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityDecisonsViaUntrustedInputViewController.swift; sourceTree = "<group>"; };
+		F6E645A6202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityDecisionsViewUntrustedInputDetailViewController.swift; sourceTree = "<group>"; };
+		F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JailbreakDetection.storyboard; sourceTree = "<group>"; };
+		F6E645AA202FBC6000884A43 /* JailbreakDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JailbreakDetectionViewController.swift; sourceTree = "<group>"; };
+		F6E645AC202FBC6000884A43 /* JailbreakDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailbreakDetection.h; sourceTree = "<group>"; };
+		F6E645AD202FBC6000884A43 /* JailbreakDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JailbreakDetection.m; sourceTree = "<group>"; };
+		F6E645DB202FBCAB00884A43 /* RealmUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		F6E645DD202FBCAB00884A43 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F6E645DE202FBCAB00884A43 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F6E645DF202FBCAB00884A43 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F6E645E1202FBCAB00884A43 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F65AC864202FA37500E4088A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6DE6FA7202FA53900A3A757 /* Foundation.framework in Frameworks */,
+				37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05AB122C780C47F565147395 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6FA6202FA53900A3A757 /* Foundation.framework */,
+				92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		793F52263EB6788C0BAC03B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */,
+				C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F65AC85E202FA37500E4088A = {
+			isa = PBXGroup;
+			children = (
+				F65AC869202FA37500E4088A /* DVIA-v2 */,
+				F65AC868202FA37500E4088A /* Products */,
+				793F52263EB6788C0BAC03B6 /* Pods */,
+				05AB122C780C47F565147395 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F65AC868202FA37500E4088A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F65AC867202FA37500E4088A /* DVIA-v2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F65AC869202FA37500E4088A /* DVIA-v2 */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645D9202FBCAB00884A43 /* Model */,
+				F6E6440F202FBB6700884A43 /* Vendor */,
+				F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */,
+				F6DE6FA8202FA6E400A3A757 /* Info.plist */,
+				F6DE6F3F202FA4DE00A3A757 /* Assets.xcassets */,
+				F6DE6F3D202FA4DD00A3A757 /* Constants.swift */,
+				F6DE6F28202FA4DD00A3A757 /* Helper Methods */,
+				F6DE6F25202FA4DD00A3A757 /* Home */,
+				F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */,
+				F6DE6F2F202FA4DD00A3A757 /* Learn */,
+				F6DE6F39202FA4DD00A3A757 /* Root */,
+				F6DE6F33202FA4DD00A3A757 /* SideMenu */,
+				F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */,
+				F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */,
+				F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */,
+			);
+			path = "DVIA-v2";
+			sourceTree = "<group>";
+		};
+		F6DE6F25202FA4DD00A3A757 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F26202FA4DD00A3A757 /* Home.storyboard */,
+				F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F6DE6F28202FA4DD00A3A757 /* Helper Methods */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */,
+				F6DE6F2A202FA4DD00A3A757 /* Storyboards.swift */,
+				F6DE6F2B202FA4DD00A3A757 /* DVIAUtilities.swift */,
+			);
+			path = "Helper Methods";
+			sourceTree = "<group>";
+		};
+		F6DE6F2F202FA4DD00A3A757 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F30202FA4DD00A3A757 /* Controller */,
+				F6DE6F32202FA4DD00A3A757 /* LearniOSApplicationSecurity.storyboard */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		F6DE6F30202FA4DD00A3A757 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F31202FA4DD00A3A757 /* LearnViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6DE6F33202FA4DD00A3A757 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F34202FA4DD00A3A757 /* MenuCellItem.swift */,
+				F6DE6F35202FA4DD00A3A757 /* Controller */,
+				F6DE6F37202FA4DD00A3A757 /* View */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		F6DE6F35202FA4DD00A3A757 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F36202FA4DD00A3A757 /* SideMenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6DE6F37202FA4DD00A3A757 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F38202FA4DD00A3A757 /* SideMenuTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6DE6F39202FA4DD00A3A757 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6F3A202FA4DD00A3A757 /* RootViewController.swift */,
+				F6DE6F3B202FA4DD00A3A757 /* Root.storyboard */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64567202FBC6000884A43 /* Application Patching */,
+				F6E6456C202FBC6000884A43 /* Attacking Third Party Libraries */,
+				F6E6459D202FBC6000884A43 /* Broken Cryptography */,
+				F6E6458C202FBC6000884A43 /* Client Side Injection */,
+				F6E64591202FBC6000884A43 /* Insecure Data Storage */,
+				F6E645A7202FBC6000884A43 /* Jailbreak Detection */,
+				F6E64570202FBC6000884A43 /* Runtime Manipulation */,
+				F6E645A2202FBC6000884A43 /* Security Decisons via Untrusted Input */,
+				F6E6457C202FBC6000884A43 /* Sensitive Information in Memory */,
+				F6E64580202FBC6000884A43 /* Side Channel Data Leakage */,
+				F6E64578202FBC6000884A43 /* Transport Layer Protection */,
+			);
+			path = Vulnerabilities;
+			sourceTree = "<group>";
+		};
+		F6E6440F202FBB6700884A43 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64410202FBB6700884A43 /* YapDatabase */,
+				F6E644D4202FBB6700884A43 /* RNCryptor */,
+				F6E644E5202FBB6700884A43 /* CocoaLumberjack */,
+				F6E644FF202FBB6700884A43 /* PDKeychainBindings */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F6E64410202FBB6700884A43 /* YapDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64411202FBB6700884A43 /* YapDatabaseConnection.m */,
+				F6E64412202FBB6700884A43 /* YapDatabase.h */,
+				F6E64413202FBB6700884A43 /* YapDatabaseTransaction.m */,
+				F6E64414202FBB6700884A43 /* Internal */,
+				F6E6442D202FBB6700884A43 /* YapDatabaseOptions.h */,
+				F6E6442E202FBB6700884A43 /* Extensions */,
+				F6E644C2202FBB6700884A43 /* Utilities */,
+				F6E644CF202FBB6700884A43 /* YapDatabase.m */,
+				F6E644D0202FBB6700884A43 /* YapDatabaseConnection.h */,
+				F6E644D1202FBB6700884A43 /* LICENSE.txt */,
+				F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */,
+				F6E644D3202FBB6700884A43 /* YapDatabaseTransaction.h */,
+			);
+			path = YapDatabase;
+			sourceTree = "<group>";
+		};
+		F6E64414202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64415202FBB6700884A43 /* YapRowidSet.h */,
+				F6E64416202FBB6700884A43 /* YapDatabaseConnectionState.m */,
+				F6E64417202FBB6700884A43 /* NSDictionary+YapDatabase.h */,
+				F6E64418202FBB6700884A43 /* YapMemoryTable.m */,
+				F6E64419202FBB6700884A43 /* YapDebugDictionary.h */,
+				F6E6441A202FBB6700884A43 /* YapDatabaseConnectionDefaults.m */,
+				F6E6441B202FBB6700884A43 /* YapNull.m */,
+				F6E6441C202FBB6700884A43 /* YapDatabaseManager.h */,
+				F6E6441D202FBB6700884A43 /* YapTouch.h */,
+				F6E6441E202FBB6700884A43 /* YapDatabaseStatement.m */,
+				F6E6441F202FBB6700884A43 /* YapDatabaseLogging.h */,
+				F6E64420202FBB6700884A43 /* YapDatabasePrivate.h */,
+				F6E64421202FBB6700884A43 /* YapDatabaseString.h */,
+				F6E64422202FBB6700884A43 /* NSDictionary+YapDatabase.m */,
+				F6E64423202FBB6700884A43 /* YapDatabaseConnectionState.h */,
+				F6E64424202FBB6700884A43 /* YapDatabaseConnectionDefaults.h */,
+				F6E64425202FBB6700884A43 /* YapDebugDictionary.m */,
+				F6E64426202FBB6700884A43 /* YapRowidSet.mm */,
+				F6E64427202FBB6700884A43 /* YapMemoryTable.h */,
+				F6E64428202FBB6700884A43 /* YapDatabaseStatement.h */,
+				F6E64429202FBB6700884A43 /* YapTouch.m */,
+				F6E6442A202FBB6700884A43 /* YapDatabaseManager.m */,
+				F6E6442B202FBB6700884A43 /* YapNull.h */,
+				F6E6442C202FBB6700884A43 /* YapDatabaseLogging.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E6442E202FBB6700884A43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6442F202FBB6700884A43 /* SearchResults */,
+				F6E6443D202FBB6700884A43 /* CloudKit */,
+				F6E6445D202FBB6700884A43 /* Protocol */,
+				F6E64466202FBB6700884A43 /* FilteredViews */,
+				F6E64471202FBB6700884A43 /* Hooks */,
+				F6E6447A202FBB6700884A43 /* SecondaryIndex */,
+				F6E64489202FBB6700884A43 /* Views */,
+				F6E644A6202FBB6700884A43 /* Relationships */,
+				F6E644B5202FBB6700884A43 /* FullTextSearch */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6E6442F202FBB6700884A43 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64430202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.h */,
+				F6E64431202FBB6700884A43 /* YapDatabaseSearchQueue.h */,
+				F6E64432202FBB6700884A43 /* YapDatabaseSearchResultsView.m */,
+				F6E64433202FBB6700884A43 /* Internal */,
+				F6E64435202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.m */,
+				F6E64436202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.m */,
+				F6E64437202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.m */,
+				F6E64438202FBB6700884A43 /* YapDatabaseSearchQueuePrivate.h */,
+				F6E64439202FBB6700884A43 /* YapDatabaseSearchResultsView.h */,
+				F6E6443A202FBB6700884A43 /* YapDatabaseSearchQueue.m */,
+				F6E6443B202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.h */,
+				F6E6443C202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.h */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		F6E64433202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64434202FBB6700884A43 /* YapDatabaseSearchResultsViewPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E6443D202FBB6700884A43 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6443E202FBB6700884A43 /* YapDatabaseCloudKitOptions.m */,
+				F6E6443F202FBB6700884A43 /* YapDatabaseCloudKitTypes.m */,
+				F6E64440202FBB6700884A43 /* YapDatabaseCloudKitTransaction.h */,
+				F6E64441202FBB6700884A43 /* Internal */,
+				F6E6444D202FBB6700884A43 /* YapDatabaseCloudKitConnection.h */,
+				F6E6444E202FBB6700884A43 /* YapDatabaseCloudKit.h */,
+				F6E6444F202FBB6700884A43 /* Utilities */,
+				F6E64458202FBB6700884A43 /* YapDatabaseCloudKitOptions.h */,
+				F6E64459202FBB6700884A43 /* YapDatabaseCloudKitTransaction.m */,
+				F6E6445A202FBB6700884A43 /* YapDatabaseCloudKitTypes.h */,
+				F6E6445B202FBB6700884A43 /* YapDatabaseCloudKit.m */,
+				F6E6445C202FBB6700884A43 /* YapDatabaseCloudKitConnection.m */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+		F6E64441202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64442202FBB6700884A43 /* YDBCKMappingTableInfo.m */,
+				F6E64443202FBB6700884A43 /* YDBCKAttachRequest.m */,
+				F6E64444202FBB6700884A43 /* YDBCKChangeRecord.h */,
+				F6E64445202FBB6700884A43 /* YDBCKRecordTableInfo.h */,
+				F6E64446202FBB6700884A43 /* YDBCKChangeQueue.h */,
+				F6E64447202FBB6700884A43 /* YDBCKMappingTableInfo.h */,
+				F6E64448202FBB6700884A43 /* YDBCKChangeRecord.m */,
+				F6E64449202FBB6700884A43 /* YapDatabaseCloudKitPrivate.h */,
+				F6E6444A202FBB6700884A43 /* YDBCKAttachRequest.h */,
+				F6E6444B202FBB6700884A43 /* YDBCKRecordTableInfo.m */,
+				F6E6444C202FBB6700884A43 /* YDBCKChangeQueue.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E6444F202FBB6700884A43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64450202FBB6700884A43 /* YDBCKRecord.h */,
+				F6E64451202FBB6700884A43 /* YDBCKMergeInfo.m */,
+				F6E64452202FBB6700884A43 /* YDBCKChangeSet.h */,
+				F6E64453202FBB6700884A43 /* YDBCKRecordInfo.m */,
+				F6E64454202FBB6700884A43 /* YDBCKMergeInfo.h */,
+				F6E64455202FBB6700884A43 /* YDBCKRecord.m */,
+				F6E64456202FBB6700884A43 /* YDBCKChangeSet.m */,
+				F6E64457202FBB6700884A43 /* YDBCKRecordInfo.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6E6445D202FBB6700884A43 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6445E202FBB6700884A43 /* YapDatabaseExtensionConnection.h */,
+				F6E6445F202FBB6700884A43 /* YapDatabaseExtension.h */,
+				F6E64460202FBB6700884A43 /* YapDatabaseExtensionTransaction.m */,
+				F6E64461202FBB6700884A43 /* Internal */,
+				F6E64463202FBB6700884A43 /* YapDatabaseExtension.m */,
+				F6E64464202FBB6700884A43 /* YapDatabaseExtensionConnection.m */,
+				F6E64465202FBB6700884A43 /* YapDatabaseExtensionTransaction.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F6E64461202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64462202FBB6700884A43 /* YapDatabaseExtensionPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E64466202FBB6700884A43 /* FilteredViews */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64467202FBB6700884A43 /* YapDatabaseFilteredView.h */,
+				F6E64468202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.h */,
+				F6E64469202FBB6700884A43 /* Internal */,
+				F6E6446B202FBB6700884A43 /* YapDatabaseFilteredViewConnection.m */,
+				F6E6446C202FBB6700884A43 /* YapDatabaseFilteredViewTypes.m */,
+				F6E6446D202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.m */,
+				F6E6446E202FBB6700884A43 /* YapDatabaseFilteredView.m */,
+				F6E6446F202FBB6700884A43 /* YapDatabaseFilteredViewTypes.h */,
+				F6E64470202FBB6700884A43 /* YapDatabaseFilteredViewConnection.h */,
+			);
+			path = FilteredViews;
+			sourceTree = "<group>";
+		};
+		F6E64469202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6446A202FBB6700884A43 /* YapDatabaseFilteredViewPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E64471202FBB6700884A43 /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64472202FBB6700884A43 /* YapDatabaseHooksConnection.h */,
+				F6E64473202FBB6700884A43 /* YapDatabaseHooks.m */,
+				F6E64474202FBB6700884A43 /* Internal */,
+				F6E64476202FBB6700884A43 /* YapDatabaseHooksTransaction.m */,
+				F6E64477202FBB6700884A43 /* YapDatabaseHooksConnection.m */,
+				F6E64478202FBB6700884A43 /* YapDatabaseHooks.h */,
+				F6E64479202FBB6700884A43 /* YapDatabaseHooksTransaction.h */,
+			);
+			path = Hooks;
+			sourceTree = "<group>";
+		};
+		F6E64474202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64475202FBB6700884A43 /* YapDatabaseHooksPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E6447A202FBB6700884A43 /* SecondaryIndex */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6447B202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.h */,
+				F6E6447C202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m */,
+				F6E6447D202FBB6700884A43 /* YapDatabaseSecondaryIndex.m */,
+				F6E6447E202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m */,
+				F6E6447F202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.h */,
+				F6E64480202FBB6700884A43 /* Internal */,
+				F6E64482202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.h */,
+				F6E64483202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.m */,
+				F6E64484202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.h */,
+				F6E64485202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m */,
+				F6E64486202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.h */,
+				F6E64487202FBB6700884A43 /* YapDatabaseSecondaryIndex.h */,
+				F6E64488202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m */,
+			);
+			path = SecondaryIndex;
+			sourceTree = "<group>";
+		};
+		F6E64480202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64481202FBB6700884A43 /* YapDatabaseSecondaryIndexPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E64489202FBB6700884A43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6448A202FBB6700884A43 /* YapDatabaseViewOptions.m */,
+				F6E6448B202FBB6700884A43 /* YapDatabaseViewTransaction.h */,
+				F6E6448C202FBB6700884A43 /* YapDatabaseViewTypes.h */,
+				F6E6448D202FBB6700884A43 /* Internal */,
+				F6E64498202FBB6700884A43 /* YapDatabaseView.h */,
+				F6E64499202FBB6700884A43 /* YapDatabaseViewConnection.m */,
+				F6E6449A202FBB6700884A43 /* Utilities */,
+				F6E644A1202FBB6700884A43 /* YapDatabaseViewTransaction.m */,
+				F6E644A2202FBB6700884A43 /* YapDatabaseViewTypes.m */,
+				F6E644A3202FBB6700884A43 /* YapDatabaseViewOptions.h */,
+				F6E644A4202FBB6700884A43 /* YapDatabaseViewConnection.h */,
+				F6E644A5202FBB6700884A43 /* YapDatabaseView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6E6448D202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6448E202FBB6700884A43 /* YapDatabaseViewMappingsPrivate.h */,
+				F6E6448F202FBB6700884A43 /* YapDatabaseViewPage.h */,
+				F6E64490202FBB6700884A43 /* YapDatabaseViewPageMetadata.h */,
+				F6E64491202FBB6700884A43 /* YapDatabaseViewState.m */,
+				F6E64492202FBB6700884A43 /* YapDatabaseViewPrivate.h */,
+				F6E64493202FBB6700884A43 /* YapDatabaseViewPageMetadata.m */,
+				F6E64494202FBB6700884A43 /* YapDatabaseViewRangeOptionsPrivate.h */,
+				F6E64495202FBB6700884A43 /* YapDatabaseViewChangePrivate.h */,
+				F6E64496202FBB6700884A43 /* YapDatabaseViewPage.mm */,
+				F6E64497202FBB6700884A43 /* YapDatabaseViewState.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E6449A202FBB6700884A43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6449B202FBB6700884A43 /* YapDatabaseViewChange.h */,
+				F6E6449C202FBB6700884A43 /* YapDatabaseViewRangeOptions.m */,
+				F6E6449D202FBB6700884A43 /* YapDatabaseViewMappings.h */,
+				F6E6449E202FBB6700884A43 /* YapDatabaseViewRangeOptions.h */,
+				F6E6449F202FBB6700884A43 /* YapDatabaseViewChange.m */,
+				F6E644A0202FBB6700884A43 /* YapDatabaseViewMappings.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6E644A6202FBB6700884A43 /* Relationships */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644A7202FBB6700884A43 /* YapDatabaseRelationshipNode.h */,
+				F6E644A8202FBB6700884A43 /* YapDatabaseRelationshipTransaction.m */,
+				F6E644A9202FBB6700884A43 /* YapDatabaseRelationshipConnection.m */,
+				F6E644AA202FBB6700884A43 /* Internal */,
+				F6E644AD202FBB6700884A43 /* YapDatabaseRelationshipOptions.m */,
+				F6E644AE202FBB6700884A43 /* YapDatabaseRelationshipEdge.h */,
+				F6E644AF202FBB6700884A43 /* YapDatabaseRelationship.m */,
+				F6E644B0202FBB6700884A43 /* YapDatabaseRelationshipConnection.h */,
+				F6E644B1202FBB6700884A43 /* YapDatabaseRelationshipTransaction.h */,
+				F6E644B2202FBB6700884A43 /* YapDatabaseRelationship.h */,
+				F6E644B3202FBB6700884A43 /* YapDatabaseRelationshipEdge.m */,
+				F6E644B4202FBB6700884A43 /* YapDatabaseRelationshipOptions.h */,
+			);
+			path = Relationships;
+			sourceTree = "<group>";
+		};
+		F6E644AA202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644AB202FBB6700884A43 /* YapDatabaseRelationshipEdgePrivate.h */,
+				F6E644AC202FBB6700884A43 /* YapDatabaseRelationshipPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E644B5202FBB6700884A43 /* FullTextSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644B6202FBB6700884A43 /* YapDatabaseFullTextSearch.h */,
+				F6E644B7202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.m */,
+				F6E644B8202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.m */,
+				F6E644B9202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.m */,
+				F6E644BA202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.h */,
+				F6E644BB202FBB6700884A43 /* Internal */,
+				F6E644BD202FBB6700884A43 /* YapDatabaseFullTextSearch.m */,
+				F6E644BE202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.h */,
+				F6E644BF202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.h */,
+				F6E644C0202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m */,
+				F6E644C1202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.h */,
+			);
+			path = FullTextSearch;
+			sourceTree = "<group>";
+		};
+		F6E644BB202FBB6700884A43 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644BC202FBB6700884A43 /* YapDatabaseFullTextSearchPrivate.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F6E644C2202FBB6700884A43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644C3202FBB6700884A43 /* YapMurmurHash.m */,
+				F6E644C4202FBB6700884A43 /* YapWhitelistBlacklist.h */,
+				F6E644C5202FBB6700884A43 /* YapCollectionKey.m */,
+				F6E644C6202FBB6700884A43 /* YapDatabaseQuery.m */,
+				F6E644C7202FBB6700884A43 /* YapCache.h */,
+				F6E644C8202FBB6700884A43 /* YapSet.m */,
+				F6E644C9202FBB6700884A43 /* YapMurmurHash.h */,
+				F6E644CA202FBB6700884A43 /* YapCache.m */,
+				F6E644CB202FBB6700884A43 /* YapDatabaseQuery.h */,
+				F6E644CC202FBB6700884A43 /* YapCollectionKey.h */,
+				F6E644CD202FBB6700884A43 /* YapWhitelistBlacklist.m */,
+				F6E644CE202FBB6700884A43 /* YapSet.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6E644D4202FBB6700884A43 /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644D5202FBB6700884A43 /* RNDecryptor.h */,
+				F6E644D6202FBB6700884A43 /* RNOpenSSLEncryptor.h */,
+				F6E644D7202FBB6700884A43 /* RNCryptor.m */,
+				F6E644D8202FBB6700884A43 /* RNCryptor+Private.h */,
+				F6E644D9202FBB6700884A43 /* RNCryptor-Prefix.pch */,
+				F6E644DA202FBB6700884A43 /* RNCryptorEngine.h */,
+				F6E644DB202FBB6700884A43 /* RNEncryptor.h */,
+				F6E644DC202FBB6700884A43 /* RNOpenSSLDecryptor.h */,
+				F6E644DD202FBB6700884A43 /* RNOpenSSLCryptor.m */,
+				F6E644DE202FBB6700884A43 /* RNCryptor.h */,
+				F6E644DF202FBB6700884A43 /* RNOpenSSLEncryptor.m */,
+				F6E644E0202FBB6700884A43 /* RNDecryptor.m */,
+				F6E644E1202FBB6700884A43 /* RNOpenSSLDecryptor.m */,
+				F6E644E2202FBB6700884A43 /* RNEncryptor.m */,
+				F6E644E3202FBB6700884A43 /* RNCryptorEngine.m */,
+				F6E644E4202FBB6700884A43 /* RNOpenSSLCryptor.h */,
+			);
+			path = RNCryptor;
+			sourceTree = "<group>";
+		};
+		F6E644E5202FBB6700884A43 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644E6202FBB6700884A43 /* DDTTYLogger.m */,
+				F6E644E7202FBB6700884A43 /* DDLog.h */,
+				F6E644E8202FBB6700884A43 /* DDAbstractDatabaseLogger.h */,
+				F6E644E9202FBB6700884A43 /* DDASLLogCapture.h */,
+				F6E644EA202FBB6700884A43 /* DDASLLogger.m */,
+				F6E644EB202FBB6700884A43 /* CLI */,
+				F6E644EE202FBB6700884A43 /* DDFileLogger.h */,
+				F6E644EF202FBB6700884A43 /* Extensions */,
+				F6E644F7202FBB6700884A43 /* DDLog.m */,
+				F6E644F8202FBB6700884A43 /* DDTTYLogger.h */,
+				F6E644F9202FBB6700884A43 /* DDLog+LOGV.h */,
+				F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */,
+				F6E644FB202FBB6700884A43 /* LICENSE.txt */,
+				F6E644FC202FBB6700884A43 /* DDFileLogger.m */,
+				F6E644FD202FBB6700884A43 /* DDASLLogger.h */,
+				F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		F6E644EB202FBB6700884A43 /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644EC202FBB6700884A43 /* CLIColor.m */,
+				F6E644ED202FBB6700884A43 /* CLIColor.h */,
+			);
+			path = CLI;
+			sourceTree = "<group>";
+		};
+		F6E644EF202FBB6700884A43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6E644F0202FBB6700884A43 /* DDContextFilterLogFormatter.m */,
+				F6E644F1202FBB6700884A43 /* DDDispatchQueueLogFormatter.m */,
+				F6E644F2202FBB6700884A43 /* DDMultiFormatter.h */,
+				F6E644F3202FBB6700884A43 /* DDContextFilterLogFormatter.h */,
+				F6E644F4202FBB6700884A43 /* DDMultiFormatter.m */,
+				F6E644F5202FBB6700884A43 /* DDDispatchQueueLogFormatter.h */,
+				F6E644F6202FBB6700884A43 /* README.txt */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6E644FF202FBB6700884A43 /* PDKeychainBindings */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64500202FBB6700884A43 /* PDKeychainBindingsController.m */,
+				F6E64501202FBB6700884A43 /* PDKeychainBindings.h */,
+				F6E64502202FBB6700884A43 /* PDKeychainBindingsController.h */,
+				F6E64503202FBB6700884A43 /* PDKeychainBindings.m */,
+			);
+			path = PDKeychainBindings;
+			sourceTree = "<group>";
+		};
+		F6E64567202FBC6000884A43 /* Application Patching */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64568202FBC6000884A43 /* Controller */,
+				F6E6456A202FBC6000884A43 /* ApplicationPatching.storyboard */,
+				F6E6456B202FBC6000884A43 /* ApplicationPatchingViewController.swift */,
+			);
+			path = "Application Patching";
+			sourceTree = "<group>";
+		};
+		F6E64568202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64569202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E6456C202FBC6000884A43 /* Attacking Third Party Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6456D202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard */,
+				F6E6456E202FBC6000884A43 /* Controller */,
+			);
+			path = "Attacking Third Party Libraries";
+			sourceTree = "<group>";
+		};
+		F6E6456E202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6456F202FBC6000884A43 /* AttackingThirdPartyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E64570202FBC6000884A43 /* Runtime Manipulation */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64571202FBC6000884A43 /* RuntimeManipulation.storyboard */,
+				F6E64572202FBC6000884A43 /* Controller */,
+				F6E64575202FBC6000884A43 /* Objective-C Methods */,
+			);
+			path = "Runtime Manipulation";
+			sourceTree = "<group>";
+		};
+		F6E64572202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64573202FBC6000884A43 /* RuntimeManipulationViewController.swift */,
+				F6E64574202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E64575202FBC6000884A43 /* Objective-C Methods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64576202FBC6000884A43 /* LoginValidate.m */,
+				F6E64577202FBC6000884A43 /* LoginValidate.h */,
+			);
+			path = "Objective-C Methods";
+			sourceTree = "<group>";
+		};
+		F6E64578202FBC6000884A43 /* Transport Layer Protection */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64579202FBC6000884A43 /* TransportLayerProtection.storyboard */,
+				F6E6457A202FBC6000884A43 /* Controller */,
+			);
+			path = "Transport Layer Protection";
+			sourceTree = "<group>";
+		};
+		F6E6457A202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6457B202FBC6000884A43 /* TransportLayerProtectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E6457C202FBC6000884A43 /* Sensitive Information in Memory */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6457D202FBC6000884A43 /* SensitiveInformation.storyboard */,
+				F6E6457E202FBC6000884A43 /* Controller */,
+			);
+			path = "Sensitive Information in Memory";
+			sourceTree = "<group>";
+		};
+		F6E6457E202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6457F202FBC6000884A43 /* SensitiveInformationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E64580202FBC6000884A43 /* Side Channel Data Leakage */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64581202FBC6000884A43 /* Controller */,
+				F6E6458B202FBC6000884A43 /* SideChannelDataLeakage.storyboard */,
+			);
+			path = "Side Channel Data Leakage";
+			sourceTree = "<group>";
+		};
+		F6E64581202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64582202FBC6000884A43 /* DeviceLogsViewController.swift */,
+				F6E64583202FBC6000884A43 /* KeystrokeLoggingViewController.swift */,
+				F6E64584202FBC6000884A43 /* SideChannelDataLeakageViewController.swift */,
+				F6E64585202FBC6000884A43 /* CookiesViewController.swift */,
+				F6E64586202FBC6000884A43 /* PasteboardViewController.swift */,
+				F6E64587202FBC6000884A43 /* Objective-C Methods */,
+				F6E6458A202FBC6000884A43 /* AppScreenshotViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E64587202FBC6000884A43 /* Objective-C Methods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64588202FBC6000884A43 /* SetSharedCookies.m */,
+				F6E64589202FBC6000884A43 /* SetSharedCookies.h */,
+			);
+			path = "Objective-C Methods";
+			sourceTree = "<group>";
+		};
+		F6E6458C202FBC6000884A43 /* Client Side Injection */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6458D202FBC6000884A43 /* ClientSideInjection.storyboard */,
+				F6E6458E202FBC6000884A43 /* Controller */,
+			);
+			path = "Client Side Injection";
+			sourceTree = "<group>";
+		};
+		F6E6458E202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6458F202FBC6000884A43 /* ClientSideInjectionViewController.swift */,
+				F6E64590202FBC6000884A43 /* ClientSideInjectionDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E64591202FBC6000884A43 /* Insecure Data Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64592202FBC6000884A43 /* Controller */,
+				F6E6459C202FBC6000884A43 /* InsecureDataStorage.storyboard */,
+			);
+			path = "Insecure Data Storage";
+			sourceTree = "<group>";
+		};
+		F6E64592202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E64593202FBC6000884A43 /* YapDatabaseViewController.swift */,
+				F6E64594202FBC6000884A43 /* CoreDataViewController.swift */,
+				F6E64595202FBC6000884A43 /* WebkitViewController.swift */,
+				F6E64596202FBC6000884A43 /* PListViewController.swift */,
+				F6E64597202FBC6000884A43 /* KeychainViewController.swift */,
+				F6E64598202FBC6000884A43 /* UserDefaultsViewController.swift */,
+				F6E64599202FBC6000884A43 /* RealmViewController.swift */,
+				F6E6459A202FBC6000884A43 /* InsecureDataStorageViewController.swift */,
+				F6E6459B202FBC6000884A43 /* CouchbaseLiteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E6459D202FBC6000884A43 /* Broken Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6459E202FBC6000884A43 /* Controller */,
+				F6E645A1202FBC6000884A43 /* BrokenCryptography.storyboard */,
+			);
+			path = "Broken Cryptography";
+			sourceTree = "<group>";
+		};
+		F6E6459E202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6459F202FBC6000884A43 /* BrokenCryptographyViewController.swift */,
+				F6E645A0202FBC6000884A43 /* BrokenCryptographyDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E645A2202FBC6000884A43 /* Security Decisons via Untrusted Input */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645A3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard */,
+				F6E645A4202FBC6000884A43 /* Controller */,
+			);
+			path = "Security Decisons via Untrusted Input";
+			sourceTree = "<group>";
+		};
+		F6E645A4202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645A5202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift */,
+				F6E645A6202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E645A7202FBC6000884A43 /* Jailbreak Detection */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */,
+				F6E645A9202FBC6000884A43 /* Controller */,
+				F6E645AB202FBC6000884A43 /* Objective-C Methods */,
+			);
+			path = "Jailbreak Detection";
+			sourceTree = "<group>";
+		};
+		F6E645A9202FBC6000884A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645AA202FBC6000884A43 /* JailbreakDetectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E645AB202FBC6000884A43 /* Objective-C Methods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645AC202FBC6000884A43 /* JailbreakDetection.h */,
+				F6E645AD202FBC6000884A43 /* JailbreakDetection.m */,
+			);
+			path = "Objective-C Methods";
+			sourceTree = "<group>";
+		};
+		F6E645D9202FBCAB00884A43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645DA202FBCAB00884A43 /* RealmUser */,
+				F6E645DC202FBCAB00884A43 /* CoreDataClasses */,
+				F6E645E0202FBCAB00884A43 /* Model.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6E645DA202FBCAB00884A43 /* RealmUser */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645DB202FBCAB00884A43 /* RealmUser.swift */,
+			);
+			path = RealmUser;
+			sourceTree = "<group>";
+		};
+		F6E645DC202FBCAB00884A43 /* CoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F6E645DD202FBCAB00884A43 /* CoreDataStack.swift */,
+				F6E645DE202FBCAB00884A43 /* User+CoreDataProperties.swift */,
+				F6E645DF202FBCAB00884A43 /* User+CoreDataClass.swift */,
+			);
+			path = CoreDataClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F65AC866202FA37500E4088A /* DVIA-v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F65AC87C202FA37500E4088A /* Build configuration list for PBXNativeTarget "DVIA-v2" */;
+			buildPhases = (
+				83BD5C4E9B4F79EB2586E3F2 /* [CP] Check Pods Manifest.lock */,
+				F65AC863202FA37500E4088A /* Sources */,
+				F65AC864202FA37500E4088A /* Frameworks */,
+				F65AC865202FA37500E4088A /* Resources */,
+				179AFFE713A4DAA32ECBFEA9 /* [CP] Embed Pods Frameworks */,
+				DBF7B3404C3581414A66C2BE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DVIA-v2";
+			productName = "DVIA-v2";
+			productReference = F65AC867202FA37500E4088A /* DVIA-v2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F65AC85F202FA37500E4088A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = HighAltitudeHacks;
+				TargetAttributes = {
+					F65AC866202FA37500E4088A = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F65AC862202FA37500E4088A /* Build configuration list for PBXProject "DVIA-v2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F65AC85E202FA37500E4088A;
+			productRefGroup = F65AC868202FA37500E4088A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F65AC866202FA37500E4088A /* DVIA-v2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F65AC865202FA37500E4088A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E645D6202FBC6000884A43 /* JailbreakDetection.storyboard in Resources */,
+				F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */,
+				F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */,
+				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
+				F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */,
+				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
+				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
+				F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */,
+				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
+				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
+				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
+				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
+				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
+				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
+				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
+				F6E645C3202FBC6000884A43 /* ClientSideInjection.storyboard in Resources */,
+				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
+				F6E645CF202FBC6000884A43 /* InsecureDataStorage.storyboard in Resources */,
+				F6DE6F88202FA4DE00A3A757 /* Assets.xcassets in Resources */,
+				F6DE6F80202FA4DE00A3A757 /* LearniOSApplicationSecurity.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		179AFFE713A4DAA32ECBFEA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83BD5C4E9B4F79EB2586E3F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVIA-v2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF7B3404C3581414A66C2BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F65AC863202FA37500E4088A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E64560202FBB6700884A43 /* DDLog.m in Sources */,
+				F6E64505202FBB6700884A43 /* YapDatabaseTransaction.m in Sources */,
+				F6DE6F7F202FA4DE00A3A757 /* LearnViewController.swift in Sources */,
+				F6E64512202FBB6700884A43 /* YapDatabaseSearchResultsViewTransaction.m in Sources */,
+				F6E6454D202FBB6700884A43 /* YapCache.m in Sources */,
+				F6E645B8202FBC6000884A43 /* TransportLayerProtectionViewController.swift in Sources */,
+				F6E64539202FBB6700884A43 /* YapDatabaseViewRangeOptions.m in Sources */,
+				F6E645B4202FBC6000884A43 /* RuntimeManipulationViewController.swift in Sources */,
+				F6E64522202FBB6700884A43 /* YapDatabaseCloudKit.m in Sources */,
+				F6E64538202FBB6700884A43 /* YapDatabaseViewConnection.m in Sources */,
+				F6E6453F202FBB6700884A43 /* YapDatabaseRelationshipTransaction.m in Sources */,
+				F6E64510202FBB6700884A43 /* YapDatabaseLogging.m in Sources */,
+				F6E645D7202FBC6000884A43 /* JailbreakDetectionViewController.swift in Sources */,
+				F6E645CC202FBC6000884A43 /* RealmViewController.swift in Sources */,
+				F6E64537202FBB6700884A43 /* YapDatabaseViewPage.mm in Sources */,
+				F6E64511202FBB6700884A43 /* YapDatabaseSearchResultsView.m in Sources */,
+				F6E645C9202FBC6000884A43 /* PListViewController.swift in Sources */,
+				F6DE6F81202FA4DE00A3A757 /* MenuCellItem.swift in Sources */,
+				F6E64531202FBB6700884A43 /* YapDatabaseSecondaryIndexOptions.m in Sources */,
+				F6E64526202FBB6700884A43 /* YapDatabaseExtensionConnection.m in Sources */,
+				F6E64555202FBB6700884A43 /* RNDecryptor.m in Sources */,
+				F6E6454F202FBB6700884A43 /* YapDatabase.m in Sources */,
+				F6E645B0202FBC6000884A43 /* ApplicationPatchingViewController.swift in Sources */,
+				F6E64527202FBB6700884A43 /* YapDatabaseFilteredViewConnection.m in Sources */,
+				F6E6454B202FBB6700884A43 /* YapDatabaseQuery.m in Sources */,
+				F6E64546202FBB6700884A43 /* YapDatabaseFullTextSearchSnippetOptions.m in Sources */,
+				F6E64559202FBB6700884A43 /* DDTTYLogger.m in Sources */,
+				F6E6454C202FBB6700884A43 /* YapSet.m in Sources */,
+				F6E64543202FBB6700884A43 /* YapDatabaseRelationshipEdge.m in Sources */,
+				F6E645C8202FBC6000884A43 /* WebkitViewController.swift in Sources */,
+				F6E645BE202FBC6000884A43 /* CookiesViewController.swift in Sources */,
+				F6E6454A202FBB6700884A43 /* YapCollectionKey.m in Sources */,
+				F6E645BF202FBC6000884A43 /* PasteboardViewController.swift in Sources */,
+				F6E64521202FBB6700884A43 /* YapDatabaseCloudKitTransaction.m in Sources */,
+				F6E645C7202FBC6000884A43 /* CoreDataViewController.swift in Sources */,
+				F6E64525202FBB6700884A43 /* YapDatabaseExtension.m in Sources */,
+				F6DE6F7D202FA4DE00A3A757 /* AppDelegate.swift in Sources */,
+				F6E64542202FBB6700884A43 /* YapDatabaseRelationship.m in Sources */,
+				F6E6452A202FBB6700884A43 /* YapDatabaseFilteredView.m in Sources */,
+				F6E64541202FBB6700884A43 /* YapDatabaseRelationshipOptions.m in Sources */,
+				F6E64545202FBB6700884A43 /* YapDatabaseFullTextSearchTransaction.m in Sources */,
+				F6E645BA202FBC6000884A43 /* SensitiveInformationViewController.swift in Sources */,
+				F6E64528202FBB6700884A43 /* YapDatabaseFilteredViewTypes.m in Sources */,
+				F6E64551202FBB6700884A43 /* YapDatabaseOptions.m in Sources */,
+				F6E6455A202FBB6700884A43 /* DDASLLogger.m in Sources */,
+				F6E64553202FBB6700884A43 /* RNOpenSSLCryptor.m in Sources */,
+				F6E645AE202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift in Sources */,
+				F6E6452E202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m in Sources */,
+				F6E6453B202FBB6700884A43 /* YapDatabaseViewMappings.m in Sources */,
+				F6E64533202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m in Sources */,
+				F6DE6F84202FA4DE00A3A757 /* RootViewController.swift in Sources */,
+				F6E6451C202FBB6700884A43 /* YDBCKChangeQueue.m in Sources */,
+				F6E6452D202FBB6700884A43 /* YapDatabaseHooksConnection.m in Sources */,
+				F6E6451A202FBB6700884A43 /* YDBCKChangeRecord.m in Sources */,
+				F6E6451D202FBB6700884A43 /* YDBCKMergeInfo.m in Sources */,
+				F6E64544202FBB6700884A43 /* YapDatabaseFullTextSearchHandler.m in Sources */,
+				F6E6453C202FBB6700884A43 /* YapDatabaseViewTransaction.m in Sources */,
+				F6E645E6202FBCAB00884A43 /* Model.xcdatamodeld in Sources */,
+				F6DE6F7B202FA4DE00A3A757 /* Storyboards.swift in Sources */,
+				F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */,
+				F6E64504202FBB6700884A43 /* YapDatabaseConnection.m in Sources */,
+				F6E64554202FBB6700884A43 /* RNOpenSSLEncryptor.m in Sources */,
+				F6E6450C202FBB6700884A43 /* YapDebugDictionary.m in Sources */,
+				F6E645E4202FBCAB00884A43 /* User+CoreDataProperties.swift in Sources */,
+				F6E6452F202FBB6700884A43 /* YapDatabaseSecondaryIndex.m in Sources */,
+				F6DE6F83202FA4DE00A3A757 /* SideMenuTableViewCell.swift in Sources */,
+				F6E645B5202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift in Sources */,
+				F6E64532202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m in Sources */,
+				F6E64564202FBB6800884A43 /* DDASLLogCapture.m in Sources */,
+				F6E6450A202FBB6700884A43 /* YapDatabaseStatement.m in Sources */,
+				F6E64540202FBB6700884A43 /* YapDatabaseRelationshipConnection.m in Sources */,
+				F6E645E3202FBCAB00884A43 /* CoreDataStack.swift in Sources */,
+				F6E645BC202FBC6000884A43 /* KeystrokeLoggingViewController.swift in Sources */,
+				F6E6452C202FBB6700884A43 /* YapDatabaseHooksTransaction.m in Sources */,
+				F6E64515202FBB6700884A43 /* YapDatabaseSearchQueue.m in Sources */,
+				F6E64536202FBB6700884A43 /* YapDatabaseViewPageMetadata.m in Sources */,
+				F6E64561202FBB6800884A43 /* DDAbstractDatabaseLogger.m in Sources */,
+				F6E645C5202FBC6000884A43 /* ClientSideInjectionDetailViewController.swift in Sources */,
+				F6E645C0202FBC6000884A43 /* SetSharedCookies.m in Sources */,
+				F6E64558202FBB6700884A43 /* RNCryptorEngine.m in Sources */,
+				F6E64556202FBB6700884A43 /* RNOpenSSLDecryptor.m in Sources */,
+				F6E645BB202FBC6000884A43 /* DeviceLogsViewController.swift in Sources */,
+				F6E645D5202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift in Sources */,
+				F6E6451E202FBB6700884A43 /* YDBCKRecordInfo.m in Sources */,
+				F6E6453A202FBB6700884A43 /* YapDatabaseViewChange.m in Sources */,
+				F6E64549202FBB6700884A43 /* YapMurmurHash.m in Sources */,
+				F6E64513202FBB6700884A43 /* YapDatabaseSearchResultsViewOptions.m in Sources */,
+				F6E645E5202FBCAB00884A43 /* User+CoreDataClass.swift in Sources */,
+				F6E64506202FBB6700884A43 /* YapDatabaseConnectionState.m in Sources */,
+				F6DE6F7C202FA4DE00A3A757 /* DVIAUtilities.swift in Sources */,
+				F6E64534202FBB6700884A43 /* YapDatabaseViewOptions.m in Sources */,
+				F6E6450F202FBB6700884A43 /* YapDatabaseManager.m in Sources */,
+				F6E64509202FBB6700884A43 /* YapNull.m in Sources */,
+				F6E645D4202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift in Sources */,
+				F6E645BD202FBC6000884A43 /* SideChannelDataLeakageViewController.swift in Sources */,
+				F6E6453D202FBB6700884A43 /* YapDatabaseViewTypes.m in Sources */,
+				F6E6455B202FBB6700884A43 /* CLIColor.m in Sources */,
+				F6E64524202FBB6700884A43 /* YapDatabaseExtensionTransaction.m in Sources */,
+				F6E645CA202FBC6000884A43 /* KeychainViewController.swift in Sources */,
+				F6E64529202FBB6700884A43 /* YapDatabaseFilteredViewTransaction.m in Sources */,
+				F6E6450D202FBB6700884A43 /* YapRowidSet.mm in Sources */,
+				F6E64565202FBB6800884A43 /* PDKeychainBindingsController.m in Sources */,
+				F6E6455C202FBB6700884A43 /* DDContextFilterLogFormatter.m in Sources */,
+				F6E64514202FBB6700884A43 /* YapDatabaseSearchResultsViewConnection.m in Sources */,
+				F6E645B6202FBC6000884A43 /* LoginValidate.m in Sources */,
+				F6E645CE202FBC6000884A43 /* CouchbaseLiteViewController.swift in Sources */,
+				F6E64523202FBB6700884A43 /* YapDatabaseCloudKitConnection.m in Sources */,
+				F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */,
+				F6E6450B202FBB6700884A43 /* NSDictionary+YapDatabase.m in Sources */,
+				F6E6455D202FBB6700884A43 /* DDDispatchQueueLogFormatter.m in Sources */,
+				F6E64507202FBB6700884A43 /* YapMemoryTable.m in Sources */,
+				F6E64547202FBB6700884A43 /* YapDatabaseFullTextSearch.m in Sources */,
+				F6DE6F82202FA4DE00A3A757 /* SideMenuViewController.swift in Sources */,
+				F6E64557202FBB6700884A43 /* RNEncryptor.m in Sources */,
+				F6E645E2202FBCAB00884A43 /* RealmUser.swift in Sources */,
+				F6E64518202FBB6700884A43 /* YDBCKMappingTableInfo.m in Sources */,
+				F6E64516202FBB6700884A43 /* YapDatabaseCloudKitOptions.m in Sources */,
+				F6E645B2202FBC6000884A43 /* AttackingThirdPartyViewController.swift in Sources */,
+				F6E645C1202FBC6000884A43 /* AppScreenshotViewController.swift in Sources */,
+				F6E645CB202FBC6000884A43 /* UserDefaultsViewController.swift in Sources */,
+				F6E645D8202FBC6000884A43 /* JailbreakDetection.m in Sources */,
+				F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */,
+				F6E64530202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m in Sources */,
+				F6E6453E202FBB6700884A43 /* YapDatabaseView.m in Sources */,
+				F6E64517202FBB6700884A43 /* YapDatabaseCloudKitTypes.m in Sources */,
+				F6E64520202FBB6700884A43 /* YDBCKChangeSet.m in Sources */,
+				F6E645C6202FBC6000884A43 /* YapDatabaseViewController.swift in Sources */,
+				F6E64519202FBB6700884A43 /* YDBCKAttachRequest.m in Sources */,
+				F6E6452B202FBB6700884A43 /* YapDatabaseHooks.m in Sources */,
+				F6E6455E202FBB6700884A43 /* DDMultiFormatter.m in Sources */,
+				F6E64548202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m in Sources */,
+				F6E6451B202FBB6700884A43 /* YDBCKRecordTableInfo.m in Sources */,
+				F6E64508202FBB6700884A43 /* YapDatabaseConnectionDefaults.m in Sources */,
+				F6E64552202FBB6700884A43 /* RNCryptor.m in Sources */,
+				F6E6451F202FBB6700884A43 /* YDBCKRecord.m in Sources */,
+				F6E6454E202FBB6700884A43 /* YapWhitelistBlacklist.m in Sources */,
+				F6E64535202FBB6700884A43 /* YapDatabaseViewState.m in Sources */,
+				F6DE6F86202FA4DE00A3A757 /* Constants.swift in Sources */,
+				F6E645D0202FBC6000884A43 /* BrokenCryptographyViewController.swift in Sources */,
+				F6E645D1202FBC6000884A43 /* BrokenCryptographyDetailsViewController.swift in Sources */,
+				F6E645C4202FBC6000884A43 /* ClientSideInjectionViewController.swift in Sources */,
+				F6E645CD202FBC6000884A43 /* InsecureDataStorageViewController.swift in Sources */,
+				F6E6450E202FBB6700884A43 /* YapTouch.m in Sources */,
+				F6E64563202FBB6800884A43 /* DDFileLogger.m in Sources */,
+				F6E64566202FBB6800884A43 /* PDKeychainBindings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F6DE6F3B202FA4DD00A3A757 /* Root.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6DE6F3C202FA4DD00A3A757 /* Base */,
+			);
+			name = Root.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F65AC87A202FA37500E4088A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F65AC87B202FA37500E4088A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F65AC87D202FA37500E4088A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DVIA-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F65AC87E202FA37500E4088A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DVIA-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F65AC862202FA37500E4088A /* Build configuration list for PBXProject "DVIA-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65AC87A202FA37500E4088A /* Debug */,
+				F65AC87B202FA37500E4088A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65AC87C202FA37500E4088A /* Build configuration list for PBXNativeTarget "DVIA-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65AC87D202FA37500E4088A /* Debug */,
+				F65AC87E202FA37500E4088A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */,
+			);
+			currentVersion = F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */;
+			path = DVIA_v2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F6E645E0202FBCAB00884A43 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F6E645E1202FBCAB00884A43 /* Model.xcdatamodel */,
+			);
+			currentVersion = F6E645E1202FBCAB00884A43 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F65AC85F202FA37500E4088A /* Project object */;
+}

@@ -1,0 +1,13 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Bolts" "$PODS_CONFIGURATION_BUILD_DIR/Flurry-iOS-SDK" "$PODS_CONFIGURATION_BUILD_DIR/Parse" "$PODS_CONFIGURATION_BUILD_DIR/Realm" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift" "${PODS_ROOT}/couchbase-lite-ios"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAnalytics" "${PODS_ROOT}/Headers/Public/couchbase-lite-ios"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GoogleAnalytics/Libraries" "${PODS_ROOT}/couchbase-lite-ios/Extras"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Bolts/Bolts.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Flurry-iOS-SDK/Flurry_iOS_SDK.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Parse/Parse.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Realm/Realm.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GoogleAnalytics" -isystem "${PODS_ROOT}/Headers/Public/couchbase-lite-ios"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CBLJSViewCompiler" -l"GoogleAnalytics" -l"c++" -l"sqlite3" -l"z" -framework "Bolts" -framework "CFNetwork" -framework "CoreData" -framework "CouchbaseLite" -framework "CouchbaseLiteListener" -framework "Flurry_iOS_SDK" -framework "JavaScriptCore" -framework "Parse" -framework "Realm" -framework "RealmSwift" -framework "Security" -framework "SystemConfiguration"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
