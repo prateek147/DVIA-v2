@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbx-cQ-e6A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbx-cQ-e6A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
         <!--Application Patching View Controller-->
         <scene sceneID="Nls-Za-Ulg">
             <objects>
-                <viewController id="GNJ-HI-TXZ" customClass="ApplicationPatchingViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GNJ-HI-TXZ" customClass="ApplicationPatchingViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bkr-Yq-eef"/>
                         <viewControllerLayoutGuide type="bottom" id="dha-cL-m59"/>
@@ -87,12 +87,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JW-Lg-gRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.80000000000001" y="-215.44227886056973"/>
+            <point key="canvasLocation" x="-79" y="-401"/>
         </scene>
         <!--Application Patching Details View Controller-->
         <scene sceneID="upo-kO-vbb">
             <objects>
-                <viewController id="0pZ-Hv-cWv" customClass="ApplicationPatchingDetailsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0pZ-Hv-cWv" customClass="ApplicationPatchingDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Mp-4F-woo"/>
                         <viewControllerLayoutGuide type="bottom" id="UhB-9B-lIu"/>
@@ -221,7 +221,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oav-jv-6NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="-215"/>
+            <point key="canvasLocation" x="-830" y="-401"/>
         </scene>
     </scenes>
 </document>

@@ -18,7 +18,7 @@
         <!--Home-->
         <scene sceneID="35S-ah-FYC">
             <objects>
-                <viewController id="zdJ-pM-bnf" customClass="HomeViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zdJ-pM-bnf" customClass="HomeViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="avG-VN-tad"/>
                         <viewControllerLayoutGuide type="bottom" id="mj8-Id-h8E"/>
@@ -37,17 +37,7 @@
                                     <action selector="twitterHandleTapped:" destination="zdJ-pM-bnf" eventType="touchUpInside" id="4ac-fr-6NS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-8V-fNL">
-                                <rect key="frame" x="22" y="439" width="72" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="@igrekde">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="twitterHandleTapped:" destination="zdJ-pM-bnf" eventType="touchUpInside" id="Udl-cF-k74"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-kg-tMT">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-kg-tMT">
                                 <rect key="frame" x="51.5" y="532.5" width="272" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="http://damnvulnerableiosapp.com">
@@ -63,7 +53,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="301" id="cUb-GA-ptE"/>
                                 </constraints>
-                                <string key="text">Damn Vulnerable iOS App (DVIA) is an iOS application that is damn vulnerable. Its main goal is to provide a platform for mobile security enthusiasts/professionals to test their iOS penetration testing skills in a legal environment. This application covers all the common vulnerabilities found in iOS applications (following OWASP top 10 mobile risks) and contains several challenges that the user can try. This project is developed and maintained by @prateekg147.  The vulnerabilities and solutions covered in this app are tested upto iOS 8.1.</string>
+                                <string key="text">Damn Vulnerable iOS App v2 (DVIA) is an iOS application that is damn vulnerable. Its main goal is to provide a platform for mobile security enthusiasts/professionals to test their iOS penetration testing skills in a legal environment. mobile risks) and contains several challenges that the user can try. This project is developed and maintained by @prateekg147.  The vulnerabilities and solutions covered in this app are tested upto iOS 11.1.2. The v2 version of this app has been completely rewritten in Swift 4.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -74,14 +64,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" scrollEnabled="NO" editable="NO" text="Project Contributor: Egor Tolstoy           " translatesAutoresizingMaskIntoConstraints="NO" id="hks-tL-Xv1">
-                                <rect key="frame" x="16" y="418" width="343" height="35.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" scrollEnabled="NO" editable="NO" text="For any questions related to this project, please get in touch with me at prateek@damnvulnerableiosapp.com" translatesAutoresizingMaskIntoConstraints="NO" id="1r1-eQ-fl2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" scrollEnabled="NO" editable="NO" text="For any questions related to this project, please get in touch with me at prateek@damnvulnerableiosapp.com" translatesAutoresizingMaskIntoConstraints="NO" id="1r1-eQ-fl2">
                                 <rect key="frame" x="16" y="472" width="343" height="73.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -91,22 +74,16 @@
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ptz-jL-5KW" firstAttribute="top" secondItem="Wem-5G-2pz" secondAttribute="bottom" constant="-15" id="Cc9-5C-6v1"/>
-                            <constraint firstItem="4kI-8V-fNL" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="22" id="D2P-Tj-N4l"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="Gf4-6a-h97"/>
                             <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="Gqb-d7-nze"/>
                             <constraint firstItem="Wem-5G-2pz" firstAttribute="top" secondItem="fzr-Hx-Y4Q" secondAttribute="bottom" id="H1c-5m-zua"/>
-                            <constraint firstItem="4kI-8V-fNL" firstAttribute="top" secondItem="hks-tL-Xv1" secondAttribute="bottom" constant="-15" id="IXQ-02-NkJ"/>
                             <constraint firstItem="1r1-eQ-fl2" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="16" id="NiE-O3-dnJ"/>
-                            <constraint firstItem="hks-tL-Xv1" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="16" id="OJV-O9-yuK"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leadingMargin" id="T42-zW-hSL"/>
                             <constraint firstAttribute="trailing" secondItem="1r1-eQ-fl2" secondAttribute="trailing" constant="16" id="UYL-DZ-W21"/>
-                            <constraint firstAttribute="trailing" secondItem="hks-tL-Xv1" secondAttribute="trailing" constant="16" id="d0x-xa-3MX"/>
                             <constraint firstItem="ptz-jL-5KW" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="22" id="eRx-U6-wIx"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="trailing" secondItem="sea-0L-Gn1" secondAttribute="trailingMargin" id="kJA-U1-5ec"/>
                             <constraint firstItem="Wem-5G-2pz" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="16" id="mYv-Hb-blR"/>
-                            <constraint firstItem="hks-tL-Xv1" firstAttribute="top" secondItem="ptz-jL-5KW" secondAttribute="bottom" id="t3G-MN-v9E"/>
                             <constraint firstItem="Ax2-kg-tMT" firstAttribute="top" secondItem="1r1-eQ-fl2" secondAttribute="bottom" constant="-13" id="t91-u9-y1j"/>
-                            <constraint firstItem="1r1-eQ-fl2" firstAttribute="top" secondItem="4kI-8V-fNL" secondAttribute="bottom" id="xj7-YN-fXn"/>
                             <constraint firstAttribute="trailing" secondItem="Wem-5G-2pz" secondAttribute="trailing" constant="16" id="y16-ol-OAX"/>
                         </constraints>
                     </view>

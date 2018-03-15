@@ -20,7 +20,7 @@
         <!--Broken Cryptography View Controller-->
         <scene sceneID="eTr-uL-OCa">
             <objects>
-                <viewController id="wAQ-tp-5l5" customClass="BrokenCryptographyViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wAQ-tp-5l5" customClass="BrokenCryptographyViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SE1-MC-Ktj"/>
                         <viewControllerLayoutGuide type="bottom" id="LaD-9G-aNt"/>
@@ -89,12 +89,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZL-AY-5wL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-164.16791604197903"/>
+            <point key="canvasLocation" x="287" y="-219"/>
         </scene>
         <!--Broken Cryptography Details View Controller-->
         <scene sceneID="zIB-tT-5mI">
             <objects>
-                <viewController id="wUu-L3-xRK" customClass="BrokenCryptographyDetailsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wUu-L3-xRK" customClass="BrokenCryptographyDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YOL-PF-E6L"/>
                         <viewControllerLayoutGuide type="bottom" id="0SA-JO-qvf"/>
@@ -222,7 +222,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZe-AC-rbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="-164"/>
+            <point key="canvasLocation" x="-209" y="-206"/>
         </scene>
     </scenes>
 </document>

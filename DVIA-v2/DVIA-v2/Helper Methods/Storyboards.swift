@@ -12,8 +12,9 @@ enum Storyboard: String {
     
     case home = "Home"
     case insecureDataStorage = "InsecureDataStorage"
-    case jailbreakDetection = "JailbreakDetection"
     case runtimeManipulation = "RuntimeManipulation"
+    case excessivePermissions = "ExcessivePermissions"
+    case privateAPIs = "PrivateAPIs"
     case sideChannelDataLeakage = "SideChannelDataLeakage"
     case securityDecisonsViaUntrustedInput = "SecurityDecisonsViaUntrustedInput"
     case brokenCryptography = "BrokenCryptography"
@@ -22,6 +23,8 @@ enum Storyboard: String {
     case applicationPatching = "ApplicationPatching"
     case sensitiveInformation = "SensitiveInformation"
     case attackingThirdPartyLibraries = "AttackingThirdPartyLibraries"
+    case jailbreakDetection = "JailbreakDetection"
+
     
     var name: String {
         return self.rawValue

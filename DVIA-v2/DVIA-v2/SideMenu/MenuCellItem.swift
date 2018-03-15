@@ -16,6 +16,8 @@ enum MenuCellItem {
     case home
     case insecureDataStorage
     case jailbreakDetection
+    case excessivePermissions
+    case privateAPIs
     case runtimeManipulation
     case sideChannelDataLeakage
     case securityDecisonsViaUntrustedInput
@@ -34,6 +36,10 @@ enum MenuCellItem {
             return "Insecure Data Storage"
         case .jailbreakDetection:
             return "Jailbreak Detection"
+        case .excessivePermissions:
+            return "Excessive Permissions"
+        case .privateAPIs:
+            return "Private APIs"
         case .runtimeManipulation:
             return "Runtime Manipulation"
         case .sideChannelDataLeakage:

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Excessive Permissions View Controller-->
+        <scene sceneID="KDC-Xx-Ok6">
+            <objects>
+                <viewController id="beC-LN-8Mk" customClass="ExcessivePermissionsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FxF-3H-0io"/>
+                        <viewControllerLayoutGuide type="bottom" id="dIq-xp-pQh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d0D-67-BfT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voe-fH-UAP">
+                                <rect key="frame" x="8" y="72" width="359" height="116.5"/>
+                                <string key="text">The advantage of patching an application is that once a change has been made in the application’s binary, its permanent. Try various challenges to patch this application      mentioned under Start Challenge.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKX-CA-USh">
+                                <rect key="frame" x="16" y="196" width="343" height="30"/>
+                                <state key="normal" title="Read an article on Binary Patching"/>
+                                <connections>
+                                    <action selector="readArticle1Tapped:" destination="beC-LN-8Mk" eventType="touchUpInside" id="dqf-fW-9w5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogJ-r0-u1E">
+                                <rect key="frame" x="16" y="234" width="343" height="30"/>
+                                <state key="normal" title="Application Patching with Hopper"/>
+                                <connections>
+                                    <action selector="readArticle2Tapped:" destination="beC-LN-8Mk" eventType="touchUpInside" id="OhG-rl-DJn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ric-H1-6w5">
+                                <rect key="frame" x="115.5" y="272" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="voe-fH-UAP" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leading" constant="8" id="5WV-n3-J99"/>
+                            <constraint firstItem="voe-fH-UAP" firstAttribute="top" secondItem="FxF-3H-0io" secondAttribute="bottom" constant="8" id="79w-0Y-DYw"/>
+                            <constraint firstItem="ric-H1-6w5" firstAttribute="top" secondItem="ogJ-r0-u1E" secondAttribute="bottom" constant="8" id="7vP-ar-7xV"/>
+                            <constraint firstItem="ogJ-r0-u1E" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leadingMargin" id="D7d-yo-vee"/>
+                            <constraint firstItem="nKX-CA-USh" firstAttribute="top" secondItem="voe-fH-UAP" secondAttribute="bottom" constant="8" id="FtE-Mj-7gZ"/>
+                            <constraint firstItem="nKX-CA-USh" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leadingMargin" id="dMi-HV-kHJ"/>
+                            <constraint firstItem="ric-H1-6w5" firstAttribute="centerX" secondItem="d0D-67-BfT" secondAttribute="centerX" id="dyx-36-iIg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nKX-CA-USh" secondAttribute="trailing" id="g6d-wn-I2h"/>
+                            <constraint firstItem="ogJ-r0-u1E" firstAttribute="top" secondItem="nKX-CA-USh" secondAttribute="bottom" constant="8" id="mpK-xA-4pr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ogJ-r0-u1E" secondAttribute="trailing" id="rGt-UA-8Gi"/>
+                            <constraint firstAttribute="trailing" secondItem="voe-fH-UAP" secondAttribute="trailing" constant="8" id="z8Y-p9-f0K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xtz-BU-1Tt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWO-CJ-J4Z">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ZEH-RH-iel">
+                            <connections>
+                                <action selector="menuTapped:" destination="beC-LN-8Mk" id="qDf-v3-Idw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNl-xe-FPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="-208"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fIg-aM-AXY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tNS-Wz-TKP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qsw-gA-2CZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="beC-LN-8Mk" kind="relationship" relationship="rootViewController" id="hlV-4v-Cph"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryo-bH-9pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="-215"/>
+        </scene>
+    </scenes>
+</document>
