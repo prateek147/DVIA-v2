@@ -21,7 +21,9 @@ class TransportLayerProtectionViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
+    @IBAction func checkATS(_ sender: Any) {
+        DVIAUtilities.showAlert(title: "App Transport Security", message: "ATS establishes best-practice policies for secure network communications. Check whether the app follows these best practices or whether it ignore them. Look at the info.plist file", viewController: self)
+    }
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
@@ -39,6 +41,9 @@ class TransportLayerProtectionViewController: UIViewController {
         guard let url = URL(string: "https://google.com/") else { return }
         sendRequestOverUrl(url)
     }
+    
+   
+    
 
     func sendRequestOverUrl(_ url: URL) {
         //initialize a request from url
@@ -77,7 +82,7 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
         let connection = NSURLConnection(request: request, delegate: self)
         connection?.start()
     }
-
+    
     // MARK: NSURLConnection Delegate Methods
     
     func connection(_ connection: NSURLConnection, willCacheResponse cachedResponse: CachedURLResponse) -> CachedURLResponse? {
