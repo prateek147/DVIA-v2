@@ -26,7 +26,7 @@ class PhishingViewController: UIViewController {
     }
 
     @IBAction func phishingPopup1Tapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Sign In to iTunes Store", message: "To continue, enter the password for test123@gmail.com", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Sign In to iTunes Store", message: "To continue, enter the password for \"test123@gmail.com\"", preferredStyle: UIAlertControllerStyle.alert)
         alert.addTextField(configurationHandler: {(textField: UITextField!) in
             textField.placeholder = "Password"
         })

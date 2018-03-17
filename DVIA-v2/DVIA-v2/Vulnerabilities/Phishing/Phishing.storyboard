@@ -44,8 +44,8 @@
                                     <outlet property="textDropDelegate" destination="MP6-hU-91T" id="RCf-b6-gio"/>
                                 </connections>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-ft-6Ao">
-                                <rect key="frame" x="114" y="437" width="147" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-ft-6Ao">
+                                <rect key="frame" x="114" y="437" width="147" height="74"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmW-Ll-y2A">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25E-kU-4T1">
-                                        <rect key="frame" x="0.0" y="30" width="147" height="30"/>
+                                        <rect key="frame" x="0.0" y="44" width="147" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="147" id="ZA2-QC-2Nr"/>
                                             <constraint firstAttribute="height" constant="30" id="zWo-oL-gMh"/>
