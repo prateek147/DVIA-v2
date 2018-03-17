@@ -1,14 +1,14 @@
 //
-//  PrivateAPIsViewController.swift
+//  PhishingViewController.swift
 //  DVIA-v2
 //
-//  Created by Prateek Gianchandani on 15/03/18.
+//  Created by Prateek Gianchandani on 17/03/18.
 //  Copyright © 2018 HighAltitudeHacks. All rights reserved.
 //
 
 import UIKit
 
-class PrivateAPIsViewController: UIViewController {
+class PhishingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,10 @@ class PrivateAPIsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func handleMenuTap(_ sender: Any) {
-        mainViewController?.toogle()
-    }
-    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+
     /*
     // MARK: - Navigation
 

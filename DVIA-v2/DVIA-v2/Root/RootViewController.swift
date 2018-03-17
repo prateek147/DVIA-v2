@@ -86,6 +86,8 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showPrivateAPIs()
         case .runtimeManipulation:
             showRuntimeManipulation()
+        case .touchIDBypass:
+            showTouchIDBypass()
         case .sideChannelDataLeakage:
             showSideChannelDataLeakage()
         case .securityDecisonsViaUntrustedInput:
@@ -102,6 +104,10 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showSensitiveInformation()
         case .attackingThirdPartyLibraries:
             showAttackingThirdPartyLibraries()
+        case .phishing:
+            showPhishing()
+        case .donate:
+            showDonate()
         }
         toogle()
     }
@@ -150,6 +156,12 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
         }
     }
     
+    func showDonate(){
+        let storyboard = UIStoryboard(name: Storyboard.donate.name, bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
+            addControllerAsChild(childController: controller)}
+    }
+    
     func showExcessivePermissions() {
         let storyboard = UIStoryboard(name: Storyboard.excessivePermissions.name, bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
@@ -159,6 +171,20 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
     
     func showRuntimeManipulation() {
         let storyboard = UIStoryboard(name: Storyboard.runtimeManipulation.name, bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
+            addControllerAsChild(childController: controller)
+        }
+    }
+    
+    func showPhishing() {
+        let storyboard = UIStoryboard(name: Storyboard.phishing.name, bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
+            addControllerAsChild(childController: controller)
+        }
+    }
+    
+    func showTouchIDBypass() {
+        let storyboard = UIStoryboard(name: Storyboard.touchIDBypass.name, bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
             addControllerAsChild(childController: controller)
         }

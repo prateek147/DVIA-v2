@@ -15,6 +15,7 @@ enum Storyboard: String {
     case runtimeManipulation = "RuntimeManipulation"
     case excessivePermissions = "ExcessivePermissions"
     case privateAPIs = "PrivateAPIs"
+    case touchIDBypass = "TouchIDBypass"
     case sideChannelDataLeakage = "SideChannelDataLeakage"
     case securityDecisonsViaUntrustedInput = "SecurityDecisonsViaUntrustedInput"
     case brokenCryptography = "BrokenCryptography"
@@ -24,6 +25,8 @@ enum Storyboard: String {
     case sensitiveInformation = "SensitiveInformation"
     case attackingThirdPartyLibraries = "AttackingThirdPartyLibraries"
     case jailbreakDetection = "JailbreakDetection"
+    case phishing = "Phishing"
+    case donate = "Donate"
 
     
     var name: String {

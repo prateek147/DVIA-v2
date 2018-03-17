@@ -21,6 +21,9 @@ class ExcessivePermissionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func menuTapped(_ sender: Any) {
+        mainViewController?.toogle()
+    }
 
     /*
     // MARK: - Navigation

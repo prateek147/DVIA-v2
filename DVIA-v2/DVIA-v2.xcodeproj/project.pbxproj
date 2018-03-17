@@ -13,6 +13,13 @@
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
 		F6C8AA0E205A62B0001E1CCB /* PrivateAPIs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA0D205A62B0001E1CCB /* PrivateAPIs.storyboard */; };
 		F6C8AA11205A632F001E1CCB /* PrivateAPIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA10205A632F001E1CCB /* PrivateAPIsViewController.swift */; };
+		F6C8AA18205A9BC2001E1CCB /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */; };
+		F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */; };
+		F6C8AA21205D2424001E1CCB /* PhishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */; };
+		F6C8AA23205D2433001E1CCB /* Phishing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA22205D2433001E1CCB /* Phishing.storyboard */; };
+		F6C8AA25205D2CBF001E1CCB /* JailbreakDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA24205D2CBF001E1CCB /* JailbreakDetection.storyboard */; };
+		F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA28205D32B7001E1CCB /* TouchIDBypass.storyboard */; };
+		F6C8AA2C205D32CB001E1CCB /* TouchIDBypassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */; };
 		F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F26202FA4DD00A3A757 /* Home.storyboard */; };
 		F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */; };
 		F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */; };
@@ -170,7 +177,6 @@
 		F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E645A3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard */; };
 		F6E645D4202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645A5202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift */; };
 		F6E645D5202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645A6202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift */; };
-		F6E645D6202FBC6000884A43 /* JailbreakDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */; };
 		F6E645D7202FBC6000884A43 /* JailbreakDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645AA202FBC6000884A43 /* JailbreakDetectionViewController.swift */; };
 		F6E645D8202FBC6000884A43 /* JailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E645AD202FBC6000884A43 /* JailbreakDetection.m */; };
 		F6E645E2202FBCAB00884A43 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DB202FBCAB00884A43 /* RealmUser.swift */; };
@@ -190,6 +196,13 @@
 		F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DVIA_v2.xcdatamodel; sourceTree = "<group>"; };
 		F6C8AA0D205A62B0001E1CCB /* PrivateAPIs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateAPIs.storyboard; sourceTree = "<group>"; };
 		F6C8AA10205A632F001E1CCB /* PrivateAPIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateAPIsViewController.swift; sourceTree = "<group>"; };
+		F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
+		F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhishingViewController.swift; sourceTree = "<group>"; };
+		F6C8AA22205D2433001E1CCB /* Phishing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phishing.storyboard; sourceTree = "<group>"; };
+		F6C8AA24205D2CBF001E1CCB /* JailbreakDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JailbreakDetection.storyboard; sourceTree = "<group>"; };
+		F6C8AA28205D32B7001E1CCB /* TouchIDBypass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchIDBypass.storyboard; sourceTree = "<group>"; };
+		F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDBypassViewController.swift; sourceTree = "<group>"; };
 		F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVIA-v2-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6DE6F26202FA4DD00A3A757 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -466,7 +479,6 @@
 		F6E645A3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecurityDecisonsViaUntrustedInput.storyboard; sourceTree = "<group>"; };
 		F6E645A5202FBC6000884A43 /* SecurityDecisonsViaUntrustedInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityDecisonsViaUntrustedInputViewController.swift; sourceTree = "<group>"; };
 		F6E645A6202FBC6000884A43 /* SecurityDecisionsViewUntrustedInputDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityDecisionsViewUntrustedInputDetailViewController.swift; sourceTree = "<group>"; };
-		F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JailbreakDetection.storyboard; sourceTree = "<group>"; };
 		F6E645AA202FBC6000884A43 /* JailbreakDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JailbreakDetectionViewController.swift; sourceTree = "<group>"; };
 		F6E645AC202FBC6000884A43 /* JailbreakDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailbreakDetection.h; sourceTree = "<group>"; };
 		F6E645AD202FBC6000884A43 /* JailbreakDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JailbreakDetection.m; sourceTree = "<group>"; };
@@ -582,6 +594,57 @@
 			path = PrivateAPIs;
 			sourceTree = "<group>";
 		};
+		F6C8AA16205A9B13001E1CCB /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA19205A9BCC001E1CCB /* Controller */,
+				F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */,
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
+		F6C8AA19205A9BCC001E1CCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6C8AA1E205D2406001E1CCB /* Phishing */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA1F205D2413001E1CCB /* Controller */,
+				F6C8AA22205D2433001E1CCB /* Phishing.storyboard */,
+			);
+			path = Phishing;
+			sourceTree = "<group>";
+		};
+		F6C8AA1F205D2413001E1CCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6C8AA27205D329F001E1CCB /* TouchIDBypass */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA2A205D32BB001E1CCB /* Controller */,
+				F6C8AA28205D32B7001E1CCB /* TouchIDBypass.storyboard */,
+			);
+			path = TouchIDBypass;
+			sourceTree = "<group>";
+		};
+		F6C8AA2A205D32BB001E1CCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F6DE6F25202FA4DD00A3A757 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +719,9 @@
 		F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8AA27205D329F001E1CCB /* TouchIDBypass */,
+				F6C8AA1E205D2406001E1CCB /* Phishing */,
+				F6C8AA16205A9B13001E1CCB /* Donate */,
 				F6C8AA0C205A629B001E1CCB /* PrivateAPIs */,
 				F65219E2205A563000D0A345 /* ExcessivePermissions */,
 				F6E64567202FBC6000884A43 /* Application Patching */,
@@ -1338,7 +1404,7 @@
 		F6E645A7202FBC6000884A43 /* Jailbreak Detection */ = {
 			isa = PBXGroup;
 			children = (
-				F6E645A8202FBC6000884A43 /* JailbreakDetection.storyboard */,
+				F6C8AA24205D2CBF001E1CCB /* JailbreakDetection.storyboard */,
 				F6E645A9202FBC6000884A43 /* Controller */,
 				F6E645AB202FBC6000884A43 /* Objective-C Methods */,
 			);
@@ -1453,21 +1519,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E645D6202FBC6000884A43 /* JailbreakDetection.storyboard in Resources */,
 				F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */,
 				F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */,
 				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
 				F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */,
+				F6C8AA23205D2433001E1CCB /* Phishing.storyboard in Resources */,
+				F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */,
 				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
 				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
 				F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */,
 				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
+				F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */,
 				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
 				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
 				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
 				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
+				F6C8AA25205D2CBF001E1CCB /* JailbreakDetection.storyboard in Resources */,
 				F6E645C3202FBC6000884A43 /* ClientSideInjection.storyboard in Resources */,
 				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
 				F6C8AA0E205A62B0001E1CCB /* PrivateAPIs.storyboard in Resources */,
@@ -1614,6 +1683,7 @@
 				F6E6452F202FBB6700884A43 /* YapDatabaseSecondaryIndex.m in Sources */,
 				F6DE6F83202FA4DE00A3A757 /* SideMenuTableViewCell.swift in Sources */,
 				F6E645B5202FBC6000884A43 /* RuntimeManipulationDetailsViewController.swift in Sources */,
+				F6C8AA18205A9BC2001E1CCB /* DonateViewController.swift in Sources */,
 				F6E64532202FBB6700884A43 /* YapDatabaseSecondaryIndexSetup.m in Sources */,
 				F6E64564202FBB6800884A43 /* DDASLLogCapture.m in Sources */,
 				F6E6450A202FBB6700884A43 /* YapDatabaseStatement.m in Sources */,
@@ -1655,11 +1725,13 @@
 				F6E645CE202FBC6000884A43 /* CouchbaseLiteViewController.swift in Sources */,
 				F6E64523202FBB6700884A43 /* YapDatabaseCloudKitConnection.m in Sources */,
 				F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */,
+				F6C8AA21205D2424001E1CCB /* PhishingViewController.swift in Sources */,
 				F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */,
 				F6E6450B202FBB6700884A43 /* NSDictionary+YapDatabase.m in Sources */,
 				F6E6455D202FBB6700884A43 /* DDDispatchQueueLogFormatter.m in Sources */,
 				F6E64507202FBB6700884A43 /* YapMemoryTable.m in Sources */,
 				F6E64547202FBB6700884A43 /* YapDatabaseFullTextSearch.m in Sources */,
+				F6C8AA2C205D32CB001E1CCB /* TouchIDBypassViewController.swift in Sources */,
 				F6DE6F82202FA4DE00A3A757 /* SideMenuViewController.swift in Sources */,
 				F6E64557202FBB6700884A43 /* RNEncryptor.m in Sources */,
 				F6E645E2202FBCAB00884A43 /* RealmUser.swift in Sources */,

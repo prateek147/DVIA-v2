@@ -24,7 +24,8 @@ class SideMenuViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
     }
-        
+    
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,14 +37,16 @@ class SideMenuViewController: UIViewController {
                 MenuCellModel(item: .excessivePermissions),
                 MenuCellModel(item: .privateAPIs),
                 MenuCellModel(item: .runtimeManipulation),
-                MenuCellModel(item: .sideChannelDataLeakage),
+                MenuCellModel(item: .touchIDBypass),
+                MenuCellModel(item: .phishing), MenuCellModel(item: .sideChannelDataLeakage),
                 MenuCellModel(item: .securityDecisonsViaUntrustedInput),
                 MenuCellModel(item: .brokenCryptography),
                 MenuCellModel(item: .clientSideInjection),
                 MenuCellModel(item: .transportLayerProtection),
                 MenuCellModel(item: .applicationPatching),
                 MenuCellModel(item: .sensitiveInformation),
-                MenuCellModel(item: .attackingThirdPartyLibraries)
+                MenuCellModel(item: .attackingThirdPartyLibraries),
+                MenuCellModel(item: .donate)
                 ]
         )
         

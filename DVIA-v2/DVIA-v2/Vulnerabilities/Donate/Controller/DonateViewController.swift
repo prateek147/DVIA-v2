@@ -1,5 +1,5 @@
 //
-//  PrivateAPIsViewController.swift
+//  DonateViewController.swift
 //  DVIA-v2
 //
 //  Created by Prateek Gianchandani on 15/03/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrivateAPIsViewController: UIViewController {
+class DonateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,11 @@ class PrivateAPIsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func handleMenuTap(_ sender: Any) {
-        mainViewController?.toogle()
-    }
-    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+    
+
     /*
     // MARK: - Navigation
 

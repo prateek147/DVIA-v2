@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZL-AY-5wL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="-219"/>
+            <point key="canvasLocation" x="702" y="-215"/>
         </scene>
         <!--Broken Cryptography Details View Controller-->
         <scene sceneID="zIB-tT-5mI">
@@ -222,7 +222,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZe-AC-rbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-209" y="-206"/>
+            <point key="canvasLocation" x="-361" y="-208"/>
         </scene>
     </scenes>
 </document>

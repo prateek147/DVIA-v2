@@ -19,6 +19,7 @@ enum MenuCellItem {
     case excessivePermissions
     case privateAPIs
     case runtimeManipulation
+    case touchIDBypass
     case sideChannelDataLeakage
     case securityDecisonsViaUntrustedInput
     case brokenCryptography
@@ -27,6 +28,8 @@ enum MenuCellItem {
     case applicationPatching
     case sensitiveInformation
     case attackingThirdPartyLibraries
+    case phishing
+    case donate
     
     var title: String {
         switch self {
@@ -42,6 +45,10 @@ enum MenuCellItem {
             return "Private APIs"
         case .runtimeManipulation:
             return "Runtime Manipulation"
+        case .touchIDBypass:
+            return "Touch ID Bypass"
+        case .phishing:
+            return "Phishing"
         case .sideChannelDataLeakage:
             return "Side Channel Data Leakage"
         case .securityDecisonsViaUntrustedInput:
@@ -58,6 +65,8 @@ enum MenuCellItem {
             return "Sensitive Information in Memory"
         case .attackingThirdPartyLibraries:
             return "Attacking Third Party Libraries"
+        case .donate:
+            return "Donate - The Juniper Fund"
         }
     }
 }
