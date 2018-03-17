@@ -25,6 +25,28 @@ class PhishingViewController: UIViewController {
         mainViewController?.toogle()
     }
 
+    @IBAction func phishingPopup1Tapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Sign In to iTunes Store", message: "To continue, enter the password for test123@gmail.com", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Password"
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Sign In", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+
+    }
+    
+    @IBAction func phishingPopup2Tapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Sign-In Required", message: "Sign In to manage your account.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Password"
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Sign In", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
