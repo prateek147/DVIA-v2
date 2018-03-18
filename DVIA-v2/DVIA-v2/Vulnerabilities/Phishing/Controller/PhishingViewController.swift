@@ -47,6 +47,27 @@ class PhishingViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func phishingPopup3Tapped(_ sender: Any) {
+    let alertController = UIAlertController(title: "Sign In to iTunes store", message: "To continue, enter the password for your Apple ID 'test123@gmail.com'.", preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addTextField { (textField : UITextField) -> Void in
+    textField.isSecureTextEntry = true
+    textField.placeholder = "Password"
+    }
+    let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+    }
+    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+        
+        let alert = UIAlertController(title: "Oops!!", message: "This was a phishing attempt, be careful of such alerts generated from within apps.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    alertController.addAction(cancelAction)
+    alertController.addAction(okAction)
+    self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
