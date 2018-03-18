@@ -19,6 +19,7 @@ enum MenuCellItem {
     case excessivePermissions
     case privateAPIs
     case runtimeManipulation
+    case binaryProtection
     case touchIDBypass
     case sideChannelDataLeakage
     case securityDecisonsViaUntrustedInput
@@ -36,7 +37,7 @@ enum MenuCellItem {
         case .home:
             return "Home"
         case .insecureDataStorage:
-            return "Insecure Data Storage"
+            return "Local Data Storage"
         case .jailbreakDetection:
             return "Jailbreak Detection"
         case .excessivePermissions:
@@ -45,20 +46,22 @@ enum MenuCellItem {
             return "Private APIs"
         case .runtimeManipulation:
             return "Runtime Manipulation"
+        case .binaryProtection:
+            return "Binary Protection"
         case .touchIDBypass:
-            return "Touch ID Bypass"
+            return "Touch/Face ID Bypass"
         case .phishing:
             return "Phishing"
         case .sideChannelDataLeakage:
             return "Side Channel Data Leakage"
         case .securityDecisonsViaUntrustedInput:
-            return "Security Decisons Via Untrusted sInput"
+            return "IPC Issues"
         case .brokenCryptography:
             return "Broken Cryptography"
         case .clientSideInjection:
-            return "Client Side Injection"
+            return "Webview Issues"
         case .transportLayerProtection:
-            return "Transport Layer Protection"
+            return "Network Layer Security"
         case .applicationPatching:
             return "Application Patching"
         case .sensitiveInformation:

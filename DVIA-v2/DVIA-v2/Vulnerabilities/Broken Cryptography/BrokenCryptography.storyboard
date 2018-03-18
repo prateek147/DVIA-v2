@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Broken Cryptography View Controller-->
+        <!--Broken Cryptography-->
         <scene sceneID="eTr-uL-OCa">
             <objects>
-                <viewController id="wAQ-tp-5l5" customClass="BrokenCryptographyViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Broken Cryptography" id="wAQ-tp-5l5" customClass="BrokenCryptographyViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SE1-MC-Ktj"/>
                         <viewControllerLayoutGuide type="bottom" id="LaD-9G-aNt"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="YoH-55-jbQ" firstAttribute="centerX" secondItem="MoF-LD-sAP" secondAttribute="centerX" id="vrl-wB-O90"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uSH-kn-sHP">
+                    <navigationItem key="navigationItem" title="Broken Cryptography" id="uSH-kn-sHP">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="B5S-3Z-Diq">
                             <connections>
                                 <action selector="menuTapped:" destination="wAQ-tp-5l5" id="9I9-Lr-CxF"/>
@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="702" y="-215"/>
         </scene>
-        <!--Broken Cryptography Details View Controller-->
+        <!--Broken Cryptography-->
         <scene sceneID="zIB-tT-5mI">
             <objects>
-                <viewController id="wUu-L3-xRK" customClass="BrokenCryptographyDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Broken Cryptography" id="wUu-L3-xRK" customClass="BrokenCryptographyDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YOL-PF-E6L"/>
                         <viewControllerLayoutGuide type="bottom" id="0SA-JO-qvf"/>

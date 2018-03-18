@@ -20,6 +20,9 @@
 		F6C8AA25205D2CBF001E1CCB /* JailbreakDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA24205D2CBF001E1CCB /* JailbreakDetection.storyboard */; };
 		F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA28205D32B7001E1CCB /* TouchIDBypass.storyboard */; };
 		F6C8AA2C205D32CB001E1CCB /* TouchIDBypassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */; };
+		F6C8AA34205D80BB001E1CCB /* BinaryProtectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA33205D80BB001E1CCB /* BinaryProtectionViewController.swift */; };
+		F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA36205D80D5001E1CCB /* BinaryProtection.storyboard */; };
+		F6C8AA39205D944A001E1CCB /* SwiftTouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */; };
 		F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F26202FA4DD00A3A757 /* Home.storyboard */; };
 		F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */; };
 		F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */; };
@@ -203,6 +206,9 @@
 		F6C8AA24205D2CBF001E1CCB /* JailbreakDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JailbreakDetection.storyboard; sourceTree = "<group>"; };
 		F6C8AA28205D32B7001E1CCB /* TouchIDBypass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchIDBypass.storyboard; sourceTree = "<group>"; };
 		F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDBypassViewController.swift; sourceTree = "<group>"; };
+		F6C8AA33205D80BB001E1CCB /* BinaryProtectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryProtectionViewController.swift; sourceTree = "<group>"; };
+		F6C8AA36205D80D5001E1CCB /* BinaryProtection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BinaryProtection.storyboard; sourceTree = "<group>"; };
+		F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTouchIDViewController.swift; sourceTree = "<group>"; };
 		F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVIA-v2-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6DE6F26202FA4DD00A3A757 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -641,6 +647,24 @@
 			isa = PBXGroup;
 			children = (
 				F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */,
+				F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6C8AA32205D809C001E1CCB /* BinaryProtection */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA35205D80BF001E1CCB /* Controller */,
+				F6C8AA36205D80D5001E1CCB /* BinaryProtection.storyboard */,
+			);
+			path = BinaryProtection;
+			sourceTree = "<group>";
+		};
+		F6C8AA35205D80BF001E1CCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8AA33205D80BB001E1CCB /* BinaryProtectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -719,6 +743,7 @@
 		F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8AA32205D809C001E1CCB /* BinaryProtection */,
 				F6C8AA27205D329F001E1CCB /* TouchIDBypass */,
 				F6C8AA1E205D2406001E1CCB /* Phishing */,
 				F6C8AA16205A9B13001E1CCB /* Donate */,
@@ -1533,6 +1558,7 @@
 				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
+				F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */,
 				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
 				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
 				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
@@ -1663,6 +1689,7 @@
 				F6E6455A202FBB6700884A43 /* DDASLLogger.m in Sources */,
 				F6E64553202FBB6700884A43 /* RNOpenSSLCryptor.m in Sources */,
 				F6E645AE202FBC6000884A43 /* ApplicationPatchingDetailsViewController.swift in Sources */,
+				F6C8AA34205D80BB001E1CCB /* BinaryProtectionViewController.swift in Sources */,
 				F6E6452E202FBB6700884A43 /* YapDatabaseSecondaryIndexHandler.m in Sources */,
 				F6E6453B202FBB6700884A43 /* YapDatabaseViewMappings.m in Sources */,
 				F6E64533202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m in Sources */,
@@ -1749,6 +1776,7 @@
 				F6E645C6202FBC6000884A43 /* YapDatabaseViewController.swift in Sources */,
 				F6E64519202FBB6700884A43 /* YDBCKAttachRequest.m in Sources */,
 				F6E6452B202FBB6700884A43 /* YapDatabaseHooks.m in Sources */,
+				F6C8AA39205D944A001E1CCB /* SwiftTouchIDViewController.swift in Sources */,
 				F6C8AA11205A632F001E1CCB /* PrivateAPIsViewController.swift in Sources */,
 				F6E6455E202FBB6700884A43 /* DDMultiFormatter.m in Sources */,
 				F6E64548202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m in Sources */,

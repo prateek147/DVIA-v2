@@ -86,6 +86,8 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showPrivateAPIs()
         case .runtimeManipulation:
             showRuntimeManipulation()
+        case .binaryProtection:
+            showBinaryProtection()
         case .touchIDBypass:
             showTouchIDBypass()
         case .sideChannelDataLeakage:
@@ -171,6 +173,13 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
     
     func showRuntimeManipulation() {
         let storyboard = UIStoryboard(name: Storyboard.runtimeManipulation.name, bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
+            addControllerAsChild(childController: controller)
+        }
+    }
+    
+    func showBinaryProtection() {
+        let storyboard = UIStoryboard(name: Storyboard.binaryProtection.name, bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
             addControllerAsChild(childController: controller)
         }
