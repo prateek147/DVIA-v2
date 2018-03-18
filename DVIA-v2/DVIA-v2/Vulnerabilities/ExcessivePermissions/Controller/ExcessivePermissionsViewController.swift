@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ExcessivePermissionsViewController: UIViewController {
 
@@ -24,6 +25,17 @@ class ExcessivePermissionsViewController: UIViewController {
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+    
+    @IBAction func cameraPermissionTapped(_ sender: Any) {
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if response {
+                self.performSegue(withIdentifier: "showCameraView", sender: self)
+            } else {
+                print("Camera Permission was not granted")
+            }
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

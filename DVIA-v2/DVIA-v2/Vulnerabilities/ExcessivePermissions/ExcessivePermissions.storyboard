@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNS-Wz-TKP">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,73 +18,60 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Excessive Permissions View Controller-->
+        <!--Excessive Permissions-->
         <scene sceneID="KDC-Xx-Ok6">
             <objects>
-                <viewController id="beC-LN-8Mk" customClass="ExcessivePermissionsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Excessive Permissions" id="beC-LN-8Mk" customClass="ExcessivePermissionsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FxF-3H-0io"/>
                         <viewControllerLayoutGuide type="bottom" id="dIq-xp-pQh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d0D-67-BfT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ExcessivePerms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voe-fH-UAP">
-                                <rect key="frame" x="8" y="72" width="359" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKX-CA-USh">
-                                <rect key="frame" x="16" y="104" width="343" height="30"/>
-                                <state key="normal" title="Read an article on Binary Patching"/>
-                                <connections>
-                                    <action selector="readArticle1Tapped:" destination="beC-LN-8Mk" eventType="touchUpInside" id="dqf-fW-9w5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogJ-r0-u1E">
-                                <rect key="frame" x="16" y="142" width="343" height="30"/>
-                                <state key="normal" title="Application Patching with Hopper"/>
-                                <connections>
-                                    <action selector="readArticle2Tapped:" destination="beC-LN-8Mk" eventType="touchUpInside" id="OhG-rl-DJn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ric-H1-6w5">
-                                <rect key="frame" x="115.5" y="180" width="144" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-FB-5Ln">
+                                <rect key="frame" x="0.0" y="77" width="414" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Users are generally unaware of the consequences of granting certain permissions to an application. Once a permission is granted, it can be used anytime by the app, and depending on the permission can allow the app to spy on the user. These permssions can also be used without indicating the user.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-u8-Q6L">
+                                <rect key="frame" x="117" y="338" width="166" height="2"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE">
+                                <state key="normal" title="CAMERA PERMISSION">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cameraPermissionTapped:" destination="beC-LN-8Mk" eventType="touchUpInside" id="g2X-lQ-AAZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="voe-fH-UAP" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leading" constant="8" id="5WV-n3-J99"/>
-                            <constraint firstItem="voe-fH-UAP" firstAttribute="top" secondItem="FxF-3H-0io" secondAttribute="bottom" constant="8" id="79w-0Y-DYw"/>
-                            <constraint firstItem="ric-H1-6w5" firstAttribute="top" secondItem="ogJ-r0-u1E" secondAttribute="bottom" constant="8" id="7vP-ar-7xV"/>
-                            <constraint firstItem="ogJ-r0-u1E" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leadingMargin" id="D7d-yo-vee"/>
-                            <constraint firstItem="nKX-CA-USh" firstAttribute="top" secondItem="voe-fH-UAP" secondAttribute="bottom" constant="8" id="FtE-Mj-7gZ"/>
-                            <constraint firstItem="nKX-CA-USh" firstAttribute="leading" secondItem="d0D-67-BfT" secondAttribute="leadingMargin" id="dMi-HV-kHJ"/>
-                            <constraint firstItem="ric-H1-6w5" firstAttribute="centerX" secondItem="d0D-67-BfT" secondAttribute="centerX" id="dyx-36-iIg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nKX-CA-USh" secondAttribute="trailing" id="g6d-wn-I2h"/>
-                            <constraint firstItem="ogJ-r0-u1E" firstAttribute="top" secondItem="nKX-CA-USh" secondAttribute="bottom" constant="8" id="mpK-xA-4pr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ogJ-r0-u1E" secondAttribute="trailing" id="rGt-UA-8Gi"/>
-                            <constraint firstAttribute="trailing" secondItem="voe-fH-UAP" secondAttribute="trailing" constant="8" id="z8Y-p9-f0K"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="width" secondItem="d0D-67-BfT" secondAttribute="width" id="1WJ-kj-3pY"/>
+                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="top" secondItem="ibn-FB-5Ln" secondAttribute="bottom" constant="61" id="42N-On-Vc1"/>
+                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="CvY-1C-aGh"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="T9w-gz-wXe"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="top" secondItem="Xtz-BU-1Tt" secondAttribute="top" id="c75-Pq-hY9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xtz-BU-1Tt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zWO-CJ-J4Z">
+                    <navigationItem key="navigationItem" title="Excessive Permissions" id="zWO-CJ-J4Z">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="ZEH-RH-iel">
                             <connections>
                                 <action selector="menuTapped:" destination="beC-LN-8Mk" id="qDf-v3-Idw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="bQ9-fa-H8b" kind="show" identifier="showCameraView" id="thw-qq-hMc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNl-xe-FPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-208"/>
+            <point key="canvasLocation" x="848" y="-317"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIg-aM-AXY">
@@ -93,7 +79,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tNS-Wz-TKP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qsw-gA-2CZ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -104,6 +90,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryo-bH-9pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-418" y="-215"/>
+        </scene>
+        <!--Excessive Permissions-->
+        <scene sceneID="cS8-ZH-c85">
+            <objects>
+                <viewController title="Excessive Permissions" id="bQ9-fa-H8b" customClass="CameraPermissionsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3jX-ia-7pc"/>
+                        <viewControllerLayoutGuide type="bottom" id="jNg-u2-snn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O5j-id-pxi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" estimatedRowHeight="400" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rof-Z6-Lnc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" id="Hkd-Mj-HW0" customClass="FeedCell" customModule="MWC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="400"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hkd-Mj-HW0" id="eRf-Id-SH3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="399.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-9p-ZBU">
+                                                    <rect key="frame" x="0.0" y="-9" width="375" height="265"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Ef-9p-ZBU" firstAttribute="width" secondItem="eRf-Id-SH3" secondAttribute="width" id="0G0-n1-aud"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="customImageView" destination="0Ef-9p-ZBU" id="RL3-kl-haS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FGv-8y-KVg" id="HHk-de-swW"/>
+                                    <outlet property="delegate" destination="FGv-8y-KVg" id="J9L-zz-xyg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="top" secondItem="klO-XZ-OoN" secondAttribute="top" id="39I-QE-kwX"/>
+                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="height" secondItem="O5j-id-pxi" secondAttribute="height" id="7og-sx-dqf"/>
+                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="width" secondItem="O5j-id-pxi" secondAttribute="width" id="Tpb-C2-70P"/>
+                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="centerX" secondItem="klO-XZ-OoN" secondAttribute="centerX" id="jnn-o9-oSd"/>
+                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="height" secondItem="O5j-id-pxi" secondAttribute="height" id="y9A-t8-LXS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="klO-XZ-OoN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Excessive Permissions" id="FGv-8y-KVg">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Got-xt-W7p">
+                            <connections>
+                                <action selector="menuTapped:" destination="bQ9-fa-H8b" id="quF-CS-Lub"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="rof-Z6-Lnc" id="An1-hJ-sOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBK-NF-oqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-351"/>
         </scene>
     </scenes>
 </document>

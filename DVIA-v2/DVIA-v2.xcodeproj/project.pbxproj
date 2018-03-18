@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */; };
+		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */; };
 		F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */; };
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
@@ -191,6 +192,7 @@
 
 /* Begin PBXFileReference section */
 		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
+		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVIA_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
 		F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcessivePermissionsViewController.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */,
+				6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1770,6 +1773,7 @@
 				F6E645D8202FBC6000884A43 /* JailbreakDetection.m in Sources */,
 				F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */,
 				F6E64530202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m in Sources */,
+				6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */,
 				F6E6453E202FBB6700884A43 /* YapDatabaseView.m in Sources */,
 				F6E64517202FBB6700884A43 /* YapDatabaseCloudKitTypes.m in Sources */,
 				F6E64520202FBB6700884A43 /* YDBCKChangeSet.m in Sources */,
@@ -1925,7 +1929,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 972PQ3R52Q;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1944,7 +1950,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 972PQ3R52Q;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
