@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bgI-cs-tS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bgI-cs-tS5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Security Decisons Via Untrusted Input View Controller-->
+        <!--IPC Issues-->
         <scene sceneID="iYm-Cb-PKv">
             <objects>
-                <viewController id="fXG-le-hwg" customClass="SecurityDecisonsViaUntrustedInputViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fXG-le-hwg" customClass="SecurityDecisonsViaUntrustedInputViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gaS-AA-wuc"/>
                         <viewControllerLayoutGuide type="bottom" id="xXx-yl-Qh4"/>
@@ -30,14 +30,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-Pz-jlT">
-                                <rect key="frame" x="11" y="64" width="353" height="93"/>
-                                <string key="text">This kind of vulnerability occurs when sensitive actions are performed without proper validation of the input or authorization check on the user.</string>
+                                <rect key="frame" x="11" y="64" width="353" height="116.5"/>
+                                <string key="text">In iOS apps can communicate between each other using certain IPC Apis. If an incoming request from another app is not handled properly, it can lead to a security vulnerabilitiy.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-dy-CUU">
-                                <rect key="frame" x="115" y="182" width="144" height="30"/>
+                                <rect key="frame" x="115" y="205.5" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="Bst-dy-CUU" firstAttribute="top" secondItem="zq2-Pz-jlT" secondAttribute="bottom" constant="25" id="zdY-c5-5B7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Zr-SN-GCO">
+                    <navigationItem key="navigationItem" title="IPC Issues" id="1Zr-SN-GCO">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="XZI-YK-lq6">
                             <connections>
                                 <action selector="menuTapped:" destination="fXG-le-hwg" id="QRa-br-P95"/>
@@ -71,7 +71,7 @@
         <!--Security Decisions View Untrusted Input Detail View Controller-->
         <scene sceneID="iP2-jf-HbA">
             <objects>
-                <viewController id="0aZ-MG-Mhg" customClass="SecurityDecisionsViewUntrustedInputDetailViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0aZ-MG-Mhg" customClass="SecurityDecisionsViewUntrustedInputDetailViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kCP-4S-3on"/>
                         <viewControllerLayoutGuide type="bottom" id="QYk-g9-ZOd"/>

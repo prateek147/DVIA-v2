@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Transport Layer Protection View Controller-->
+        <!--Network Layer Security-->
         <scene sceneID="Ck0-39-0dH">
             <objects>
                 <viewController id="RbF-hp-Dde" customClass="TransportLayerProtectionViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                             <constraint firstItem="pHe-eG-Owi" firstAttribute="trailing" secondItem="BnA-6G-QMX" secondAttribute="trailingMargin" id="zdp-wH-EqH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7zI-ej-nh8">
+                    <navigationItem key="navigationItem" title="Network Layer Security" id="7zI-ej-nh8">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="UKd-w6-jcx">
                             <connections>
                                 <action selector="menuTapped:" destination="RbF-hp-Dde" id="73u-Ui-avR"/>

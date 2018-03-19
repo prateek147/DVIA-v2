@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Insecure Data Storage-->
+        <!--Local Data Storage-->
         <scene sceneID="qSw-RE-geg">
             <objects>
-                <viewController id="w03-gb-uZp" customClass="InsecureDataStorageViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w03-gb-uZp" customClass="InsecureDataStorageViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yUH-bM-C3W"/>
                         <viewControllerLayoutGuide type="bottom" id="vdU-cn-VMz"/>
@@ -78,7 +78,7 @@
                             <constraint firstItem="ZiM-rg-tUk" firstAttribute="centerX" secondItem="84s-cA-9zu" secondAttribute="centerX" id="lHp-V5-57e"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Insecure Data Storage" id="8b4-55-5cU">
+                    <navigationItem key="navigationItem" title="Local Data Storage" id="8b4-55-5cU">
                         <barButtonItem key="leftBarButtonItem" title="MENU" id="hla-Fx-hcc">
                             <connections>
                                 <action selector="handleMenuTap:" destination="w03-gb-uZp" id="GaQ-g9-udn"/>
@@ -104,7 +104,7 @@
         <!--List View Controller-->
         <scene sceneID="dU6-py-D4d">
             <objects>
-                <viewController id="mVA-cH-gaX" customClass="PListViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mVA-cH-gaX" customClass="PListViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t12-kK-a3A"/>
                         <viewControllerLayoutGuide type="bottom" id="gN3-7A-q1m"/>
@@ -200,7 +200,7 @@
         <!--User Defaults View Controller-->
         <scene sceneID="jIf-7h-QBs">
             <objects>
-                <viewController id="wa3-ZE-dvo" customClass="UserDefaultsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wa3-ZE-dvo" customClass="UserDefaultsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2SQ-1U-MwV"/>
                         <viewControllerLayoutGuide type="bottom" id="iZI-Sg-Vjq"/>
@@ -267,7 +267,7 @@
         <!--Yap Database View Controller-->
         <scene sceneID="bxW-0C-1AB">
             <objects>
-                <viewController id="DSk-Vq-ZLq" customClass="YapDatabaseViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DSk-Vq-ZLq" customClass="YapDatabaseViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNK-Tc-au2"/>
                         <viewControllerLayoutGuide type="bottom" id="WZm-At-0fG"/>
@@ -344,7 +344,7 @@
         <!--Keychain View Controller-->
         <scene sceneID="Aln-z3-FFw">
             <objects>
-                <viewController id="Eig-6j-TMN" customClass="KeychainViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Eig-6j-TMN" customClass="KeychainViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B3k-Hk-va7"/>
                         <viewControllerLayoutGuide type="bottom" id="NhC-Fx-br3"/>
@@ -412,7 +412,7 @@
         <!--Core Data View Controller-->
         <scene sceneID="a2h-ZW-uB2">
             <objects>
-                <viewController id="tbv-1v-oYB" customClass="CoreDataViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tbv-1v-oYB" customClass="CoreDataViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OyU-vG-mcm"/>
                         <viewControllerLayoutGuide type="bottom" id="fQQ-XY-Zt2"/>
@@ -507,7 +507,7 @@
         <!--Webkit View Controller-->
         <scene sceneID="jMR-Iz-znU">
             <objects>
-                <viewController id="Rvc-og-2VY" customClass="WebkitViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rvc-og-2VY" customClass="WebkitViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Dy-BL-m3P"/>
                         <viewControllerLayoutGuide type="bottom" id="icH-te-xCq"/>
@@ -551,7 +551,7 @@
         <!--Realm View Controller-->
         <scene sceneID="OLn-OD-uC2">
             <objects>
-                <viewController id="Mpr-I4-Yqk" customClass="RealmViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mpr-I4-Yqk" customClass="RealmViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QuH-Nb-vdw"/>
                         <viewControllerLayoutGuide type="bottom" id="0q5-oA-0gt"/>
@@ -618,7 +618,7 @@
         <!--Couchbase Lite View Controller-->
         <scene sceneID="vaT-W8-BJB">
             <objects>
-                <viewController id="Jow-2Z-Eb8" customClass="CouchbaseLiteViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jow-2Z-Eb8" customClass="CouchbaseLiteViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="06M-O6-Fmq"/>
                         <viewControllerLayoutGuide type="bottom" id="IQB-6q-Q8y"/>

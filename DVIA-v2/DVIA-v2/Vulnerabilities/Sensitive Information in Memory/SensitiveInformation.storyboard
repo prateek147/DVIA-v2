@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPP-l3-b70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPP-l3-b70">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Sensitive Information View Controller-->
+        <!--Sensitive Information in Memory-->
         <scene sceneID="YLh-v8-1xL">
             <objects>
-                <viewController id="xe4-YI-Q67" customClass="SensitiveInformationViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xe4-YI-Q67" customClass="SensitiveInformationViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X5A-hI-suQ"/>
                         <viewControllerLayoutGuide type="bottom" id="R6z-M8-UZ5"/>
@@ -31,14 +31,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-9M-UsC">
-                                <rect key="frame" x="16" y="72" width="343" height="123"/>
+                                <rect key="frame" x="16" y="72" width="343" height="163"/>
                                 <string key="text">Some applications store sensitive information in the memory of the application even when it's not required. This could happen when the developer creates properties or instance variables that might contain confidential information but forgets to remove them after they have been used.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMf-LT-LTe">
-                                <rect key="frame" x="115.5" y="225" width="144" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMf-LT-LTe">
+                                <rect key="frame" x="115" y="293" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="YMf-LT-LTe" firstAttribute="top" secondItem="Sh6-9M-UsC" secondAttribute="bottom" constant="30" id="hEl-NA-USh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hWt-i4-gbC">
+                    <navigationItem key="navigationItem" title="Sensitive Information in Memory" id="hWt-i4-gbC">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="DNe-YC-ChW">
                             <connections>
                                 <action selector="menuTapped:" destination="xe4-YI-Q67" id="udD-8v-WDP"/>

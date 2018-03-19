@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Side Channel Data Leakage View Controller-->
+        <!--Side Channel Data Leakage-->
         <scene sceneID="Dzm-Yl-MU5">
             <objects>
-                <tableViewController id="VXC-Er-6jm" customClass="SideChannelDataLeakageViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="VXC-Er-6jm" customClass="SideChannelDataLeakageViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="sVK-oe-995">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
                             <outlet property="delegate" destination="VXC-Er-6jm" id="pd6-hw-Oar"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="K2c-9V-ExD">
+                    <navigationItem key="navigationItem" title="Side Channel Data Leakage" id="K2c-9V-ExD">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="IHC-Jb-uio">
                             <connections>
                                 <action selector="menuTapped:" destination="VXC-Er-6jm" id="nC6-Gg-27R"/>
@@ -188,7 +188,7 @@
         <!--Device Logs View Controller-->
         <scene sceneID="r1I-Mz-ONd">
             <objects>
-                <viewController id="cw6-bq-MwE" customClass="DeviceLogsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cw6-bq-MwE" customClass="DeviceLogsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qqt-bb-ahF"/>
                         <viewControllerLayoutGuide type="bottom" id="0Xn-tp-ucq"/>
@@ -302,7 +302,7 @@ The following input field signs up a user with the entered information and saves
         <!--App Screenshot View Controller-->
         <scene sceneID="g1j-6m-m8c">
             <objects>
-                <viewController id="wMC-7L-YcG" customClass="AppScreenshotViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wMC-7L-YcG" customClass="AppScreenshotViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JPg-nf-Od8"/>
                         <viewControllerLayoutGuide type="bottom" id="P3k-x5-ZgL"/>
@@ -383,7 +383,7 @@ The following input field signs up a user with the entered information and saves
         <!--Pasteboard View Controller-->
         <scene sceneID="fcp-c9-e9G">
             <objects>
-                <viewController id="msr-sp-ScI" customClass="PasteboardViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="msr-sp-ScI" customClass="PasteboardViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwb-2g-gTi"/>
                         <viewControllerLayoutGuide type="bottom" id="Zi3-5D-zzN"/>
@@ -467,7 +467,7 @@ The following input field signs up a user with the entered information and saves
         <!--Keystroke Logging View Controller-->
         <scene sceneID="LM3-lg-bza">
             <objects>
-                <viewController id="dOB-qx-YQW" customClass="KeystrokeLoggingViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dOB-qx-YQW" customClass="KeystrokeLoggingViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3eB-KO-wEM"/>
                         <viewControllerLayoutGuide type="bottom" id="nTB-HG-IWQ"/>
@@ -533,7 +533,7 @@ The following input field signs up a user with the entered information and saves
         <!--Cookies View Controller-->
         <scene sceneID="VXd-mx-4gg">
             <objects>
-                <viewController id="7YM-lO-x0R" customClass="CookiesViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7YM-lO-x0R" customClass="CookiesViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ePy-7W-r4F"/>
                         <viewControllerLayoutGuide type="bottom" id="8gI-ST-Wep"/>

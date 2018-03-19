@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Application Patching View Controller-->
+        <!--Application Patching-->
         <scene sceneID="Nls-Za-Ulg">
             <objects>
                 <viewController id="GNJ-HI-TXZ" customClass="ApplicationPatchingViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <constraint firstItem="qTb-Zz-DKJ" firstAttribute="top" secondItem="Mo8-zf-EPJ" secondAttribute="bottom" constant="8" id="z6x-el-Pgd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="auv-Rt-v27">
+                    <navigationItem key="navigationItem" title="Application Patching" id="auv-Rt-v27">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="O6Q-u5-QMQ">
                             <connections>
                                 <action selector="menuTapped:" destination="GNJ-HI-TXZ" id="GtN-cE-Pdu"/>

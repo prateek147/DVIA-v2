@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--PrivateAP Is View Controller-->
+        <!--Private APIs-->
         <scene sceneID="g7n-B7-gWl">
             <objects>
                 <viewController id="0aB-fX-js9" customClass="PrivateAPIsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kv2-BL-wdi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5o0-EC-W1E">
+                    <navigationItem key="navigationItem" title="Private APIs" id="5o0-EC-W1E">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Omo-4R-JrS">
                             <connections>
                                 <action selector="menuTapped:" destination="0aB-fX-js9" id="pXv-K3-ZT7"/>
