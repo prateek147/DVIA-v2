@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="1309.5999999999999" y="-215.44227886056973"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Application Patching-->
         <scene sceneID="3BC-F7-HoK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbx-cQ-e6A" sceneMemberID="viewController">
+                <navigationController title="Application Patching" automaticallyAdjustsScrollViewInsets="NO" id="cbx-cQ-e6A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Adl-9q-9Rf">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

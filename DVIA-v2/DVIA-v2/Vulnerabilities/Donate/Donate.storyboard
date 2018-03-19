@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dl8-An-0mH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,9 +14,12 @@
         <array key="Avenir.ttc">
             <string>Avenir-Roman</string>
         </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--DONATE-->
+        <!--DONATE - The Juniper Fund-->
         <scene sceneID="jft-fN-ZqY">
             <objects>
                 <viewController id="KRm-5V-AYA" customClass="DonateViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,32 +31,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONATE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkY-cx-IlM">
-                                <rect key="frame" x="8" y="72" width="359" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g6-nQ-fTg">
+                                <rect key="frame" x="56" y="417" width="262" height="39"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Go to Website">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToWebsiteTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="ZRr-gj-EXX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-mG-eaO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="345"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FzH-mG-eaO" secondAttribute="height" multiplier="320:321" id="2Ok-9O-UXA"/>
+                                </constraints>
+                                <mutableString key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
+The Juniper Fund was started by David Morton and Melissa Arnot in order to address an unmet obligation they witnessed through their work as guides in the world's great mountains.
+The mountain climbing and expedition industry employs countless local staff and laborers in order to help support the adventures many travelers seek. The reality is that some of these workers are injured or killed in the course of this work.
+The local governments have inadequate systems for insuring against this in the event of tragedy.Their work is presently focused on Nepali workers involved with climbing and expedition support in the high mountains of Nepal.</mutableString>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-s5-WBL">
+                                <rect key="frame" x="56" y="480" width="262" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="See Video">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="seeVideoTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="hnF-av-F1k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NkY-cx-IlM" secondAttribute="trailing" constant="8" id="Ctc-9y-StY"/>
-                            <constraint firstItem="NkY-cx-IlM" firstAttribute="leading" secondItem="Bk1-6j-KRK" secondAttribute="leading" constant="8" id="WRz-vt-S7J"/>
-                            <constraint firstItem="NkY-cx-IlM" firstAttribute="top" secondItem="ewd-ED-Ap6" secondAttribute="bottom" constant="8" id="uHp-PL-Eh9"/>
+                            <constraint firstItem="5g6-nQ-fTg" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="EdO-mq-r5J"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="HDg-li-ktm"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="top" secondItem="J05-nk-B92" secondAttribute="top" id="Hxq-ZR-JjG"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="width" secondItem="FzH-mG-eaO" secondAttribute="height" multiplier="320:321" id="KT5-50-Eix"/>
+                            <constraint firstItem="5g6-nQ-fTg" firstAttribute="top" secondItem="FzH-mG-eaO" secondAttribute="bottom" constant="29" id="R1P-7s-jI9"/>
+                            <constraint firstItem="pgY-s5-WBL" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="dhf-R4-7Vm"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="width" secondItem="Bk1-6j-KRK" secondAttribute="width" id="h92-FA-t9T"/>
+                            <constraint firstItem="pgY-s5-WBL" firstAttribute="top" secondItem="5g6-nQ-fTg" secondAttribute="bottom" constant="24" id="inL-8y-Lqx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J05-nk-B92"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DONATE" id="aRH-Br-DB1">
+                    <navigationItem key="navigationItem" title="DONATE - The Juniper Fund" id="aRH-Br-DB1">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="fZL-FS-VrX">
                             <connections>
                                 <action selector="menuTapped:" destination="KRm-5V-AYA" id="u0d-Fz-tHF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="IxJ-3j-cwa" kind="show" identifier="juniperFund" id="Kna-mQ-RZ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3m-jA-sU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-208"/>
+            <point key="canvasLocation" x="-428" y="-440.32983508245883"/>
+        </scene>
+        <!--DONATE - The Juniper Fund-->
+        <scene sceneID="dqA-lp-xK7">
+            <objects>
+                <viewController id="IxJ-3j-cwa" customClass="DonateDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6C-ZX-5aK"/>
+                        <viewControllerLayoutGuide type="bottom" id="C0I-UX-0PV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="94G-hN-Fg8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3li-4U-F1p">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3li-4U-F1p" firstAttribute="top" secondItem="N6C-ZX-5aK" secondAttribute="bottom" id="Nqc-cP-LfY"/>
+                            <constraint firstItem="3li-4U-F1p" firstAttribute="leading" secondItem="h8J-7F-1el" secondAttribute="leading" id="Rvd-3N-kla"/>
+                            <constraint firstItem="3li-4U-F1p" firstAttribute="trailing" secondItem="h8J-7F-1el" secondAttribute="trailing" id="jwe-yA-ZP5"/>
+                            <constraint firstItem="C0I-UX-0PV" firstAttribute="top" secondItem="3li-4U-F1p" secondAttribute="bottom" id="nZD-zs-e6D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h8J-7F-1el"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DONATE - The Juniper Fund" id="36m-6t-rBp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wR-jj-6IF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="-418"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rVY-Xl-5ju">
@@ -70,7 +140,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXd-eG-Z0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="-215"/>
+            <point key="canvasLocation" x="-1199" y="-439"/>
         </scene>
     </scenes>
 </document>

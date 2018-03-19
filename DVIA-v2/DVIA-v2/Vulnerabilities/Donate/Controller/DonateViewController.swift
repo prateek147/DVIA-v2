@@ -9,7 +9,7 @@
 import UIKit
 
 class DonateViewController: UIViewController {
-
+    var video:Bool!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +25,28 @@ class DonateViewController: UIViewController {
         mainViewController?.toogle()
     }
     
-
+    @IBAction func goToWebsiteTapped(_ sender: Any) {
+        video = false
+        self.performSegue(withIdentifier: "juniperFund", sender: self)
+    }
+    
+    @IBAction func seeVideoTapped(_ sender: Any) {
+        video = true
+        self.performSegue(withIdentifier: "juniperFund", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "juniperFund" {
+            if let destinationVC:DonateDetailsViewController = segue.destination as? DonateDetailsViewController {
+                if(!video){
+                destinationVC.urlToLoad = "http://www.thejuniperfund.org/"
+                }else{
+                destinationVC.urlToLoad = "https://www.youtube.com/watch?v=HsV6jaA5J2I"
+                }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
