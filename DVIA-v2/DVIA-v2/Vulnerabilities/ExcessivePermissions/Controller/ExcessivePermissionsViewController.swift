@@ -29,7 +29,9 @@ class ExcessivePermissionsViewController: UIViewController {
     @IBAction func cameraPermissionTapped(_ sender: Any) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
-                self.performSegue(withIdentifier: "showCameraView", sender: self)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "showCameraView", sender: self)
+                }
             } else {
                 print("Camera Permission was not granted")
             }

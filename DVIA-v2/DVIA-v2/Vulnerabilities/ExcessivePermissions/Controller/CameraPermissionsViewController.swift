@@ -11,11 +11,11 @@ import AVFoundation
 
 class FeedCell: UITableViewCell {
     @IBOutlet weak var customImageView: UIImageView!
-   
 }
 
 class CameraPermissionsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     @IBOutlet weak var tableView: UITableView!
+    
     var session: AVCaptureSession?
     var feedImages = [CGImage]()
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -25,6 +25,8 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+
         prepareFrontCamera()
         // Do any additional setup after loading the view.
     }
@@ -37,15 +39,16 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
     
     // All UITableView methods
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.feedImages.count;
+        return self.feedImages.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320;
+        return 400
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,10 +56,10 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedCell
-        cell.customImageView?.image = UIImage.init(cgImage: self.feedImages[indexPath.item]);
-        cell.customImageView.contentMode = .scaleAspectFill
-        return cell;
+        let cell:FeedCell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedCell
+        cell.customImageView.image = UIImage.init(cgImage: self.feedImages[indexPath.item]);
+        cell.customImageView.contentMode = .scaleAspectFit
+        return cell
     }
 
     /*
@@ -70,6 +73,7 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
     */
     
     func prepareFrontCamera() {
+        
         session = AVCaptureSession()
         guard let session = session, let captureDevice = frontCamera else { return }
         
@@ -103,7 +107,7 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
         shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.lineWidth = 2.0
         
-        //needs to filp coordinate system for Vision
+        //needs to flip coordinate system for Vision
         shapeLayer.setAffineTransform(CGAffineTransform(scaleX: -1, y: -1))
         
         view.layer.addSublayer(shapeLayer)
@@ -112,14 +116,18 @@ class CameraPermissionsViewController: UIViewController,UITableViewDataSource, U
 }
 
 extension CameraPermissionsViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    
+
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
+        //Sleep for half a second before taking another picture
+        sleep(1)
+        //Allow up to a maximum of 50 images
+        if (self.feedImages.count > 50) {return}
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate)
         let ciImage = CIImage(cvImageBuffer: pixelBuffer!, options: attachments as! [String : Any]?)
         let ciImageWithOrientation = ciImage.oriented(forExifOrientation: Int32(UIImageOrientation.leftMirrored.rawValue))
         editImage(on: ciImageWithOrientation)
+        
     }
     
 }

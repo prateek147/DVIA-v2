@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNl-xe-FPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="-317"/>
+            <point key="canvasLocation" x="443" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIg-aM-AXY">
@@ -89,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryo-bH-9pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="-215"/>
+            <point key="canvasLocation" x="-288" y="-580"/>
         </scene>
         <!--Excessive Permissions-->
         <scene sceneID="cS8-ZH-c85">
@@ -107,56 +107,59 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" id="Hkd-Mj-HW0" customClass="FeedCell" customModule="MWC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" id="Hkd-Mj-HW0" customClass="FeedCell" customModule="DVIA_v2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hkd-Mj-HW0" id="eRf-Id-SH3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="399.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-9p-ZBU">
-                                                    <rect key="frame" x="0.0" y="-9" width="375" height="265"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-9p-ZBU">
+                                                    <rect key="frame" x="0.0" y="-9" width="375" height="400"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="87X-iE-gAy"/>
+                                                        <constraint firstAttribute="width" constant="375" id="eSE-VM-1yv"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0Ef-9p-ZBU" firstAttribute="width" secondItem="eRf-Id-SH3" secondAttribute="width" id="0G0-n1-aud"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="0Ef-9p-ZBU" firstAttribute="top" secondItem="Hkd-Mj-HW0" secondAttribute="top" constant="-9" id="JtO-ub-1tX"/>
+                                            <constraint firstItem="0Ef-9p-ZBU" firstAttribute="width" secondItem="Hkd-Mj-HW0" secondAttribute="width" id="MlW-04-6ZT"/>
+                                            <constraint firstItem="0Ef-9p-ZBU" firstAttribute="centerX" secondItem="Hkd-Mj-HW0" secondAttribute="centerX" id="ZD0-4G-9d3"/>
+                                            <constraint firstItem="0Ef-9p-ZBU" firstAttribute="height" secondItem="Hkd-Mj-HW0" secondAttribute="height" id="lKM-9U-u4y"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="customImageView" destination="0Ef-9p-ZBU" id="RL3-kl-haS"/>
+                                            <outlet property="customImageView" destination="0Ef-9p-ZBU" id="YFm-wb-YhK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="FGv-8y-KVg" id="HHk-de-swW"/>
-                                    <outlet property="delegate" destination="FGv-8y-KVg" id="J9L-zz-xyg"/>
+                                    <outlet property="dataSource" destination="bQ9-fa-H8b" id="Bjh-YQ-zeb"/>
+                                    <outlet property="delegate" destination="bQ9-fa-H8b" id="c0S-lQ-No4"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rof-Z6-Lnc" firstAttribute="top" secondItem="klO-XZ-OoN" secondAttribute="top" id="39I-QE-kwX"/>
-                            <constraint firstItem="rof-Z6-Lnc" firstAttribute="height" secondItem="O5j-id-pxi" secondAttribute="height" id="7og-sx-dqf"/>
                             <constraint firstItem="rof-Z6-Lnc" firstAttribute="width" secondItem="O5j-id-pxi" secondAttribute="width" id="Tpb-C2-70P"/>
                             <constraint firstItem="rof-Z6-Lnc" firstAttribute="centerX" secondItem="klO-XZ-OoN" secondAttribute="centerX" id="jnn-o9-oSd"/>
                             <constraint firstItem="rof-Z6-Lnc" firstAttribute="height" secondItem="O5j-id-pxi" secondAttribute="height" id="y9A-t8-LXS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="klO-XZ-OoN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Excessive Permissions" id="FGv-8y-KVg">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Got-xt-W7p">
-                            <connections>
-                                <action selector="menuTapped:" destination="bQ9-fa-H8b" id="quF-CS-Lub"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Camera Permissions" id="FGv-8y-KVg"/>
                     <connections>
-                        <outlet property="tableView" destination="rof-Z6-Lnc" id="An1-hJ-sOj"/>
+                        <outlet property="tableView" destination="rof-Z6-Lnc" id="FNE-qj-xXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBK-NF-oqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="-351"/>
+            <point key="canvasLocation" x="1147.8260869565217" y="-580.43478260869574"/>
         </scene>
     </scenes>
 </document>
