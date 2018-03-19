@@ -33,7 +33,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-FB-5Ln">
                                 <rect key="frame" x="0.0" y="77" width="414" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Users are generally unaware of the consequences of granting certain permissions to an application. Once a permission is granted, it can be used anytime by the app, and depending on the permission can allow the app to spy on the user. These permssions can also be used without indicating the user.</string>
+                                <string key="text">Users are generally unaware of the consequences of granting certain permissions to an application. Once a permission is granted, it can be used anytime by the app, and depending on the permission can allow the app to spy on the user. These permissions can also be used without any warning or indication to the user.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
