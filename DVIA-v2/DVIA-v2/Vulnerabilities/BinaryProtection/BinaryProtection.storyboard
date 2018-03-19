@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Binary Protection-->
         <scene sceneID="efL-Jq-RrM">
@@ -21,6 +26,24 @@
                     <view key="view" contentMode="scaleToFill" id="sTv-GQ-TjW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-7g-eV7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lack of Binary protection within a mobile app can help an adversary analyze the app, reverse engineer it and tamper it as well. Check for the following protections.                                                                                 </string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-7P-msL">
+                                <rect key="frame" x="1" y="191" width="375" height="360.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">a) Check whether PIE, ARC and stack smashing protectionn is enabled in the app   b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Check the signature used for signing the app                                                                     h) Find the entitlements used by the app </mutableString>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ln8-S6-6tG"/>
                     </view>
@@ -34,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGN-Ob-QGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-208"/>
+            <point key="canvasLocation" x="301.60000000000002" y="-208.24587706146929"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZU-ek-L27">
