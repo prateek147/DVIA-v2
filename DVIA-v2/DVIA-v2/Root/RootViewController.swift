@@ -280,6 +280,13 @@ extension RootViewController {
         swipeRight.direction = .right
         overlay?.addGestureRecognizer(swipeLeft)
         visibleViewController?.view.addGestureRecognizer(swipeRight)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
+        overlay?.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        if (self.isMenuOpen){ dismissMenu()}
     }
     
     @objc func handleLeftSwipe(recognizer: UISwipeGestureRecognizer) {
