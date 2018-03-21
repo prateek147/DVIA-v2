@@ -11,6 +11,7 @@
 		6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */; };
 		6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */; };
 		6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */; };
+		6E38A98820627DE400C9B563 /* anti.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A98720627DE400C9B563 /* anti.c */; };
 		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		6EF0C419205FD59A0089050C /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */; };
 		6EF0C42120622B590089050C /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF0C42020622B580089050C /* fingerprint.png */; };
@@ -200,6 +201,8 @@
 		6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDDetailsViewController.swift; sourceTree = "<group>"; };
 		6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AntiAntiHookingDebugging.storyboard; sourceTree = "<group>"; };
 		6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiAntiHookingDebuggingViewController.swift; sourceTree = "<group>"; };
+		6E38A98620627DE400C9B563 /* anti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = anti.h; sourceTree = "<group>"; };
+		6E38A98720627DE400C9B563 /* anti.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = anti.c; sourceTree = "<group>"; };
 		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
 		6EF0C42020622B580089050C /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 			children = (
 				6E38A983206266A300C9B563 /* Controller */,
 				6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */,
+				6E38A98620627DE400C9B563 /* anti.h */,
+				6E38A98720627DE400C9B563 /* anti.c */,
 			);
 			path = AntiAntiHookingDebugging;
 			sourceTree = "<group>";
@@ -1806,6 +1811,7 @@
 				F6E6450B202FBB6700884A43 /* NSDictionary+YapDatabase.m in Sources */,
 				F6E6455D202FBB6700884A43 /* DDDispatchQueueLogFormatter.m in Sources */,
 				F6E64507202FBB6700884A43 /* YapMemoryTable.m in Sources */,
+				6E38A98820627DE400C9B563 /* anti.c in Sources */,
 				F6E64547202FBB6700884A43 /* YapDatabaseFullTextSearch.m in Sources */,
 				F6C8AA2C205D32CB001E1CCB /* TouchIDBypassViewController.swift in Sources */,
 				F6DE6F82202FA4DE00A3A757 /* SideMenuViewController.swift in Sources */,

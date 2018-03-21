@@ -14,6 +14,7 @@
 #include "RNEncryptor.h"
 #include "RNDecryptor.h"
 #include "SetSharedCookies.h"
+#include "anti.h"
 
 #endif /* DVIA_Bridging_Header_h */
 
