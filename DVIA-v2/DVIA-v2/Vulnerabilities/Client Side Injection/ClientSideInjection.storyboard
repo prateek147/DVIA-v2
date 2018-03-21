@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-NG-GS4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-NG-GS4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Client Side Injection View Controller-->
+        <!--Webview Issues-->
         <scene sceneID="ITM-x8-s00">
             <objects>
-                <viewController id="1EQ-53-rsS" customClass="ClientSideInjectionViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1EQ-53-rsS" customClass="ClientSideInjectionViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NBC-0G-xI9"/>
                         <viewControllerLayoutGuide type="bottom" id="WGN-ia-kBI"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="ida-iq-sIb" firstAttribute="top" secondItem="Sko-Nq-IwT" secondAttribute="bottom" constant="50" id="wrs-Jh-hE1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wcq-4Q-QCH">
+                    <navigationItem key="navigationItem" title="Webview Issues" id="wcq-4Q-QCH">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="5Cy-mu-j0I">
                             <connections>
                                 <action selector="menuTapped:" destination="1EQ-53-rsS" id="hlz-4f-9fc"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="356" y="154.27286356821591"/>
         </scene>
-        <!--Client Side Injection Detail View Controller-->
+        <!--Webview Issues-->
         <scene sceneID="tZ6-kf-XTO">
             <objects>
-                <viewController id="jmF-8F-pzQ" customClass="ClientSideInjectionDetailViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Webview Issues" id="jmF-8F-pzQ" customClass="ClientSideInjectionDetailViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JtQ-Fy-eeH"/>
                         <viewControllerLayoutGuide type="bottom" id="v45-mk-XEs"/>
