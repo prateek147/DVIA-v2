@@ -31,27 +31,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-aI-tos">
-                                <rect key="frame" x="56" y="410" width="262" height="34"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Objective-C">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="AMh-bw-iLh" kind="show" id="I2n-8f-BE1"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWk-hS-a7c">
-                                <rect key="frame" x="-1" y="88" width="375" height="269"/>
+                                <rect key="frame" x="-1" y="88" width="375" height="269.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Functions that do the authentication via Touch/Face ID can be hooked and manipulated in order to authenticate the attacker. Having a Objective-C runtime environment definitely aids the attacker as it becomes easier to swizzle method.. Use a combination of hooking/debugging to bypass the Touch ID and Face ID checks. You can use tools like Needle, Frida, Cycript etc or just LLDB.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-M7-HKd">
-                                <rect key="frame" x="86" y="461" width="203" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-M7-HKd">
+                                <rect key="frame" x="101" y="417" width="173" height="34"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Swift">
+                                <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -62,13 +52,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="width" secondItem="RWk-hS-a7c" secondAttribute="height" multiplier="320:321" constant="106.83800623052957" id="4ok-8f-uEp"/>
-                            <constraint firstItem="sfH-aI-tos" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="78" id="5UL-i9-llA"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="width" secondItem="vd4-Mq-OiI" secondAttribute="width" id="9Ji-Jc-md0"/>
                             <constraint firstItem="8yf-M7-HKd" firstAttribute="centerX" secondItem="QCX-ai-swQ" secondAttribute="centerX" id="Fxs-zk-x0r"/>
+                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="59.329999999999998" id="Fze-ax-hYv"/>
                             <constraint firstItem="QCX-ai-swQ" firstAttribute="leading" secondItem="RWk-hS-a7c" secondAttribute="leading" constant="0.66666666666665719" id="Gs1-I0-h0P"/>
-                            <constraint firstItem="sfH-aI-tos" firstAttribute="centerX" secondItem="QCX-ai-swQ" secondAttribute="centerX" id="Gy5-Lw-Ktb"/>
+                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="59.333333333333314" id="Vme-xV-Hl0"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="top" secondItem="QCX-ai-swQ" secondAttribute="top" id="Voz-vV-DFG"/>
-                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="sfH-aI-tos" secondAttribute="bottom" constant="17" id="e7c-fp-fqw"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="centerX" secondItem="QCX-ai-swQ" secondAttribute="centerX" constant="-1" id="lDo-6Q-adv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCX-ai-swQ"/>
@@ -106,7 +95,7 @@
         <!--Touch/Fammce ID Bypass-->
         <scene sceneID="tRR-9v-EMG">
             <objects>
-                <viewController title="Touch/Fammce ID Bypass" id="huM-gu-QqO" customClass="SwiftTouchIDViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Touch/Fammce ID Bypass" id="huM-gu-QqO" customClass="TouchIDDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6fR-nm-wVc"/>
                         <viewControllerLayoutGuide type="bottom" id="80J-J5-xjN"/>
@@ -115,36 +104,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wot-bo-zOd">
-                                <rect key="frame" x="43" y="435" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Objective-C">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-ve-AB5">
-                                <rect key="frame" x="27" y="72" width="320" height="286.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-ve-AB5">
+                                <rect key="frame" x="0.0" y="118" width="375" height="114.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iBx-ve-AB5" secondAttribute="height" multiplier="320:321" id="y16-fj-S3d"/>
-                                </constraints>
-                                <string key="text">Functions that do the authentication via Touch/Face ID can be hooked and manipulated in order to authenticate the attacker. Having a Objective-C runtime environment definitely aids the attacker as it becomes easier to swizzle method.. Use a combination of hooking/debugging to bypass the Touch ID and Face ID checks. You can use tools like Needle, Frida, Cycript etc or just LLDB.</string>
+                                <string key="text">Tapping on the button below will authenticate you with your Touch-ID. Your task is to bypass this authentication using patching or swizzling.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-pR-w3f">
-                                <rect key="frame" x="86" y="386" width="203" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5v-h3g">
+                                <rect key="frame" x="46" y="291" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlJ-hQ-kQR">
+                                <rect key="frame" x="46" y="384" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X63-06-UYF">
+                                <rect key="frame" x="287" y="364" width="40" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="2X1-fX-n4q"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="dhz-4P-Aqo"/>
+                                    <constraint firstAttribute="height" constant="60" id="jC3-aU-r3V"/>
+                                    <constraint firstAttribute="width" constant="40" id="uBx-Gq-5Nv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="yNi-LR-Ojz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Swift">
+                                <state key="normal" image="fingerprint.png">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchIDTappedObjC:" destination="huM-gu-QqO" eventType="touchUpInside" id="9jY-sZ-YHh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-pR-w3f">
+                                <rect key="frame" x="287" y="282.66666666666669" width="40" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="mPh-dx-KGE"/>
+                                    <constraint firstAttribute="height" constant="60" id="vVz-7b-lZB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" image="fingerprint.png">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchIDTapped:" destination="huM-gu-QqO" eventType="touchUpInside" id="RwS-jN-o0V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LyE-pR-w3f" firstAttribute="centerX" secondItem="mmm-WM-IdM" secondAttribute="centerX" id="DQE-wM-JQI"/>
-                            <constraint firstItem="iBx-ve-AB5" firstAttribute="width" secondItem="iBx-ve-AB5" secondAttribute="height" multiplier="320:321" id="aoC-lL-Qlx"/>
+                            <constraint firstItem="LyE-pR-w3f" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="50" id="4LG-MT-AXo"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" id="4RK-gz-O05"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="48" id="6LP-W6-XC9"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="9gy-h1-LaO"/>
+                            <constraint firstItem="LyE-pR-w3f" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="50" id="ARP-4Y-B7R"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="F56-WN-Rka"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="34" id="Jc3-bU-URT"/>
+                            <constraint firstItem="SlJ-hQ-kQR" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" constant="46" id="PC2-5B-zbL"/>
+                            <constraint firstItem="smH-5v-h3g" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="58.333333333333314" id="QEu-9C-Air"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" constant="10" id="Stl-WY-x1v"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" id="TkZ-nG-mot"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" constant="30" id="aWO-wL-LPy"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="cQe-Bu-udA"/>
+                            <constraint firstItem="SlJ-hQ-kQR" firstAttribute="top" secondItem="smH-5v-h3g" secondAttribute="bottom" constant="72" id="eq9-5S-XSY"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="gdy-RI-ZWd"/>
+                            <constraint firstItem="X63-06-UYF" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="131.33333333333331" id="iFM-Ub-9Td"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="centerX" secondItem="MPf-CM-zyw" secondAttribute="centerX" id="iuO-40-QWC"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="trailing" secondItem="MPf-CM-zyw" secondAttribute="trailing" id="jpU-op-zMo"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="lgP-a3-fJK"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="m5y-hX-W8y"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="34" id="rxO-wA-B7h"/>
+                            <constraint firstItem="smH-5v-h3g" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" constant="46" id="s8V-Dk-kSU"/>
+                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="48" id="uZV-5Z-93k"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="trailing" secondItem="MPf-CM-zyw" secondAttribute="trailing" id="ylN-B4-UqJ"/>
+                            <constraint firstItem="iBx-ve-AB5" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" id="zSk-FC-PDB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MPf-CM-zyw"/>
                     </view>
@@ -152,58 +189,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYV-P0-XAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="256"/>
-        </scene>
-        <!--Touch/Fammce ID Bypass-->
-        <scene sceneID="wpy-A0-bob">
-            <objects>
-                <viewController title="Touch/Fammce ID Bypass" id="AMh-bw-iLh" customClass="SwiftTouchIDViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iRj-9X-lFR"/>
-                        <viewControllerLayoutGuide type="bottom" id="aRy-LL-1AI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="caX-Cn-mpZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8v-gy-SEp">
-                                <rect key="frame" x="43" y="435" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Objective-C">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvv-vc-HHL">
-                                <rect key="frame" x="27" y="72" width="320" height="286.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Jvv-vc-HHL" secondAttribute="height" multiplier="320:321" id="P2r-RN-h1d"/>
-                                </constraints>
-                                <string key="text">Functions that do the authentication via Touch/Face ID can be hooked and manipulated in order to authenticate the attacker. Having a Objective-C runtime environment definitely aids the attacker as it becomes easier to swizzle method.. Use a combination of hooking/debugging to bypass the Touch ID and Face ID checks. You can use tools like Needle, Frida, Cycript etc or just LLDB.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPE-Xj-Dd8">
-                                <rect key="frame" x="86" y="386" width="203" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Implementation in Swift">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RPE-Xj-Dd8" firstAttribute="centerX" secondItem="caX-Cn-mpZ" secondAttribute="centerX" id="cnX-5B-CWN"/>
-                            <constraint firstItem="Jvv-vc-HHL" firstAttribute="width" secondItem="Jvv-vc-HHL" secondAttribute="height" multiplier="320:321" id="k1b-Wx-m1I"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="NBd-OT-MPY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Touch/Face ID Bypass" id="Ato-4G-c38"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tfo-6D-I9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1258" y="-233"/>
+            <point key="canvasLocation" x="984.79999999999995" y="-172.90640394088672"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fingerprint.png" width="821" height="1225"/>
+    </resources>
 </document>

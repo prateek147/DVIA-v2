@@ -6,6 +6,7 @@
 #define DVIA_Bridging_Header_h
 
 #include "JailbreakDetection.h"
+#include "TouchIDAuthentication.h"
 #include "PDKeychainBindings.h"
 #include "LoginValidate.h"
 #import <CouchbaseLite/CouchbaseLite.h>

@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */; };
+		6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */; };
 		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		6EF0C419205FD59A0089050C /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */; };
+		6EF0C42120622B590089050C /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF0C42020622B580089050C /* fingerprint.png */; };
+		6EF0C423206234BD0089050C /* TouchIDAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C422206234BD0089050C /* TouchIDAuthentication.m */; };
 		F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */; };
 		F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */; };
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
@@ -24,7 +27,6 @@
 		F6C8AA2C205D32CB001E1CCB /* TouchIDBypassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */; };
 		F6C8AA34205D80BB001E1CCB /* BinaryProtectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA33205D80BB001E1CCB /* BinaryProtectionViewController.swift */; };
 		F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA36205D80D5001E1CCB /* BinaryProtection.storyboard */; };
-		F6C8AA39205D944A001E1CCB /* SwiftTouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */; };
 		F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F26202FA4DD00A3A757 /* Home.storyboard */; };
 		F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */; };
 		F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F29202FA4DD00A3A757 /* UIViewController+Helper.swift */; };
@@ -193,8 +195,12 @@
 
 /* Begin PBXFileReference section */
 		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
+		6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDDetailsViewController.swift; sourceTree = "<group>"; };
 		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
+		6EF0C42020622B580089050C /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
+		6EF0C422206234BD0089050C /* TouchIDAuthentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDAuthentication.m; sourceTree = "<group>"; };
+		6EF0C424206234D10089050C /* TouchIDAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDAuthentication.h; sourceTree = "<group>"; };
 		92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVIA_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
 		F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcessivePermissionsViewController.swift; sourceTree = "<group>"; };
@@ -212,7 +218,6 @@
 		F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDBypassViewController.swift; sourceTree = "<group>"; };
 		F6C8AA33205D80BB001E1CCB /* BinaryProtectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryProtectionViewController.swift; sourceTree = "<group>"; };
 		F6C8AA36205D80D5001E1CCB /* BinaryProtection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BinaryProtection.storyboard; sourceTree = "<group>"; };
-		F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTouchIDViewController.swift; sourceTree = "<group>"; };
 		F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVIA-v2-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6DE6F26202FA4DD00A3A757 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -521,6 +526,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6EF0C41F20622B300089050C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6EF0C42020622B580089050C /* fingerprint.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		793F52263EB6788C0BAC03B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +582,7 @@
 		F65AC869202FA37500E4088A /* DVIA-v2 */ = {
 			isa = PBXGroup;
 			children = (
+				6EF0C41F20622B300089050C /* Images */,
 				F6E645D9202FBCAB00884A43 /* Model */,
 				F6E6440F202FBB6700884A43 /* Vendor */,
 				F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */,
@@ -652,8 +666,10 @@
 		F6C8AA2A205D32BB001E1CCB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */,
 				F6C8AA2B205D32CB001E1CCB /* TouchIDBypassViewController.swift */,
-				F6C8AA38205D944A001E1CCB /* SwiftTouchIDViewController.swift */,
+				6EF0C422206234BD0089050C /* TouchIDAuthentication.m */,
+				6EF0C424206234D10089050C /* TouchIDAuthentication.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1572,6 +1588,7 @@
 				F6E645C3202FBC6000884A43 /* ClientSideInjection.storyboard in Resources */,
 				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
 				F6C8AA0E205A62B0001E1CCB /* PrivateAPIs.storyboard in Resources */,
+				6EF0C42120622B590089050C /* fingerprint.png in Resources */,
 				F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */,
 				F6E645CF202FBC6000884A43 /* InsecureDataStorage.storyboard in Resources */,
 				F6DE6F88202FA4DE00A3A757 /* Assets.xcassets in Resources */,
@@ -1701,6 +1718,7 @@
 				F6E6453B202FBB6700884A43 /* YapDatabaseViewMappings.m in Sources */,
 				F6E64533202FBB6700884A43 /* YapDatabaseSecondaryIndexTransaction.m in Sources */,
 				F6DE6F84202FA4DE00A3A757 /* RootViewController.swift in Sources */,
+				6EF0C423206234BD0089050C /* TouchIDAuthentication.m in Sources */,
 				F6E6451C202FBB6700884A43 /* YDBCKChangeQueue.m in Sources */,
 				F6E6452D202FBB6700884A43 /* YapDatabaseHooksConnection.m in Sources */,
 				F6E6451A202FBB6700884A43 /* YDBCKChangeRecord.m in Sources */,
@@ -1711,6 +1729,7 @@
 				F6DE6F7B202FA4DE00A3A757 /* Storyboards.swift in Sources */,
 				F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */,
 				F6E64504202FBB6700884A43 /* YapDatabaseConnection.m in Sources */,
+				6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */,
 				F6E64554202FBB6700884A43 /* RNOpenSSLEncryptor.m in Sources */,
 				F6E6450C202FBB6700884A43 /* YapDebugDictionary.m in Sources */,
 				F6E645E4202FBCAB00884A43 /* User+CoreDataProperties.swift in Sources */,
@@ -1784,7 +1803,6 @@
 				F6E645C6202FBC6000884A43 /* YapDatabaseViewController.swift in Sources */,
 				F6E64519202FBB6700884A43 /* YDBCKAttachRequest.m in Sources */,
 				F6E6452B202FBB6700884A43 /* YapDatabaseHooks.m in Sources */,
-				F6C8AA39205D944A001E1CCB /* SwiftTouchIDViewController.swift in Sources */,
 				F6C8AA11205A632F001E1CCB /* PrivateAPIsViewController.swift in Sources */,
 				F6E6455E202FBB6700884A43 /* DDMultiFormatter.m in Sources */,
 				F6E64548202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m in Sources */,
