@@ -86,6 +86,8 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showPrivateAPIs()
         case .runtimeManipulation:
             showRuntimeManipulation()
+        case .antiAntiHookingDebugging:
+            showAntiAntiHookingDebugging()
         case .binaryProtection:
             showBinaryProtection()
         case .touchIDBypass:
@@ -139,6 +141,13 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
     
     func showInsecureDataStorage() {
         let storyboard = UIStoryboard(name: Storyboard.insecureDataStorage.name, bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
+            addControllerAsChild(childController: controller)
+        }
+    }
+    
+    func showAntiAntiHookingDebugging() {
+        let storyboard = UIStoryboard(name: Storyboard.antiAntiHookingDebugging.name, bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
             addControllerAsChild(childController: controller)
         }

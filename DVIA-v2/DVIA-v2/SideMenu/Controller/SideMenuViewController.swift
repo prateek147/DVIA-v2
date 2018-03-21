@@ -37,6 +37,7 @@ class SideMenuViewController: UIViewController {
                 MenuCellModel(item: .excessivePermissions),
                 MenuCellModel(item: .privateAPIs),
                 MenuCellModel(item: .runtimeManipulation),
+                MenuCellModel(item: .antiAntiHookingDebugging),
                 MenuCellModel(item: .binaryProtection),
                 MenuCellModel(item: .touchIDBypass),
                 MenuCellModel(item: .phishing), MenuCellModel(item: .sideChannelDataLeakage),

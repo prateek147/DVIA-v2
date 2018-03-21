@@ -20,6 +20,7 @@ enum MenuCellItem {
     case privateAPIs
     case runtimeManipulation
     case binaryProtection
+    case antiAntiHookingDebugging
     case touchIDBypass
     case sideChannelDataLeakage
     case securityDecisonsViaUntrustedInput
@@ -44,6 +45,8 @@ enum MenuCellItem {
             return "Excessive Permissions"
         case .privateAPIs:
             return "Private APIs"
+        case .antiAntiHookingDebugging:
+            return "Anti Anti Hooking/Debugging"
         case .runtimeManipulation:
             return "Runtime Manipulation"
         case .binaryProtection:

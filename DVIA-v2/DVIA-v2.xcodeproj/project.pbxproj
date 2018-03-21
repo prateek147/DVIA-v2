@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */; };
 		6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */; };
+		6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */; };
+		6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */; };
 		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		6EF0C419205FD59A0089050C /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */; };
 		6EF0C42120622B590089050C /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF0C42020622B580089050C /* fingerprint.png */; };
@@ -196,6 +198,8 @@
 /* Begin PBXFileReference section */
 		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
 		6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDDetailsViewController.swift; sourceTree = "<group>"; };
+		6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AntiAntiHookingDebugging.storyboard; sourceTree = "<group>"; };
+		6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiAntiHookingDebuggingViewController.swift; sourceTree = "<group>"; };
 		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
 		6EF0C42020622B580089050C /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
@@ -526,6 +530,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6E38A9802062650F00C9B563 /* AntiAntiHookingDebugging */ = {
+			isa = PBXGroup;
+			children = (
+				6E38A983206266A300C9B563 /* Controller */,
+				6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */,
+			);
+			path = AntiAntiHookingDebugging;
+			sourceTree = "<group>";
+		};
+		6E38A983206266A300C9B563 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6EF0C41F20622B300089050C /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +786,7 @@
 		F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */ = {
 			isa = PBXGroup;
 			children = (
+				6E38A9802062650F00C9B563 /* AntiAntiHookingDebugging */,
 				F6C8AA32205D809C001E1CCB /* BinaryProtection */,
 				F6C8AA27205D329F001E1CCB /* TouchIDBypass */,
 				F6C8AA1E205D2406001E1CCB /* Phishing */,
@@ -1571,6 +1593,7 @@
 				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
 				F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */,
 				F6C8AA23205D2433001E1CCB /* Phishing.storyboard in Resources */,
+				6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */,
 				F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */,
 				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
 				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
@@ -1806,6 +1829,7 @@
 				F6C8AA11205A632F001E1CCB /* PrivateAPIsViewController.swift in Sources */,
 				F6E6455E202FBB6700884A43 /* DDMultiFormatter.m in Sources */,
 				F6E64548202FBB6700884A43 /* YapDatabaseFullTextSearchConnection.m in Sources */,
+				6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */,
 				F6E6451B202FBB6700884A43 /* YDBCKRecordTableInfo.m in Sources */,
 				F6E64508202FBB6700884A43 /* YapDatabaseConnectionDefaults.m in Sources */,
 				F6E64552202FBB6700884A43 /* RNCryptor.m in Sources */,

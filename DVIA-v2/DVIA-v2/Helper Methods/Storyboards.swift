@@ -13,6 +13,7 @@ enum Storyboard: String {
     case home = "Home"
     case insecureDataStorage = "InsecureDataStorage"
     case runtimeManipulation = "RuntimeManipulation"
+    case antiAntiHookingDebugging = "AntiAntiHookingDebugging"
     case binaryProtection = "BinaryProtection"
     case excessivePermissions = "ExcessivePermissions"
     case privateAPIs = "PrivateAPIs"
