@@ -10,14 +10,12 @@ import UIKit
 
 class SecurityDecisionsViewUntrustedInputDetailViewController: UIViewController {
 
-    
     @IBOutlet var callStatusLabel: UILabel!
     @IBOutlet var enterNumberTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "IPC Issues"
-
     }
 
     @IBAction func URLSchemeButtonTapped(_ sender: Any) {

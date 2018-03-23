@@ -37,22 +37,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-AR-1sa">
-                                <rect key="frame" x="16" y="196" width="343" height="30"/>
-                                <state key="normal" title="Read an article on Binary Patching"/>
-                                <connections>
-                                    <action selector="readArticle1Tapped:" destination="GNJ-HI-TXZ" eventType="touchUpInside" id="ASg-WI-xZq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo8-zf-EPJ">
-                                <rect key="frame" x="16" y="234" width="343" height="30"/>
-                                <state key="normal" title="Application Patching with Hopper"/>
-                                <connections>
-                                    <action selector="readArticle2Tapped:" destination="GNJ-HI-TXZ" eventType="touchUpInside" id="poP-o9-baW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTb-Zz-DKJ">
-                                <rect key="frame" x="115.5" y="272" width="144" height="30"/>
+                                <rect key="frame" x="115" y="226" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,16 +51,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="deJ-61-FWh" firstAttribute="top" secondItem="bkr-Yq-eef" secondAttribute="bottom" constant="8" id="4zb-hF-rBJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nRx-AR-1sa" secondAttribute="trailing" id="BR7-SF-22o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mo8-zf-EPJ" secondAttribute="trailing" id="QFp-kX-F7q"/>
-                            <constraint firstItem="nRx-AR-1sa" firstAttribute="top" secondItem="deJ-61-FWh" secondAttribute="bottom" constant="8" id="Sif-dP-Gnp"/>
-                            <constraint firstItem="nRx-AR-1sa" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leadingMargin" id="UT9-yK-9Ae"/>
+                            <constraint firstItem="qTb-Zz-DKJ" firstAttribute="top" secondItem="deJ-61-FWh" secondAttribute="bottom" constant="37.5" id="K8s-CY-4Ag"/>
                             <constraint firstItem="deJ-61-FWh" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leading" constant="8" id="dGS-CP-jCi"/>
                             <constraint firstAttribute="trailing" secondItem="deJ-61-FWh" secondAttribute="trailing" constant="8" id="erP-cL-v6L"/>
-                            <constraint firstItem="Mo8-zf-EPJ" firstAttribute="leading" secondItem="aoG-mJ-icw" secondAttribute="leadingMargin" id="lzQ-VS-dBn"/>
                             <constraint firstItem="qTb-Zz-DKJ" firstAttribute="centerX" secondItem="aoG-mJ-icw" secondAttribute="centerX" id="oXS-4Y-eQx"/>
-                            <constraint firstItem="Mo8-zf-EPJ" firstAttribute="top" secondItem="nRx-AR-1sa" secondAttribute="bottom" constant="8" id="tYF-FL-SgY"/>
-                            <constraint firstItem="qTb-Zz-DKJ" firstAttribute="top" secondItem="Mo8-zf-EPJ" secondAttribute="bottom" constant="8" id="z6x-el-Pgd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Application Patching" id="auv-Rt-v27">
