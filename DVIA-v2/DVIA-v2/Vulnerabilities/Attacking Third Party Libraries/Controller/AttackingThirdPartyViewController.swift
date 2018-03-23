@@ -12,7 +12,6 @@ class AttackingThirdPartyViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func menuTapped(_ sender: Any) {

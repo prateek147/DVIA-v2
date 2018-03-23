@@ -80,10 +80,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBA-fY-gLt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBA-fY-gLt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVr-Gf-HUc">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVr-Gf-HUc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="795"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-dN-9g4">
@@ -96,28 +96,21 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-d5-N3d">
-                                                <rect key="frame" x="87" y="360" width="201" height="30"/>
-                                                <state key="normal" title="Read article on URL schemes"/>
-                                                <connections>
-                                                    <action selector="URLSchemeButtonTapped:" destination="0aZ-MG-Mhg" eventType="touchUpInside" id="Xkh-UM-T2Q"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number to call" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-5A-wFw">
-                                                <rect key="frame" x="87" y="398" width="201" height="30"/>
+                                                <rect key="frame" x="106.5" y="333" width="162.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhu-1p-VZi">
-                                                <rect key="frame" x="172" y="436" width="30" height="30"/>
+                                                <rect key="frame" x="172" y="371" width="30" height="30"/>
                                                 <state key="normal" title="Call"/>
                                                 <connections>
                                                     <action selector="callButtonTapped:" destination="0aZ-MG-Mhg" eventType="touchUpInside" id="vBs-vV-G0n"/>
                                                 </connections>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seriously?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-4x-bgK">
-                                                <rect key="frame" x="148" y="474" width="79" height="21"/>
+                                                <rect key="frame" x="148" y="409" width="79" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -125,18 +118,14 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="aQq-4x-bgK" secondAttribute="bottom" constant="300" id="13W-nq-d9R"/>
-                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="top" secondItem="j0m-d5-N3d" secondAttribute="bottom" constant="8" id="7jc-T2-b3g"/>
-                                            <constraint firstItem="j0m-d5-N3d" firstAttribute="top" secondItem="9o6-dN-9g4" secondAttribute="bottom" constant="10" id="S93-LM-jtc"/>
-                                            <constraint firstItem="j0m-d5-N3d" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="Zdb-p6-AVg"/>
-                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="top" secondItem="lLE-5A-wFw" secondAttribute="bottom" constant="8" id="djm-bl-JA7"/>
-                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="width" secondItem="j0m-d5-N3d" secondAttribute="width" id="gLu-3S-EtE"/>
-                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="hug-rW-gTM"/>
+                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="top" secondItem="9o6-dN-9g4" secondAttribute="bottom" constant="-17" id="7xf-bi-0qQ"/>
+                                            <constraint firstItem="lLE-5A-wFw" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="DiI-ZJ-dT6"/>
+                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="top" secondItem="lLE-5A-wFw" secondAttribute="bottom" constant="8" id="JZH-KF-ZCm"/>
+                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="Ogm-pJ-2aZ"/>
+                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="top" secondItem="Vhu-1p-VZi" secondAttribute="bottom" constant="8" id="QCj-2X-sRN"/>
                                             <constraint firstItem="9o6-dN-9g4" firstAttribute="top" secondItem="GVr-Gf-HUc" secondAttribute="top" id="k4X-cV-ZC4"/>
-                                            <constraint firstItem="Vhu-1p-VZi" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="lXz-Rf-KMJ"/>
-                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="nJ7-eJ-gUk"/>
+                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="centerX" secondItem="GVr-Gf-HUc" secondAttribute="centerX" id="oUI-kV-kvO"/>
                                             <constraint firstItem="9o6-dN-9g4" firstAttribute="leading" secondItem="GVr-Gf-HUc" secondAttribute="leading" id="q9e-2i-6bJ"/>
-                                            <constraint firstItem="aQq-4x-bgK" firstAttribute="top" secondItem="Vhu-1p-VZi" secondAttribute="bottom" constant="8" id="qdE-BI-AQO"/>
                                             <constraint firstAttribute="trailing" secondItem="9o6-dN-9g4" secondAttribute="trailing" id="tk9-ee-MtY"/>
                                         </constraints>
                                     </view>

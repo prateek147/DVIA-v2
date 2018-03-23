@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8It-mx-aOm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8It-mx-aOm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
         <!--Runtime Manipulation-->
         <scene sceneID="3Ey-5y-UbM">
             <objects>
-                <viewController id="Bbu-sl-jPk" customClass="RuntimeManipulationViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bbu-sl-jPk" customClass="RuntimeManipulationViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsw-Is-WCr"/>
                         <viewControllerLayoutGuide type="bottom" id="u9v-hR-aGY"/>
@@ -30,76 +30,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEF-fV-0Qg">
-                                <rect key="frame" x="47" y="250" width="281" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Understanding the Objective-C runtime"/>
-                                <connections>
-                                    <action selector="runtimeArticle1Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="bZg-wH-WuU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyU-ee-QTt">
-                                <rect key="frame" x="81" y="280" width="213" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Runtime analysis with Cycript"/>
-                                <connections>
-                                    <action selector="runtimeArticle2Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="LbW-qq-1PW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPR-ph-V69">
-                                <rect key="frame" x="59.5" y="310" width="256" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Runtime manipulation using Cycript"/>
-                                <connections>
-                                    <action selector="runtimeArticle3Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="QGt-oV-bEd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-m6-DBD">
-                                <rect key="frame" x="75" y="340" width="225" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Method Swizzling using Cycript"/>
-                                <connections>
-                                    <action selector="runtimeArticle4Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="6dk-Q4-e9x"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-KF-sPd">
-                                <rect key="frame" x="77.5" y="370" width="220" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Runtime Analysis with iNalyzer"/>
-                                <connections>
-                                    <action selector="runtimeArticle5Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="03f-ig-HrP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-dx-61c">
-                                <rect key="frame" x="89.5" y="430" width="196" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Runtime Analysis with GDB"/>
-                                <connections>
-                                    <action selector="runtimeArticle7Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="7Fc-jR-lWw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-QC-5qU">
-                                <rect key="frame" x="115.5" y="470" width="144" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="p4L-bl-0f0" kind="show" id="dOE-7x-xh2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRp-dC-qlH">
-                                <rect key="frame" x="112.5" y="400" width="150" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Arm and GDB Basics"/>
-                                <connections>
-                                    <action selector="runtimeArticle6Tapped:" destination="Bbu-sl-jPk" eventType="touchUpInside" id="lzI-68-OBt"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25D-Dj-mSb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25D-Dj-mSb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="48o-Ln-i1G"/>
                                     <constraint firstAttribute="height" constant="200" id="qM9-gv-Js0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
@@ -113,47 +48,23 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiG-wf-wgH">
-                                <rect key="frame" x="62.5" y="200" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="dqJ-cd-XjE"/>
-                                    <constraint firstAttribute="height" constant="40" id="nVj-RG-28t"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Some Tutorials on Runtime Analysis and manipulation">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-QC-5qU">
+                                <rect key="frame" x="115" y="222" width="144" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START CHALLENGE">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p4L-bl-0f0" kind="show" id="dOE-7x-xh2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="2qM-cp-zZU"/>
-                            <constraint firstItem="25D-Dj-mSb" firstAttribute="trailing" secondItem="fqH-Ra-bUh" secondAttribute="trailing" id="2qO-eJ-87t"/>
-                            <constraint firstItem="uyU-ee-QTt" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="6pJ-95-4Ww"/>
-                            <constraint firstItem="Tdm-m6-DBD" firstAttribute="top" secondItem="RPR-ph-V69" secondAttribute="bottom" id="9gj-Vc-cuw"/>
-                            <constraint firstItem="wRp-dC-qlH" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="FcG-42-3a0"/>
-                            <constraint firstItem="vEF-fV-0Qg" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="K8f-W0-OCI"/>
-                            <constraint firstItem="25D-Dj-mSb" firstAttribute="leading" secondItem="fqH-Ra-bUh" secondAttribute="leading" id="LMP-Ql-C92"/>
-                            <constraint firstItem="uyU-ee-QTt" firstAttribute="top" secondItem="vEF-fV-0Qg" secondAttribute="bottom" id="OQu-sD-xbL"/>
-                            <constraint firstItem="vEF-fV-0Qg" firstAttribute="top" secondItem="PiG-wf-wgH" secondAttribute="bottom" constant="10" id="P2r-sB-KE7"/>
-                            <constraint firstItem="wRp-dC-qlH" firstAttribute="top" secondItem="m8n-KF-sPd" secondAttribute="bottom" id="POa-ym-KCf"/>
-                            <constraint firstItem="PiG-wf-wgH" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="PZi-zh-bOq"/>
-                            <constraint firstItem="m8n-KF-sPd" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="Pa0-Ou-VPl"/>
-                            <constraint firstItem="RPR-ph-V69" firstAttribute="top" secondItem="uyU-ee-QTt" secondAttribute="bottom" id="VEa-xm-eVk"/>
-                            <constraint firstItem="m8n-KF-sPd" firstAttribute="top" secondItem="Tdm-m6-DBD" secondAttribute="bottom" id="gAi-Jx-Pop"/>
-                            <constraint firstItem="PiG-wf-wgH" firstAttribute="top" secondItem="25D-Dj-mSb" secondAttribute="bottom" id="iry-nP-zvR"/>
-                            <constraint firstItem="YLV-QC-5qU" firstAttribute="top" secondItem="Uxw-dx-61c" secondAttribute="bottom" constant="10" id="lTh-gD-tG5"/>
-                            <constraint firstItem="YLV-QC-5qU" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="nnc-Ha-XU5"/>
-                            <constraint firstItem="Uxw-dx-61c" firstAttribute="top" secondItem="wRp-dC-qlH" secondAttribute="bottom" id="sDS-gJ-m8b"/>
-                            <constraint firstItem="Uxw-dx-61c" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="seX-9S-ZiJ"/>
-                            <constraint firstItem="Tdm-m6-DBD" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="trM-6m-X2k"/>
-                            <constraint firstItem="RPR-ph-V69" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="yiE-Z4-sen"/>
+                            <constraint firstItem="YLV-QC-5qU" firstAttribute="top" secondItem="25D-Dj-mSb" secondAttribute="bottom" constant="22" id="ROO-SU-XzC"/>
+                            <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="SWp-Ee-E0R"/>
+                            <constraint firstItem="YLV-QC-5qU" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="kQM-wM-kyk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Runtime Manipulation" id="iJW-S7-rRg">
@@ -171,7 +82,7 @@
         <!--Runtime Manipulation Details View Controller-->
         <scene sceneID="KS8-GU-Xho">
             <objects>
-                <viewController id="p4L-bl-0f0" customClass="RuntimeManipulationDetailsViewController" customModule="DVIA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p4L-bl-0f0" customClass="RuntimeManipulationDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dus-ns-gjZ"/>
                         <viewControllerLayoutGuide type="bottom" id="50B-i0-tWx"/>

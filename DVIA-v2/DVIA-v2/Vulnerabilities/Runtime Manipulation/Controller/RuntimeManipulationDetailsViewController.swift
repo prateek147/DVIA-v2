@@ -16,7 +16,7 @@ class RuntimeManipulationDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Runtime Manipulation"
     }
     
     @IBAction func loginMethod1Tapped(_ sender: Any) {

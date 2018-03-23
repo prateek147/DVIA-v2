@@ -14,8 +14,8 @@ class SensitiveInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.navigationItem.title = "Sensitive Information in Memory"
+
     }
 
     @IBAction func menuTapped(_ sender: Any) {

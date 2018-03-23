@@ -12,7 +12,7 @@ class KeystrokeLoggingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Keystroke Logging"
         // Do any additional setup after loading the view.
     }
 

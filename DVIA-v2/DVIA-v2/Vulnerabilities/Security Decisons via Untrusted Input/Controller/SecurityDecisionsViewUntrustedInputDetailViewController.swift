@@ -16,6 +16,8 @@ class SecurityDecisionsViewUntrustedInputDetailViewController: UIViewController 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "IPC Issues"
+
     }
 
     @IBAction func URLSchemeButtonTapped(_ sender: Any) {

@@ -19,7 +19,7 @@ class DeviceLogsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Device Logs"
     }
 
     @IBAction func signupTapped(_ sender: Any) {

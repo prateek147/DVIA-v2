@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqH-09-uT9">
-                                <rect key="frame" x="0.0" y="242" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="215" width="375" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="bCr-ak-Rd5"/>
@@ -49,12 +49,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-mo-tlL">
-                                <rect key="frame" x="0.0" y="412" width="375" height="30"/>
-                                <state key="normal" title="Read an article on Broken Cryptography"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-55-jbQ">
-                                <rect key="frame" x="115" y="450" width="144" height="30"/>
+                                <rect key="frame" x="115" y="371" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,17 +62,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uqH-09-uT9" firstAttribute="top" secondItem="bsb-1Q-Ai2" secondAttribute="bottom" constant="8" id="2Xu-iB-aN0"/>
                             <constraint firstItem="bsb-1Q-Ai2" firstAttribute="leading" secondItem="MoF-LD-sAP" secondAttribute="leading" id="4O3-k8-TxG"/>
                             <constraint firstItem="bsb-1Q-Ai2" firstAttribute="top" secondItem="SE1-MC-Ktj" secondAttribute="bottom" id="9Ql-iE-eZ0"/>
-                            <constraint firstItem="YoH-55-jbQ" firstAttribute="top" secondItem="7BY-mo-tlL" secondAttribute="bottom" constant="8" id="Gox-RU-phi"/>
+                            <constraint firstItem="YoH-55-jbQ" firstAttribute="top" secondItem="uqH-09-uT9" secondAttribute="bottom" constant="-14" id="DlH-71-5YK"/>
                             <constraint firstItem="uqH-09-uT9" firstAttribute="leading" secondItem="MoF-LD-sAP" secondAttribute="leading" id="V6w-Ni-2AG"/>
                             <constraint firstItem="uqH-09-uT9" firstAttribute="trailing" secondItem="MoF-LD-sAP" secondAttribute="trailing" id="YFK-XP-4gY"/>
-                            <constraint firstItem="7BY-mo-tlL" firstAttribute="leading" secondItem="MoF-LD-sAP" secondAttribute="leading" id="eHp-W4-Cbw"/>
-                            <constraint firstItem="7BY-mo-tlL" firstAttribute="top" secondItem="uqH-09-uT9" secondAttribute="bottom" id="fCO-iY-Zez"/>
                             <constraint firstItem="bsb-1Q-Ai2" firstAttribute="trailing" secondItem="MoF-LD-sAP" secondAttribute="trailing" id="mBg-1q-HyI"/>
-                            <constraint firstAttribute="trailing" secondItem="7BY-mo-tlL" secondAttribute="trailing" id="uoY-AS-5zE"/>
                             <constraint firstItem="YoH-55-jbQ" firstAttribute="centerX" secondItem="MoF-LD-sAP" secondAttribute="centerX" id="vrl-wB-O90"/>
+                            <constraint firstItem="uqH-09-uT9" firstAttribute="top" secondItem="bsb-1Q-Ai2" secondAttribute="bottom" constant="-19" id="xIF-gZ-emr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Broken Cryptography" id="uSH-kn-sHP">

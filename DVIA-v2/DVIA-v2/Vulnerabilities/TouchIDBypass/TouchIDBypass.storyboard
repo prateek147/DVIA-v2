@@ -39,8 +39,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-M7-HKd">
-                                <rect key="frame" x="101" y="417" width="173" height="34"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <rect key="frame" x="115.66666666666669" y="377.66666666666669" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uqp-aw-N8V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -54,9 +57,8 @@
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="width" secondItem="RWk-hS-a7c" secondAttribute="height" multiplier="320:321" constant="106.83800623052957" id="4ok-8f-uEp"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="width" secondItem="vd4-Mq-OiI" secondAttribute="width" id="9Ji-Jc-md0"/>
                             <constraint firstItem="8yf-M7-HKd" firstAttribute="centerX" secondItem="QCX-ai-swQ" secondAttribute="centerX" id="Fxs-zk-x0r"/>
-                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="59.329999999999998" id="Fze-ax-hYv"/>
                             <constraint firstItem="QCX-ai-swQ" firstAttribute="leading" secondItem="RWk-hS-a7c" secondAttribute="leading" constant="0.66666666666665719" id="Gs1-I0-h0P"/>
-                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="59.333333333333314" id="Vme-xV-Hl0"/>
+                            <constraint firstItem="8yf-M7-HKd" firstAttribute="top" secondItem="RWk-hS-a7c" secondAttribute="bottom" constant="20" id="QEd-7j-HJy"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="top" secondItem="QCX-ai-swQ" secondAttribute="top" id="Voz-vV-DFG"/>
                             <constraint firstItem="RWk-hS-a7c" firstAttribute="centerX" secondItem="QCX-ai-swQ" secondAttribute="centerX" constant="-1" id="lDo-6Q-adv"/>
                         </constraints>

@@ -12,7 +12,7 @@ class PasteboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Pasteboard"
         // Do any additional setup after loading the view.
     }
 

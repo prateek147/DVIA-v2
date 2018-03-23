@@ -22,6 +22,7 @@ class CookiesViewController: UIViewController {
         super.viewDidLoad()
 //        setSharedCookies()
         SetSharedCookies.setSharedCookies()
+        self.navigationItem.title = "Cookies"
         // Do any additional setup after loading the view.
     }
     
