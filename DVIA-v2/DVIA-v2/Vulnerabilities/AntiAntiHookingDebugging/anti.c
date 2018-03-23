@@ -52,19 +52,11 @@ int detect_injected_dylds()
             continue;
         }
         else {
+            //Suspicious injected library found, exiting
             exit(0);
         }
         
-        
-        
     }
-    
-    int mib[2U] = { CTL_HW, HW_NCPU };
-    size_t sizeOfNumCPUs = sizeof(numCPUs);
-    int status = sysctl(mib, 2U, &numCPUs, &sizeOfNumCPUs, NULL, 0U);
-    if(status)
-        numCPUs = 1;
-    
     return 0;
 }
 

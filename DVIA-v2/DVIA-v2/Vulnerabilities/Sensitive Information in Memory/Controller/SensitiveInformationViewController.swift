@@ -9,13 +9,19 @@
 import UIKit
 
 class SensitiveInformationViewController: UIViewController {
-
+    let username = "edhillary"
+    let password = "ev8848@1953"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
     }
 
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
+        let passwd = "tenzinnorgay"
+        let concatenated = username + passwd + password
+        
     }
 }

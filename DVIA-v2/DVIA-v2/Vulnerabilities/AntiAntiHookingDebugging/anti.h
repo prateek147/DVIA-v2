@@ -6,14 +6,11 @@
 //  Copyright © 2018 HighAltitudeHacks. All rights reserved.
 //
 
-
 #ifndef anti_h
 #define anti_h
-
 
 #include <stdio.h>
 
 int detect_injected_dylds(void);
-
 
 #endif

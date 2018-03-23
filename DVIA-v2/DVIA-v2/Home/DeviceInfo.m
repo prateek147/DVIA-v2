@@ -26,6 +26,8 @@
 #import <mach/mach_host.h>
 #include <libgen.h>
 #include <mach/processor_info.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
+
 
 // ...
 @implementation DeviceInfo : NSObject
@@ -56,7 +58,20 @@
     
     struct utsname u = {0};
     uname(&u);
+    
+    //Get the Wifi information
+    
+    NSArray *interFaceNames = (__bridge_transfer id)CNCopySupportedInterfaces();
+    
+    for (NSString *name in interFaceNames) {
+        NSDictionary *info = (__bridge_transfer id)CNCopyCurrentNetworkInfo((__bridge CFStringRef)name);
+        
+        NSLog(@"wifi info: bssid: %@, ssid:%@, ssidData: %@", info[@"BSSID"], info[@"SSID"], info[@"SSIDDATA"]);
+    }
     return [NSString stringWithFormat:@"Sysname: %s\nNodename: %s\nRelease: %s\nVersion: %s\nMachine: %s\nMemory in use (in MB): %f", u.sysname,u.nodename,u.release,u.version,u.machine,((CGFloat)info.resident_size / 1000000)];
+    
+    
    
 }
+
 @end

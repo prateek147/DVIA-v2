@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,16 +27,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptz-jL-5KW">
-                                <rect key="frame" x="22" y="385.5" width="111" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="@prateekg147">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="twitterHandleTapped:" destination="zdJ-pM-bnf" eventType="touchUpInside" id="4ac-fr-6NS"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
                                 <rect key="frame" x="16" y="64" width="343" height="301"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -48,21 +37,12 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" scrollEnabled="NO" editable="NO" text="Project Leader: Prateek Gianchandani             " translatesAutoresizingMaskIntoConstraints="NO" id="Wem-5G-2pz">
-                                <rect key="frame" x="16" y="365" width="343" height="35.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" scrollEnabled="NO" editable="NO" text="For any questions related to this project, please get in touch with me at prateek@damnvulnerableiosapp.com" translatesAutoresizingMaskIntoConstraints="NO" id="1r1-eQ-fl2">
-                                <rect key="frame" x="16" y="426" width="343" height="73.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-kg-tMT">
-                                <rect key="frame" x="51.5" y="534" width="272" height="34"/>
+                                <rect key="frame" x="51.5" y="613" width="272" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Kf3-sC-YbZ"/>
+                                    <constraint firstAttribute="width" constant="272" id="ffG-KY-DJG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="http://damnvulnerableiosapp.com">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,22 +54,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1r1-eQ-fl2" firstAttribute="top" secondItem="Wem-5G-2pz" secondAttribute="bottom" constant="71.5" id="C2K-nF-TVv"/>
-                            <constraint firstItem="ptz-jL-5KW" firstAttribute="top" secondItem="Wem-5G-2pz" secondAttribute="bottom" constant="-15" id="Cc9-5C-6v1"/>
+                            <constraint firstItem="mj8-Id-h8E" firstAttribute="top" secondItem="Ax2-kg-tMT" secondAttribute="bottom" constant="20" id="2RY-QT-u6B"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="Gf4-6a-h97"/>
-                            <constraint firstItem="Wem-5G-2pz" firstAttribute="top" secondItem="fzr-Hx-Y4Q" secondAttribute="bottom" id="H1c-5m-zua"/>
-                            <constraint firstItem="1r1-eQ-fl2" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="16" id="NiE-O3-dnJ"/>
-                            <constraint firstItem="Ax2-kg-tMT" firstAttribute="width" secondItem="sea-0L-Gn1" secondAttribute="height" multiplier="272:667" id="Rhh-FN-12X"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leadingMargin" id="T42-zW-hSL"/>
-                            <constraint firstAttribute="trailing" secondItem="1r1-eQ-fl2" secondAttribute="trailing" constant="16" id="UYL-DZ-W21"/>
-                            <constraint firstItem="1r1-eQ-fl2" firstAttribute="top" secondItem="Wem-5G-2pz" secondAttribute="bottom" constant="25.5" id="W9D-rA-7nC"/>
-                            <constraint firstItem="1r1-eQ-fl2" firstAttribute="top" secondItem="ptz-jL-5KW" secondAttribute="bottom" constant="7.5" id="biB-dd-AGP"/>
-                            <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="c3g-8o-yLD"/>
-                            <constraint firstItem="ptz-jL-5KW" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="22" id="eRx-U6-wIx"/>
+                            <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="hVH-Gk-My4"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="trailing" secondItem="sea-0L-Gn1" secondAttribute="trailingMargin" id="kJA-U1-5ec"/>
-                            <constraint firstItem="Wem-5G-2pz" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" constant="16" id="mYv-Hb-blR"/>
-                            <constraint firstItem="Ax2-kg-tMT" firstAttribute="top" secondItem="1r1-eQ-fl2" secondAttribute="bottom" constant="34.5" id="s3f-gR-ZKS"/>
-                            <constraint firstAttribute="trailing" secondItem="Wem-5G-2pz" secondAttribute="trailing" constant="16" id="y16-ol-OAX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="J5c-Cy-q3k">

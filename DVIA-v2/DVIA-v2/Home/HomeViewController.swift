@@ -13,10 +13,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        detect_injected_dylds();
-        let fileManager = FileManager.default
-        let currentPath = fileManager.currentDirectoryPath
-        print("Current path: \(currentPath)")
         homeTextView.text = DeviceInfo.getDeviceInfo();
         // Do any additional setup after loading the view.
     }
