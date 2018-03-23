@@ -83,8 +83,6 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showJailbreakDetection()
         case .excessivePermissions:
             showExcessivePermissions()
-        case .privateAPIs:
-            showPrivateAPIs()
         case .runtimeManipulation:
             showRuntimeManipulation()
         case .antiAntiHookingDebugging:
@@ -156,13 +154,6 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
     
     func showJailbreakDetection() {
         let storyboard = UIStoryboard(name: Storyboard.jailbreakDetection.name, bundle: nil)
-        if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
-            addControllerAsChild(childController: controller)
-        }
-    }
-    
-    func showPrivateAPIs() {
-        let storyboard = UIStoryboard(name: Storyboard.privateAPIs.name, bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() as? UINavigationController {
             addControllerAsChild(childController: controller)
         }

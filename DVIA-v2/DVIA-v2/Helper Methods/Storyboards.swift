@@ -16,7 +16,6 @@ enum Storyboard: String {
     case antiAntiHookingDebugging = "AntiAntiHookingDebugging"
     case binaryProtection = "BinaryProtection"
     case excessivePermissions = "ExcessivePermissions"
-    case privateAPIs = "PrivateAPIs"
     case touchIDBypass = "TouchIDBypass"
     case sideChannelDataLeakage = "SideChannelDataLeakage"
     case securityDecisonsViaUntrustedInput = "SecurityDecisonsViaUntrustedInput"
