@@ -22,7 +22,7 @@ class SensitiveInformationInMemoryDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func initializeIVars -> void {
+    func initializeIVars(){
         let passwd = "tenzinnorgay"
         let concatenated = username + passwd + password
     }
