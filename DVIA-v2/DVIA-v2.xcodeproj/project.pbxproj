@@ -18,6 +18,7 @@
 		6EF0C423206234BD0089050C /* TouchIDAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C422206234BD0089050C /* TouchIDAuthentication.m */; };
 		F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */; };
 		F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */; };
+		F65A37F420652EF3005966DA /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A37F320652EF3005966DA /* DeviceInfo.m */; };
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
 		F6C8AA0E205A62B0001E1CCB /* PrivateAPIs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA0D205A62B0001E1CCB /* PrivateAPIs.storyboard */; };
 		F6C8AA11205A632F001E1CCB /* PrivateAPIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA10205A632F001E1CCB /* PrivateAPIsViewController.swift */; };
@@ -212,6 +213,8 @@
 		C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
 		F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcessivePermissionsViewController.swift; sourceTree = "<group>"; };
 		F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExcessivePermissions.storyboard; sourceTree = "<group>"; };
+		F65A37F320652EF3005966DA /* DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		F65A37F520652F18005966DA /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		F65AC867202FA37500E4088A /* DVIA-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVIA-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DVIA_v2.xcdatamodel; sourceTree = "<group>"; };
 		F6C8AA0D205A62B0001E1CCB /* PrivateAPIs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateAPIs.storyboard; sourceTree = "<group>"; };
@@ -722,6 +725,8 @@
 			children = (
 				F6DE6F26202FA4DD00A3A757 /* Home.storyboard */,
 				F6DE6F27202FA4DD00A3A757 /* HomeViewController.swift */,
+				F65A37F320652EF3005966DA /* DeviceInfo.m */,
+				F65A37F520652F18005966DA /* DeviceInfo.h */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1760,6 +1765,7 @@
 				6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */,
 				F6E64554202FBB6700884A43 /* RNOpenSSLEncryptor.m in Sources */,
 				F6E6450C202FBB6700884A43 /* YapDebugDictionary.m in Sources */,
+				F65A37F420652EF3005966DA /* DeviceInfo.m in Sources */,
 				F6E645E4202FBCAB00884A43 /* User+CoreDataProperties.swift in Sources */,
 				F6E6452F202FBB6700884A43 /* YapDatabaseSecondaryIndex.m in Sources */,
 				F6DE6F83202FA4DE00A3A757 /* SideMenuTableViewCell.swift in Sources */,

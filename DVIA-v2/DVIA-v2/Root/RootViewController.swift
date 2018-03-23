@@ -44,6 +44,7 @@ class RootViewController: UIViewController {
 
 extension RootViewController {
  
+    
     func toogle() {
         isMenuOpen ? dismissMenu() : openMenu()
     }

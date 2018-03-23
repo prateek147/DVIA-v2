@@ -99,6 +99,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="homeTextView" destination="fzr-Hx-Y4Q" id="AP3-qe-aHU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG3-vG-NW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
