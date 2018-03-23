@@ -18,6 +18,7 @@ class CoreDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Core Data"
 
     }
 

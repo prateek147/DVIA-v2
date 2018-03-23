@@ -16,6 +16,7 @@ class RealmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Realm"
 
         // Do any additional setup after loading the view.
     }

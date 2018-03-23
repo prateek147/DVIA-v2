@@ -17,6 +17,8 @@ class PListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Plist"
+
     }
     
     @IBAction func saveInPlistFileTapped(_ sender: Any) {

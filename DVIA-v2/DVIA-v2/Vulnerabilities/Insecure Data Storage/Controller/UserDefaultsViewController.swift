@@ -14,6 +14,7 @@ class UserDefaultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "UserDefaults"
 
         // Do any additional setup after loading the view.
     }

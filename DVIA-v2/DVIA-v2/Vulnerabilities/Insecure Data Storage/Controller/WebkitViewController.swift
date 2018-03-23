@@ -12,6 +12,7 @@ class WebkitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "WebKit"
 
         // Do any additional setup after loading the view.
     }

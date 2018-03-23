@@ -32,6 +32,16 @@ class JailbreakDetectionViewController: UIViewController {
     @IBAction func jailbreakTest2Tapped(_ sender: Any) {
         DVIAUtilities.showAlert(forJailbreakTestIsJailbroken: JailbreakDetection.isJailbroken(), viewController: self)
     }
+   
+    @IBAction func jailbreakTest3Tapped(_ sender: Any) {
+    }
+    
+    @IBAction func jailbreakTest4Tapped(_ sender: Any) {
+    }
+    
+    @IBAction func jailbreakTest5Tapped(_ sender: Any) {
+    }
+    
     
     func isJailbroken() -> Bool {
         #if !SIMULATOR

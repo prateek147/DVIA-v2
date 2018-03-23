@@ -40,7 +40,7 @@ enum segueIdentifier: Int {
     }
 }
 
-fileprivate var vulnerabilities = ["Plist","NSUserDefaults","Keychain","Core Data","Webkit Caching","Realm","Couchbase Lite","YapDatabase"]
+fileprivate var vulnerabilities = ["Plist","UserDefaults","Keychain","Core Data","Webkit Caching","Realm","Couchbase Lite","YapDatabase"]
 
 class InsecureDataStorageViewController: UIViewController {
     

@@ -14,6 +14,7 @@ class KeychainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Keychain"
 
         // Do any additional setup after loading the view.
     }

@@ -26,15 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-rg-tUk">
-                                <rect key="frame" x="58.5" y="189" width="258" height="30"/>
-                                <state key="normal" title="Read an article on Local Data Storage">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="readArticleTapped:" destination="w03-gb-uZp" eventType="touchUpInside" id="6eQ-qM-uxZ"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="phe-fp-Akl">
                                 <rect key="frame" x="0.0" y="64" width="375" height="125"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -46,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-W7-anf">
-                                <rect key="frame" x="0.0" y="219" width="375" height="448"/>
+                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="hNy-V9-9d9">
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
@@ -69,13 +60,11 @@
                         <constraints>
                             <constraint firstItem="phe-fp-Akl" firstAttribute="top" secondItem="yUH-bM-C3W" secondAttribute="bottom" id="15s-QH-OZT"/>
                             <constraint firstAttribute="trailing" secondItem="KjW-W7-anf" secondAttribute="trailing" id="3vQ-ON-FKU"/>
-                            <constraint firstItem="ZiM-rg-tUk" firstAttribute="top" secondItem="phe-fp-Akl" secondAttribute="bottom" id="LDC-1D-Uhg"/>
                             <constraint firstAttribute="trailing" secondItem="phe-fp-Akl" secondAttribute="trailing" id="WQ8-2I-ZJB"/>
-                            <constraint firstItem="KjW-W7-anf" firstAttribute="top" secondItem="ZiM-rg-tUk" secondAttribute="bottom" id="Z36-cD-Srs"/>
                             <constraint firstItem="vdU-cn-VMz" firstAttribute="top" secondItem="KjW-W7-anf" secondAttribute="bottom" id="bNZ-lE-asb"/>
+                            <constraint firstItem="KjW-W7-anf" firstAttribute="top" secondItem="phe-fp-Akl" secondAttribute="bottom" constant="-19" id="fVy-lq-31L"/>
                             <constraint firstItem="KjW-W7-anf" firstAttribute="leading" secondItem="84s-cA-9zu" secondAttribute="leading" id="g5y-3F-j2R"/>
                             <constraint firstItem="phe-fp-Akl" firstAttribute="leading" secondItem="84s-cA-9zu" secondAttribute="leading" id="kXk-Ub-dKP"/>
-                            <constraint firstItem="ZiM-rg-tUk" firstAttribute="centerX" secondItem="84s-cA-9zu" secondAttribute="centerX" id="lHp-V5-57e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Local Data Storage" id="8b4-55-5cU">
@@ -179,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-702" y="-1478"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Local Data Storage-->
         <scene sceneID="2Kn-4g-aap">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FwH-jF-8Ez" sceneMemberID="viewController">
+                <navigationController title="Local Data Storage" automaticallyAdjustsScrollViewInsets="NO" id="FwH-jF-8Ez" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WSk-R7-QdB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -564,12 +553,16 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-zE-9dM">
-                                        <rect key="frame" x="35" y="46" width="305" height="30"/>
+                                        <rect key="frame" x="35" y="124" width="305" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bOo-2x-TQL"/>
+                                            <constraint firstAttribute="width" constant="305" id="jic-NI-nQk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceg-pb-oS7">
-                                        <rect key="frame" x="106" y="86" width="163" height="30"/>
+                                        <rect key="frame" x="106" y="164" width="163" height="30"/>
                                         <state key="normal" title="Save in Realm database">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -578,31 +571,46 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgm-lF-v4x">
-                                        <rect key="frame" x="35" y="8" width="305" height="30"/>
+                                        <rect key="frame" x="35" y="77" width="305" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="305" id="Vxs-zS-Sbv"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The input entered here is saved in a Realm. Your task is to find where this data is stored in the App sandbox." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZR-Qe-EAH">
+                                        <rect key="frame" x="10" y="8" width="355" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="centerX" secondItem="BMS-bi-VPf" secondAttribute="centerX" id="0bX-OG-OYs"/>
-                                    <constraint firstItem="fgm-lF-v4x" firstAttribute="top" secondItem="BMS-bi-VPf" secondAttribute="top" constant="8" id="3Ou-Rx-w9V"/>
-                                    <constraint firstAttribute="trailing" secondItem="iCk-zE-9dM" secondAttribute="trailing" constant="35" id="EMe-46-g8M"/>
-                                    <constraint firstItem="iCk-zE-9dM" firstAttribute="leading" secondItem="BMS-bi-VPf" secondAttribute="leading" constant="35" id="Jmv-6H-VDu"/>
-                                    <constraint firstItem="fgm-lF-v4x" firstAttribute="leading" secondItem="BMS-bi-VPf" secondAttribute="leading" constant="35" id="LUg-YL-tYS"/>
-                                    <constraint firstAttribute="trailing" secondItem="fgm-lF-v4x" secondAttribute="trailing" constant="35" id="OvQ-pW-EtU"/>
-                                    <constraint firstItem="iCk-zE-9dM" firstAttribute="top" secondItem="fgm-lF-v4x" secondAttribute="bottom" constant="8" id="Qr8-Su-rIp"/>
-                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="top" secondItem="iCk-zE-9dM" secondAttribute="bottom" constant="10" id="oN3-nL-x3B"/>
+                                    <constraint firstItem="iCk-zE-9dM" firstAttribute="centerX" secondItem="BMS-bi-VPf" secondAttribute="centerX" id="0ff-Xx-5as"/>
+                                    <constraint firstItem="iCk-zE-9dM" firstAttribute="top" secondItem="fgm-lF-v4x" secondAttribute="bottom" constant="8" id="1Al-vI-NfX"/>
+                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="top" secondItem="iCk-zE-9dM" secondAttribute="bottom" constant="10" id="4Ta-lU-mze"/>
+                                    <constraint firstItem="iCk-zE-9dM" firstAttribute="top" secondItem="fgm-lF-v4x" secondAttribute="bottom" constant="8" id="Di9-qo-Tz0"/>
+                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="top" secondItem="BMS-bi-VPf" secondAttribute="top" constant="164" id="E4y-sh-tSh"/>
+                                    <constraint firstAttribute="trailing" secondItem="hZR-Qe-EAH" secondAttribute="trailing" constant="10" id="FoA-uE-JAv"/>
+                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="centerX" secondItem="BMS-bi-VPf" secondAttribute="centerX" id="GGi-f5-eb4"/>
+                                    <constraint firstItem="hZR-Qe-EAH" firstAttribute="leading" secondItem="BMS-bi-VPf" secondAttribute="leading" constant="10" id="Hpq-aG-z8d"/>
+                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="top" secondItem="iCk-zE-9dM" secondAttribute="bottom" constant="10" id="OyF-sG-UiI"/>
+                                    <constraint firstItem="Ceg-pb-oS7" firstAttribute="top" secondItem="iCk-zE-9dM" secondAttribute="bottom" constant="10" id="dzP-dI-8Qj"/>
+                                    <constraint firstItem="fgm-lF-v4x" firstAttribute="top" secondItem="hZR-Qe-EAH" secondAttribute="bottom" constant="8" id="hgt-2p-XuT"/>
+                                    <constraint firstItem="fgm-lF-v4x" firstAttribute="centerX" secondItem="BMS-bi-VPf" secondAttribute="centerX" id="n6x-Ja-Myo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hZR-Qe-EAH" firstAttribute="centerX" secondItem="tx8-Uc-4WZ" secondAttribute="centerX" id="9WQ-eY-1Ee"/>
                             <constraint firstAttribute="trailing" secondItem="BMS-bi-VPf" secondAttribute="trailing" id="EeB-33-KA8"/>
                             <constraint firstItem="BMS-bi-VPf" firstAttribute="leading" secondItem="tx8-Uc-4WZ" secondAttribute="leading" id="gH6-wh-w8Q"/>
                             <constraint firstAttribute="trailing" secondItem="BMS-bi-VPf" secondAttribute="trailing" id="sYq-CH-QK2"/>
                             <constraint firstItem="0q5-oA-0gt" firstAttribute="top" secondItem="BMS-bi-VPf" secondAttribute="bottom" id="xsb-LQ-ISN"/>
                             <constraint firstItem="BMS-bi-VPf" firstAttribute="leading" secondItem="tx8-Uc-4WZ" secondAttribute="leading" id="yRJ-5c-Rpk"/>
+                            <constraint firstItem="hZR-Qe-EAH" firstAttribute="top" secondItem="QuH-Nb-vdw" secondAttribute="bottom" constant="8" id="yuW-ek-eLY"/>
                             <constraint firstItem="BMS-bi-VPf" firstAttribute="top" secondItem="QuH-Nb-vdw" secondAttribute="bottom" id="zVx-TB-QRs"/>
                         </constraints>
                     </view>

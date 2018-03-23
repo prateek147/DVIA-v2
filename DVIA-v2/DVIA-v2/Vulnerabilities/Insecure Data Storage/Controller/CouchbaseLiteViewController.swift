@@ -15,7 +15,7 @@ class CouchbaseLiteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Couchbase"
     }
 
     @IBAction func saveInCouchbaseTapped(_ sender: Any) {
