@@ -15,13 +15,10 @@ class SensitiveInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Sensitive Information in Memory"
-
     }
 
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
-        let passwd = "tenzinnorgay"
-        let concatenated = username + passwd + password
         
     }
 }

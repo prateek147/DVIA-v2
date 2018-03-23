@@ -20,6 +20,7 @@
 		F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */; };
 		F65A37F420652EF3005966DA /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A37F320652EF3005966DA /* DeviceInfo.m */; };
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
+		F69D6EDA2065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69D6ED92065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift */; };
 		F6C8AA18205A9BC2001E1CCB /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */; };
 		F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */; };
 		F6C8AA21205D2424001E1CCB /* PhishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */; };
@@ -215,6 +216,7 @@
 		F65A37F520652F18005966DA /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		F65AC867202FA37500E4088A /* DVIA-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVIA-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DVIA_v2.xcdatamodel; sourceTree = "<group>"; };
+		F69D6ED92065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveInformationInMemoryDetailsViewController.swift; sourceTree = "<group>"; };
 		F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
 		F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhishingViewController.swift; sourceTree = "<group>"; };
@@ -1343,6 +1345,7 @@
 			isa = PBXGroup;
 			children = (
 				F6E6457F202FBC6000884A43 /* SensitiveInformationViewController.swift */,
+				F69D6ED92065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1790,6 +1793,7 @@
 				F6E64523202FBB6700884A43 /* YapDatabaseCloudKitConnection.m in Sources */,
 				F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */,
 				F6C8AA21205D2424001E1CCB /* PhishingViewController.swift in Sources */,
+				F69D6EDA2065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift in Sources */,
 				F6DE6F7A202FA4DE00A3A757 /* UIViewController+Helper.swift in Sources */,
 				F6E6450B202FBB6700884A43 /* NSDictionary+YapDatabase.m in Sources */,
 				F6E6455D202FBB6700884A43 /* DDDispatchQueueLogFormatter.m in Sources */,

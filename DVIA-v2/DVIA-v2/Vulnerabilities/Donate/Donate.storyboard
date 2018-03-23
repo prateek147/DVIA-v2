@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,16 +40,13 @@
                                     <action selector="goToWebsiteTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="ZRr-gj-EXX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-mG-eaO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="345"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-mG-eaO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="344"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FzH-mG-eaO" secondAttribute="height" multiplier="320:321" id="2Ok-9O-UXA"/>
-                                </constraints>
-                                <mutableString key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
+                                <string key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
 The Juniper Fund was started by David Morton and Melissa Arnot in order to address an unmet obligation they witnessed through their work as guides in the world's great mountains.
 The mountain climbing and expedition industry employs countless local staff and laborers in order to help support the adventures many travelers seek. The reality is that some of these workers are injured or killed in the course of this work.
-The local governments have inadequate systems for insuring against this in the event of tragedy.Their work is presently focused on Nepali workers involved with climbing and expedition support in the high mountains of Nepal.</mutableString>
+The local governments have inadequate systems for insuring against this in the event of tragedy.Their work is presently focused on Nepali workers involved with climbing and expedition support in the high mountains of Nepal.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -69,12 +65,14 @@ The local governments have inadequate systems for insuring against this in the e
                         <constraints>
                             <constraint firstItem="5g6-nQ-fTg" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="EdO-mq-r5J"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="HDg-li-ktm"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="leading" secondItem="J05-nk-B92" secondAttribute="leading" id="HHQ-0z-dX2"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="top" secondItem="J05-nk-B92" secondAttribute="top" id="Hxq-ZR-JjG"/>
-                            <constraint firstItem="FzH-mG-eaO" firstAttribute="width" secondItem="FzH-mG-eaO" secondAttribute="height" multiplier="320:321" id="KT5-50-Eix"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="top" secondItem="ewd-ED-Ap6" secondAttribute="bottom" id="JWI-Ba-3aR"/>
+                            <constraint firstItem="pgY-s5-WBL" firstAttribute="top" secondItem="5g6-nQ-fTg" secondAttribute="bottom" constant="24" id="Kg6-LT-Sol"/>
                             <constraint firstItem="5g6-nQ-fTg" firstAttribute="top" secondItem="FzH-mG-eaO" secondAttribute="bottom" constant="29" id="R1P-7s-jI9"/>
+                            <constraint firstItem="FzH-mG-eaO" firstAttribute="trailing" secondItem="J05-nk-B92" secondAttribute="trailing" id="aB9-KJ-Om5"/>
                             <constraint firstItem="pgY-s5-WBL" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="dhf-R4-7Vm"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="width" secondItem="Bk1-6j-KRK" secondAttribute="width" id="h92-FA-t9T"/>
-                            <constraint firstItem="pgY-s5-WBL" firstAttribute="top" secondItem="5g6-nQ-fTg" secondAttribute="bottom" constant="24" id="inL-8y-Lqx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J05-nk-B92"/>
                     </view>
