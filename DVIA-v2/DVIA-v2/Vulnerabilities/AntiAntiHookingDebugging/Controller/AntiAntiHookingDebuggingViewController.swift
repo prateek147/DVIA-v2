@@ -9,10 +9,9 @@
 import UIKit
 
 class AntiAntiHookingDebuggingViewController: UIViewController {
-
+    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +22,26 @@ class AntiAntiHookingDebuggingViewController: UIViewController {
     
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
+    }
+
+    @IBAction func disableDebuggingTapped(_ sender: Any) {
+        disable_gdb()
+        DVIAUtilities.showAlert(title: "", message: "Debugger Protection applied.", viewController: self)
+    }
+    
+    @IBAction func disableInjection(_ sender: Any) {
+        //In case someone taps this button twice
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 5.0,
+                                     target: self,
+                                     selector: #selector(eventWith(timer:)),
+                                     userInfo: nil,
+                                     repeats: true)
+        DVIAUtilities.showAlert(title: "", message: "Detecting Injected Libraries now.", viewController: self)
+    }
+    
+    @objc func eventWith(timer: Timer!) {
+        detect_injected_dylds()
     }
 
     /*

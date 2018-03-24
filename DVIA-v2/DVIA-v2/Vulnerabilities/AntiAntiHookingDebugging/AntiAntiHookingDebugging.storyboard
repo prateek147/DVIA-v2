@@ -27,24 +27,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-ME-1la">
-                                <rect key="frame" x="0.0" y="64" width="375" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-ME-1la">
+                                <rect key="frame" x="0.0" y="64" width="375" height="265"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lack of Binary protection within a mobile app can help an adversary analyze the app, reverse engineer it and tamper it as well. Check for the following protections.                                                                                 </string>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="265" id="Bka-Lw-ZhG"/>
+                                </constraints>
+                                <string key="text">Some apps might deploy protection against debuggers to prevent an attacker from debugging the app. Also, they might have additional protection against attacks such as runtime manipulation, substrate patches etc. If it's detected, the application immediately exits. Your task is to bypass these checks by try trying to attach a debugger and do some injection in the application.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6i-sd-6rP">
-                                <rect key="frame" x="1" y="191" width="375" height="360.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app    b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-ge-HSK">
+                                <rect key="frame" x="121" y="379" width="133" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="1YP-0e-Lpg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Disable Injection">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="disableInjection:" destination="agV-Wr-IO2" eventType="touchUpInside" id="3cL-OM-TuA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPA-ZA-6it">
+                                <rect key="frame" x="110" y="337" width="154" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="6nW-82-IsC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Disable Debugging">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="disableDebuggingTapped:" destination="agV-Wr-IO2" eventType="touchUpInside" id="pQC-hO-juA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ycq-ge-HSK" firstAttribute="centerX" secondItem="Qbd-Ib-L1d" secondAttribute="centerX" id="12S-ye-P6o"/>
+                            <constraint firstItem="2rb-ME-1la" firstAttribute="trailing" secondItem="Qbd-Ib-L1d" secondAttribute="trailing" id="1Ed-ds-ek4"/>
+                            <constraint firstItem="cPA-ZA-6it" firstAttribute="centerX" secondItem="Qbd-Ib-L1d" secondAttribute="centerX" id="A8b-7O-GnR"/>
+                            <constraint firstItem="2rb-ME-1la" firstAttribute="leading" secondItem="Qbd-Ib-L1d" secondAttribute="leading" id="UNY-eN-zr0"/>
+                            <constraint firstItem="2rb-ME-1la" firstAttribute="top" secondItem="DCV-4d-BQj" secondAttribute="bottom" id="YkE-m8-wH3"/>
+                            <constraint firstItem="ycq-ge-HSK" firstAttribute="top" secondItem="cPA-ZA-6it" secondAttribute="bottom" constant="8" id="fG3-P3-1R5"/>
+                            <constraint firstItem="cPA-ZA-6it" firstAttribute="top" secondItem="2rb-ME-1la" secondAttribute="bottom" constant="8" id="tQD-R2-hmh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qbd-Ib-L1d"/>
                     </view>
                     <navigationItem key="navigationItem" title="Anti Anti Hooking/Debugging" id="i4y-5I-CCz">

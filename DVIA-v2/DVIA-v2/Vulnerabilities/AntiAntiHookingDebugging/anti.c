@@ -29,7 +29,6 @@ processor_info_array_t cpuInfo, prevCpuInfo;
 mach_msg_type_number_t numCpuInfo, numPrevCpuInfo;
 unsigned numCPUs;
 
-
 void disable_gdb()
 {
     void* handle = dlopen(0, RTLD_GLOBAL | RTLD_NOW);
@@ -40,22 +39,21 @@ void disable_gdb()
 
 int detect_injected_dylds()
 {
-    
-    //Get count of all currently loaded DYLD
+    //Get count of all currently loaded DYLDs
     uint32_t count = _dyld_image_count();
     for(uint32_t i = 0; i < count; i++)
     {
-        //Name of image (includes full path)
+        //Get the name along with the full path of all the injeced DYLDs
         const char *dyld = _dyld_get_image_name(i);
-       // printf("Injected Library:%s\n",basename(dyld));
-        if(!strstr(dyld, "MobileSubstrate") || !strstr(dyld, "cycript") || !strstr(dyld, "SSLKillSwitch2")) {
+       // printf("LibraryName:%s\n",basename(dyld));
+        //Cycript for RuntimeManipulation, MobileSubstrate for any form of injection, and SSLKillSwitch2 if someone tries to bypas SSLPinning, additionally these stings can be obfuscated in the code as well
+        if(!strstr(dyld, "MobileSubstrate") || !strstr(dyld, "cycript") || !strstr(dyld, "SSLKillSwitch") || !strstr(dyld, "SSLKillSwitch2")) {
             continue;
         }
         else {
-            //Suspicious injected library found, exiting
+            //Suspicious injected library found, exit the program
             exit(0);
         }
-        
     }
     return 0;
 }

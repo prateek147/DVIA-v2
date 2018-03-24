@@ -12,5 +12,6 @@
 #include <stdio.h>
 
 int detect_injected_dylds(void);
+void disable_gdb(void);
 
 #endif
