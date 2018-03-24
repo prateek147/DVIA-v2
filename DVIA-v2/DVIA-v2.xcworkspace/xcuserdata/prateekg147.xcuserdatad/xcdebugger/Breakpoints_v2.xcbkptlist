@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DVIA-v2/Vulnerabilities/Jailbreak Detection/Controller/JailbreakDetectionViewController.swift"
-            timestampString = "543572556.378593"
+            timestampString = "543576098.324042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "isJailbroken()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DVIA-v2/Vulnerabilities/Jailbreak Detection/Controller/JailbreakDetectionViewController.swift"
-            timestampString = "543572556.378893"
+            timestampString = "543576098.324393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "isJailbroken()"
             landmarkType = "7">
          </BreakpointContent>

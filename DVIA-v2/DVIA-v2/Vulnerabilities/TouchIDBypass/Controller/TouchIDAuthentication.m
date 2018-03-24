@@ -40,11 +40,11 @@
                             reply:^(BOOL success, NSError *error) {
                                 if (success) {
                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                    [TouchIDAuthentication showAlert:@"Success" withTitle:@"Authentication Successful"];
+                                    [TouchIDAuthentication showAlert:@"Authentication Successful" withTitle:@"Success"];
                                     });
                                 } else {
                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                       [TouchIDAuthentication showAlert:@"Error" withTitle:@"Authentication Failed !!"];
+                                       [TouchIDAuthentication showAlert:@"Authentication Failed !" withTitle:@"Error"];
                                     });
                                 }
                             }];
