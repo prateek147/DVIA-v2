@@ -19,7 +19,15 @@ class TransportLayerProtectionViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        button.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        let barButton = UIBarButtonItem(customView: button)
+        //assign button to navigationbar
+        self.navigationItem.leftBarButtonItem = barButton
     }
     @IBAction func checkATS(_ sender: Any) {
         DVIAUtilities.showAlert(title: "App Transport Security", message: "ATS establishes best-practice policies for secure network communications. Check whether the app follows these best practices or whether it ignore them. Look at the info.plist file", viewController: self)

@@ -39,7 +39,7 @@
                                 <rect key="frame" x="1" y="191" width="375" height="360.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app    b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </mutableString>
+                                <string key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app    b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -47,17 +47,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ln8-S6-6tG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Binary Protection" id="2cG-KS-jIh">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="h0X-av-e1u">
-                            <connections>
-                                <action selector="menuTapped:" destination="mNY-sa-vvm" id="MfA-WF-sFq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Binary Protection" id="2cG-KS-jIh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGN-Ob-QGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.60000000000002" y="-208.24587706146929"/>
+            <point key="canvasLocation" x="-215" y="-224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZU-ek-L27">
@@ -75,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iug-02-Na2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="-215"/>
+            <point key="canvasLocation" x="-1006" y="-219"/>
         </scene>
     </scenes>
 </document>

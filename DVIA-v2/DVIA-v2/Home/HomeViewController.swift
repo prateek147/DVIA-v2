@@ -13,11 +13,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+        button.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 28).isActive = true
+        let barButton = UIBarButtonItem(customView: button)
+        //assign button to navigationbar
+        self.navigationItem.leftBarButtonItem = barButton
         homeTextView.text = DeviceInfo.getDeviceInfo();
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func handleMenuTap(_ sender: Any) {
+    @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
     
