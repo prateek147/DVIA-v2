@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -48,7 +49,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="projectHomePageTapped:" destination="zdJ-pM-bnf" eventType="touchUpInside" id="AfB-aG-FcG"/>
+                                    <segue destination="YF7-xL-A0R" kind="show" identifier="dvia" id="gRP-4L-V9w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG3-vG-NW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.79999999999995" y="177.66116941529236"/>
+            <point key="canvasLocation" x="465" y="-260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gmv-E7-RVy">
@@ -93,6 +94,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTy-l4-cgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33.600000000000001" y="178.11094452773614"/>
+        </scene>
+        <!--DONATE - The Juniper Fund-->
+        <scene sceneID="Py2-Qs-LP8">
+            <objects>
+                <viewController id="YF7-xL-A0R" customClass="DonateDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PJR-gX-CuO"/>
+                        <viewControllerLayoutGuide type="bottom" id="zIT-fD-S7q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dCR-a5-pfz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SzY-4k-e3q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SzY-4k-e3q" firstAttribute="trailing" secondItem="KwV-Zc-DHQ" secondAttribute="trailing" id="JMS-LR-uIn"/>
+                            <constraint firstItem="zIT-fD-S7q" firstAttribute="top" secondItem="SzY-4k-e3q" secondAttribute="bottom" id="MmV-7y-8Jf"/>
+                            <constraint firstItem="SzY-4k-e3q" firstAttribute="top" secondItem="PJR-gX-CuO" secondAttribute="bottom" id="V3O-VD-vwr"/>
+                            <constraint firstItem="SzY-4k-e3q" firstAttribute="leading" secondItem="KwV-Zc-DHQ" secondAttribute="leading" id="f5K-df-r5A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KwV-Zc-DHQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DONATE - The Juniper Fund" id="mwE-Kp-qw2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4k8-jA-mgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-319"/>
         </scene>
     </scenes>
 </document>

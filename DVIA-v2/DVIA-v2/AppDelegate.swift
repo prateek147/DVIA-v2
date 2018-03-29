@@ -13,8 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       
+//        let backImage = UIImage(named: "back.png")?.withRenderingMode(.alwaysOriginal)
+//        UINavigationBar.appearance().backIndicatorImage = backImage
+//        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -80.0), for: .default)
         // Override point for customization after application launch.
+        
+//        let button = UIButton.init(type: .custom)
+//        button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
+//        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
+//        button.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+//        button.widthAnchor.constraint(equalToConstant: 28).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 28).isActive = true
+//        let barButton = UIBarButtonItem(customView: button)
+//        //assign button to navigationbar
+//        self.navigationItem.leftBarButtonItem = barButton
+        
         return true
     }
 

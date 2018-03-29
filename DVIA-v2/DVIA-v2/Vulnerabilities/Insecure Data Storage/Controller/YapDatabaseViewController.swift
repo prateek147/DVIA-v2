@@ -16,8 +16,7 @@ class YapDatabaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Yap Database"
-
-    }
+}
   
     @IBAction func saveInYapDatabaseTapped(_ sender: Any) {
         let databaseName = "YapDatabase.sqlite"

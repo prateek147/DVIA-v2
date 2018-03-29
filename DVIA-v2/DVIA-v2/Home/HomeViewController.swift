@@ -40,4 +40,13 @@ class HomeViewController: UIViewController {
         let url = UrlLinks.homePage.url
         DVIAUtilities.loadWebView(withURL: url, viewController: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dvia" {
+            if let destinationVC:DonateDetailsViewController = segue.destination as? DonateDetailsViewController {
+                destinationVC.urlToLoad = "http://damnvulnerableiosapp.com"
+                destinationVC.navigationItem.title = "DVIA"
+            }
+        }
+    }
 }
