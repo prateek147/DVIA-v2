@@ -13,10 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        let backImage = UIImage(named: "back.png")?.withRenderingMode(.alwaysOriginal)
-//        UINavigationBar.appearance().backIndicatorImage = backImage
-//        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
-//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -80.0), for: .default)
+        let backImage = UIImage(named: "back.png")?.withRenderingMode(.alwaysOriginal)
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+       // UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, 0.0), for: .default)
         // Override point for customization after application launch.
         
 //        let button = UIButton.init(type: .custom)
