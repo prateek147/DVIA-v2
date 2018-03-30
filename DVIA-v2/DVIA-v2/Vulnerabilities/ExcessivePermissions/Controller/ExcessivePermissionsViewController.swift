@@ -30,6 +30,14 @@ class ExcessivePermissionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Excessive Permissions"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }

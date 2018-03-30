@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DVIA-v2/Vulnerabilities/Jailbreak Detection/Controller/JailbreakDetectionViewController.swift"
-            timestampString = "543580921.38109"
+            timestampString = "544080651.4865561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "isJailbroken()"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "jailbreakTest4Tapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DVIA-v2/Vulnerabilities/Jailbreak Detection/Controller/JailbreakDetectionViewController.swift"
-            timestampString = "543580921.381166"
+            timestampString = "544080651.486649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "isJailbroken()"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "jailbreakTest4Tapped(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DVIA-v2/Vulnerabilities/Insecure Data Storage/Controller/PListViewController.swift"
+            timestampString = "544080651.486696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DVIA_v2.PListViewController.__deallocating_deinit"
+                  moduleName = "DVIA-v2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prateekg147/Documents/WORK/DVIA-v2Current/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Insecure%20Data%20Storage/Controller/PListViewController.swift"
+                  timestampString = "544080651.724034"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DVIA_v2.PListViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; DVIA_v2.PListViewController"
+                  moduleName = "DVIA-v2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prateekg147/Documents/WORK/DVIA-v2Current/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Insecure%20Data%20Storage/Controller/PListViewController.swift"
+                  timestampString = "544080651.725554"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DVIA_v2.PListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; DVIA_v2.PListViewController"
+                  moduleName = "DVIA-v2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prateekg147/Documents/WORK/DVIA-v2Current/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Insecure%20Data%20Storage/Controller/PListViewController.swift"
+                  timestampString = "544080651.727272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DVIA_v2.PListViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;DVIA_v2.PListViewController&gt;"
+                  moduleName = "DVIA-v2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prateekg147/Documents/WORK/DVIA-v2Current/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Insecure%20Data%20Storage/Controller/PListViewController.swift"
+                  timestampString = "544080651.728644"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DVIA_v2.PListViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;DVIA_v2.PListViewController&gt;"
+                  moduleName = "DVIA-v2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prateekg147/Documents/WORK/DVIA-v2Current/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Insecure%20Data%20Storage/Controller/PListViewController.swift"
+                  timestampString = "544080651.729968"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

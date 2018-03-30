@@ -23,6 +23,13 @@ class AntiAntiHookingDebuggingViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Anti Anti Hooking/Debugging"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

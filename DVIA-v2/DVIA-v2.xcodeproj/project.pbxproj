@@ -24,6 +24,14 @@
 		F65AC873202FA37500E4088A /* DVIA_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */; };
 		F669D003206645C6001AEBEE /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669D002206645C6001AEBEE /* Obfuscator.swift */; };
 		F69D6EDA2065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69D6ED92065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift */; };
+		F6B770E3206D2F520069874E /* 6s.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770DB206D2F520069874E /* 6s.png */; };
+		F6B770E4206D2F520069874E /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770DC206D2F520069874E /* 8.png */; };
+		F6B770E5206D2F520069874E /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770DD206D2F520069874E /* X.png */; };
+		F6B770E6206D2F520069874E /* 6splus.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770DE206D2F520069874E /* 6splus.png */; };
+		F6B770E7206D2F520069874E /* 7plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770DF206D2F520069874E /* 7plus.png */; };
+		F6B770E8206D2F520069874E /* SE.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770E0206D2F520069874E /* SE.png */; };
+		F6B770E9206D2F520069874E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770E1206D2F520069874E /* 7.png */; };
+		F6B770EA206D2F520069874E /* 8plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B770E2206D2F520069874E /* 8plus.png */; };
 		F6C8AA18205A9BC2001E1CCB /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */; };
 		F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */; };
 		F6C8AA21205D2424001E1CCB /* PhishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */; };
@@ -223,6 +231,14 @@
 		F65AC872202FA37500E4088A /* DVIA_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DVIA_v2.xcdatamodel; sourceTree = "<group>"; };
 		F669D002206645C6001AEBEE /* Obfuscator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		F69D6ED92065762E00002381 /* SensitiveInformationInMemoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveInformationInMemoryDetailsViewController.swift; sourceTree = "<group>"; };
+		F6B770DB206D2F520069874E /* 6s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6s.png; sourceTree = "<group>"; };
+		F6B770DC206D2F520069874E /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		F6B770DD206D2F520069874E /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+		F6B770DE206D2F520069874E /* 6splus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6splus.png; sourceTree = "<group>"; };
+		F6B770DF206D2F520069874E /* 7plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7plus.png; sourceTree = "<group>"; };
+		F6B770E0206D2F520069874E /* SE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SE.png; sourceTree = "<group>"; };
+		F6B770E1206D2F520069874E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		F6B770E2206D2F520069874E /* 8plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8plus.png; sourceTree = "<group>"; };
 		F6C8AA17205A9BC2001E1CCB /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		F6C8AA1A205A9BE3001E1CCB /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
 		F6C8AA20205D2424001E1CCB /* PhishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhishingViewController.swift; sourceTree = "<group>"; };
@@ -562,6 +578,7 @@
 		6EF0C41F20622B300089050C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6B770DA206D2F520069874E /* Splash Screens */,
 				6EFF445E206CFA20007BE6C6 /* back.png */,
 				6EFF445C206CD4D7007BE6C6 /* menu.png */,
 				6EF0C42020622B580089050C /* fingerprint.png */,
@@ -635,6 +652,21 @@
 				F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */,
 			);
 			path = "DVIA-v2";
+			sourceTree = "<group>";
+		};
+		F6B770DA206D2F520069874E /* Splash Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F6B770DB206D2F520069874E /* 6s.png */,
+				F6B770DC206D2F520069874E /* 8.png */,
+				F6B770DD206D2F520069874E /* X.png */,
+				F6B770DE206D2F520069874E /* 6splus.png */,
+				F6B770DF206D2F520069874E /* 7plus.png */,
+				F6B770E0206D2F520069874E /* SE.png */,
+				F6B770E1206D2F520069874E /* 7.png */,
+				F6B770E2206D2F520069874E /* 8plus.png */,
+			);
+			path = "Splash Screens";
 			sourceTree = "<group>";
 		};
 		F6C8AA16205A9B13001E1CCB /* Donate */ = {
@@ -1588,6 +1620,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B770E4206D2F520069874E /* 8.png in Resources */,
+				F6B770E3206D2F520069874E /* 6s.png in Resources */,
 				F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */,
 				F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */,
 				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
@@ -1602,6 +1636,7 @@
 				F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */,
 				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
 				F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */,
+				F6B770E5206D2F520069874E /* X.png in Resources */,
 				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
@@ -1609,10 +1644,15 @@
 				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
 				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
 				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
+				F6B770E6206D2F520069874E /* 6splus.png in Resources */,
 				F6C8AA25205D2CBF001E1CCB /* JailbreakDetection.storyboard in Resources */,
+				F6B770EA206D2F520069874E /* 8plus.png in Resources */,
 				F6E645C3202FBC6000884A43 /* ClientSideInjection.storyboard in Resources */,
+				F6B770E9206D2F520069874E /* 7.png in Resources */,
+				F6B770E7206D2F520069874E /* 7plus.png in Resources */,
 				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
 				6EF0C42120622B590089050C /* fingerprint.png in Resources */,
+				F6B770E8206D2F520069874E /* SE.png in Resources */,
 				F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */,
 				F6E645CF202FBC6000884A43 /* InsecureDataStorage.storyboard in Resources */,
 				F6DE6F88202FA4DE00A3A757 /* Assets.xcassets in Resources */,
@@ -1979,7 +2019,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 972PQ3R52Q;
+				DEVELOPMENT_TEAM = UAVZNE8PJA;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2000,7 +2040,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 972PQ3R52Q;
+				DEVELOPMENT_TEAM = UAVZNE8PJA;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

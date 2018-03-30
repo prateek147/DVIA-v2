@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="330.58470764617692"/>
         </scene>
-        <!--View Controller-->
+        <!--Parse-->
         <scene sceneID="ObH-hT-rO2">
             <objects>
-                <viewController id="Rey-kc-ZW8" sceneMemberID="viewController">
+                <viewController title="Parse" id="Rey-kc-ZW8" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1eg-Y7-tvd"/>
                         <viewControllerLayoutGuide type="bottom" id="lhS-8d-Esq"/>
@@ -232,10 +232,10 @@
             </objects>
             <point key="canvasLocation" x="2137" y="-756"/>
         </scene>
-        <!--View Controller-->
+        <!--Parse-->
         <scene sceneID="5GR-w0-2eh">
             <objects>
-                <viewController id="CTD-F0-S2p" sceneMemberID="viewController">
+                <viewController title="Parse" id="CTD-F0-S2p" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Klh-3P-j57"/>
                         <viewControllerLayoutGuide type="bottom" id="ghs-xd-2Gk"/>
@@ -308,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="-440"/>
         </scene>
-        <!--View Controller-->
+        <!--Parse-->
         <scene sceneID="Fw6-WH-SlC">
             <objects>
-                <viewController id="xW1-Q7-V6k" sceneMemberID="viewController">
+                <viewController title="Parse" id="xW1-Q7-V6k" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="De6-ju-A7M"/>
                         <viewControllerLayoutGuide type="bottom" id="JuT-RA-TuS"/>
@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="-1190"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Analytics-->
         <scene sceneID="Kuz-em-i5s">
             <objects>
-                <viewController id="M5I-d3-ZJU" sceneMemberID="viewController">
+                <viewController title="Google Analytics" id="M5I-d3-ZJU" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DqS-Hd-UkS"/>
                         <viewControllerLayoutGuide type="bottom" id="i3R-8p-9f8"/>
@@ -417,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="1980" y="1106"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Analytics-->
         <scene sceneID="k3A-oc-lOL">
             <objects>
-                <viewController id="Llh-rW-gL7" sceneMemberID="viewController">
+                <viewController title="Google Analytics" id="Llh-rW-gL7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Phc-JQ-FyW"/>
                         <viewControllerLayoutGuide type="bottom" id="T5u-YJ-Hlc"/>
@@ -473,10 +473,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="1989.3553223388308"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Analytics-->
         <scene sceneID="QM4-eY-KZZ">
             <objects>
-                <viewController id="N7f-aw-VHH" sceneMemberID="viewController">
+                <viewController title="Google Analytics" id="N7f-aw-VHH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ENp-Dk-s9m"/>
                         <viewControllerLayoutGuide type="bottom" id="faX-ud-rTi"/>
@@ -528,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="1105.9970014992505"/>
         </scene>
-        <!--View Controller-->
+        <!--Flurry-->
         <scene sceneID="ghG-3b-fv9">
             <objects>
-                <viewController id="4Ce-1O-3kH" sceneMemberID="viewController">
+                <viewController title="Flurry" id="4Ce-1O-3kH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRU-MF-HaY"/>
                         <viewControllerLayoutGuide type="bottom" id="KPS-et-Ltv"/>
@@ -587,10 +587,10 @@
             </objects>
             <point key="canvasLocation" x="2487" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Flurry-->
         <scene sceneID="DDq-Os-Arx">
             <objects>
-                <viewController id="Kdb-WV-B86" sceneMemberID="viewController">
+                <viewController title="Flurry" id="Kdb-WV-B86" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljL-cf-Jcx"/>
                         <viewControllerLayoutGuide type="bottom" id="ku4-rG-VZM"/>
@@ -643,10 +643,10 @@
             </objects>
             <point key="canvasLocation" x="3932" y="655"/>
         </scene>
-        <!--View Controller-->
+        <!--Flurry-->
         <scene sceneID="nhL-Du-anz">
             <objects>
-                <viewController id="kCg-XG-OE9" sceneMemberID="viewController">
+                <viewController title="Flurry" id="kCg-XG-OE9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rRY-Ek-kdK"/>
                         <viewControllerLayoutGuide type="bottom" id="ebn-3B-WRw"/>

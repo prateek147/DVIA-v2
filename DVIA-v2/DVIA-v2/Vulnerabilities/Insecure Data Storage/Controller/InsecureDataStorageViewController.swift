@@ -61,6 +61,14 @@ class InsecureDataStorageViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Local Data Storage"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }

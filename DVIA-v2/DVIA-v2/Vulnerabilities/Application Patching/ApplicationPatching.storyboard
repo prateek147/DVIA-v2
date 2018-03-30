@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="-79" y="-401"/>
         </scene>
-        <!--Application Patching Details View Controller-->
+        <!--Application Patching-->
         <scene sceneID="upo-kO-vbb">
             <objects>
-                <viewController id="0pZ-Hv-cWv" customClass="ApplicationPatchingDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Application Patching" id="0pZ-Hv-cWv" customClass="ApplicationPatchingDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Mp-4F-woo"/>
                         <viewControllerLayoutGuide type="bottom" id="UhB-9B-lIu"/>

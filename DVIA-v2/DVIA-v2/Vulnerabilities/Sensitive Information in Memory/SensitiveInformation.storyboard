@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="447.19999999999999" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Sensitive Information In Memory-->
         <scene sceneID="Azn-xv-i2g">
             <objects>
-                <viewController id="xOd-VV-mzq" sceneMemberID="viewController">
+                <viewController title="Sensitive Information In Memory" id="xOd-VV-mzq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGs-Ae-ydW"/>
                         <viewControllerLayoutGuide type="bottom" id="14g-gQ-yW0"/>

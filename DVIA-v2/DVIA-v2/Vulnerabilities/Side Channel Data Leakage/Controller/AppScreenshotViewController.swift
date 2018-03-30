@@ -12,7 +12,7 @@ class AppScreenshotViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "App Screenshot"
         // Do any additional setup after loading the view.
     }
 

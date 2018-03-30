@@ -25,6 +25,14 @@ class SensitiveInformationViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
         self.navigationItem.title = "Sensitive Information in Memory"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Sensitive Information in Memory"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()

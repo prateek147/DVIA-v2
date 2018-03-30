@@ -32,6 +32,14 @@ class TouchIDBypassViewController: UIViewController {
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Touch/Face ID Bypass"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     /*
     // MARK: - Navigation

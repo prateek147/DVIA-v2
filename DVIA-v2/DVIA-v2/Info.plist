@@ -29,6 +29,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Root</string>
+	<key>UILaunchImageFile</key>
+	<string>8.png</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

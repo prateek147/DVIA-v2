@@ -23,6 +23,14 @@ class SideChannelDataLeakageViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = barButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Side Channel Data Leakage"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }

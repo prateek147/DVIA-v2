@@ -29,6 +29,10 @@ class DonateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Donate"
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
@@ -45,6 +49,7 @@ class DonateViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "juniperFund" {
+            self.navigationItem.title = " "
             if let destinationVC:DonateDetailsViewController = segue.destination as? DonateDetailsViewController {
                 if(!video){
                 destinationVC.urlToLoad = "http://www.thejuniperfund.org/"

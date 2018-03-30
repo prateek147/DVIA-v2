@@ -32,6 +32,14 @@ class PhishingViewController: UIViewController {
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Phishing"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     @IBAction func phishingPopup1Tapped(_ sender: Any) {
         let alert = UIAlertController(title: "Sign In to iTunes Store", message: "To continue, enter the password for \"test123@gmail.com\"", preferredStyle: UIAlertControllerStyle.alert)

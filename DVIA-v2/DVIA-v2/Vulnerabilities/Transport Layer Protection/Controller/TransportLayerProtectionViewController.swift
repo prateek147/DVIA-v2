@@ -29,6 +29,15 @@ class TransportLayerProtectionViewController: UIViewController {
         //assign button to navigationbar
         self.navigationItem.leftBarButtonItem = barButton
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Network Layer Security"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
+    
     @IBAction func checkATS(_ sender: Any) {
         DVIAUtilities.showAlert(title: "App Transport Security", message: "ATS establishes best-practice policies for secure network communications. Check whether the app follows these best practices or whether it ignore them. Look at the info.plist file", viewController: self)
     }

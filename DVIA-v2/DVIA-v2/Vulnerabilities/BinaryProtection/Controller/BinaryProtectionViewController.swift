@@ -31,6 +31,14 @@ class BinaryProtectionViewController: UIViewController {
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Binary Protection"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     /*
     // MARK: - Navigation

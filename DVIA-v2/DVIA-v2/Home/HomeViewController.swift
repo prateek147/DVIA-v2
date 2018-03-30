@@ -26,6 +26,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Home"
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
     }
@@ -42,6 +46,7 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
         if segue.identifier == "dvia" {
             if let destinationVC:DonateDetailsViewController = segue.destination as? DonateDetailsViewController {
                 destinationVC.urlToLoad = "http://damnvulnerableiosapp.com"

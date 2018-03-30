@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG3-vG-NW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="-260"/>
+            <point key="canvasLocation" x="298" y="-320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gmv-E7-RVy">
@@ -93,7 +93,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTy-l4-cgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33.600000000000001" y="178.11094452773614"/>
+            <point key="canvasLocation" x="-386" y="-320"/>
         </scene>
         <!--DONATE - The Juniper Fund-->
         <scene sceneID="Py2-Qs-LP8">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4k8-jA-mgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="-319"/>
+            <point key="canvasLocation" x="986" y="-321"/>
         </scene>
     </scenes>
 </document>

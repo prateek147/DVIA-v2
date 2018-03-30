@@ -19,6 +19,14 @@ class ApplicationPatchingDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Application Patching"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let username = usernameTextField.text, let password = passwordTextField.text else { return }
