@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWk-hS-a7c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWk-hS-a7c">
                                 <rect key="frame" x="-1" y="88" width="375" height="269.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Functions that do the authentication via Touch/Face ID can be hooked and manipulated in order to authenticate the attacker. Having a Objective-C runtime environment definitely aids the attacker as it becomes easier to swizzle method.. Use a combination of hooking/debugging to bypass the Touch ID and Face ID checks. You can use tools like Needle, Frida, Cycript etc or just LLDB.</string>
@@ -106,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-ve-AB5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-ve-AB5">
                                 <rect key="frame" x="0.0" y="118" width="375" height="114.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Tapping on the button below will authenticate you with your Touch-ID. Your task is to bypass this authentication using patching or swizzling.</string>
@@ -126,7 +126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X63-06-UYF">
-                                <rect key="frame" x="287" y="364" width="40" height="60"/>
+                                <rect key="frame" x="301" y="364" width="40" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="2X1-fX-n4q"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="dhz-4P-Aqo"/>
@@ -143,7 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-pR-w3f">
-                                <rect key="frame" x="287" y="282.66666666666669" width="40" height="60"/>
+                                <rect key="frame" x="301" y="282.66666666666669" width="40" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="mPh-dx-KGE"/>
                                     <constraint firstAttribute="height" constant="60" id="vVz-7b-lZB"/>
@@ -161,27 +161,17 @@
                         <constraints>
                             <constraint firstItem="LyE-pR-w3f" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="50" id="4LG-MT-AXo"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" id="4RK-gz-O05"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="48" id="6LP-W6-XC9"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="9gy-h1-LaO"/>
                             <constraint firstItem="LyE-pR-w3f" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="50" id="ARP-4Y-B7R"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="F56-WN-Rka"/>
                             <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="34" id="Jc3-bU-URT"/>
                             <constraint firstItem="SlJ-hQ-kQR" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" constant="46" id="PC2-5B-zbL"/>
                             <constraint firstItem="smH-5v-h3g" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="58.333333333333314" id="QEu-9C-Air"/>
-                            <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" constant="10" id="Stl-WY-x1v"/>
-                            <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" id="TkZ-nG-mot"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="top" secondItem="6fR-nm-wVc" secondAttribute="bottom" constant="30" id="aWO-wL-LPy"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="cQe-Bu-udA"/>
                             <constraint firstItem="SlJ-hQ-kQR" firstAttribute="top" secondItem="smH-5v-h3g" secondAttribute="bottom" constant="72" id="eq9-5S-XSY"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="gdy-RI-ZWd"/>
                             <constraint firstItem="X63-06-UYF" firstAttribute="top" secondItem="iBx-ve-AB5" secondAttribute="bottom" constant="131.33333333333331" id="iFM-Ub-9Td"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="centerX" secondItem="MPf-CM-zyw" secondAttribute="centerX" id="iuO-40-QWC"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="trailing" secondItem="MPf-CM-zyw" secondAttribute="trailing" id="jpU-op-zMo"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="lgP-a3-fJK"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="LyE-pR-w3f" secondAttribute="trailing" constant="48" id="m5y-hX-W8y"/>
                             <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="34" id="rxO-wA-B7h"/>
                             <constraint firstItem="smH-5v-h3g" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" constant="46" id="s8V-Dk-kSU"/>
-                            <constraint firstItem="MPf-CM-zyw" firstAttribute="trailing" secondItem="X63-06-UYF" secondAttribute="trailing" constant="48" id="uZV-5Z-93k"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="trailing" secondItem="MPf-CM-zyw" secondAttribute="trailing" id="ylN-B4-UqJ"/>
                             <constraint firstItem="iBx-ve-AB5" firstAttribute="leading" secondItem="MPf-CM-zyw" secondAttribute="leading" id="zSk-FC-PDB"/>
                         </constraints>

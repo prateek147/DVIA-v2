@@ -661,8 +661,8 @@
 				F6B770DC206D2F520069874E /* 8.png */,
 				F6B770DD206D2F520069874E /* X.png */,
 				F6B770DE206D2F520069874E /* 6splus.png */,
-				F6B770DF206D2F520069874E /* 7plus.png */,
 				F6B770E0206D2F520069874E /* SE.png */,
+				F6B770DF206D2F520069874E /* 7plus.png */,
 				F6B770E1206D2F520069874E /* 7.png */,
 				F6B770E2206D2F520069874E /* 8plus.png */,
 			);
@@ -2023,7 +2023,7 @@
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.highaltitudehacks.DVIAv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";
@@ -2044,7 +2044,7 @@
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.highaltitudehacks.DVIA-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.highaltitudehacks.DVIAv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";

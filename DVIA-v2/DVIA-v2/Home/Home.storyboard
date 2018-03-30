@@ -28,13 +28,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
                                 <rect key="frame" x="16" y="64" width="343" height="301"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="301" id="cUb-GA-ptE"/>
                                 </constraints>
-                                <string key="text">Damn Vulnerable iOS App v2 (DVIA) is an iOS application that is damn vulnerable. Its main goal is to provide a platform for mobile security enthusiasts/professionals to test their iOS penetration testing skills in a legal environment. mobile risks) and contains several challenges that the user can try. This project is developed and maintained by @prateekg147.  The vulnerabilities and solutions covered in this app are tested upto iOS 11.1.2. The v2 version of this app has been completely rewritten in Swift 4.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

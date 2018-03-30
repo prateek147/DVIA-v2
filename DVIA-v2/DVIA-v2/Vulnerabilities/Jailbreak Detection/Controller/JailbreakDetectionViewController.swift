@@ -39,7 +39,7 @@ class JailbreakDetectionViewController: UIViewController {
         let barButton = UIBarButtonItem(customView: button)
         //assign button to navigationbar
         self.navigationItem.leftBarButtonItem = barButton
-        let o = Obfuscator(withSalt: [AppDelegate.self, NSObject.self, NSString.self])
+        //let o = Obfuscator(withSalt: [AppDelegate.self, NSObject.self, NSString.self])
         
 //        var bytes = o.bytesByObfuscatingString(string: "/Applications/Cydia.app")
 //        print(bytes)
