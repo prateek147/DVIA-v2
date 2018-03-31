@@ -205,6 +205,10 @@
 		F6E645E4202FBCAB00884A43 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DE202FBCAB00884A43 /* User+CoreDataProperties.swift */; };
 		F6E645E5202FBCAB00884A43 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E645DF202FBCAB00884A43 /* User+CoreDataClass.swift */; };
 		F6E645E6202FBCAB00884A43 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6E645E0202FBCAB00884A43 /* Model.xcdatamodeld */; };
+		F6ED006C206F8337000D1E99 /* main-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED0068206F8335000D1E99 /* main-bg.png */; };
+		F6ED006D206F8337000D1E99 /* slider-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED0069206F8337000D1E99 /* slider-bg.png */; };
+		F6ED006E206F8337000D1E99 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED006A206F8337000D1E99 /* main-bg@2x.png */; };
+		F6ED006F206F8337000D1E99 /* slider-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED006B206F8337000D1E99 /* slider-bg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -532,6 +536,10 @@
 		F6E645DE202FBCAB00884A43 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F6E645DF202FBCAB00884A43 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F6E645E1202FBCAB00884A43 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F6ED0068206F8335000D1E99 /* main-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg.png"; sourceTree = "<group>"; };
+		F6ED0069206F8337000D1E99 /* slider-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-bg.png"; sourceTree = "<group>"; };
+		F6ED006A206F8337000D1E99 /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg@2x.png"; sourceTree = "<group>"; };
+		F6ED006B206F8337000D1E99 /* slider-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-bg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +586,10 @@
 		6EF0C41F20622B300089050C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6ED0068206F8335000D1E99 /* main-bg.png */,
+				F6ED006A206F8337000D1E99 /* main-bg@2x.png */,
+				F6ED0069206F8337000D1E99 /* slider-bg.png */,
+				F6ED006B206F8337000D1E99 /* slider-bg@2x.png */,
 				F6B770DA206D2F520069874E /* Splash Screens */,
 				6EFF445E206CFA20007BE6C6 /* back.png */,
 				6EFF445C206CD4D7007BE6C6 /* menu.png */,
@@ -1629,11 +1641,14 @@
 				6EFF445D206CD4D7007BE6C6 /* menu.png in Resources */,
 				F6C8AA23205D2433001E1CCB /* Phishing.storyboard in Resources */,
 				6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */,
+				F6ED006D206F8337000D1E99 /* slider-bg.png in Resources */,
 				F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */,
 				6EFF445F206CFA20007BE6C6 /* back.png in Resources */,
 				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
 				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
+				F6ED006E206F8337000D1E99 /* main-bg@2x.png in Resources */,
 				F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */,
+				F6ED006F206F8337000D1E99 /* slider-bg@2x.png in Resources */,
 				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
 				F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */,
 				F6B770E5206D2F520069874E /* X.png in Resources */,
@@ -1651,6 +1666,7 @@
 				F6B770E9206D2F520069874E /* 7.png in Resources */,
 				F6B770E7206D2F520069874E /* 7plus.png in Resources */,
 				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
+				F6ED006C206F8337000D1E99 /* main-bg.png in Resources */,
 				6EF0C42120622B590089050C /* fingerprint.png in Resources */,
 				F6B770E8206D2F520069874E /* SE.png in Resources */,
 				F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */,

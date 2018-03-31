@@ -30,5 +30,6 @@ class SideMenuTableViewCell: UITableViewCell {
     func configure(_ item: Any?) {
         guard let cellModel = item as? MenuCellModel else { return }
         title.text = cellModel.item.title
+        title.textColor = UIColor.white
     }
 }

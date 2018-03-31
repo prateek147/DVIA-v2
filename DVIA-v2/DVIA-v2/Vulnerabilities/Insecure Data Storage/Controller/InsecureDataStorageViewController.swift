@@ -59,6 +59,7 @@ class InsecureDataStorageViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     
     override func viewWillAppear(_ animated: Bool) {
