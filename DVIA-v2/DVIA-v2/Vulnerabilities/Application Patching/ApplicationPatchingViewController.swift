@@ -29,6 +29,10 @@ class ApplicationPatchingViewController: UIViewController {
         mainViewController?.toogle()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.title = " "
+    }
+    
     @IBAction func readArticle1Tapped(_ sender: Any) {
         DVIAUtilities.loadWebView(withURL: UrlLinks.patchingApplicationArticle1.url, viewController: self)
     }
