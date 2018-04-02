@@ -13,6 +13,7 @@ class RuntimeManipulationDetailsViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var codeTextField: UITextField!
+    let tutorialUrl:String = "http://highaltitudehacks.com/2013/11/08/ios-application-security-part-21-arm-and-gdb-basics"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +38,11 @@ class RuntimeManipulationDetailsViewController: UIViewController {
     }
     
     @IBAction func readTutorialTapped(_ sender: Any) {
-        DVIAUtilities.loadWebView(withURL: "http://highaltitudehacks.com/2013/11/08/ios-application-security-part-21-arm-and-gdb-basics", viewController: self)
+        DVIAUtilities.loadWebView(withURL:tutorialUrl , viewController: self)
     }
     
     @IBAction func validateCodeTapped(_ sender: Any) {
-        if codeTextField.text == "181" {
-            DVIAUtilities.showAlert(title: "Success", message: "Congratulations. You have cracked the code.", viewController: self)
-        } else {
-            DVIAUtilities.showAlert(title: "Failure", message: "Incorrect code.", viewController: self)
-        }
+        LoginValidate.validateCode(Int(codeTextField.text!)!, viewController: self)
     }
+    
 }

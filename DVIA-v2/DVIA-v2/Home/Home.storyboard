@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xpY-AP-bmb">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,11 +24,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mj8-Id-h8E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sea-0L-Gn1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
-                                <rect key="frame" x="16" y="64" width="343" height="301"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="301" id="cUb-GA-ptE"/>
@@ -38,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-kg-tMT">
-                                <rect key="frame" x="51.5" y="613" width="272" height="34"/>
+                                <rect key="frame" x="24" y="514" width="272" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Kf3-sC-YbZ"/>
                                     <constraint firstAttribute="width" constant="272" id="ffG-KY-DJG"/>
@@ -55,10 +54,11 @@
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mj8-Id-h8E" firstAttribute="top" secondItem="Ax2-kg-tMT" secondAttribute="bottom" constant="20" id="2RY-QT-u6B"/>
-                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="Gf4-6a-h97"/>
-                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leadingMargin" id="T42-zW-hSL"/>
+                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="MeL-tI-WE6"/>
+                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" id="Oqt-YK-GrA"/>
+                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="bNw-b9-XO0"/>
                             <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="hVH-Gk-My4"/>
-                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="trailing" secondItem="sea-0L-Gn1" secondAttribute="trailingMargin" id="kJA-U1-5ec"/>
+                            <constraint firstAttribute="trailing" secondItem="fzr-Hx-Y4Q" secondAttribute="trailing" id="xNT-Nu-9UT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="J5c-Cy-q3k">
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG3-vG-NW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-320"/>
+            <point key="canvasLocation" x="296.25" y="-320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gmv-E7-RVy">
@@ -82,7 +82,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xpY-AP-bmb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BFS-1I-SId">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -103,11 +103,11 @@
                         <viewControllerLayoutGuide type="bottom" id="zIT-fD-S7q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dCR-a5-pfz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SzY-4k-e3q">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

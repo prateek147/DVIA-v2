@@ -60,11 +60,14 @@
                         <constraints>
                             <constraint firstItem="phe-fp-Akl" firstAttribute="top" secondItem="yUH-bM-C3W" secondAttribute="bottom" id="15s-QH-OZT"/>
                             <constraint firstAttribute="trailing" secondItem="KjW-W7-anf" secondAttribute="trailing" id="3vQ-ON-FKU"/>
+                            <constraint firstItem="phe-fp-Akl" firstAttribute="leading" secondItem="84s-cA-9zu" secondAttribute="leading" id="FRa-x4-kFq"/>
+                            <constraint firstAttribute="trailing" secondItem="phe-fp-Akl" secondAttribute="trailing" id="Ubi-kY-7gO"/>
                             <constraint firstAttribute="trailing" secondItem="phe-fp-Akl" secondAttribute="trailing" id="WQ8-2I-ZJB"/>
                             <constraint firstItem="vdU-cn-VMz" firstAttribute="top" secondItem="KjW-W7-anf" secondAttribute="bottom" id="bNZ-lE-asb"/>
                             <constraint firstItem="KjW-W7-anf" firstAttribute="top" secondItem="phe-fp-Akl" secondAttribute="bottom" constant="-19" id="fVy-lq-31L"/>
                             <constraint firstItem="KjW-W7-anf" firstAttribute="leading" secondItem="84s-cA-9zu" secondAttribute="leading" id="g5y-3F-j2R"/>
                             <constraint firstItem="phe-fp-Akl" firstAttribute="leading" secondItem="84s-cA-9zu" secondAttribute="leading" id="kXk-Ub-dKP"/>
+                            <constraint firstItem="phe-fp-Akl" firstAttribute="top" secondItem="yUH-bM-C3W" secondAttribute="bottom" id="uIT-mx-Sl5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Local Data Storage" id="8b4-55-5cU">

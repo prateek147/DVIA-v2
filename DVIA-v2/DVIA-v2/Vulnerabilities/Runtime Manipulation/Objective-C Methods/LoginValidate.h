@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginValidate : NSObject
+
 +(BOOL)isLoginValidated;
++(void)validateCode:(NSInteger)code viewController:(UIViewController *)viewController;
+
 @end

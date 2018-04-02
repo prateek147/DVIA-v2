@@ -27,24 +27,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-7g-eV7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-7g-eV7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="114.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114.5" id="C3v-Pl-m6s"/>
+                                </constraints>
                                 <string key="text">Lack of Binary protection within a mobile app can help an adversary analyze the app, reverse engineer it and tamper it as well. Check for the following protections.                                                                                 </string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-7P-msL">
-                                <rect key="frame" x="1" y="191" width="375" height="360.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-7P-msL">
+                                <rect key="frame" x="0.0" y="178" width="375" height="360.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360.5" id="qnR-8b-fHM"/>
+                                </constraints>
                                 <string key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app    b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="leading" secondItem="Ln8-S6-6tG" secondAttribute="leading" id="9Ua-4I-clr"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="trailing" secondItem="Ln8-S6-6tG" secondAttribute="trailing" id="EKB-Qb-AVn"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="top" secondItem="MPb-5R-bu1" secondAttribute="bottom" id="Iad-Ya-hh8"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="leading" secondItem="Ln8-S6-6tG" secondAttribute="leading" id="Il2-JY-lLB"/>
+                            <constraint firstAttribute="trailing" secondItem="ee8-7P-msL" secondAttribute="trailing" id="ME0-2I-Wbt"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="leading" secondItem="Ln8-S6-6tG" secondAttribute="leading" id="Odm-nA-um7"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="centerX" secondItem="Ln8-S6-6tG" secondAttribute="centerX" id="Z4w-bF-feM"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="leading" secondItem="Ln8-S6-6tG" secondAttribute="leading" id="auQ-4N-bN8"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="leading" secondItem="Ln8-S6-6tG" secondAttribute="leading" id="bJe-r8-7au"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="top" secondItem="Ln8-S6-6tG" secondAttribute="top" constant="114" id="cGQ-vD-Xp5"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="trailing" secondItem="Ln8-S6-6tG" secondAttribute="trailing" id="hSm-ml-dAs"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="centerX" secondItem="Ln8-S6-6tG" secondAttribute="centerX" id="pdv-Bx-aGF"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="trailing" secondItem="Ln8-S6-6tG" secondAttribute="trailing" id="tMO-c2-zLU"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="top" secondItem="u9u-7g-eV7" secondAttribute="bottom" id="tVc-Uq-okl"/>
+                            <constraint firstItem="u9u-7g-eV7" firstAttribute="trailing" secondItem="Ln8-S6-6tG" secondAttribute="trailing" id="uCf-4v-ywI"/>
+                            <constraint firstItem="ee8-7P-msL" firstAttribute="top" secondItem="u9u-7g-eV7" secondAttribute="bottom" constant="-0.5" id="vI2-ZJ-5q0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ln8-S6-6tG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Binary Protection" id="2cG-KS-jIh"/>

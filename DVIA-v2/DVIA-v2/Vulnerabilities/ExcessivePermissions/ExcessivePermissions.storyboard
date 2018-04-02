@@ -31,14 +31,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-FB-5Ln">
-                                <rect key="frame" x="0.0" y="64" width="414" height="188"/>
+                                <rect key="frame" x="0.0" y="64.000000000000014" width="414" height="188.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Users are generally unaware of the consequences of granting certain permissions to an application. Once a permission is granted, it can be used anytime by the app, and depending on the permission can allow the app to spy on the user. These permissions can also be used without any warning or indication to the user.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-u8-Q6L">
-                                <rect key="frame" x="124" y="313.33333333333331" width="166" height="30"/>
+                                <rect key="frame" x="124" y="294.33333333333331" width="166" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="CAMERA PERMISSION">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,11 +50,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="top" secondItem="FxF-3H-0io" secondAttribute="bottom" id="1FM-Jf-shT"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="width" secondItem="d0D-67-BfT" secondAttribute="width" id="1WJ-kj-3pY"/>
-                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="top" secondItem="ibn-FB-5Ln" secondAttribute="bottom" constant="61" id="42N-On-Vc1"/>
+                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="top" secondItem="ibn-FB-5Ln" secondAttribute="bottom" constant="41" id="42N-On-Vc1"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="leading" secondItem="Xtz-BU-1Tt" secondAttribute="leading" id="8H6-aE-euf"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="trailing" secondItem="Xtz-BU-1Tt" secondAttribute="trailing" id="AbP-we-pUO"/>
                             <constraint firstItem="JuO-u8-Q6L" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="CvY-1C-aGh"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="T9w-gz-wXe"/>
-                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="top" secondItem="Xtz-BU-1Tt" secondAttribute="top" id="c75-Pq-hY9"/>
+                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="leading" secondItem="Xtz-BU-1Tt" secondAttribute="leading" id="noO-4K-0ac"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xtz-BU-1Tt"/>
                     </view>
@@ -71,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNl-xe-FPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-579"/>
+            <point key="canvasLocation" x="-39" y="-580"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIg-aM-AXY">
@@ -89,7 +92,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryo-bH-9pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288" y="-580"/>
+            <point key="canvasLocation" x="-872" y="-580"/>
         </scene>
         <!--Excessive Permissions-->
         <scene sceneID="cS8-ZH-c85">
@@ -155,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBK-NF-oqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.8260869565217" y="-580.43478260869574"/>
+            <point key="canvasLocation" x="783" y="-601"/>
         </scene>
     </scenes>
 </document>

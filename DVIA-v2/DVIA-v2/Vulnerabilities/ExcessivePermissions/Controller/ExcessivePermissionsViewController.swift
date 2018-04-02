@@ -31,7 +31,7 @@ class ExcessivePermissionsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "Excessive Permissions"
+         self.navigationItem.title = "Excessive Permissions"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

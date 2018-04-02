@@ -11,7 +11,6 @@
 
 @implementation JailbreakDetection
 
-
 +(BOOL)isJailbroken{
     
 #if !(TARGET_IPHONE_SIMULATOR)

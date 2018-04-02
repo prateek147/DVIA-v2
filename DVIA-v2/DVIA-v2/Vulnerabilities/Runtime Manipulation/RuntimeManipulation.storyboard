@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25D-Dj-mSb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25D-Dj-mSb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -39,7 +39,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">All native iOS applications are written in Objective-C which is a runtime oriented language. This feature makes all native applications vulnerable to runtime analysis and manipulation. Your task is to bypass the login check in the challenge below using runtime manipulation techniques .</string>
+                                        <string key="content">All native iOS applications are written in Objective-C which is a runtime oriented language. This feature makes all native applications vulnerable to runtime analysis and manipulation. Your task is to bypass the login check in the followig challenges using runtime manipulation techniques .</string>
                                         <attributes>
                                             <font key="NSFont" size="19" name="Avenir-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -62,9 +62,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="2qM-cp-zZU"/>
+                            <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="CSt-tm-KZH"/>
+                            <constraint firstItem="25D-Dj-mSb" firstAttribute="leading" secondItem="fqH-Ra-bUh" secondAttribute="leading" id="Nxe-Qw-ekd"/>
                             <constraint firstItem="YLV-QC-5qU" firstAttribute="top" secondItem="25D-Dj-mSb" secondAttribute="bottom" constant="22" id="ROO-SU-XzC"/>
                             <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="SWp-Ee-E0R"/>
+                            <constraint firstAttribute="trailing" secondItem="25D-Dj-mSb" secondAttribute="trailing" id="ec0-Ck-hHG"/>
                             <constraint firstItem="YLV-QC-5qU" firstAttribute="centerX" secondItem="fqH-Ra-bUh" secondAttribute="centerX" id="kQM-wM-kyk"/>
+                            <constraint firstItem="25D-Dj-mSb" firstAttribute="leading" secondItem="fqH-Ra-bUh" secondAttribute="leading" id="keC-mj-pz9"/>
+                            <constraint firstAttribute="trailing" secondItem="25D-Dj-mSb" secondAttribute="trailing" id="xtp-hM-duV"/>
+                            <constraint firstItem="25D-Dj-mSb" firstAttribute="top" secondItem="bsw-Is-WCr" secondAttribute="bottom" id="xwh-0k-ntW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Runtime Manipulation" id="iJW-S7-rRg">
@@ -77,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtU-dm-oUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-930.39999999999998" y="2263.7181409295354"/>
+            <point key="canvasLocation" x="-1022" y="2114"/>
         </scene>
         <!--Runtime Manipulation Details View Controller-->
         <scene sceneID="KS8-GU-Xho">
@@ -197,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezT-tz-OLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="2264"/>
+            <point key="canvasLocation" x="-254" y="2113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="diR-Yz-6rz">
@@ -218,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhh-eR-PVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1690" y="2264"/>
+            <point key="canvasLocation" x="-1713" y="2113"/>
         </scene>
     </scenes>
 </document>
