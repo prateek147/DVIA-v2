@@ -31,14 +31,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-9M-UsC">
-                                <rect key="frame" x="16" y="72" width="343" height="163"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="208"/>
                                 <string key="text">Some applications store sensitive information in the memory of the application even when it's not required. This could happen when the developer creates properties or instance variables that might contain confidential information but forgets to remove them after they have been used.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMf-LT-LTe">
-                                <rect key="frame" x="115" y="265" width="144" height="30"/>
+                                <rect key="frame" x="115" y="302" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,11 +50,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Sh6-9M-UsC" firstAttribute="top" secondItem="X5A-hI-suQ" secondAttribute="bottom" id="CY6-TO-AVl"/>
                             <constraint firstItem="YMf-LT-LTe" firstAttribute="centerX" secondItem="MgN-rC-vRS" secondAttribute="centerX" id="HZJ-yE-PtM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Sh6-9M-UsC" secondAttribute="trailing" id="JEo-Sv-wXT"/>
-                            <constraint firstItem="Sh6-9M-UsC" firstAttribute="top" secondItem="X5A-hI-suQ" secondAttribute="bottom" constant="8" id="NYi-Gg-aTN"/>
                             <constraint firstItem="Sh6-9M-UsC" firstAttribute="leading" secondItem="MgN-rC-vRS" secondAttribute="leadingMargin" id="Pda-w3-zXa"/>
                             <constraint firstItem="YMf-LT-LTe" firstAttribute="top" secondItem="Sh6-9M-UsC" secondAttribute="bottom" constant="30" id="hEl-NA-USh"/>
+                            <constraint firstAttribute="trailing" secondItem="Sh6-9M-UsC" secondAttribute="trailing" id="lqk-os-n8a"/>
+                            <constraint firstItem="Sh6-9M-UsC" firstAttribute="leading" secondItem="MgN-rC-vRS" secondAttribute="leading" id="q1R-v2-0c5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sensitive Information in Memory" id="hWt-i4-gbC">
@@ -82,33 +83,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzv-M3-xvf">
-                                <rect key="frame" x="16" y="72" width="343" height="143.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="208"/>
                                 <string key="text">Let's assume this is some application that a user has logged in to already and is happily navigating. It is possible that the user's credentials, access token, or some other confidential information is still stored in the memory of the application and hence accessible to an attacker. Your task is to find out the following things.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) A couple of properties with the name &quot;Password&quot; &amp; &quot;Username&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-7W-OTy">
-                                <rect key="frame" x="16" y="223" width="343" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1) A couple of properties with the name &quot;Password&quot; &amp; &quot;Username&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-7W-OTy">
+                                <rect key="frame" x="13" y="310" width="343" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) An instance variable named &quot;passwd&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZI-w1-b0D">
-                                <rect key="frame" x="16" y="264" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2) An instance variable named &quot;passwd&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZI-w1-b0D">
+                                <rect key="frame" x="13" y="373" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lzv-M3-xvf" secondAttribute="trailing" id="5OE-Jd-YhA"/>
-                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="top" secondItem="NGs-Ae-ydW" secondAttribute="bottom" constant="8" id="DGW-Pu-V2M"/>
+                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="top" secondItem="NGs-Ae-ydW" secondAttribute="bottom" id="5vw-zd-e3n"/>
+                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leading" id="Dju-NX-alM"/>
                             <constraint firstItem="YZI-w1-b0D" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="Sjy-Rq-E29"/>
+                            <constraint firstAttribute="trailing" secondItem="Lzv-M3-xvf" secondAttribute="trailing" id="VJv-0z-lcY"/>
                             <constraint firstItem="YZI-w1-b0D" firstAttribute="top" secondItem="VWu-7W-OTy" secondAttribute="bottom" constant="8" id="Zvx-Gl-GMz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VWu-7W-OTy" secondAttribute="trailing" id="bXo-RF-bcQ"/>
-                            <constraint firstItem="Lzv-M3-xvf" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="e67-FC-SDy"/>
                             <constraint firstItem="VWu-7W-OTy" firstAttribute="top" secondItem="Lzv-M3-xvf" secondAttribute="bottom" constant="8" id="fKJ-8o-dYi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YZI-w1-b0D" secondAttribute="trailing" id="i2c-z5-hXk"/>
                             <constraint firstItem="VWu-7W-OTy" firstAttribute="leading" secondItem="kYC-Fl-tog" secondAttribute="leadingMargin" id="o4e-K7-6sL"/>
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmq-Zd-4NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="131"/>
+            <point key="canvasLocation" x="1264.8" y="130.88455772113943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kUX-I1-Ane">

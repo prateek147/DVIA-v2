@@ -27,13 +27,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-Hx-Y4Q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="301"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="301" id="cUb-GA-ptE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-kg-tMT">
@@ -56,8 +56,11 @@
                             <constraint firstItem="mj8-Id-h8E" firstAttribute="top" secondItem="Ax2-kg-tMT" secondAttribute="bottom" constant="20" id="2RY-QT-u6B"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="MeL-tI-WE6"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" id="Oqt-YK-GrA"/>
+                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="sea-0L-Gn1" secondAttribute="top" id="RjA-Lb-06D"/>
+                            <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" id="ZDU-l0-D52"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="bNw-b9-XO0"/>
                             <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="hVH-Gk-My4"/>
+                            <constraint firstAttribute="trailing" secondItem="fzr-Hx-Y4Q" secondAttribute="trailing" id="mgq-dK-AYm"/>
                             <constraint firstAttribute="trailing" secondItem="fzr-Hx-Y4Q" secondAttribute="trailing" id="xNT-Nu-9UT"/>
                         </constraints>
                     </view>

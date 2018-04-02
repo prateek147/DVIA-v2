@@ -126,7 +126,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Brute Force this 3 digit code using Cycript" translatesAutoresizingMaskIntoConstraints="NO" id="dOX-Fi-Q03">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Brute Force this 4 digit code using Cycript" translatesAutoresizingMaskIntoConstraints="NO" id="dOX-Fi-Q03">
                                 <rect key="frame" x="0.0" y="284" width="375" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -162,7 +162,7 @@
                                     <action selector="loginMethod1Tapped:" destination="p4L-bl-0f0" eventType="touchUpInside" id="CPh-Ya-c6A"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter correct 3 digit code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrP-UF-Fbo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter correct 4 digit code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrP-UF-Fbo">
                                 <rect key="frame" x="16" y="327" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>

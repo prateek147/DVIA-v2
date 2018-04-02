@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V9c-3Y-IB2">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zyd-Bb-RKK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sTv-GQ-TjW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-7g-eV7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="114.5"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="114.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114.5" id="C3v-Pl-m6s"/>
@@ -38,12 +38,12 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-7P-msL">
-                                <rect key="frame" x="0.0" y="178" width="375" height="360.5"/>
+                                <rect key="frame" x="0.0" y="178.00000000000003" width="414" height="360.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="360.5" id="qnR-8b-fHM"/>
                                 </constraints>
-                                <string key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app    b) Check whether the app comes with stripped symbols or not                                   c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device               e) Check whether the app binary is a fat binary or not                                                        f) Check whether the class names are obfuscated in the application or not              g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </string>
+                                <mutableString key="text">a) Check whether PIE, ARC and stack smashing protection is enabled in the app                             b) Check whether the app comes with stripped symbols or not                                                         c) Find the shared libraries used by the app               d) Check whether the app can be self-signed and deployed on a jailbroken device                              e) Check whether the app binary is a fat binary or not                                                                             f) Check whether the class names are obfuscated in the application or not                                             g) Find the signature used for signing the app                                                                      h) Find the entitlements used by the app </mutableString>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGN-Ob-QGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215" y="-224"/>
+            <point key="canvasLocation" x="9" y="-335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZU-ek-L27">
@@ -81,7 +81,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V9c-3Y-IB2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="saz-qG-Sos">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
