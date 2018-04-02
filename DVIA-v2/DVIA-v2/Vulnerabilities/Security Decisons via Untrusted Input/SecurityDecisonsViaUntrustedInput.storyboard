@@ -30,14 +30,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-Pz-jlT">
-                                <rect key="frame" x="11" y="64" width="353" height="116.5"/>
-                                <string key="text">In iOS apps can communicate between each other using certain IPC Apis. If an incoming request from another app is not handled properly, it can lead to a security vulnerabilitiy.</string>
+                                <rect key="frame" x="11" y="64" width="353" height="93"/>
+                                <string key="text">In iOS apps can communicate between each other using certain IPC Apis. If an incoming request from another app is not handled properly, it can lead to a security vulnerability.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-dy-CUU">
-                                <rect key="frame" x="115" y="205.5" width="144" height="30"/>
+                                <rect key="frame" x="115" y="182" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

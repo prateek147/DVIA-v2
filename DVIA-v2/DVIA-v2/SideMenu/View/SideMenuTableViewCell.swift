@@ -23,12 +23,13 @@ class SideMenuTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
     func configure(_ item: Any?) {
         guard let cellModel = item as? MenuCellModel else { return }
+        title.lineBreakMode = .byWordWrapping
+        title.numberOfLines = 0
         title.text = cellModel.item.title
         title.textColor = UIColor.white
     }

@@ -38,7 +38,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-u8-Q6L">
-                                <rect key="frame" x="124" y="294.33333333333331" width="166" height="30"/>
+                                <rect key="frame" x="124" y="276.33333333333331" width="166" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="CAMERA PERMISSION">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,12 +52,11 @@
                         <constraints>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="top" secondItem="FxF-3H-0io" secondAttribute="bottom" id="1FM-Jf-shT"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="width" secondItem="d0D-67-BfT" secondAttribute="width" id="1WJ-kj-3pY"/>
-                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="top" secondItem="ibn-FB-5Ln" secondAttribute="bottom" constant="41" id="42N-On-Vc1"/>
+                            <constraint firstItem="JuO-u8-Q6L" firstAttribute="top" secondItem="ibn-FB-5Ln" secondAttribute="bottom" constant="24" id="42N-On-Vc1"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="leading" secondItem="Xtz-BU-1Tt" secondAttribute="leading" id="8H6-aE-euf"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="trailing" secondItem="Xtz-BU-1Tt" secondAttribute="trailing" id="AbP-we-pUO"/>
                             <constraint firstItem="JuO-u8-Q6L" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="CvY-1C-aGh"/>
                             <constraint firstItem="ibn-FB-5Ln" firstAttribute="centerX" secondItem="Xtz-BU-1Tt" secondAttribute="centerX" id="T9w-gz-wXe"/>
-                            <constraint firstItem="ibn-FB-5Ln" firstAttribute="leading" secondItem="Xtz-BU-1Tt" secondAttribute="leading" id="noO-4K-0ac"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xtz-BU-1Tt"/>
                     </view>

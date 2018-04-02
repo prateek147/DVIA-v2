@@ -30,6 +30,8 @@ class JailbreakDetectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Bug Fix if view goes under the navigation bar
+        self.edgesForExtendedLayout = []
         let button = UIButton.init(type: .custom)
         button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
         button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
