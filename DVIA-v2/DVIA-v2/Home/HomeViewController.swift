@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "Home"
+        self.navigationItem.title = "Device Info"
     }
     
     @IBAction func menuTapped(_ sender: Any) {

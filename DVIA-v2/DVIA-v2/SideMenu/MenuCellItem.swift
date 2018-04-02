@@ -35,7 +35,7 @@ enum MenuCellItem {
     var title: String {
         switch self {
         case .home:
-            return "Home"
+            return "Device Info"
         case .insecureDataStorage:
             return "Local Data Storage"
         case .jailbreakDetection:

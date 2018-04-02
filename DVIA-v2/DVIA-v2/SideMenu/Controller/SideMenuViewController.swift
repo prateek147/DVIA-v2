@@ -56,6 +56,15 @@ class SideMenuViewController: UIViewController {
                 ]
         )
         menuItems = [items]
+        let view = UIView(frame: CGRect.zero)
+        view.backgroundColor = UIColor.clear
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 350, height: 20))
+        label.text = "DAMNVULNERABLEIOSAPP.COM"
+        label.font = label.font.withSize(14)
+        label.textColor = UIColor(red: 109/255, green: 109/255, blue: 113/255, alpha: 1.0)
+        view.addSubview(label)
+        view.frame.size = CGSize(width:tableView.frame.width, height: 20.0)
+        tableView.tableHeaderView = view;
     }
 
 }
@@ -66,15 +75,6 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         return menuItems[section].cellModels.count
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect.zero)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 350, height: 30))
-        label.text = "DAMNVULNERABLEIOSAPP.COM"
-        label.font = label.font.withSize(14)
-        label.textColor = UIColor(red: 109/255, green: 109/255, blue: 113/255, alpha: 1.0)
-        view.addSubview(label)
-        return view
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = menuItems[indexPath.section].cellModels[indexPath.item]
