@@ -9,6 +9,7 @@
 #include "anti.h"
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <stdio.h>
 #import <dlfcn.h>
 #import <sys/types.h>
@@ -37,6 +38,8 @@ void disable_gdb()
     dlclose(handle);
 }
 
+
+
 int detect_injected_dylds()
 {
     //Get count of all currently loaded DYLDs
@@ -57,4 +60,25 @@ int detect_injected_dylds()
     }
     return 0;
 }
+
+int isDebugged()
+{
+    int name[4];
+    struct kinfo_proc info;
+    size_t info_size = sizeof(info);
+    
+    info.kp_proc.p_flag = 0;
+    
+    name[0] = CTL_KERN;
+    name[1] = KERN_PROC;
+    name[2] = KERN_PROC_PID;
+    name[3] = getpid();
+    
+    if (sysctl(name, 4, &info, &info_size, NULL, 0) == -1) {
+        //Program is being debugged
+        return 1;
+    }
+    return ((info.kp_proc.p_flag & P_TRACED) != 0);
+}
+
 

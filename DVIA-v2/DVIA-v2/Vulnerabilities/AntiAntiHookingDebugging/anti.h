@@ -11,7 +11,8 @@
 
 #include <stdio.h>
 
-int detect_injected_dylds(void);
-void disable_gdb(void);
+inline int detect_injected_dylds(void) __attribute__((always_inline));;
+inline void disable_gdb(void) __attribute__((always_inline));;
+inline int isDebugged (void) __attribute__((always_inline));
 
 #endif

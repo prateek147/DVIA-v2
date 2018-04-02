@@ -68,10 +68,8 @@
         
         NSLog(@"wifi info: bssid: %@, ssid:%@, ssidData: %@", info[@"BSSID"], info[@"SSID"], info[@"SSIDDATA"]);
     }
-    return [NSString stringWithFormat:@"Sysname: %s\nNodename: %s\nRelease: %s\nVersion: %s\nMachine: %s\nMemory in use (in MB): %f", u.sysname,u.nodename,u.release,u.version,u.machine,((CGFloat)info.resident_size / 1000000)];
-    
-    
-   
+    return [NSString stringWithFormat:@"Sysname: %s\nNodename: %s\nRelease: %s\nVersion: %s\nMachine: %s\nMemory in use (in MB): %f\nPID: %d", u.sysname,u.nodename,u.release,u.version,u.machine,((CGFloat)info.resident_size / 1000000),getpid()];
+
 }
 
 @end
