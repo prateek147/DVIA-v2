@@ -59,9 +59,6 @@ class TransportLayerProtectionViewController: UIViewController {
         sendRequestOverUrl(url)
     }
     
-   
-    
-
     func sendRequestOverUrl(_ url: URL) {
         //initialize a request from url
         var request = URLRequest(url: url.standardized)
@@ -76,10 +73,21 @@ class TransportLayerProtectionViewController: UIViewController {
         request.httpBody = jsonData
         
         //initialize a connection from request
-        let connection = NSURLConnection(request: request, delegate: self)
+        _ = URLSession.shared.dataTask(with: request) {
+            data, response, error in
+            // Check for error
+            if error != nil
+            {
+                print("error=\(error ?? nil ?? "Error" as! Error)")
+                return
+            }
+            // Print out response string
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(String(describing: responseString))")
+            
+        }
         
         //start the connection
-        connection?.start()
         DVIAUtilities.showAlert(title: "", message: "Request Sent, lookout!", viewController: self)
     }
 
