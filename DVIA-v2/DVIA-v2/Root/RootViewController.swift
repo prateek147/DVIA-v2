@@ -50,7 +50,7 @@ extension RootViewController {
     }
     
     public func openMenu() {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.homeContainerTrailingConstraint.constant = -self.sideMenuContainerWidthConstraint.constant
             self.homeContainerLeadingConstraint.constant = self.sideMenuContainerWidthConstraint.constant
             self.view.layoutIfNeeded()
@@ -61,7 +61,7 @@ extension RootViewController {
     }
     
     public func dismissMenu() {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.homeContainerTrailingConstraint.constant = 0
             self.homeContainerLeadingConstraint.constant = 0
             self.view.layoutIfNeeded()
