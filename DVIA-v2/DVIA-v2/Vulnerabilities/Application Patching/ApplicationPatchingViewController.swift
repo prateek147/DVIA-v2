@@ -26,6 +26,10 @@ class ApplicationPatchingViewController: UIViewController {
         self.navigationItem.title = "Application Patching"
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Application Patching"
+    }
 
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()

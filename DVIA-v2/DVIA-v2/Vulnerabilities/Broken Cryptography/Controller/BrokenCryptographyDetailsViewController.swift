@@ -34,7 +34,7 @@ extension BrokenCryptographyDetailsViewController: UITextFieldDelegate {
                 DVIAUtilities.showAlert(title: "Oops", message: "Please enter a password", viewController: self)
             } else {
                 let data = passwordTextField.text?.data(using: String.Encoding.utf8)
-                let encryptedData = try? RNEncryptor.encryptData(data, with: kRNCryptorAES256Settings, password: "Secret-Key")
+                let encryptedData = try? RNEncryptor.encryptData(data, with: kRNCryptorAES256Settings, password: "@daloq3as$qweasdlasasjdnj")
                 try? encryptedData?.write(to: dataPath, options: .atomic)
                 UserDefaults.standard.set(true, forKey: "loggedIn")
                 UserDefaults.standard.synchronize()
@@ -43,7 +43,7 @@ extension BrokenCryptographyDetailsViewController: UITextFieldDelegate {
         } else if textField == returningUserPasswordTextField {
             let data = returningUserPasswordTextField.text?.data(using: String.Encoding.utf8)
             let encryptedData = try? Data(contentsOf: dataPath)
-            let decryptedData = try? RNDecryptor.decryptData(encryptedData, withPassword: "Secret-Key")
+            let decryptedData = try? RNDecryptor.decryptData(encryptedData, withPassword: "@daloq3as$qweasdlasasjdnj")
             if data == decryptedData {
                 loggedInLabel.isHidden = false
                 returningUserPasswordTextField.isHidden = true

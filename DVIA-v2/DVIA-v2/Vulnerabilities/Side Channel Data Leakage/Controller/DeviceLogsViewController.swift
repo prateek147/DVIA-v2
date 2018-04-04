@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import os.log
 
 class DeviceLogsViewController: UIViewController {
     
@@ -33,7 +34,7 @@ class DeviceLogsViewController: UIViewController {
         user.saveInBackground(block: {(_ succeeded: Bool, _ error: Error?) -> Void in
             if succeeded {
                 DVIAUtilities.showAlert(title: "Success", message: "User signed up successfully, look for the logs now", viewController: self)
-                print("Saved user info: \(user.description)")
+                os_log("Saved user info: %@",user.description)
             } else {
                 DVIAUtilities.showAlert(title: "Oops", message: "Sign Up failed.", viewController: self)
             }
