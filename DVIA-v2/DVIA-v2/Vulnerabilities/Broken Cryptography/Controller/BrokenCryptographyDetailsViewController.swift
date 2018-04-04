@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BrokenCryptographyDetailsViewController: UIViewController {
+class BrokenCryptographyDetailsViewController: UIViewController
 
+    {
     @IBOutlet var firstTimeUserView: UIView!
     @IBOutlet var passwordTextField: UITextField!
-    
     @IBOutlet var returningUserView: UIView!
     @IBOutlet var welcomeReturningUserLabel: UILabel!
     @IBOutlet var returningUserPasswordTextField: UITextField!
@@ -21,7 +21,6 @@ class BrokenCryptographyDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
 
 extension BrokenCryptographyDetailsViewController: UITextFieldDelegate {
