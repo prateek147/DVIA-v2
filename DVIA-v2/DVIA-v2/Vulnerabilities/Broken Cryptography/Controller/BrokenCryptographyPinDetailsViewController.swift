@@ -67,30 +67,28 @@ extension BrokenCryptographyPinDetailsViewController: UITextFieldDelegate {
         return derivedKeyData
     }
 
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let salt = Data(bytes: [0x65, 0x62, 0x6f, 0xf2, 0xff, 0x44, 0x7a, 0xc6])
         let keyByteCount = 16
         //Could be 100000 :/
-        let rounds = 100
-        let dataPath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent("/passcode-data").absoluteURL
+        let rounds = 500
+        let dataPath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent("/v324dsa13qasd.enc").absoluteURL
+        let encryptedData = pbkdf2(password:textField.text!, salt:salt, keyByteCount:keyByteCount, rounds:rounds)
         if textField == passwordTextField {
             textField.resignFirstResponder()
             if textField.text == nil {
                 DVIAUtilities.showAlert(title: "Oops", message: "Please enter a password", viewController: self)
             } else {
-                let encryptedData = pbkdf2(password:textField.text!, salt:salt, keyByteCount:keyByteCount, rounds:rounds)
-                print("encryptedDatga (SHA1): \(encryptedData! as NSData)")
+                //First time user, save the encrypted data
+                print("encryptedData (SHA1): \(encryptedData! as NSData)")
                 try? encryptedData?.write(to: dataPath, options: .atomic)
                 UserDefaults.standard.set(true, forKey: "loggedIn")
                 UserDefaults.standard.synchronize()
                 firstTimeUserView.isHidden = true
             }
         } else if textField == returningUserPasswordTextField {
-            let data = returningUserPasswordTextField.text?.data(using: String.Encoding.utf8)
-            let encryptedData = try? Data(contentsOf: dataPath)
-            let decryptedData = try? RNDecryptor.decryptData(encryptedData, withPassword: "@daloq3as$qweasdlasasjdnj")
-            if data == decryptedData {
+            let previousData = try? Data(contentsOf: dataPath)
+            if (encryptedData == previousData) {
                 loggedInLabel.isHidden = false
                 returningUserPasswordTextField.isHidden = true
                 welcomeReturningUserLabel.isHidden = true

@@ -60,8 +60,8 @@ class TransportLayerProtectionViewController: UIViewController {
     }
     
     func sendRequestOverUrl(_ url: URL) {
-        //initialize a request from url
         var request = URLRequest(url: url.standardized)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         let postDictionary = [
             "card_number" : cardNumberTextField.text,
@@ -71,26 +71,24 @@ class TransportLayerProtectionViewController: UIViewController {
         let jsonData = try? JSONSerialization.data(withJSONObject: postDictionary, options: .prettyPrinted)
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
-        
-        //initialize a connection from request
-        _ = URLSession.shared.dataTask(with: request) {
-            data, response, error in
-            // Check for error
-            if error != nil
-            {
-                print("error=\(error ?? nil ?? "Error" as! Error)")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(String(describing: error))")
                 return
             }
-            // Print out response string
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("responseString = \(String(describing: responseString))")
             
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString) )")
         }
-        
-        //start the connection
+        task.resume()
         DVIAUtilities.showAlert(title: "", message: "Request Sent, lookout!", viewController: self)
-    }
-
+        }
 }
 
 extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConnectionDelegate {
@@ -102,7 +100,7 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
     
     @IBAction func send(usingSSLPinning sender: Any) {
         isSSLPinning = true
-        let httpsURL = URL(string: "https://www.google.co.uk")
+        let httpsURL = URL(string: "https://www.google.com")
         let request = URLRequest(url: httpsURL!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         let connection = NSURLConnection(request: request, delegate: self)
         connection?.start()
@@ -133,7 +131,7 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
             guard let serverTrust = challenge.protectionSpace.serverTrust else { return }
             guard let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0) else { return }
             let remoteCetificateData = SecCertificateCopyData(certificate)
-            let skabberCertificateData = NSData(contentsOfFile: Bundle.main.path(forResource: "google.co.uk", ofType: "cer")!)
+            let skabberCertificateData = NSData(contentsOfFile: Bundle.main.path(forResource: "google.com", ofType: "cer")!)
             
             if remoteCetificateData == skabberCertificateData {
                 DVIAUtilities.showAlert(title: "", message: "Request Sent using pinning, lookout!", viewController: self)

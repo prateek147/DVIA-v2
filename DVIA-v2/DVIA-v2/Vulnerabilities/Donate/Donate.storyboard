@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dl8-An-0mH">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,11 +27,11 @@
                         <viewControllerLayoutGuide type="bottom" id="T6K-y9-cD3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bk1-6j-KRK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g6-nQ-fTg">
-                                <rect key="frame" x="127" y="437" width="121" height="34"/>
+                                <rect key="frame" x="323.5" y="243" width="121" height="34"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Go to Website">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,18 +40,18 @@
                                     <action selector="goToWebsiteTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="ZRr-gj-EXX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-mG-eaO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="344"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-mG-eaO">
+                                <rect key="frame" x="0.0" y="64" width="768" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
 The Juniper Fund was started by David Morton and Melissa Arnot in order to address an unmet obligation they witnessed through their work as guides in the world's great mountains.
 The mountain climbing and expedition industry employs countless local staff and laborers in order to help support the adventures many travelers seek. The reality is that some of these workers are injured or killed in the course of this work.
 The local governments have inadequate systems for insuring against this in the event of tragedy.Their work is presently focused on Nepali workers involved with climbing and expedition support in the high mountains of Nepal.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-s5-WBL">
-                                <rect key="frame" x="144" y="495" width="86" height="34"/>
+                                <rect key="frame" x="341" y="285" width="86" height="34"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="See Video">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,12 +63,12 @@ The local governments have inadequate systems for insuring against this in the e
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pgY-s5-WBL" firstAttribute="top" secondItem="5g6-nQ-fTg" secondAttribute="bottom" constant="8" id="7rs-yI-WFG"/>
                             <constraint firstItem="5g6-nQ-fTg" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="EdO-mq-r5J"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="HDg-li-ktm"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="leading" secondItem="J05-nk-B92" secondAttribute="leading" id="HHQ-0z-dX2"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="top" secondItem="J05-nk-B92" secondAttribute="top" id="Hxq-ZR-JjG"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="top" secondItem="ewd-ED-Ap6" secondAttribute="bottom" id="JWI-Ba-3aR"/>
-                            <constraint firstItem="pgY-s5-WBL" firstAttribute="top" secondItem="5g6-nQ-fTg" secondAttribute="bottom" constant="24" id="Kg6-LT-Sol"/>
                             <constraint firstItem="5g6-nQ-fTg" firstAttribute="top" secondItem="FzH-mG-eaO" secondAttribute="bottom" constant="29" id="R1P-7s-jI9"/>
                             <constraint firstItem="FzH-mG-eaO" firstAttribute="trailing" secondItem="J05-nk-B92" secondAttribute="trailing" id="aB9-KJ-Om5"/>
                             <constraint firstItem="pgY-s5-WBL" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="dhf-R4-7Vm"/>
@@ -100,11 +100,11 @@ The local governments have inadequate systems for insuring against this in the e
                         <viewControllerLayoutGuide type="bottom" id="C0I-UX-0PV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="94G-hN-Fg8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3li-4U-F1p">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,7 +128,7 @@ The local governments have inadequate systems for insuring against this in the e
                 <navigationController storyboardIdentifier="Phishing" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dl8-An-0mH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zAg-bX-Dae">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
