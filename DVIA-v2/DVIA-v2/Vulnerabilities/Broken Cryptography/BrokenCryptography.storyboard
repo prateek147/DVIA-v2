@@ -271,7 +271,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyW-8t-0je">
                                 <rect key="frame" x="0.0" y="64" width="375" height="350"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up a new 6 digit passcode to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-0y-pz7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up a new 6 character passcode to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-0y-pz7">
                                         <rect key="frame" x="30" y="30" width="315" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Dqu-eb-EwR"/>
@@ -284,7 +284,7 @@
                                         <rect key="frame" x="30" y="130" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="postal-code"/>
+                                        <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                                         <connections>
                                             <outlet property="delegate" destination="Ebv-Ll-eJS" id="tbE-Ez-gqd"/>
                                         </connections>

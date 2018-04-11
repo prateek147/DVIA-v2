@@ -40,7 +40,7 @@ class TouchIDDetailsViewController: UIViewController {
                 }
             }
         } else {
-           DVIAUtilities.showAlert(title: "Touch ID not available", message: "Your device doesn't support Touch ID", viewController: self)
+           DVIAUtilities.showAlert(title: "Touch ID not available", message: "Your device doesn't support Touch ID or you haven't configured Touch ID authentication on your device", viewController: self)
         }
     }
     

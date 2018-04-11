@@ -50,7 +50,7 @@
                             }];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [TouchIDAuthentication showAlert:@"Your device doesn't support Touch ID" withTitle:@"Error"];
+            [TouchIDAuthentication showAlert:@"Your device doesn't support Touch ID or you haven't configured Touch ID authentication on your device" withTitle:@"Error"];
         });
     }
 }

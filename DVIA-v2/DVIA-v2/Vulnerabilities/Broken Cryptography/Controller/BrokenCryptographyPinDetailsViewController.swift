@@ -66,6 +66,14 @@ extension BrokenCryptographyPinDetailsViewController: UITextFieldDelegate {
         
         return derivedKeyData
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 6
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let salt = Data(bytes: [0x65, 0x62, 0x6f, 0xf2, 0xff, 0x44, 0x7a, 0xc6])
