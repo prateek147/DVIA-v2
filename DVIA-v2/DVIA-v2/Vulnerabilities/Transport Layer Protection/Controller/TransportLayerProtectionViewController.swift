@@ -16,6 +16,7 @@ class TransportLayerProtectionViewController: UIViewController {
     @IBOutlet var nameOnCardTextField: UITextField!
     
     var isSSLPinning: Bool = true
+    var isPublicKeyPinning: Bool = true
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,14 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
         connection?.start()
     }
     
+    @IBAction func send(usingPublicKeyPinning sender: Any) {
+        isPublicKeyPinning = true
+        let httpsURL = URL(string: "https://www.google.com")
+        let request = URLRequest(url: httpsURL!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+        let connection = NSURLConnection(request: request, delegate: self)
+        connection?.start()
+    }
+    
     // MARK: NSURLConnection Delegate Methods
     
     func connection(_ connection: NSURLConnection, willCacheResponse cachedResponse: CachedURLResponse) -> CachedURLResponse? {
@@ -132,9 +141,24 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
             guard let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0) else { return }
             let remoteCetificateData = SecCertificateCopyData(certificate)
             let skabberCertificateData = NSData(contentsOfFile: Bundle.main.path(forResource: "google.com", ofType: "cer")!)
-            
             if remoteCetificateData == skabberCertificateData {
                 DVIAUtilities.showAlert(title: "", message: "Request Sent using pinning, lookout!", viewController: self)
+                let credential = URLCredential(trust: serverTrust)
+                challenge.sender?.use(credential, for: challenge)
+            } else {
+                DVIAUtilities.showAlert(title: "", message: "Certificate validation failed. You will have to do better than this, my boy!!", viewController: self)
+                challenge.sender?.cancel(challenge)
+            }
+        }
+        //Don't check for valid public key when the user taps on "Send over HTTPs"
+        if isPublicKeyPinning {
+            isPublicKeyPinning = false
+            guard let serverTrust = challenge.protectionSpace.serverTrust else { return }
+            guard let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0) else { return }
+            let remoteCetificateData = SecCertificateCopyData(certificate)
+            let skabberCertificateData = NSData(contentsOfFile: Bundle.main.path(forResource: "google.com", ofType: "cer")!)
+            if remoteCetificateData == skabberCertificateData {
+                DVIAUtilities.showAlert(title: "", message: "Request Sent using Public Key Pinning, lookout!", viewController: self)
                 let credential = URLCredential(trust: serverTrust)
                 challenge.sender?.use(credential, for: challenge)
             } else {

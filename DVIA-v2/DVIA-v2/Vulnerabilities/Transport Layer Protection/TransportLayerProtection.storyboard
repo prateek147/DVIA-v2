@@ -83,7 +83,7 @@
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendUsingSSLPinning:" destination="RbF-hp-Dde" eventType="touchUpInside" id="2zD-c0-wSe"/>
+                                    <action selector="sendUsingPublicKeyPinning:" destination="RbF-hp-Dde" eventType="touchUpInside" id="38z-Wk-4CN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-bI-mKV">
