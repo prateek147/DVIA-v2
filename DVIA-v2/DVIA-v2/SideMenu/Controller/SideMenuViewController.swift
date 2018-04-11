@@ -51,7 +51,7 @@ class SideMenuViewController: UIViewController {
                 MenuCellModel(item: .transportLayerProtection),
                 MenuCellModel(item: .applicationPatching),
                 MenuCellModel(item: .sensitiveInformation),
-                MenuCellModel(item: .attackingThirdPartyLibraries),
+                //MenuCellModel(item: .attackingThirdPartyLibraries),
                 MenuCellModel(item: .donate)
                 ]
         )

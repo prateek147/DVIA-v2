@@ -28,7 +28,7 @@ enum MenuCellItem {
     case transportLayerProtection
     case applicationPatching
     case sensitiveInformation
-    case attackingThirdPartyLibraries
+    //case attackingThirdPartyLibraries
     case phishing
     case donate
     
@@ -66,8 +66,8 @@ enum MenuCellItem {
             return "Application Patching"
         case .sensitiveInformation:
             return "Sensitive Information in Memory"
-        case .attackingThirdPartyLibraries:
-            return "Attacking Third Party Libraries"
+//        case .attackingThirdPartyLibraries:
+//            return "Attacking Third Party Libraries"
         case .donate:
             return "Donate - The Juniper Fund"
         }

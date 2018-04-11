@@ -12,6 +12,7 @@
 		6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */; };
 		6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */; };
 		6E38A98820627DE400C9B563 /* anti.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A98720627DE400C9B563 /* anti.c */; };
+		6E3D0559207E14DE000395C2 /* example.der in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D0558207E14DC000395C2 /* example.der */; };
 		6E6C0DCE2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */; };
 		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		6EF0C419205FD59A0089050C /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */; };
@@ -219,6 +220,7 @@
 		6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiAntiHookingDebuggingViewController.swift; sourceTree = "<group>"; };
 		6E38A98620627DE400C9B563 /* anti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = anti.h; sourceTree = "<group>"; };
 		6E38A98720627DE400C9B563 /* anti.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = anti.c; sourceTree = "<group>"; };
+		6E3D0558207E14DC000395C2 /* example.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.der; sourceTree = SOURCE_ROOT; };
 		6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenCryptographyPinDetailsViewController.swift; sourceTree = "<group>"; };
 		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
@@ -1373,6 +1375,7 @@
 		F6E64578202FBC6000884A43 /* Transport Layer Protection */ = {
 			isa = PBXGroup;
 			children = (
+				6E3D0558207E14DC000395C2 /* example.der */,
 				F6E64579202FBC6000884A43 /* TransportLayerProtection.storyboard */,
 				F6E6457A202FBC6000884A43 /* Controller */,
 			);
@@ -1659,6 +1662,7 @@
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
 				F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */,
+				6E3D0559207E14DE000395C2 /* example.der in Resources */,
 				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
 				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
 				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
