@@ -1347,7 +1347,6 @@
 		F6E64570202FBC6000884A43 /* Runtime Manipulation */ = {
 			isa = PBXGroup;
 			children = (
-				F6E64571202FBC6000884A43 /* RuntimeManipulation.storyboard */,
 				F6E64572202FBC6000884A43 /* Controller */,
 				F6E64575202FBC6000884A43 /* Objective-C Methods */,
 			);
@@ -1541,6 +1540,7 @@
 		F6E645AB202FBC6000884A43 /* Objective-C Methods */ = {
 			isa = PBXGroup;
 			children = (
+				F6E64571202FBC6000884A43 /* RuntimeManipulation.storyboard */,
 				F6E645AC202FBC6000884A43 /* JailbreakDetection.h */,
 				F6E645AD202FBC6000884A43 /* JailbreakDetection.m */,
 			);

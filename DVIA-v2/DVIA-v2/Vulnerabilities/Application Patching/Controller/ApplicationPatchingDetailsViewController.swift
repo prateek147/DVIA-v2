@@ -16,13 +16,15 @@
 
 import UIKit
 
-class ApplicationPatchingDetailsViewController: UIViewController {
+class ApplicationPatchingDetailsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
         self.navigationItem.title = "Application Patching"
 
         // Do any additional setup after loading the view.
@@ -51,5 +53,10 @@ class ApplicationPatchingDetailsViewController: UIViewController {
     
     @IBAction func killApplicationTapped(_ sender: Any) {
         exit(-1)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

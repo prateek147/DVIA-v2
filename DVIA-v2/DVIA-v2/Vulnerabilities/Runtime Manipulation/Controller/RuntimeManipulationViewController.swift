@@ -20,8 +20,6 @@ class RuntimeManipulationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Bug Fix if view goes under the navigation bar
-        self.edgesForExtendedLayout = []
         let button = UIButton.init(type: .custom)
         button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
         button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
@@ -32,6 +30,8 @@ class RuntimeManipulationViewController: UIViewController {
         //assign button to navigationbar
         self.navigationItem.leftBarButtonItem = barButton
         // Do any additional setup after loading the view.
+        //Bug Fix if view goes under the navigation bar
+        self.edgesForExtendedLayout = []
     }
 
     override func viewWillAppear(_ animated: Bool) {

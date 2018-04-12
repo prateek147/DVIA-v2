@@ -16,7 +16,7 @@
 
 import UIKit
 
-class RuntimeManipulationDetailsViewController: UIViewController {
+class RuntimeManipulationDetailsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -25,6 +25,10 @@ class RuntimeManipulationDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        //Bug Fix if view goes under the navigation bar
+        self.edgesForExtendedLayout = []
         self.navigationItem.title = "Runtime Manipulation"
     }
     
@@ -51,6 +55,11 @@ class RuntimeManipulationDetailsViewController: UIViewController {
     
     @IBAction func validateCodeTapped(_ sender: Any) {
         LoginValidate.validateCode(Int(codeTextField.text!)!, viewController: self)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

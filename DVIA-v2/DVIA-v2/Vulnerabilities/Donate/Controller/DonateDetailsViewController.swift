@@ -31,6 +31,10 @@ class DonateDetailsViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(!Reachability.isConnectedToNetwork()){
+            DVIAUtilities.showAlert(title: "Error", message: "Make sure you are connected to the internet.", viewController: self)
+            return
+        }
         let myURL = URL(string:urlToLoad)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)

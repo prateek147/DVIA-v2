@@ -47,6 +47,7 @@ class TransportLayerProtectionViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameOnCardTextField.delegate = self
         let button = UIButton.init(type: .custom)
         button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
         button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
@@ -88,6 +89,10 @@ class TransportLayerProtectionViewController: UIViewController {
     }
     
     func sendRequestOverUrl(_ url: URL) {
+        if(!Reachability.isConnectedToNetwork()){
+            DVIAUtilities.showAlert(title: "Error", message: "Make sure you are connected to the internet.", viewController: self)
+            return
+        }
         var request = URLRequest(url: url.standardized)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -207,9 +212,6 @@ extension TransportLayerProtectionViewController: UITextFieldDelegate, NSURLConn
                 }
                 
             }
-            
-        
-            
             
         }
     }
