@@ -27,57 +27,82 @@
                         <viewControllerLayoutGuide type="bottom" id="T6K-y9-cD3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bk1-6j-KRK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giL-fC-w07">
-                                <rect key="frame" x="0.0" y="66" width="375" height="670"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giL-fC-w07">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="766"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-iR-ixd">
-                                        <rect key="frame" x="67" y="249" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAC-1l-NfF">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="538"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-iR-ixd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAC-1l-NfF">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="549"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="549" id="lQg-oO-hKp"/>
+                                                </constraints>
+                                                <string key="text">If you liked this project and benefitted from it, please consider making a donation to the Juniper fund.                     
 The Juniper Fund was started by David Morton and Melissa Arnot in order to address an unmet obligation they witnessed through their work as guides in the world's great mountains.
 The mountain climbing and expedition industry employs countless local staff and laborers in order to help support the adventures many travelers seek. The reality is that some of these workers are injured or killed in the course of this work.
 The local governments have inadequate systems for insuring against this in the event of tragedy.Their work is presently focused on Nepali workers involved with climbing and expedition support in the high mountains of Nepal.</string>
-                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-Ah-8rg">
-                                        <rect key="frame" x="127.5" y="540" width="121" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Go to Website">
-                                            <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToWebsiteTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="ptO-Tr-hpW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUQ-le-gzG">
-                                        <rect key="frame" x="144.5" y="572" width="86" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="See Video">
-                                            <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="seeVideoTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="tdi-AA-Yjv"/>
-                                        </connections>
-                                    </button>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-Ah-8rg">
+                                                <rect key="frame" x="127" y="563" width="121" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Go to Website">
+                                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToWebsiteTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="ptO-Tr-hpW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUQ-le-gzG">
+                                                <rect key="frame" x="144" y="601" width="86" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="See Video">
+                                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="seeVideoTapped:" destination="KRm-5V-AYA" eventType="touchUpInside" id="tdi-AA-Yjv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="900" id="6VX-qU-cb8"/>
+                                            <constraint firstItem="oAC-1l-NfF" firstAttribute="leading" secondItem="fhX-iR-ixd" secondAttribute="leading" id="b30-SW-FyC"/>
+                                            <constraint firstItem="oAC-1l-NfF" firstAttribute="top" secondItem="fhX-iR-ixd" secondAttribute="top" id="kOC-NJ-bFN"/>
+                                            <constraint firstAttribute="trailing" secondItem="oAC-1l-NfF" secondAttribute="trailing" id="zzF-yA-cco"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Uxg-Ah-8rg" firstAttribute="centerX" secondItem="oAC-1l-NfF" secondAttribute="centerX" id="Fce-zt-Kk0"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhX-iR-ixd" secondAttribute="trailing" id="0xm-ZX-dzl"/>
+                                    <constraint firstItem="fhX-iR-ixd" firstAttribute="top" secondItem="giL-fC-w07" secondAttribute="top" id="7Ah-4w-PFb"/>
+                                    <constraint firstAttribute="bottom" secondItem="fhX-iR-ixd" secondAttribute="bottom" id="E10-qL-8Lf"/>
+                                    <constraint firstItem="fhX-iR-ixd" firstAttribute="top" secondItem="giL-fC-w07" secondAttribute="top" id="M0e-pb-rfB"/>
+                                    <constraint firstItem="fhX-iR-ixd" firstAttribute="leading" secondItem="giL-fC-w07" secondAttribute="leading" id="pPa-nZ-PSn"/>
+                                    <constraint firstItem="fhX-iR-ixd" firstAttribute="top" secondItem="giL-fC-w07" secondAttribute="top" id="pnS-jk-Nob"/>
+                                    <constraint firstItem="fhX-iR-ixd" firstAttribute="leading" secondItem="giL-fC-w07" secondAttribute="leading" id="u65-A1-fb7"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhX-iR-ixd" secondAttribute="trailing" id="vwM-jQ-MyF"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fhX-iR-ixd" firstAttribute="width" secondItem="Bk1-6j-KRK" secondAttribute="width" id="Lqf-3I-lyW"/>
+                            <constraint firstItem="giL-fC-w07" firstAttribute="trailing" secondItem="J05-nk-B92" secondAttribute="trailing" id="OZ7-uf-4CT"/>
+                            <constraint firstItem="T6K-y9-cD3" firstAttribute="top" secondItem="giL-fC-w07" secondAttribute="bottom" id="Pj4-tu-Iqz"/>
+                            <constraint firstItem="fhX-iR-ixd" firstAttribute="centerX" secondItem="J05-nk-B92" secondAttribute="centerX" id="isC-Td-XVf"/>
+                            <constraint firstItem="giL-fC-w07" firstAttribute="top" secondItem="Bk1-6j-KRK" secondAttribute="top" id="nbZ-em-EgL"/>
+                            <constraint firstItem="giL-fC-w07" firstAttribute="leading" secondItem="J05-nk-B92" secondAttribute="leading" id="yfM-LF-kVa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J05-nk-B92"/>
                     </view>
                     <navigationItem key="navigationItem" title="DONATE - The Juniper Fund" id="aRH-Br-DB1">
@@ -87,13 +112,14 @@ The local governments have inadequate systems for insuring against this in the e
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="700"/>
                     <connections>
                         <segue destination="IxJ-3j-cwa" kind="show" identifier="juniperFund" id="Kna-mQ-RZ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3m-jA-sU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="-444.82758620689657"/>
+            <point key="canvasLocation" x="-433" y="-569"/>
         </scene>
         <!--DONATE - The Juniper Fund-->
         <scene sceneID="dqA-lp-xK7">
