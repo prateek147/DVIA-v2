@@ -13,6 +13,7 @@
 		6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */; };
 		6E38A98820627DE400C9B563 /* anti.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A98720627DE400C9B563 /* anti.c */; };
 		6E3D0559207E14DE000395C2 /* example.der in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D0558207E14DC000395C2 /* example.der */; };
+		6E6413A12084C19E0033E2A0 /* FlurryLeakDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6413A02084C19E0033E2A0 /* FlurryLeakDetailsViewController.swift */; };
 		6E6C0DCE2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */; };
 		6EADF0782083674600A4AB1C /* slider-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EADF0762083674300A4AB1C /* slider-active.png */; };
 		6EADF0792083674600A4AB1C /* slider-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EADF0772083674500A4AB1C /* slider-active@2x.png */; };
@@ -223,6 +224,7 @@
 		6E38A98620627DE400C9B563 /* anti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = anti.h; sourceTree = "<group>"; };
 		6E38A98720627DE400C9B563 /* anti.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = anti.c; sourceTree = "<group>"; };
 		6E3D0558207E14DC000395C2 /* example.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.der; sourceTree = SOURCE_ROOT; };
+		6E6413A02084C19E0033E2A0 /* FlurryLeakDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlurryLeakDetailsViewController.swift; sourceTree = "<group>"; };
 		6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenCryptographyPinDetailsViewController.swift; sourceTree = "<group>"; };
 		6EADF0762083674300A4AB1C /* slider-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-active.png"; sourceTree = "<group>"; };
 		6EADF0772083674500A4AB1C /* slider-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-active@2x.png"; sourceTree = "<group>"; };
@@ -1346,6 +1348,7 @@
 			isa = PBXGroup;
 			children = (
 				F6E6456F202FBC6000884A43 /* AttackingThirdPartyViewController.swift */,
+				6E6413A02084C19E0033E2A0 /* FlurryLeakDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1896,6 +1899,7 @@
 				F6DE6F79202FA4DE00A3A757 /* HomeViewController.swift in Sources */,
 				F6E64530202FBB6700884A43 /* YapDatabaseSecondaryIndexConnection.m in Sources */,
 				F669D003206645C6001AEBEE /* Obfuscator.swift in Sources */,
+				6E6413A12084C19E0033E2A0 /* FlurryLeakDetailsViewController.swift in Sources */,
 				6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */,
 				F6E6453E202FBB6700884A43 /* YapDatabaseView.m in Sources */,
 				F6E64517202FBB6700884A43 /* YapDatabaseCloudKitTypes.m in Sources */,

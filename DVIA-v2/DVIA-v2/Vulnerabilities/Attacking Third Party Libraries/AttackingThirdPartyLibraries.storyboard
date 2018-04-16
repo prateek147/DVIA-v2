@@ -11,10 +11,10 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
-            <string>Avenir-Heavy</string>
             <string>Avenir-Roman</string>
         </array>
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
@@ -30,389 +30,62 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3M4-3f-CS8" kind="relationship" relationship="rootViewController" id="a9N-3O-yau"/>
+                        <segue destination="aMi-V6-too" kind="relationship" relationship="rootViewController" id="rwx-to-ZpG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwj-uG-DLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="331"/>
+            <point key="canvasLocation" x="66" y="100"/>
         </scene>
-        <!--Attacking Third Party Libraries-->
-        <scene sceneID="bTw-o5-iYV">
+        <!--Attacking Third Party View Controller-->
+        <scene sceneID="3fl-yl-ie2">
             <objects>
-                <tableViewController id="3M4-3f-CS8" customClass="AttackingThirdPartyViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5nt-Ty-MZm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="00M-WA-oJe">
-                            <rect key="frame" x="0.0" y="261.5" width="375" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A lot of iOS applications use different third party libraries and services, which expose their own vulnerabilities." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvd-2q-1zk">
-                                    <rect key="frame" x="8" y="8" width="359" height="84"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="trailingMargin" secondItem="mvd-2q-1zk" secondAttribute="trailing" id="6ne-gQ-Wvz"/>
-                                <constraint firstItem="mvd-2q-1zk" firstAttribute="top" secondItem="00M-WA-oJe" secondAttribute="topMargin" id="eEI-P9-tbd"/>
-                                <constraint firstItem="mvd-2q-1zk" firstAttribute="bottom" secondItem="00M-WA-oJe" secondAttribute="bottomMargin" id="eei-K1-3hQ"/>
-                                <constraint firstItem="mvd-2q-1zk" firstAttribute="leading" secondItem="00M-WA-oJe" secondAttribute="leadingMargin" id="zTd-ep-fUR"/>
-                            </constraints>
-                        </view>
-                        <sections>
-                            <tableViewSection headerTitle="DATA STORAGE" id="aDC-NF-4bP">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="JhU-ul-zng">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JhU-ul-zng" id="dhW-LI-6NR">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-T1-JbT">
-                                                    <rect key="frame" x="-42" y="58" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attacking Parse.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-IZ-Ua4">
-                                                    <rect key="frame" x="16" y="12" width="157.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="q2e-IZ-Ua4" firstAttribute="leading" secondItem="dhW-LI-6NR" secondAttribute="leadingMargin" id="hPS-ea-xNg"/>
-                                                <constraint firstItem="q2e-IZ-Ua4" firstAttribute="centerY" secondItem="dhW-LI-6NR" secondAttribute="centerY" id="vKt-gN-cmD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Rey-kc-ZW8" kind="show" id="VYA-F9-MNx"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="ANALYTICS" id="2DA-5h-C40">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yVo-cF-rwy" style="IBUITableViewCellStyleDefault" id="fhW-2p-R8T">
-                                        <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fhW-2p-R8T" id="FeT-6R-e44">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVo-cF-rwy">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="4Ce-1O-3kH" kind="show" id="7U3-lh-6xz"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="qX4-T4-IT8">
-                                        <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qX4-T4-IT8" id="BFy-od-s25">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attacking Google Analytics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwQ-Fa-l1C">
-                                                    <rect key="frame" x="16" y="12" width="206" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="SwQ-Fa-l1C" firstAttribute="leading" secondItem="BFy-od-s25" secondAttribute="leadingMargin" id="3qL-TQ-33j"/>
-                                                <constraint firstItem="SwQ-Fa-l1C" firstAttribute="centerY" secondItem="BFy-od-s25" secondAttribute="centerY" id="d7N-Hk-aPc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="M5I-d3-ZJU" kind="show" id="BXy-y2-Zsk"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="3M4-3f-CS8" id="U0T-kq-OoA"/>
-                            <outlet property="delegate" destination="3M4-3f-CS8" id="ZRd-gt-kAx"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Attacking Third Party Libraries" id="Ytw-oW-csI">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="wLt-En-4Qs">
-                            <connections>
-                                <action selector="menuTapped:" destination="3M4-3f-CS8" id="GMw-zr-gRm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vk4-YM-Jjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1036" y="330.58470764617692"/>
-        </scene>
-        <!--Parse-->
-        <scene sceneID="ObH-hT-rO2">
-            <objects>
-                <viewController title="Parse" id="Rey-kc-ZW8" sceneMemberID="viewController">
+                <viewController id="aMi-V6-too" customClass="AttackingThirdPartyViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1eg-Y7-tvd"/>
-                        <viewControllerLayoutGuide type="bottom" id="lhS-8d-Esq"/>
+                        <viewControllerLayoutGuide type="top" id="WnZ-QQ-rJY"/>
+                        <viewControllerLayoutGuide type="bottom" id="FAG-PX-rW3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MA0-KL-Sxo">
+                    <view key="view" contentMode="scaleToFill" id="RxY-Ub-sNq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9D-hb-0qG">
-                                <rect key="frame" x="16" y="72" width="343" height="102.5"/>
-                                <string key="text">Parse is a wonderful BaaS which helps with setting up backend infrastructure for your mobile application as fast as possible. Maybe just because of this simplicity many developers forget about a number of new security issues and vulnerabilities.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqG-dc-mW7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="208" id="8XN-sU-FUR"/>
+                                    <constraint firstAttribute="height" constant="208" id="FBP-9c-6HI"/>
+                                </constraints>
+                                <string key="text">A lot of applications using third party services for various reasons. Sensitive data might get leaked to these parties if not properly taken care of. Under some cases, a breach of a third party service provider might end up releasing a lot of information about their customers.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-3L-Qwt">
-                                <rect key="frame" x="109" y="249" width="157" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xq-p0-qda">
+                                <rect key="frame" x="115.5" y="318" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 1">
+                                <state key="normal" title="START CHALLENGE">
                                     <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xW1-Q7-V6k" kind="show" id="0K8-IB-fYQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLk-vF-gHv">
-                                <rect key="frame" x="16" y="189.5" width="343" height="30"/>
-                                <state key="normal" title="Read an article on Attacking Parse">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoX-nH-rdx">
-                                <rect key="frame" x="109" y="309" width="157" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 2">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="CTD-F0-S2p" kind="show" id="ZF1-TU-DwL"/>
+                                    <segue destination="4Ce-1O-3kH" kind="show" id="XdZ-lw-GqA"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XLk-vF-gHv" firstAttribute="top" secondItem="R9D-hb-0qG" secondAttribute="bottom" constant="15" id="9gc-ER-ETf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XLk-vF-gHv" secondAttribute="trailing" id="Dzt-DU-o1j"/>
-                            <constraint firstItem="XLk-vF-gHv" firstAttribute="leading" secondItem="MA0-KL-Sxo" secondAttribute="leadingMargin" id="Nyd-va-Ruw"/>
-                            <constraint firstItem="R9D-hb-0qG" firstAttribute="top" secondItem="1eg-Y7-tvd" secondAttribute="bottom" constant="8" id="YyK-R7-3pH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R9D-hb-0qG" secondAttribute="trailing" id="aCh-DK-bYF"/>
-                            <constraint firstItem="DoX-nH-rdx" firstAttribute="top" secondItem="mdc-3L-Qwt" secondAttribute="bottom" constant="30" id="eMh-1o-62a"/>
-                            <constraint firstItem="mdc-3L-Qwt" firstAttribute="centerX" secondItem="MA0-KL-Sxo" secondAttribute="centerX" id="gkI-4L-c9e"/>
-                            <constraint firstItem="R9D-hb-0qG" firstAttribute="leading" secondItem="MA0-KL-Sxo" secondAttribute="leadingMargin" id="iHS-xE-N98"/>
-                            <constraint firstItem="mdc-3L-Qwt" firstAttribute="top" secondItem="XLk-vF-gHv" secondAttribute="bottom" constant="30" id="ntC-ok-Rra"/>
-                            <constraint firstItem="DoX-nH-rdx" firstAttribute="centerX" secondItem="MA0-KL-Sxo" secondAttribute="centerX" id="zj3-sH-L4f"/>
+                            <constraint firstItem="aqG-dc-mW7" firstAttribute="top" secondItem="WnZ-QQ-rJY" secondAttribute="bottom" id="MX1-yZ-Tme"/>
+                            <constraint firstAttribute="trailing" secondItem="aqG-dc-mW7" secondAttribute="trailing" id="NJE-7G-SLd"/>
+                            <constraint firstItem="aqG-dc-mW7" firstAttribute="leading" secondItem="RxY-Ub-sNq" secondAttribute="leading" id="aMK-I0-SBn"/>
+                            <constraint firstItem="7Xq-p0-qda" firstAttribute="centerX" secondItem="RxY-Ub-sNq" secondAttribute="centerX" id="asA-O7-EgW"/>
+                            <constraint firstItem="7Xq-p0-qda" firstAttribute="top" secondItem="aqG-dc-mW7" secondAttribute="bottom" constant="46" id="fYN-nE-VTy"/>
+                            <constraint firstItem="aqG-dc-mW7" firstAttribute="centerX" secondItem="RxY-Ub-sNq" secondAttribute="centerX" id="lVI-cw-SCh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9uJ-td-9Rr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KTT-tg-Bp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ro0-j4-tgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-756"/>
-        </scene>
-        <!--Parse-->
-        <scene sceneID="5GR-w0-2eh">
-            <objects>
-                <viewController title="Parse" id="CTD-F0-S2p" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Klh-3P-j57"/>
-                        <viewControllerLayoutGuide type="bottom" id="ghs-xd-2Gk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kve-qy-7xX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoj-NT-NCk">
-                                <rect key="frame" x="16" y="72" width="130" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personal code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBU-XI-rQp">
-                                <rect key="frame" x="16" y="143.5" width="152" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-sl-KEu">
-                                <rect key="frame" x="16" y="103.5" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-9V-0xN">
-                                <rect key="frame" x="138" y="210" width="98" height="30"/>
-                                <state key="normal" title="Test the result"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-j1-EoJ">
-                                <rect key="frame" x="16" y="248" width="343" height="255.5"/>
-                                <string key="text">We hope that you've successfully finished the previous challenge. Here are your next steps:
-1. Find the name of the Parse class corresponding to the second challenge.
-2. Check it access permissions.
-3. Add a new entry, using the name you've just inputted in the above textfield and your personal code.
-4. Tap the 'Test' button - we'll check the results of your attempt.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-jB-iOm">
-                                <rect key="frame" x="16" y="175" width="343" height="27.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4r9-j1-EoJ" firstAttribute="leading" secondItem="Kve-qy-7xX" secondAttribute="leadingMargin" id="3Ky-LF-ueI"/>
-                            <constraint firstItem="4r9-j1-EoJ" firstAttribute="top" secondItem="T4U-9V-0xN" secondAttribute="bottom" constant="8" id="BjA-6p-lwC"/>
-                            <constraint firstItem="EVV-sl-KEu" firstAttribute="top" secondItem="hoj-NT-NCk" secondAttribute="bottom" constant="8" id="FM9-1F-4dL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EVV-sl-KEu" secondAttribute="trailing" id="JOE-e9-wmS"/>
-                            <constraint firstItem="cSA-jB-iOm" firstAttribute="leading" secondItem="Kve-qy-7xX" secondAttribute="leadingMargin" id="NXC-pX-gRx"/>
-                            <constraint firstItem="T4U-9V-0xN" firstAttribute="top" secondItem="cSA-jB-iOm" secondAttribute="bottom" constant="8" id="Qba-W3-IXP"/>
-                            <constraint firstItem="hoj-NT-NCk" firstAttribute="leading" secondItem="Kve-qy-7xX" secondAttribute="leadingMargin" id="SJ3-KD-cqw"/>
-                            <constraint firstItem="EVV-sl-KEu" firstAttribute="leading" secondItem="Kve-qy-7xX" secondAttribute="leadingMargin" id="SPx-LG-TDk"/>
-                            <constraint firstItem="uBU-XI-rQp" firstAttribute="leading" secondItem="Kve-qy-7xX" secondAttribute="leadingMargin" id="Tfh-r8-bZM"/>
-                            <constraint firstItem="uBU-XI-rQp" firstAttribute="top" secondItem="EVV-sl-KEu" secondAttribute="bottom" constant="10" id="TrU-Il-IOT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4r9-j1-EoJ" secondAttribute="trailing" id="aN9-vz-ef8"/>
-                            <constraint firstItem="T4U-9V-0xN" firstAttribute="centerX" secondItem="Kve-qy-7xX" secondAttribute="centerX" id="adZ-ws-C5B"/>
-                            <constraint firstItem="cSA-jB-iOm" firstAttribute="top" secondItem="uBU-XI-rQp" secondAttribute="bottom" constant="8" id="dyG-di-rAh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cSA-jB-iOm" secondAttribute="trailing" id="oCd-KJ-E5C"/>
-                            <constraint firstItem="hoj-NT-NCk" firstAttribute="top" secondItem="Klh-3P-j57" secondAttribute="bottom" constant="8" id="taC-TD-gy0"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ig5-9y-BL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2956" y="-440"/>
-        </scene>
-        <!--Parse-->
-        <scene sceneID="Fw6-WH-SlC">
-            <objects>
-                <viewController title="Parse" id="xW1-Q7-V6k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="De6-ju-A7M"/>
-                        <viewControllerLayoutGuide type="bottom" id="JuT-RA-TuS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QeJ-OJ-cEN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret Keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-zW-eFI">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ees-VG-a5l">
-                                <rect key="frame" x="140" y="122" width="94" height="30"/>
-                                <state key="normal" title="Test the input"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6n-DK-KoI">
-                                <rect key="frame" x="16" y="172" width="343" height="186"/>
-                                <string key="text">You should do a couple of things:
-1. Locate the Parse applicationId and clientKey.
-2. Find the name of Parse class corresponding to this challenge somewhere in the application code.
-3. Inspect this class, find the keyword and print it in the above textfield.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cxy-zW-eFI" firstAttribute="leading" secondItem="QeJ-OJ-cEN" secondAttribute="leadingMargin" id="1wb-OJ-S8q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i6n-DK-KoI" secondAttribute="trailing" id="5rG-m8-adW"/>
-                            <constraint firstItem="cxy-zW-eFI" firstAttribute="top" secondItem="De6-ju-A7M" secondAttribute="bottom" constant="8" id="Fwa-NC-A1M"/>
-                            <constraint firstItem="i6n-DK-KoI" firstAttribute="top" secondItem="Ees-VG-a5l" secondAttribute="bottom" constant="20" id="WR6-Xg-JlP"/>
-                            <constraint firstItem="i6n-DK-KoI" firstAttribute="leading" secondItem="QeJ-OJ-cEN" secondAttribute="leadingMargin" id="iRn-0c-jca"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cxy-zW-eFI" secondAttribute="trailing" id="nwX-35-Bqm"/>
-                            <constraint firstItem="Ees-VG-a5l" firstAttribute="centerX" secondItem="QeJ-OJ-cEN" secondAttribute="centerX" id="o28-dQ-hGH"/>
-                            <constraint firstItem="Ees-VG-a5l" firstAttribute="top" secondItem="cxy-zW-eFI" secondAttribute="bottom" constant="20" id="xeI-bf-JrW"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LT9-X4-By3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2956" y="-1190"/>
-        </scene>
-        <!--Google Analytics-->
-        <scene sceneID="Kuz-em-i5s">
-            <objects>
-                <viewController title="Google Analytics" id="M5I-d3-ZJU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DqS-Hd-UkS"/>
-                        <viewControllerLayoutGuide type="bottom" id="i3R-8p-9f8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MAN-e7-PvY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Analytics is the another one mobile analytics service. The authorization is also done by using single API key." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-81-IsH">
-                                <rect key="frame" x="16" y="72" width="343" height="70"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-ko-fAb">
-                                <rect key="frame" x="109" y="172" width="157" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 1">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="N7f-aw-VHH" kind="show" id="8oY-D4-tZd">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4R-EQ-KLc">
-                                <rect key="frame" x="109" y="232" width="157" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 2">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Llh-rW-gL7" kind="show" id="qcn-MC-HIh">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="A4R-EQ-KLc" firstAttribute="centerX" secondItem="MAN-e7-PvY" secondAttribute="centerX" id="5f4-Kg-Aed"/>
-                            <constraint firstItem="A4R-EQ-KLc" firstAttribute="top" secondItem="j0k-ko-fAb" secondAttribute="bottom" constant="30" id="7kU-Jg-Whh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="afa-81-IsH" secondAttribute="trailing" id="LbF-nk-4h9"/>
-                            <constraint firstItem="afa-81-IsH" firstAttribute="top" secondItem="DqS-Hd-UkS" secondAttribute="bottom" constant="8" id="Odk-eN-2c4"/>
-                            <constraint firstItem="afa-81-IsH" firstAttribute="leading" secondItem="MAN-e7-PvY" secondAttribute="leadingMargin" id="UEu-Mh-xqT"/>
-                            <constraint firstItem="j0k-ko-fAb" firstAttribute="centerX" secondItem="MAN-e7-PvY" secondAttribute="centerX" id="aSK-rw-Ijk"/>
-                            <constraint firstItem="j0k-ko-fAb" firstAttribute="top" secondItem="afa-81-IsH" secondAttribute="bottom" constant="30" id="akp-LN-WZC"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="luS-6x-2yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1980" y="1106"/>
+            <point key="canvasLocation" x="878" y="152"/>
         </scene>
         <!--Google Analytics-->
         <scene sceneID="k3A-oc-lOL">
@@ -427,23 +100,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret Event Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVQ-ez-kYY">
-                                <rect key="frame" x="16" y="103" width="343" height="30"/>
+                                <rect key="frame" x="16" y="59" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Secret Event Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="875-Qc-b3P">
-                                <rect key="frame" x="16" y="72" width="343" height="23.5"/>
+                                <rect key="frame" x="16" y="28" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-Yq-Y1d">
-                                <rect key="frame" x="138" y="143" width="98" height="30"/>
+                                <rect key="frame" x="138" y="99" width="98" height="30"/>
                                 <state key="normal" title="Test the result"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-xg-L7n">
-                                <rect key="frame" x="16" y="193" width="343" height="139.5"/>
+                                <rect key="frame" x="16" y="149" width="343" height="139.5"/>
                                 <string key="text">This ViewController is tied to a specific Google Analytics event. You have to disassemble it, find the event payload and input in the textfield the string, corresponding to the key "eventSecretName".</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -470,65 +143,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="1989.3553223388308"/>
         </scene>
-        <!--Google Analytics-->
-        <scene sceneID="QM4-eY-KZZ">
-            <objects>
-                <viewController title="Google Analytics" id="N7f-aw-VHH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ENp-Dk-s9m"/>
-                        <viewControllerLayoutGuide type="bottom" id="faX-ud-rTi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lkp-qA-uCq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdI-Ri-iIP">
-                                <rect key="frame" x="16" y="104" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Google Analytics API key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ec-8M-MKi">
-                                <rect key="frame" x="16" y="72" width="343" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWI-kE-2c2">
-                                <rect key="frame" x="139" y="144" width="98" height="30"/>
-                                <state key="normal" title="Test the result"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All you need to do is locate Google Analytics API key somewhere in the application code and print it in the textfield above." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-ty-rbK">
-                                <rect key="frame" x="16" y="194" width="343" height="93"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2ec-8M-MKi" firstAttribute="top" secondItem="ENp-Dk-s9m" secondAttribute="bottom" constant="8" id="2gO-Fz-Zse"/>
-                            <constraint firstItem="tdI-Ri-iIP" firstAttribute="trailing" secondItem="Lkp-qA-uCq" secondAttribute="trailingMargin" id="5lL-mp-CiA"/>
-                            <constraint firstItem="PNQ-ty-rbK" firstAttribute="top" secondItem="fWI-kE-2c2" secondAttribute="bottom" constant="20" id="HHW-cJ-gZN"/>
-                            <constraint firstItem="PNQ-ty-rbK" firstAttribute="leading" secondItem="Lkp-qA-uCq" secondAttribute="leadingMargin" id="O9z-Yb-Txq"/>
-                            <constraint firstItem="2ec-8M-MKi" firstAttribute="trailing" secondItem="Lkp-qA-uCq" secondAttribute="trailingMargin" id="OB2-Wy-Top"/>
-                            <constraint firstItem="fWI-kE-2c2" firstAttribute="top" secondItem="tdI-Ri-iIP" secondAttribute="bottom" constant="10" id="OL4-dp-Hlt"/>
-                            <constraint firstItem="fWI-kE-2c2" firstAttribute="centerX" secondItem="Lkp-qA-uCq" secondAttribute="centerX" id="XQC-0g-E9o"/>
-                            <constraint firstItem="tdI-Ri-iIP" firstAttribute="leading" secondItem="Lkp-qA-uCq" secondAttribute="leadingMargin" id="cth-mm-ejQ"/>
-                            <constraint firstItem="PNQ-ty-rbK" firstAttribute="trailing" secondItem="Lkp-qA-uCq" secondAttribute="trailingMargin" id="oho-1y-Vwk"/>
-                            <constraint firstItem="tdI-Ri-iIP" firstAttribute="top" secondItem="2ec-8M-MKi" secondAttribute="bottom" constant="8" id="pVQ-Y3-wwC"/>
-                            <constraint firstItem="2ec-8M-MKi" firstAttribute="leading" secondItem="Lkp-qA-uCq" secondAttribute="leadingMargin" id="wqC-Hf-gh9"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eio-UT-TfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2956" y="1105.9970014992505"/>
-        </scene>
-        <!--Flurry-->
+        <!--Data Leakage to Third Parties-->
         <scene sceneID="ghG-3b-fv9">
             <objects>
-                <viewController title="Flurry" id="4Ce-1O-3kH" sceneMemberID="viewController">
+                <viewController title="Data Leakage to Third Parties" id="4Ce-1O-3kH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRU-MF-HaY"/>
                         <viewControllerLayoutGuide type="bottom" id="KPS-et-Ltv"/>
@@ -537,163 +155,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flurry is the most popular mobile analytics service. The authorization is done by using single API key." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-IM-VIp">
-                                <rect key="frame" x="16" y="72" width="343" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-IM-VIp">
+                                <rect key="frame" x="16" y="72" width="343" height="98.5"/>
+                                <string key="text">Flurry is the most popular mobile analytics service. The authorization is done by using single API key.  Your tasks are the following.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaR-pG-b1J">
-                                <rect key="frame" x="109" y="176" width="157" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 1">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a) Identify the API key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvU-fx-SKg">
+                                <rect key="frame" x="16" y="202" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b) Capture the data leak to Flurry when the information is entered in the text field below." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-zC-ALg">
+                                <rect key="frame" x="16" y="231" width="343" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter dummy phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJe-yq-Y4H">
+                                <rect key="frame" x="36" y="301" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <segue destination="kCg-XG-OE9" kind="show" id="74i-e8-zvp">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <outlet property="delegate" destination="4Ce-1O-3kH" id="oJp-dS-YmF"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-v6-WHl">
-                                <rect key="frame" x="109" y="236" width="157" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="START CHALLENGE 2">
-                                    <color key="titleColor" red="0.87450980389999999" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Kdb-WV-B86" kind="show" id="nJF-HR-CxO">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Re4-v6-WHl" firstAttribute="top" secondItem="ZaR-pG-b1J" secondAttribute="bottom" constant="30" id="2VU-0i-yaT"/>
+                            <constraint firstItem="AvU-fx-SKg" firstAttribute="leading" secondItem="O3u-nc-ToP" secondAttribute="leadingMargin" id="2Jf-jf-hkO"/>
+                            <constraint firstItem="yvw-zC-ALg" firstAttribute="top" secondItem="AvU-fx-SKg" secondAttribute="bottom" constant="9" id="3JK-FT-7CD"/>
+                            <constraint firstItem="yvw-zC-ALg" firstAttribute="leading" secondItem="O3u-nc-ToP" secondAttribute="leadingMargin" id="Cdo-eL-gKy"/>
                             <constraint firstItem="Mn7-IM-VIp" firstAttribute="leading" secondItem="O3u-nc-ToP" secondAttribute="leadingMargin" id="JCs-h2-Epd"/>
-                            <constraint firstItem="Re4-v6-WHl" firstAttribute="centerX" secondItem="O3u-nc-ToP" secondAttribute="centerX" id="LWt-Lb-vET"/>
-                            <constraint firstItem="ZaR-pG-b1J" firstAttribute="centerX" secondItem="O3u-nc-ToP" secondAttribute="centerX" id="e7C-tr-btl"/>
-                            <constraint firstItem="ZaR-pG-b1J" firstAttribute="top" secondItem="Mn7-IM-VIp" secondAttribute="bottom" constant="30" id="fTx-Km-Mfm"/>
+                            <constraint firstItem="AvU-fx-SKg" firstAttribute="top" secondItem="Mn7-IM-VIp" secondAttribute="bottom" constant="31.5" id="KAP-oZ-HGX"/>
+                            <constraint firstItem="AvU-fx-SKg" firstAttribute="trailing" secondItem="O3u-nc-ToP" secondAttribute="trailingMargin" id="W4o-WY-qDn"/>
+                            <constraint firstItem="yvw-zC-ALg" firstAttribute="trailing" secondItem="O3u-nc-ToP" secondAttribute="trailingMargin" id="fBT-OE-oWY"/>
                             <constraint firstItem="Mn7-IM-VIp" firstAttribute="top" secondItem="ZRU-MF-HaY" secondAttribute="bottom" constant="8" id="hZW-6y-NmY"/>
+                            <constraint firstItem="CJe-yq-Y4H" firstAttribute="centerX" secondItem="O3u-nc-ToP" secondAttribute="centerX" id="mGZ-nC-Aal"/>
+                            <constraint firstItem="CJe-yq-Y4H" firstAttribute="top" secondItem="yvw-zC-ALg" secondAttribute="bottom" constant="15" id="rYF-MK-CVp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mn7-IM-VIp" secondAttribute="trailing" id="tZB-cu-jOG"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMP-zR-n1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="313"/>
-        </scene>
-        <!--Flurry-->
-        <scene sceneID="DDq-Os-Arx">
-            <objects>
-                <viewController title="Flurry" id="Kdb-WV-B86" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ljL-cf-Jcx"/>
-                        <viewControllerLayoutGuide type="bottom" id="ku4-rG-VZM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jqi-WY-3Ua">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret Event Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-xm-K5P">
-                                <rect key="frame" x="16" y="103.5" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Secret Event Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yh-kc-gyl">
-                                <rect key="frame" x="16" y="72" width="343" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIl-Fn-Cad">
-                                <rect key="frame" x="138.5" y="143.5" width="98" height="30"/>
-                                <state key="normal" title="Test the result"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XW-9L-GW0">
-                                <rect key="frame" x="16" y="193.5" width="343" height="116.5"/>
-                                <string key="text">This ViewController is tied to a specific Flurry event. You have to disassemble it, find the event payload and input in the textfield the string, corresponding to the key "eventSecretName".</string>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WIl-Fn-Cad" firstAttribute="top" secondItem="2lZ-xm-K5P" secondAttribute="bottom" constant="10" id="2xg-JJ-mrI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3XW-9L-GW0" secondAttribute="trailing" id="BP2-QU-u1Q"/>
-                            <constraint firstItem="2lZ-xm-K5P" firstAttribute="leading" secondItem="jqi-WY-3Ua" secondAttribute="leadingMargin" id="T5h-Ko-tKl"/>
-                            <constraint firstItem="3XW-9L-GW0" firstAttribute="top" secondItem="WIl-Fn-Cad" secondAttribute="bottom" constant="20" id="cP6-bs-tyC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Yh-kc-gyl" secondAttribute="trailing" id="cmj-pR-dSL"/>
-                            <constraint firstItem="2lZ-xm-K5P" firstAttribute="top" secondItem="1Yh-kc-gyl" secondAttribute="bottom" constant="8" id="gUJ-Px-5gS"/>
-                            <constraint firstItem="3XW-9L-GW0" firstAttribute="leading" secondItem="jqi-WY-3Ua" secondAttribute="leadingMargin" id="gjp-ai-a3k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2lZ-xm-K5P" secondAttribute="trailing" id="jgc-4A-aaA"/>
-                            <constraint firstItem="1Yh-kc-gyl" firstAttribute="top" secondItem="ljL-cf-Jcx" secondAttribute="bottom" constant="8" id="mxM-Bl-j59"/>
-                            <constraint firstItem="1Yh-kc-gyl" firstAttribute="leading" secondItem="jqi-WY-3Ua" secondAttribute="leadingMargin" id="p0A-RT-l77"/>
-                            <constraint firstItem="WIl-Fn-Cad" firstAttribute="centerX" secondItem="jqi-WY-3Ua" secondAttribute="centerX" id="shn-le-WW5"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tti-wT-S5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3932" y="655"/>
-        </scene>
-        <!--Flurry-->
-        <scene sceneID="nhL-Du-anz">
-            <objects>
-                <viewController title="Flurry" id="kCg-XG-OE9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rRY-Ek-kdK"/>
-                        <viewControllerLayoutGuide type="bottom" id="ebn-3B-WRw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yko-IQ-rOi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Flurry API Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52d-EW-if2">
-                                <rect key="frame" x="16" y="72" width="343" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-i5-Wqe">
-                                <rect key="frame" x="138" y="141.5" width="98" height="30"/>
-                                <state key="normal" title="Test the result"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All you need to do is locate Flurry API key somewhere in the application code and print it in the textfield above." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9S-sp-B40">
-                                <rect key="frame" x="16" y="191.5" width="343" height="70"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pra-TJ-XLa">
-                                <rect key="frame" x="16" y="103.5" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MfB-i5-Wqe" firstAttribute="top" secondItem="pra-TJ-XLa" secondAttribute="bottom" constant="8" id="24K-bw-WxY"/>
-                            <constraint firstItem="52d-EW-if2" firstAttribute="leading" secondItem="Yko-IQ-rOi" secondAttribute="leadingMargin" id="45I-Gz-Uqi"/>
-                            <constraint firstItem="i9S-sp-B40" firstAttribute="leading" secondItem="Yko-IQ-rOi" secondAttribute="leadingMargin" id="BBE-JY-oCt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pra-TJ-XLa" secondAttribute="trailing" id="Ggs-Hi-mrJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="52d-EW-if2" secondAttribute="trailing" id="GvA-jE-i7Z"/>
-                            <constraint firstItem="MfB-i5-Wqe" firstAttribute="centerX" secondItem="Yko-IQ-rOi" secondAttribute="centerX" id="Wxh-j6-56q"/>
-                            <constraint firstItem="pra-TJ-XLa" firstAttribute="top" secondItem="52d-EW-if2" secondAttribute="bottom" constant="8" id="YUw-Rf-KV7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i9S-sp-B40" secondAttribute="trailing" id="lDE-YT-erP"/>
-                            <constraint firstItem="i9S-sp-B40" firstAttribute="top" secondItem="MfB-i5-Wqe" secondAttribute="bottom" constant="20" id="mOk-Fh-YAW"/>
-                            <constraint firstItem="52d-EW-if2" firstAttribute="top" secondItem="rRY-Ek-kdK" secondAttribute="bottom" constant="8" id="rc3-PM-owc"/>
-                            <constraint firstItem="pra-TJ-XLa" firstAttribute="leading" secondItem="Yko-IQ-rOi" secondAttribute="leadingMargin" id="zwH-PK-f9S"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DZ9-ou-66d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3932" y="-93.103448275862078"/>
+            <point key="canvasLocation" x="1669.5999999999999" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>

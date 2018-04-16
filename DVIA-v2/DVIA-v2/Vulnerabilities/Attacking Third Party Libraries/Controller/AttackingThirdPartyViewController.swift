@@ -16,7 +16,7 @@
 
 import UIKit
 
-class AttackingThirdPartyViewController: UITableViewController {
+class AttackingThirdPartyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class AttackingThirdPartyViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "Attacking Third Party Libraries"
+        self.navigationItem.title = "Data Leakage to Third Parties"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

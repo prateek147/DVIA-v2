@@ -112,8 +112,8 @@ extension RootViewController: SideMenuViewControllerDelegate, ContainerViewContr
             showApplicationPatching()
         case .sensitiveInformation:
             showSensitiveInformation()
-//        case .attackingThirdPartyLibraries:
-//            showAttackingThirdPartyLibraries()
+        case .attackingThirdPartyLibraries:
+             showAttackingThirdPartyLibraries()
         case .phishing:
             showPhishing()
         case .donate:
