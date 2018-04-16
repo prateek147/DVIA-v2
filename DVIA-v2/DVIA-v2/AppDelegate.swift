@@ -14,6 +14,7 @@
 
 
 import UIKit
+import Flurry_iOS_SDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.barTintColor = UIColor(red: 0.9, green: 0.13, blue: 0.28, alpha: 1.0)
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white , NSAttributedStringKey.font: UIFont(name: "Helvetica-Bold", size: 20)!]
         navigationBarAppearace.titleTextAttributes = textAttributes
+        
+        //Flurry Analytics code for Thirty Party Data Leakage section
+        Flurry.startSession("8RM5WHP628853HQXFKDX", with: FlurrySessionBuilder
+            .init()
+            .withCrashReporting(true)
+            .withLogLevel(FlurryLogLevelAll))
+        
         return true
     }
 

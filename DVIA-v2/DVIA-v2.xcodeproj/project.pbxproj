@@ -218,6 +218,8 @@
 
 /* Begin PBXFileReference section */
 		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
+		6E178C072084CA6900F39E47 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6E178C092084CA6F00F39E47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDDetailsViewController.swift; sourceTree = "<group>"; };
 		6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AntiAntiHookingDebugging.storyboard; sourceTree = "<group>"; };
 		6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiAntiHookingDebuggingViewController.swift; sourceTree = "<group>"; };
@@ -568,6 +570,8 @@
 		05AB122C780C47F565147395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E178C092084CA6F00F39E47 /* SystemConfiguration.framework */,
+				6E178C072084CA6900F39E47 /* Security.framework */,
 				F6DE6FA6202FA53900A3A757 /* Foundation.framework */,
 				92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */,
 			);

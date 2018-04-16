@@ -146,7 +146,7 @@
         <!--Data Leakage to Third Parties-->
         <scene sceneID="ghG-3b-fv9">
             <objects>
-                <viewController title="Data Leakage to Third Parties" id="4Ce-1O-3kH" sceneMemberID="viewController">
+                <viewController title="Data Leakage to Third Parties" id="4Ce-1O-3kH" customClass="FlurryLeakDetailsViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRU-MF-HaY"/>
                         <viewControllerLayoutGuide type="bottom" id="KPS-et-Ltv"/>
@@ -180,7 +180,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="4Ce-1O-3kH" id="oJp-dS-YmF"/>
+                                    <outlet property="delegate" destination="4Ce-1O-3kH" id="dTn-8M-pL0"/>
                                 </connections>
                             </textField>
                         </subviews>

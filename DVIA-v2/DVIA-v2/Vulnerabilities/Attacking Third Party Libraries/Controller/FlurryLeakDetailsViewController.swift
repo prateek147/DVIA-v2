@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
-class FlurryLeakDetailsViewController: UIViewController {
+
+class FlurryLeakDetailsViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,21 @@ class FlurryLeakDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Device UDID for Flurry
+        let identifierForVendor = UIDevice.current.identifierForVendor?.uuidString
+        //Shouldn't be sending the whole UDID
+        let strippeduuid = identifierForVendor?.dropLast(10)
+        textField.resignFirstResponder()
+        let params: Dictionary = [
+            "phone": textField.text,
+            "udid" : strippeduuid
+            ] as [String : Any]
+        Flurry.logEvent("PhoneEntered", withParameters:params as Any as! [AnyHashable : Any])
+                return true
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -33,3 +49,4 @@ class FlurryLeakDetailsViewController: UIViewController {
     */
 
 }
+
