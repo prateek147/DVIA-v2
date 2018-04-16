@@ -28,11 +28,11 @@ class FlurryLeakDetailsViewController: UIViewController, UITextFieldDelegate {
         //Device UDID for Flurry
         let identifierForVendor = UIDevice.current.identifierForVendor?.uuidString
         //Shouldn't be sending the whole UDID
-        let strippeduuid = identifierForVendor?.dropLast(10)
+        let strippedudid = identifierForVendor?.dropLast(10)
         textField.resignFirstResponder()
         let params: Dictionary = [
             "phone": textField.text,
-            "udid" : strippeduuid
+            "udid" : strippedudid
             ] as [String : Any]
         Flurry.logEvent("PhoneEntered", withParameters:params as Any as! [AnyHashable : Any])
                 return true
