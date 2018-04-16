@@ -14,6 +14,8 @@
 		6E38A98820627DE400C9B563 /* anti.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A98720627DE400C9B563 /* anti.c */; };
 		6E3D0559207E14DE000395C2 /* example.der in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D0558207E14DC000395C2 /* example.der */; };
 		6E6C0DCE2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */; };
+		6EADF0782083674600A4AB1C /* slider-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EADF0762083674300A4AB1C /* slider-active.png */; };
+		6EADF0792083674600A4AB1C /* slider-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EADF0772083674500A4AB1C /* slider-active@2x.png */; };
 		6EB619DB205E352A00C42DE4 /* CameraPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */; };
 		6EF0C419205FD59A0089050C /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */; };
 		6EF0C42120622B590089050C /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF0C42020622B580089050C /* fingerprint.png */; };
@@ -222,6 +224,8 @@
 		6E38A98720627DE400C9B563 /* anti.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = anti.c; sourceTree = "<group>"; };
 		6E3D0558207E14DC000395C2 /* example.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.der; sourceTree = SOURCE_ROOT; };
 		6E6C0DCD2074F36F00C5C4E3 /* BrokenCryptographyPinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenCryptographyPinDetailsViewController.swift; sourceTree = "<group>"; };
+		6EADF0762083674300A4AB1C /* slider-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-active.png"; sourceTree = "<group>"; };
+		6EADF0772083674500A4AB1C /* slider-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-active@2x.png"; sourceTree = "<group>"; };
 		6EB619DA205E352A00C42DE4 /* CameraPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionsViewController.swift; sourceTree = "<group>"; };
 		6EF0C418205FD59A0089050C /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
 		6EF0C42020622B580089050C /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
@@ -591,6 +595,8 @@
 			isa = PBXGroup;
 			children = (
 				F6ED0068206F8335000D1E99 /* main-bg.png */,
+				6EADF0762083674300A4AB1C /* slider-active.png */,
+				6EADF0772083674500A4AB1C /* slider-active@2x.png */,
 				F6ED006A206F8337000D1E99 /* main-bg@2x.png */,
 				F6ED0069206F8337000D1E99 /* slider-bg.png */,
 				F6ED006B206F8337000D1E99 /* slider-bg@2x.png */,
@@ -1661,6 +1667,7 @@
 				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
+				6EADF0782083674600A4AB1C /* slider-active.png in Resources */,
 				F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */,
 				6E3D0559207E14DE000395C2 /* example.der in Resources */,
 				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
@@ -1674,6 +1681,7 @@
 				F6B770E7206D2F520069874E /* 7plus.png in Resources */,
 				F6E6455F202FBB6700884A43 /* README.txt in Resources */,
 				F6ED006C206F8337000D1E99 /* main-bg.png in Resources */,
+				6EADF0792083674600A4AB1C /* slider-active@2x.png in Resources */,
 				6EF0C42120622B590089050C /* fingerprint.png in Resources */,
 				F6B770E8206D2F520069874E /* SE.png in Resources */,
 				F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */,

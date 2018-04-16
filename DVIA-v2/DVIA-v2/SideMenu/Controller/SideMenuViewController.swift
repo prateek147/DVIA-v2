@@ -73,7 +73,6 @@ class SideMenuViewController: UIViewController {
         view.frame.size = CGSize(width:tableView.frame.width, height: 20.0)
         tableView.tableHeaderView = view;
     }
-
 }
 
 extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -82,9 +81,9 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         return menuItems[section].cellModels.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = menuItems[indexPath.section].cellModels[indexPath.item]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! SideMenuTableViewCell
         cell.configure(cellModel)
         return cell

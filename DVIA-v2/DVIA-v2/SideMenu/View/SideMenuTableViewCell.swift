@@ -26,10 +26,13 @@ class SideMenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 
@@ -39,5 +42,6 @@ class SideMenuTableViewCell: UITableViewCell {
         title.numberOfLines = 0
         title.text = cellModel.item.title
         title.textColor = UIColor.white
+        
     }
 }
