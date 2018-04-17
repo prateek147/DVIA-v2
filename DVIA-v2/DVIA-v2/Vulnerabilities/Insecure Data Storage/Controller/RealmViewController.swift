@@ -37,6 +37,8 @@ class RealmViewController: UIViewController {
         do {
             try! realm.write {
                 realm.add(user)
+                DVIAUtilities.showAlert(title: "", message: "Data saved in Realm Database", viewController: self)
+
             }
         }
     }
