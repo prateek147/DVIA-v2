@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37517614A8E6D74BF049BD28 /* Pods_DVIA_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */; };
+		6E30A0A820874C34007534D8 /* AppIcons in Resources */ = {isa = PBXBuildFile; fileRef = 6E30A0A720874C33007534D8 /* AppIcons */; };
+		6E30A0AA20874D72007534D8 /* DVIASplash in Resources */ = {isa = PBXBuildFile; fileRef = 6E30A0A920874D72007534D8 /* DVIASplash */; };
 		6E38A97D20625B6500C9B563 /* TouchIDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */; };
 		6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */; };
 		6E38A985206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */; };
@@ -52,7 +54,6 @@
 		F6DE6F7B202FA4DE00A3A757 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2A202FA4DD00A3A757 /* Storyboards.swift */; };
 		F6DE6F7C202FA4DE00A3A757 /* DVIAUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2B202FA4DD00A3A757 /* DVIAUtilities.swift */; };
 		F6DE6F7D202FA4DE00A3A757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */; };
-		F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */; };
 		F6DE6F7F202FA4DE00A3A757 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F31202FA4DD00A3A757 /* LearnViewController.swift */; };
 		F6DE6F80202FA4DE00A3A757 /* LearniOSApplicationSecurity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F32202FA4DD00A3A757 /* LearniOSApplicationSecurity.storyboard */; };
 		F6DE6F81202FA4DE00A3A757 /* MenuCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F34202FA4DD00A3A757 /* MenuCellItem.swift */; };
@@ -220,6 +221,8 @@
 		06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.debug.xcconfig"; sourceTree = "<group>"; };
 		6E178C072084CA6900F39E47 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6E178C092084CA6F00F39E47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6E30A0A720874C33007534D8 /* AppIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcons; sourceTree = "<group>"; };
+		6E30A0A920874D72007534D8 /* DVIASplash */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DVIASplash; sourceTree = "<group>"; };
 		6E38A97C20625B6500C9B563 /* TouchIDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDDetailsViewController.swift; sourceTree = "<group>"; };
 		6E38A9812062669E00C9B563 /* AntiAntiHookingDebugging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AntiAntiHookingDebugging.storyboard; sourceTree = "<group>"; };
 		6E38A984206266B900C9B563 /* AntiAntiHookingDebuggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiAntiHookingDebuggingViewController.swift; sourceTree = "<group>"; };
@@ -271,7 +274,6 @@
 		F6DE6F2A202FA4DD00A3A757 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		F6DE6F2B202FA4DD00A3A757 /* DVIAUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVIAUtilities.swift; sourceTree = "<group>"; };
 		F6DE6F2C202FA4DD00A3A757 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6DE6F31202FA4DD00A3A757 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		F6DE6F32202FA4DD00A3A757 /* LearniOSApplicationSecurity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearniOSApplicationSecurity.storyboard; sourceTree = "<group>"; };
 		F6DE6F34202FA4DD00A3A757 /* MenuCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellItem.swift; sourceTree = "<group>"; };
@@ -600,6 +602,8 @@
 		6EF0C41F20622B300089050C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6E30A0A920874D72007534D8 /* DVIASplash */,
+				6E30A0A720874C33007534D8 /* AppIcons */,
 				F6ED0068206F8335000D1E99 /* main-bg.png */,
 				6EADF0762083674300A4AB1C /* slider-active.png */,
 				6EADF0772083674500A4AB1C /* slider-active@2x.png */,
@@ -671,7 +675,6 @@
 				F6DE6F3D202FA4DD00A3A757 /* Constants.swift */,
 				F6DE6F28202FA4DD00A3A757 /* Helper Methods */,
 				F6DE6F25202FA4DD00A3A757 /* Home */,
-				F6DE6F2E202FA4DD00A3A757 /* LaunchScreen.storyboard */,
 				F6DE6F2F202FA4DD00A3A757 /* Learn */,
 				F6DE6F39202FA4DD00A3A757 /* Root */,
 				F6DE6F33202FA4DD00A3A757 /* SideMenu */,
@@ -1656,6 +1659,7 @@
 				F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */,
 				F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */,
 				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
+				6E30A0AA20874D72007534D8 /* DVIASplash in Resources */,
 				F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */,
 				6EFF445D206CD4D7007BE6C6 /* menu.png in Resources */,
 				F6C8AA23205D2433001E1CCB /* Phishing.storyboard in Resources */,
@@ -1666,12 +1670,12 @@
 				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
 				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
 				F6ED006E206F8337000D1E99 /* main-bg@2x.png in Resources */,
-				F6DE6F7E202FA4DE00A3A757 /* LaunchScreen.storyboard in Resources */,
 				F6ED006F206F8337000D1E99 /* slider-bg@2x.png in Resources */,
 				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
 				F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */,
 				F6B770E5206D2F520069874E /* X.png in Resources */,
 				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
+				6E30A0A820874C34007534D8 /* AppIcons in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
 				6EADF0782083674600A4AB1C /* slider-active.png in Resources */,
@@ -2057,6 +2061,7 @@
 			baseConfigurationReference = 06128A191A180E39D5A8BB42 /* Pods-DVIA-v2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2079,6 +2084,7 @@
 			baseConfigurationReference = C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

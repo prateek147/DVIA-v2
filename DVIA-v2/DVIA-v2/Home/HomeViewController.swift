@@ -17,6 +17,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTextView: UITextView!
+    var isTwitterProfile:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         //Bug Fix if view goes under the navigation bar
@@ -40,11 +41,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func menuTapped(_ sender: Any) {
         mainViewController?.toogle()
+        isTwitterProfile = false
     }
     
     @IBAction func twitterHandleTapped(_ sender: Any) {
-        let twitterHandleURL = "https://twitter.com/prateekg147"
-        DVIAUtilities.loadWebView(withURL: twitterHandleURL, viewController: self)
+        isTwitterProfile = true
+        self.performSegue(withIdentifier:"dvia", sender: nil)
     }
     
     @IBAction func projectHomePageTapped(_ sender: Any) {
@@ -56,8 +58,13 @@ class HomeViewController: UIViewController {
         self.navigationItem.title = " "
         if segue.identifier == "dvia" {
             if let destinationVC:DonateDetailsViewController = segue.destination as? DonateDetailsViewController {
-                destinationVC.urlToLoad = "http://damnvulnerableiosapp.com"
-                destinationVC.navigationItem.title = "DVIA"
+                if(isTwitterProfile){
+                    destinationVC.urlToLoad = "https://twitter.com/prateekg147"
+                    destinationVC.navigationItem.title = "Twitter"
+                }else{
+                    destinationVC.urlToLoad = "http://damnvulnerableiosapp.com"
+                    destinationVC.navigationItem.title = "DVIA"
+                }
             }
         }
     }
