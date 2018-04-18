@@ -10,8 +10,7 @@
 //  For more information,  visit www.thejuniperfund.org
 //  Or watch this video https://www.youtube.com/watch?v=HsV6jaA5J2I
 //  And this https://www.youtube.com/watch?v=6dHXcoF590E
-//  Let's make the world a better place for everyone :-)
-
+ 
 
 import UIKit
 
