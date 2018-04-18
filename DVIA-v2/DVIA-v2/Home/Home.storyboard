@@ -50,15 +50,31 @@
                                     <segue destination="YF7-xL-A0R" kind="show" identifier="dvia" id="gRP-4L-V9w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKc-i0-gcb">
+                                <rect key="frame" x="24" y="479" width="272" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="gsm-rz-URH"/>
+                                    <constraint firstAttribute="width" constant="272" id="qNH-Ej-60U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Developed by: @prateekg147">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterHandleTapped:" destination="zdJ-pM-bnf" eventType="touchUpInside" id="l9p-df-uAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mj8-Id-h8E" firstAttribute="top" secondItem="Ax2-kg-tMT" secondAttribute="bottom" constant="20" id="2RY-QT-u6B"/>
+                            <constraint firstItem="Ax2-kg-tMT" firstAttribute="top" secondItem="kKc-i0-gcb" secondAttribute="bottom" constant="1" id="AxY-Wb-qZN"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="MeL-tI-WE6"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" id="Oqt-YK-GrA"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="sea-0L-Gn1" secondAttribute="top" id="RjA-Lb-06D"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="leading" secondItem="sea-0L-Gn1" secondAttribute="leading" id="ZDU-l0-D52"/>
                             <constraint firstItem="fzr-Hx-Y4Q" firstAttribute="top" secondItem="avG-VN-tad" secondAttribute="bottom" id="bNw-b9-XO0"/>
+                            <constraint firstItem="kKc-i0-gcb" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="gTH-vD-0re"/>
                             <constraint firstItem="Ax2-kg-tMT" firstAttribute="centerX" secondItem="sea-0L-Gn1" secondAttribute="centerX" id="hVH-Gk-My4"/>
                             <constraint firstAttribute="trailing" secondItem="fzr-Hx-Y4Q" secondAttribute="trailing" id="mgq-dK-AYm"/>
                             <constraint firstAttribute="trailing" secondItem="fzr-Hx-Y4Q" secondAttribute="trailing" id="xNT-Nu-9UT"/>

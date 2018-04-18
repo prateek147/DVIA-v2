@@ -43,8 +43,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func twitterHandleTapped(_ sender: Any) {
-        guard let twitterHandle: String = (sender as? UIButton)?.titleLabel?.text?.components(separatedBy: "@").last else { return }
-        let twitterHandleURL = "https://twitter.com/\(twitterHandle)"
+        let twitterHandleURL = "https://twitter.com/prateekg147"
         DVIAUtilities.loadWebView(withURL: twitterHandleURL, viewController: self)
     }
     
