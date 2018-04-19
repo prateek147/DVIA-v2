@@ -16,7 +16,6 @@
 import UIKit
 
 class RuntimeManipulationViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let button = UIButton.init(type: .custom)

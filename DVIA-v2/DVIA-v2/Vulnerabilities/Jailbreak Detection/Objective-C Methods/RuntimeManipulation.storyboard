@@ -162,10 +162,10 @@
                                     <action selector="loginMethod1Tapped:" destination="p4L-bl-0f0" eventType="touchUpInside" id="CPh-Ya-c6A"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter correct 4 digit code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrP-UF-Fbo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter correct 4 digit numeric code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrP-UF-Fbo">
                                 <rect key="frame" x="16" y="327" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

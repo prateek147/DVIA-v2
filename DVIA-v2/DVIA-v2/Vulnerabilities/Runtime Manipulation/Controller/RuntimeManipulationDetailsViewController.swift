@@ -20,15 +20,31 @@ class RuntimeManipulationDetailsViewController: UIViewController, UITextFieldDel
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var codeTextField: UITextField!
+    let numToolbar: UIToolbar = UIToolbar()
     let tutorialUrl:String = "http://highaltitudehacks.com/2013/11/08/ios-application-security-part-21-arm-and-gdb-basics"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //For the done and cancel button in Validate code input
+        numToolbar.barStyle = UIBarStyle.default
+        numToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneOrCancelTapped)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneOrCancelTapped))
+        ]
+        
+        numToolbar.sizeToFit()
+        
+        codeTextField.inputAccessoryView = numToolbar
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         //Bug Fix if view goes under the navigation bar
         self.edgesForExtendedLayout = []
         self.navigationItem.title = "Runtime Manipulation"
+    }
+    
+    @objc func doneOrCancelTapped () {
+        codeTextField.resignFirstResponder()
     }
     
     @IBAction func loginMethod1Tapped(_ sender: Any) {
