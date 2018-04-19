@@ -15,12 +15,17 @@
 
 import UIKit
 
-class PasteboardViewController: UIViewController {
+class PasteboardViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Pasteboard"
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

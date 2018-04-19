@@ -27,6 +27,10 @@ class KeychainViewController: UIViewController {
     }
 
     @IBAction func saveInKeychainTapped(_ sender: Any) {
+        if keychainTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         let bindings = PDKeychainBindings.shared()
         bindings?.setObject(keychainTextField.text, forKey: "keychainValue")
         DVIAUtilities.showAlert(title: "", message: "Data saved in Keychain", viewController: self)

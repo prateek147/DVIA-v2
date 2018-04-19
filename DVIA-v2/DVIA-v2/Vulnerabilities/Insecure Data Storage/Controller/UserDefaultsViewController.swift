@@ -27,6 +27,10 @@ class UserDefaultsViewController: UIViewController {
     }
 
     @IBAction func saveInUserDefaultsTapped(_ sender: Any) {
+        if userDefaultsTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         let defaults: UserDefaults? = UserDefaults.standard
         defaults?.set(userDefaultsTextField.text, forKey: "DemoValue")
         defaults?.synchronize()

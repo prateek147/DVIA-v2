@@ -17,7 +17,7 @@ import UIKit
 import Parse
 import os.log
 
-class DeviceLogsViewController: UIViewController {
+class DeviceLogsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var nameTextField: UITextField!
@@ -29,8 +29,17 @@ class DeviceLogsViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Device Logs"
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       textField.resignFirstResponder()
+       return true
+    }
+    
     @IBAction func signupTapped(_ sender: Any) {
+        if nameTextField.text?.isEmpty ?? true || passwordTextField.text?.isEmpty ?? true || phoneNoTextField.text?.isEmpty ?? true || emailTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         signUpButton.setTitle("Signing Up ...", for: .normal)
         let user = PFObject(className: "Person")
         user["name"] = nameTextField.text

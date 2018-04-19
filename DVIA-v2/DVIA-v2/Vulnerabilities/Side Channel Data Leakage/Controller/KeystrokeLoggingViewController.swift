@@ -15,12 +15,17 @@
 
 import UIKit
 
-class KeystrokeLoggingViewController: UIViewController {
+class KeystrokeLoggingViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Keystroke Logging"
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

@@ -15,13 +15,17 @@
 
 import UIKit
 
-class AppScreenshotViewController: UIViewController {
+class AppScreenshotViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "App Screenshot"
         // Do any additional setup after loading the view.
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }

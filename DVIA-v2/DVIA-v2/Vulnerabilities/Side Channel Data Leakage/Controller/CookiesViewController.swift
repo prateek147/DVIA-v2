@@ -52,8 +52,7 @@ extension CookiesViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    
+
     func setSharedCookies() {
 
         var components = DateComponents()

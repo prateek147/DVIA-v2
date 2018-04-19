@@ -29,7 +29,10 @@ class PListViewController: UIViewController {
     }
     
     @IBAction func saveInPlistFileTapped(_ sender: Any) {
-       
+        if usernameTextField.text?.isEmpty ?? true || passwordTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         func documentsDirectory() -> String {
             let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
             let documentsDirectory = paths.first!

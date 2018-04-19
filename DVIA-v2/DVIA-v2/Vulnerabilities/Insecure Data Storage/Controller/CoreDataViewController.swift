@@ -31,6 +31,11 @@ class CoreDataViewController: UIViewController {
 
     @IBAction func saveInCoreDataTapped(_ sender: Any) {
         
+        if nameTextField.text?.isEmpty ?? true || emailTextField.text?.isEmpty ?? true || passwordTextField.text?.isEmpty ?? true || phoneTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
+        
         if #available(iOS 10.0, *) {
             let context = CoreDataStack.shared.persistentContainer.viewContext
             let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as? User

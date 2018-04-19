@@ -30,6 +30,10 @@ class YapDatabaseViewController: UIViewController {
     }
   
     @IBAction func saveInYapDatabaseTapped(_ sender: Any) {
+        if yapDatabaseUsername.text?.isEmpty ?? true || yapDatabasePassword.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         let databaseName = "YapDatabase.sqlite"
         let baseUrl = try! FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         let databaseUrl = baseUrl.appendingPathComponent(databaseName, isDirectory: false)

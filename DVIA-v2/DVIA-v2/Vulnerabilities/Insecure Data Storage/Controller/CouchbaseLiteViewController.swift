@@ -26,6 +26,10 @@ class CouchbaseLiteViewController: UIViewController {
     }
 
     @IBAction func saveInCouchbaseTapped(_ sender: Any) {
+        if couchbaseUserName.text?.isEmpty ?? true || couchbasePassword.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         let database: CBLDatabase = try! CBLManager.sharedInstance().databaseNamed("dvcouchbasedb")
         guard let username = couchbaseUserName.text else { return }
         guard let password = couchbasePassword.text else { return }

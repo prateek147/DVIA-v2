@@ -29,6 +29,10 @@ class RealmViewController: UIViewController {
     }
 
     @IBAction func saveInRealmTapped(_ sender: Any) {
+        if realmUserNameTextField.text?.isEmpty ?? true || realmPasswordTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         let realm: Realm = try! Realm()
         let user = RealmUser()
         user.name = realmUserNameTextField.text
