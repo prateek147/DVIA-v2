@@ -88,6 +88,10 @@ class TransportLayerProtectionViewController: UIViewController {
     }
     
     func sendRequestOverUrl(_ url: URL) {
+        if cardNumberTextField.text?.isEmpty ?? true || nameOnCardTextField.text?.isEmpty ?? true || CVVTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         if(!Reachability.isConnectedToNetwork()){
             DVIAUtilities.showAlert(title: "Error", message: "Make sure you are connected to the internet.", viewController: self)
             return

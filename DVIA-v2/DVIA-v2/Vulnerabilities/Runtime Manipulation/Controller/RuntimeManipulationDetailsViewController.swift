@@ -48,6 +48,10 @@ class RuntimeManipulationDetailsViewController: UIViewController, UITextFieldDel
     }
     
     @IBAction func loginMethod1Tapped(_ sender: Any) {
+        if usernameTextField.text?.isEmpty ?? true || passwordTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         if LoginValidate.isLoginValidated() {
             DVIAUtilities.showAlert(title: "Congratulations", message: "You have successfully bypassed the authentication check.", viewController: self)
         } else {
@@ -56,8 +60,12 @@ class RuntimeManipulationDetailsViewController: UIViewController, UITextFieldDel
     }
     
     @IBAction func loginMethod2Tapped(_ sender: Any) {
+        if usernameTextField.text?.isEmpty ?? true || passwordTextField.text?.isEmpty ?? true {
+            DVIAUtilities.showAlert(title: "Error", message: "One or more input fields is empty.", viewController: self)
+            return
+        }
         // TODO: change username and password text in this code.
-        if usernameTextField.text == "" && passwordTextField.text == "" {
+        if usernameTextField.text == "admin13412" && passwordTextField.text == "S@g@rm@7h@8848" {
             DVIAUtilities.showAlert(title: "Congratulations", message: "You have successfully bypassed the authentication check.", viewController: self)
         } else {
             DVIAUtilities.showAlert(title: "Oops", message: "Incorrect Username or Password", viewController: self)
