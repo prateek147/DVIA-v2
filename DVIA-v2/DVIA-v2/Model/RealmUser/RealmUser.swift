@@ -17,7 +17,7 @@ import Foundation
 import RealmSwift
 
 class RealmUser: Object {
-    var name: String?
-    var password: String?
+    @objc dynamic var name: String?
+    @objc dynamic var password: String?
     
 }
