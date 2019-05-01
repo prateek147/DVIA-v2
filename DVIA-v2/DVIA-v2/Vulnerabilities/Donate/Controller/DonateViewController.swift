@@ -19,8 +19,8 @@ class DonateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let button = UIButton.init(type: .custom)
-        button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "menu.png"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControl.Event.touchUpInside)
         button.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
         button.widthAnchor.constraint(equalToConstant: 28).isActive = true
         button.heightAnchor.constraint(equalToConstant: 28).isActive = true

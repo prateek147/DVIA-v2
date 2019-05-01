@@ -38,7 +38,7 @@ class SideMenuViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionHeaderHeight = 30
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         let items = MenuItem(
             cellModels: [
                 MenuCellModel(item: .home),
