@@ -48,8 +48,8 @@ class TransportLayerProtectionViewController: UIViewController {
         super.viewDidLoad()
         nameOnCardTextField.delegate = self
         let button = UIButton.init(type: .custom)
-        button.setImage(UIImage(named: "menu.png"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "menu.png"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(menuTapped(_:)), for: UIControl.Event.touchUpInside)
         button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         button.widthAnchor.constraint(equalToConstant: 25).isActive = true
         button.heightAnchor.constraint(equalToConstant: 25).isActive = true

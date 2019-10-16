@@ -129,9 +129,9 @@ extension CameraPermissionsViewController: AVCaptureVideoDataOutputSampleBufferD
         //Allow up to a maximum of 50 images
         if (self.feedImages.count > 50) {return}
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-        let attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate)
-        let ciImage = CIImage(cvImageBuffer: pixelBuffer!, options: attachments as! [String : Any]?)
-        let ciImageWithOrientation = ciImage.oriented(forExifOrientation: Int32(UIImageOrientation.leftMirrored.rawValue))
+        let attachments = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
+        let ciImage = CIImage(cvImageBuffer: pixelBuffer!, options: convertToOptionalCIImageOptionDictionary(attachments as! [String : Any]? as [String : Any]?))
+        let ciImageWithOrientation = ciImage.oriented(forExifOrientation: Int32(UIImage.Orientation.leftMirrored.rawValue))
         editImage(on: ciImageWithOrientation)
         
     }
@@ -161,3 +161,9 @@ extension CameraPermissionsViewController {
 }
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalCIImageOptionDictionary(_ input: [String: Any]?) -> [CIImageOption: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (CIImageOption(rawValue: key), value)})
+}

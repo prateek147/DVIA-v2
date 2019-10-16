@@ -41,7 +41,7 @@ extension BrokenCryptographyDetailsViewController: UITextFieldDelegate {
             } else {
                 let data = passwordTextField.text?.data(using: String.Encoding.utf8)
                 let encryptedData = try? RNEncryptor.encryptData(data, with: kRNCryptorAES256Settings, password: "@daloq3as$qweasdlasasjdnj")
-                try? encryptedData?.write(to: dataPath, options: .atomic)
+                ((try? encryptedData?.write(to: dataPath, options: .atomic)) as ()??)
                 UserDefaults.standard.set(true, forKey: "loggedIn")
                 UserDefaults.standard.synchronize()
                 firstTimeUserView.isHidden = true

@@ -28,9 +28,9 @@ class RuntimeManipulationDetailsViewController: UIViewController, UITextFieldDel
         //For the done and cancel button in Validate code input
         numToolbar.barStyle = UIBarStyle.default
         numToolbar.items=[
-            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneOrCancelTapped)),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneOrCancelTapped))
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneOrCancelTapped)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneOrCancelTapped))
         ]
         
         numToolbar.sizeToFit()

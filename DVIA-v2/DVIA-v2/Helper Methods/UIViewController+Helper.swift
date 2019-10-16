@@ -27,11 +27,11 @@ extension ContainerViewControllerProtocol where Self: UIViewController {
     
     func addControllerAsChild(childController: UIViewController, insideView containerView: UIView) {
         DispatchQueue.main.async {
-            self.addChildViewController(childController)
+            self.addChild(childController)
             childController.view.frame = containerView.bounds
-            childController.willMove(toParentViewController: self)
+            childController.willMove(toParent: self)
             containerView.addSubview(childController.view)
-            childController.didMove(toParentViewController: self)
+            childController.didMove(toParent: self)
         }
     }
 }
