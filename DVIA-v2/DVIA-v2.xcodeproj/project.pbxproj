@@ -56,7 +56,6 @@
 		F6DE6F86202FA4DE00A3A757 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6F3D202FA4DD00A3A757 /* Constants.swift */; };
 		F6DE6F88202FA4DE00A3A757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6F3F202FA4DE00A3A757 /* Assets.xcassets */; };
 		F6DE6FA7202FA53900A3A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6FA6202FA53900A3A757 /* Foundation.framework */; };
-		F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6FA8202FA6E400A3A757 /* Info.plist */; };
 		F6E64504202FBB6700884A43 /* YapDatabaseConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64411202FBB6700884A43 /* YapDatabaseConnection.m */; };
 		F6E64505202FBB6700884A43 /* YapDatabaseTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64413202FBB6700884A43 /* YapDatabaseTransaction.m */; };
 		F6E64506202FBB6700884A43 /* YapDatabaseConnectionState.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64416202FBB6700884A43 /* YapDatabaseConnectionState.m */; };
@@ -133,7 +132,7 @@
 		F6E6454D202FBB6700884A43 /* YapCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CA202FBB6700884A43 /* YapCache.m */; };
 		F6E6454E202FBB6700884A43 /* YapWhitelistBlacklist.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CD202FBB6700884A43 /* YapWhitelistBlacklist.m */; };
 		F6E6454F202FBB6700884A43 /* YapDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644CF202FBB6700884A43 /* YapDatabase.m */; };
-		F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644D1202FBB6700884A43 /* LICENSE.txt */; };
+		F6E64550202FBB6700884A43 /* LICENSE-YapDatabase.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644D1202FBB6700884A43 /* LICENSE-YapDatabase.txt */; };
 		F6E64551202FBB6700884A43 /* YapDatabaseOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */; };
 		F6E64552202FBB6700884A43 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644D7202FBB6700884A43 /* RNCryptor.m */; };
 		F6E64553202FBB6700884A43 /* RNOpenSSLCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644DD202FBB6700884A43 /* RNOpenSSLCryptor.m */; };
@@ -151,7 +150,7 @@
 		F6E6455F202FBB6700884A43 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644F6202FBB6700884A43 /* README.txt */; };
 		F6E64560202FBB6700884A43 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644F7202FBB6700884A43 /* DDLog.m */; };
 		F6E64561202FBB6800884A43 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */; };
-		F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644FB202FBB6700884A43 /* LICENSE.txt */; };
+		F6E64562202FBB6800884A43 /* LICENSE-CocoaLumberjack.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6E644FB202FBB6700884A43 /* LICENSE-CocoaLumberjack.txt */; };
 		F6E64563202FBB6800884A43 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FC202FBB6700884A43 /* DDFileLogger.m */; };
 		F6E64564202FBB6800884A43 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */; };
 		F6E64565202FBB6800884A43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E64500202FBB6700884A43 /* PDKeychainBindingsController.m */; };
@@ -438,7 +437,7 @@
 		F6E644CE202FBB6700884A43 /* YapSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapSet.h; sourceTree = "<group>"; };
 		F6E644CF202FBB6700884A43 /* YapDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabase.m; sourceTree = "<group>"; };
 		F6E644D0202FBB6700884A43 /* YapDatabaseConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseConnection.h; sourceTree = "<group>"; };
-		F6E644D1202FBB6700884A43 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6E644D1202FBB6700884A43 /* LICENSE-YapDatabase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-YapDatabase.txt"; sourceTree = "<group>"; };
 		F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YapDatabaseOptions.m; sourceTree = "<group>"; };
 		F6E644D3202FBB6700884A43 /* YapDatabaseTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YapDatabaseTransaction.h; sourceTree = "<group>"; };
 		F6E644D5202FBB6700884A43 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
@@ -476,7 +475,7 @@
 		F6E644F8202FBB6700884A43 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
 		F6E644F9202FBB6700884A43 /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
 		F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		F6E644FB202FBB6700884A43 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6E644FB202FBB6700884A43 /* LICENSE-CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-CocoaLumberjack.txt"; sourceTree = "<group>"; };
 		F6E644FC202FBB6700884A43 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
 		F6E644FD202FBB6700884A43 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
 		F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
@@ -861,7 +860,7 @@
 				F6E644C2202FBB6700884A43 /* Utilities */,
 				F6E644CF202FBB6700884A43 /* YapDatabase.m */,
 				F6E644D0202FBB6700884A43 /* YapDatabaseConnection.h */,
-				F6E644D1202FBB6700884A43 /* LICENSE.txt */,
+				F6E644D1202FBB6700884A43 /* LICENSE-YapDatabase.txt */,
 				F6E644D2202FBB6700884A43 /* YapDatabaseOptions.m */,
 				F6E644D3202FBB6700884A43 /* YapDatabaseTransaction.h */,
 			);
@@ -1250,7 +1249,7 @@
 				F6E644F8202FBB6700884A43 /* DDTTYLogger.h */,
 				F6E644F9202FBB6700884A43 /* DDLog+LOGV.h */,
 				F6E644FA202FBB6700884A43 /* DDAbstractDatabaseLogger.m */,
-				F6E644FB202FBB6700884A43 /* LICENSE.txt */,
+				F6E644FB202FBB6700884A43 /* LICENSE-CocoaLumberjack.txt */,
 				F6E644FC202FBB6700884A43 /* DDFileLogger.m */,
 				F6E644FD202FBB6700884A43 /* DDASLLogger.h */,
 				F6E644FE202FBB6700884A43 /* DDASLLogCapture.m */,
@@ -1571,7 +1570,6 @@
 				F65AC864202FA37500E4088A /* Frameworks */,
 				F65AC865202FA37500E4088A /* Resources */,
 				179AFFE713A4DAA32ECBFEA9 /* [CP] Embed Pods Frameworks */,
-				DBF7B3404C3581414A66C2BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1594,7 +1592,7 @@
 				TargetAttributes = {
 					F65AC866202FA37500E4088A = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1623,7 +1621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E645C2202FBC6000884A43 /* SideChannelDataLeakage.storyboard in Resources */,
-				F6E64562202FBB6800884A43 /* LICENSE.txt in Resources */,
+				F6E64562202FBB6800884A43 /* LICENSE-CocoaLumberjack.txt in Resources */,
 				F6E645B7202FBC6000884A43 /* TransportLayerProtection.storyboard in Resources */,
 				6E30A0AA20874D72007534D8 /* DVIASplash in Resources */,
 				F6DE6F78202FA4DE00A3A757 /* Home.storyboard in Resources */,
@@ -1639,14 +1637,13 @@
 				F6ED006F206F8337000D1E99 /* slider-bg@2x.png in Resources */,
 				F6E645AF202FBC6000884A43 /* ApplicationPatching.storyboard in Resources */,
 				F6C8AA1B205A9BE3001E1CCB /* Donate.storyboard in Resources */,
-				F6DE6FA9202FA6E500A3A757 /* Info.plist in Resources */,
 				6E30A0A820874C34007534D8 /* AppIcons in Resources */,
 				F6E645B1202FBC6000884A43 /* AttackingThirdPartyLibraries.storyboard in Resources */,
 				F6DE6F85202FA4DE00A3A757 /* Root.storyboard in Resources */,
 				6EADF0782083674600A4AB1C /* slider-active.png in Resources */,
 				F6C8AA37205D80D5001E1CCB /* BinaryProtection.storyboard in Resources */,
 				6E3D0559207E14DE000395C2 /* example.der in Resources */,
-				F6E64550202FBB6700884A43 /* LICENSE.txt in Resources */,
+				F6E64550202FBB6700884A43 /* LICENSE-YapDatabase.txt in Resources */,
 				F6E645D3202FBC6000884A43 /* SecurityDecisonsViaUntrustedInput.storyboard in Resources */,
 				F6E645B9202FBC6000884A43 /* SensitiveInformation.storyboard in Resources */,
 				F6C8AA25205D2CBF001E1CCB /* JailbreakDetection.storyboard in Resources */,
@@ -1671,7 +1668,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
@@ -1688,7 +1685,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83BD5C4E9B4F79EB2586E3F2 /* [CP] Check Pods Manifest.lock */ = {
@@ -1707,21 +1704,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DBF7B3404C3581414A66C2BE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2034,7 +2016,7 @@
 				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2056,7 +2038,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DVIA-v2/DVIA-v2-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

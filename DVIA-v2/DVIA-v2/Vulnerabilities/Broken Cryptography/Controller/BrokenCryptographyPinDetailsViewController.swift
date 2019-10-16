@@ -52,8 +52,9 @@ extension BrokenCryptographyPinDetailsViewController: UITextFieldDelegate {
     
         let passwordData = password.data(using:String.Encoding.utf8)!
         var derivedKeyData = Data(repeating:0, count:keyByteCount)
+        var localVariable = derivedKeyData
         
-        let derivationStatus = derivedKeyData.withUnsafeMutableBytes {derivedKeyBytes in
+        let derivationStatus = localVariable.withUnsafeMutableBytes {derivedKeyBytes in
             salt.withUnsafeBytes { saltBytes in
                 //Could also use SHA256 or SHA512 :/
                 CCKeyDerivationPBKDF(
@@ -95,7 +96,7 @@ extension BrokenCryptographyPinDetailsViewController: UITextFieldDelegate {
             } else {
                 //First time user, save the encrypted data
                 print("encryptedData (SHA1): \(encryptedData! as NSData)")
-                try? encryptedData?.write(to: dataPath, options: .atomic)
+                ((try? encryptedData?.write(to: dataPath, options: .atomic)) as ()??)
                 UserDefaults.standard.set(true, forKey: "loggedIn")
                 UserDefaults.standard.synchronize()
                 firstTimeUserView.isHidden = true
