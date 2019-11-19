@@ -22,41 +22,44 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface RLMNetworkRequestOptions : NSObject
+@property (nonatomic, copy, nullable) NSString *authorizationHeaderName;
+@property (nonatomic, copy, nullable) NSDictionary<NSString *, NSString *> *customHeaders;
+@property (nullable, nonatomic, copy) NSDictionary<NSString *, NSURL *> *pinnedCertificatePaths;
+@end
+
 /// An abstract class representing a server endpoint.
 @interface RLMSyncServerEndpoint : NSObject RLM_SYNC_UNINITIALIZABLE
++ (void)sendRequestToServer:(NSURL *)serverURL
+                       JSON:(NSDictionary *)jsonDictionary
+                 completion:(void (^)(NSError *))completionBlock;
+
++ (void)sendRequestToServer:(NSURL *)serverURL
+                       JSON:(NSDictionary *)jsonDictionary
+                    timeout:(NSTimeInterval)timeout
+                 completion:(void (^)(NSError *, NSDictionary *))completionBlock;
 @end
 
-/// The authentication endpoint.
 @interface RLMSyncAuthEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
-+ (instancetype)endpoint;
 @end
-
-/// The password change endpoint.
 @interface RLMSyncChangePasswordEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
-+ (instancetype)endpoint;
 @end
-
-/// The get user info endpoint.
+@interface RLMSyncUpdateAccountEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
 @interface RLMSyncGetUserInfoEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
-+ (instancetype)endpoint;
 @end
 
-/**
- A simple Realm Object Server network client that wraps `NSURLSession`.
- */
-@interface RLMNetworkClient : NSObject
-
-+ (void)sendRequestToEndpoint:(RLMSyncServerEndpoint *)endpoint
-                       server:(NSURL *)serverURL
-                         JSON:(NSDictionary *)jsonDictionary
-                   completion:(RLMSyncCompletionBlock)completionBlock;
-
-+ (void)sendRequestToEndpoint:(RLMSyncServerEndpoint *)endpoint
-                       server:(NSURL *)serverURL
-                         JSON:(NSDictionary *)jsonDictionary
-                      timeout:(NSTimeInterval)timeout
-                   completion:(RLMSyncCompletionBlock)completionBlock;
+@interface RLMSyncGetPermissionsEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
+@interface RLMSyncGetPermissionOffersEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
+@interface RLMSyncApplyPermissionsEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
+@interface RLMSyncOfferPermissionsEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
+@interface RLMSyncAcceptPermissionOfferEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
+@interface RLMSyncInvalidatePermissionOfferEndpoint : RLMSyncServerEndpoint RLM_SYNC_UNINITIALIZABLE
+@end
 
 NS_ASSUME_NONNULL_END
-
-@end

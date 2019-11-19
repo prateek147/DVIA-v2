@@ -21,11 +21,13 @@
 
 #include <cstdint> // unint8_t etc
 #include <utility>
+#include <map>
 
 #include <realm/util/file.hpp>
 #include <realm/alloc.hpp>
 #include <realm/impl/array_writer.hpp>
 #include <realm/array_integer.hpp>
+#include <realm/group_shared_options.hpp>
 
 
 namespace realm {
@@ -50,7 +52,8 @@ public:
     // (Group::m_is_shared), the constructor also adds version tracking
     // information to the group, if it is not already present (6th and 7th entry
     // in Group::m_top).
-    GroupWriter(Group&);
+    using Durability = SharedGroupOptions::Durability;
+    GroupWriter(Group&, Durability dura = Durability::Full);
     ~GroupWriter();
 
     void set_versions(uint64_t current, uint64_t read_lock) noexcept;
@@ -68,16 +71,22 @@ public:
 
     size_t get_file_size() const noexcept;
 
-    /// Write the specified chunk into free space.
-    void write(const char* data, size_t size);
-
     ref_type write_array(const char*, size_t, uint32_t) override;
 
 #ifdef REALM_DEBUG
     void dump();
 #endif
 
-    size_t get_free_space();
+    size_t get_free_space_size() const
+    {
+        return m_free_space_size;
+    }
+
+    size_t get_locked_space_size() const
+    {
+        return m_locked_space_size;
+    }
+
 private:
     class MapWindow;
     Group& m_group;
@@ -85,10 +94,39 @@ private:
     ArrayInteger m_free_positions; // 4th slot in Group::m_top
     ArrayInteger m_free_lengths;   // 5th slot in Group::m_top
     ArrayInteger m_free_versions;  // 6th slot in Group::m_top
-    uint64_t m_current_version;
+    uint64_t m_current_version = 0;
     uint64_t m_readlock_version;
-    size_t m_alloc_position;
+    size_t m_window_alignment;
+    size_t m_free_space_size = 0;
+    size_t m_locked_space_size = 0;
+    Durability m_durability;
 
+    struct FreeSpaceEntry {
+        FreeSpaceEntry(size_t r, size_t s, uint64_t v)
+            : ref(r)
+            , size(s)
+            , released_at_version(v)
+        {
+        }
+        size_t ref;
+        size_t size;
+        uint64_t released_at_version;
+    };
+    class FreeList : public std::vector<FreeSpaceEntry> {
+    public:
+        FreeList() = default;
+        // Merge adjacent chunks
+        void merge_adjacent_entries_in_freelist();
+        // Copy free space entries to structure where entries are sorted by size
+        void move_free_in_file_to_size_map(std::multimap<size_t, size_t>& size_map);
+    };
+    //  m_free_in_file;
+    std::vector<FreeSpaceEntry> m_not_free_in_file;
+    std::multimap<size_t, size_t> m_size_map;
+    using FreeListElement = std::multimap<size_t, size_t>::iterator;
+
+    void read_in_freelist();
+    size_t recreate_freelist(size_t reserve_pos);
     // Currently cached memory mappings. We keep as many as 16 1MB windows
     // open for writing. The allocator will favor sequential allocation
     // from a modest number of windows, depending upon fragmentation, so
@@ -105,9 +143,6 @@ private:
 
     // Sync all cached memory mappings
     void sync_all_mappings();
-
-    // Merge adjacent chunks
-    void merge_free_space();
 
     /// Allocate a chunk of free space of the specified size. The
     /// specified size must be 8-byte aligned. Extend the file if
@@ -129,13 +164,14 @@ private:
     /// \return A pair (`chunk_ndx`, `chunk_size`) where `chunk_ndx`
     /// is the index of a chunk whose size is at least the requestd
     /// size, and `chunk_size` is the size of that chunk.
-    std::pair<size_t, size_t> reserve_free_space(size_t size);
+    FreeListElement reserve_free_space(size_t size);
+
+    FreeListElement search_free_space_in_free_list_element(FreeListElement element, size_t size);
 
     /// Search only a range of the free list for a block as big as the
     /// specified size. Return a pair with index and size of the found chunk.
     /// \param found indicates whether a suitable block was found.
-    std::pair<size_t, size_t> search_free_space_in_part_of_freelist(size_t size, size_t begin, size_t end,
-                                                                    bool& found);
+    FreeListElement search_free_space_in_part_of_freelist(size_t size);
 
     /// Extend the file to ensure that a chunk of free space of the
     /// specified size is available. The specified size does not need
@@ -145,10 +181,10 @@ private:
     /// \return A pair (`chunk_ndx`, `chunk_size`) where `chunk_ndx`
     /// is the index of a chunk whose size is at least the requestd
     /// size, and `chunk_size` is the size of that chunk.
-    std::pair<size_t, size_t> extend_free_space(size_t requested_size);
+    FreeListElement extend_free_space(size_t requested_size);
 
     void write_array_at(MapWindow* window, ref_type, const char* data, size_t size);
-    size_t split_freelist_chunk(size_t index, size_t start_pos, size_t alloc_pos, size_t chunk_size, bool is_shared);
+    FreeListElement split_freelist_chunk(FreeListElement, size_t alloc_pos);
 };
 
 

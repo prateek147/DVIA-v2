@@ -22,38 +22,41 @@
 #include <stdexcept>
 
 #include <realm/util/features.h>
+#include <realm/util/backtrace.hpp>
 
 namespace realm {
 
+using util::ExceptionWithBacktrace;
+
 /// Thrown by various functions to indicate that a specified table does not
 /// exist.
-class NoSuchTable : public std::exception {
+class NoSuchTable : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
 /// Thrown by various functions to indicate that a specified table name is
 /// already in use.
-class TableNameInUse : public std::exception {
+class TableNameInUse : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
 // Thrown by functions that require a table to **not** be the target of link
 // columns, unless those link columns are part of the table itself.
-class CrossTableLinkTarget : public std::exception {
+class CrossTableLinkTarget : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
 /// Thrown by various functions to indicate that the dynamic type of a table
 /// does not match a particular other table type (dynamic or static).
-class DescriptorMismatch : public std::exception {
+class DescriptorMismatch : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
@@ -63,18 +66,18 @@ public:
 /// want automatic upgrades to be performed. This exception indicates that until
 /// an upgrade of the file format is performed, the database will be unavailable
 /// for read or write operations.
-class FileFormatUpgradeRequired : public std::exception {
+class FileFormatUpgradeRequired : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
 /// Thrown when a sync agent attempts to join a session in which there is
 /// already a sync agent. A session may only contain one sync agent at any given
 /// time.
-class MultipleSyncAgents : public std::exception {
+class MultipleSyncAgents : public ExceptionWithBacktrace<std::exception> {
 public:
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
 };
 
 
@@ -96,6 +99,25 @@ public:
 class OutOfDiskSpace : public std::runtime_error {
 public:
     OutOfDiskSpace(const std::string& msg);
+    /// runtime_error::what() returns the msg provided in the constructor.
+};
+
+// SerialisationError intentionally does not inherit ExceptionWithBacktrace
+// because the query-based-sync permissions queries generated on the server
+// use a LinksToNode which is not currently serialisable (this limitation can
+// be lifted in core 6 given stable ids). Coupled with query metrics which
+// serialize all queries, the capturing of the stack for these frequent
+// permission queries shows up in performance profiles.
+class SerialisationError : public std::runtime_error {
+public:
+    SerialisationError(const std::string& msg);
+    /// runtime_error::what() returns the msg provided in the constructor.
+};
+
+// thrown when a user constructed link path is not a valid input
+class InvalidPathError : public std::runtime_error {
+public:
+    InvalidPathError(const std::string& msg);
     /// runtime_error::what() returns the msg provided in the constructor.
 };
 
@@ -132,7 +154,7 @@ public:
 ///
 /// FIXME: This exception class should probably be moved to the `_impl`
 /// namespace, in order to avoid some confusion.
-class LogicError : public std::exception {
+class LogicError : public ExceptionWithBacktrace<std::exception> {
 public:
     enum ErrorKind {
         string_too_big,
@@ -230,7 +252,7 @@ public:
 
     LogicError(ErrorKind message);
 
-    const char* what() const noexcept override;
+    const char* message() const noexcept override;
     ErrorKind kind() const noexcept;
 
 private:
@@ -242,32 +264,32 @@ private:
 
 // LCOV_EXCL_START (Wording of what() strings are not to be tested)
 
-inline const char* NoSuchTable::what() const noexcept
+inline const char* NoSuchTable::message() const noexcept
 {
     return "No such table exists";
 }
 
-inline const char* TableNameInUse::what() const noexcept
+inline const char* TableNameInUse::message() const noexcept
 {
     return "The specified table name is already in use";
 }
 
-inline const char* CrossTableLinkTarget::what() const noexcept
+inline const char* CrossTableLinkTarget::message() const noexcept
 {
     return "Table is target of cross-table link columns";
 }
 
-inline const char* DescriptorMismatch::what() const noexcept
+inline const char* DescriptorMismatch::message() const noexcept
 {
     return "Table descriptor mismatch";
 }
 
-inline const char* FileFormatUpgradeRequired::what() const noexcept
+inline const char* FileFormatUpgradeRequired::message() const noexcept
 {
     return "Database upgrade required but prohibited";
 }
 
-inline const char* MultipleSyncAgents::what() const noexcept
+inline const char* MultipleSyncAgents::message() const noexcept
 {
     return "Multiple sync agents attempted to join the same session";
 }
@@ -289,6 +311,16 @@ inline OutOfDiskSpace::OutOfDiskSpace(const std::string& msg)
 {
 }
 
+inline SerialisationError::SerialisationError(const std::string& msg)
+    : std::runtime_error(msg)
+{
+}
+
+inline InvalidPathError::InvalidPathError(const std::string& msg)
+    : runtime_error(msg)
+{
+}
+
 inline LogicError::LogicError(LogicError::ErrorKind k)
     : m_kind(k)
 {
@@ -301,5 +333,6 @@ inline LogicError::ErrorKind LogicError::kind() const noexcept
 
 
 } // namespace realm
+
 
 #endif // REALM_EXCEPTIONS_HPP

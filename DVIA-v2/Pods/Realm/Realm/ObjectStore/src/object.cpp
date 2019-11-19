@@ -49,6 +49,10 @@ ReadOnlyPropertyException::ReadOnlyPropertyException(const std::string& object_t
 : std::logic_error(util::format("Cannot modify read-only property '%1.%2'", object_type, property_name))
 , object_type(object_type), property_name(property_name) {}
 
+ModifyPrimaryKeyException::ModifyPrimaryKeyException(const std::string& object_type, const std::string& property_name)
+        : std::logic_error(util::format("Cannot modify primary key after creation: '%1.%2'", object_type, property_name))
+        , object_type(object_type), property_name(property_name) {}
+
 Object::Object(SharedRealm r, ObjectSchema const& s, RowExpr const& o)
 : m_realm(std::move(r)), m_object_schema(&s), m_row(o) { }
 
@@ -91,3 +95,26 @@ Property const& Object::property_for_name(StringData prop_name) const
     }
     return *prop;
 }
+
+#if REALM_ENABLE_SYNC
+void Object::ensure_user_in_everyone_role()
+{
+    auto role_table = m_realm->read_group().get_table("class___Role");
+    if (!role_table)
+        return;
+    size_t ndx = role_table->find_first_string(role_table->get_column_index("name"), "everyone");
+    if (ndx == npos)
+        return;
+    auto users = role_table->get_linklist(role_table->get_column_index("members"), ndx);
+    if (users->find(m_row.get_index()) != not_found)
+        return;
+
+    users->add(m_row.get_index());
+}
+
+void Object::ensure_private_role_exists_for_user()
+{
+    auto user_id = m_row.get<StringData>(m_row.get_table()->get_column_index("id"));
+    ObjectStore::ensure_private_role_exists_for_user(m_realm->read_group(), user_id);
+}
+#endif

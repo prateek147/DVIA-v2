@@ -22,6 +22,7 @@
 #include <realm/util/logger.hpp>
 #include <realm/table_ref.hpp>
 #include <realm/string_data.hpp>
+#include <realm/group.hpp>
 
 #include <realm/sync/object_id.hpp>
 
@@ -33,13 +34,15 @@
 namespace realm {
 
 class Group;
+class ReadTransaction;
+class WriteTransaction;
 
 namespace sync {
 
 class SyncHistory;
 
-static const char object_id_column_name[] = "!OID";
-static const char array_value_column_name[] = "!ARRAY_VALUE"; // FIXME call Jorgen
+extern const char object_id_column_name[]; // "!OID"
+extern const char array_value_column_name[]; // "!ARRAY_VALUE"
 
 struct TableInfoCache;
 
@@ -97,13 +100,23 @@ TableRef create_table(Group&, StringData name);
 TableRef create_table_with_primary_key(Group&, StringData name, DataType pk_type,
                                        StringData pk_column_name, bool nullable = false);
 
+
+//@{
+/// Erase table and update metadata.
+///
+/// It is an error to erase tables via the Group API, because it does not
+/// correctly update metadata tables (such as the `pk` table).
+void erase_table(Group& g, TableInfoCache& table_info_cache, StringData name);
+void erase_table(Group& g, TableInfoCache& table_info_cache, TableRef);
+//@}
+
 /// Create an array column with the specified element type.
 ///
 /// The result will be a column of type type_Table with one subcolumn named
-/// "!ARRAY_VALUE" of the specified element type.
+/// "!ARRAY_VALUE" of the specified element type and nullability.
 ///
 /// Return the column index of the inserted array column.
-size_t add_array_column(Table&, DataType element_type, StringData column_name);
+size_t add_array_column(Table&, DataType element_type, StringData column_name, bool is_nullable = false);
 
 
 //@{
@@ -176,6 +189,9 @@ size_t create_object_with_primary_key(const TableInfoCache&, Table&, StringData 
 struct TableInfoCache {
     const Group& m_group;
 
+    explicit TableInfoCache(const ReadTransaction&);
+    explicit TableInfoCache(const WriteTransaction&);
+
     // Implicit conversion deliberately allowed for the purpose of calling the above
     // functions without constructing a cache manually.
     TableInfoCache(const Group&);
@@ -186,10 +202,18 @@ struct TableInfoCache {
 
         StringData name;
         const VTable* vtable;
-        size_t object_id_index;
+        size_t object_id_index = size_t(-1);
         size_t primary_key_index;
         DataType primary_key_type = DataType(-1);
         bool primary_key_nullable = false;
+        mutable size_t last_row_index = size_t(-1);
+        mutable ObjectID last_object_id;
+
+        void clear_last_object() const
+        {
+            last_row_index = size_t(-1);
+            last_object_id = {};
+        }
     };
 
     mutable std::vector<util::Optional<TableInfo>> m_table_info;
@@ -197,6 +221,8 @@ struct TableInfoCache {
     const TableInfo& get_table_info(const Table&) const;
     const TableInfo& get_table_info(size_t table_index) const;
     void clear();
+    void clear_last_object(const Table&);
+    void verify();
 };
 
 
@@ -204,6 +230,30 @@ struct TableInfoCache {
 /// `Replication::hist_SyncServer` and whose history schema version is 0 (i.e.,
 /// Realm files without stable identifiers).
 void import_from_legacy_format(const Group& old_group, Group& new_group, util::Logger&);
+
+using TableNameBuffer = std::array<char, Group::max_table_name_length>;
+StringData table_name_to_class_name(StringData);
+StringData class_name_to_table_name(StringData, TableNameBuffer&);
+
+
+// Implementation:
+
+inline StringData table_name_to_class_name(StringData table_name)
+{
+    REALM_ASSERT(table_name.begins_with("class_"));
+    return table_name.substr(6);
+}
+
+
+inline StringData class_name_to_table_name(StringData class_name, TableNameBuffer& buffer)
+{
+    constexpr const char class_prefix[] = "class_";
+    constexpr size_t class_prefix_len = sizeof(class_prefix) - 1;
+    char* p = std::copy_n(class_prefix, class_prefix_len, buffer.data());
+    size_t len = std::min(class_name.size(), buffer.size() - class_prefix_len);
+    std::copy_n(class_name.data(), len, p);
+    return StringData(buffer.data(), class_prefix_len + len);
+}
 
 } // namespace sync
 } // namespace realm

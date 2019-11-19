@@ -19,7 +19,10 @@
 #import <Foundation/Foundation.h>
 #import "RLMConstants.h"
 
-@class RLMRealmConfiguration, RLMRealm, RLMObject, RLMSchema, RLMMigration, RLMNotificationToken, RLMThreadSafeReference;
+@class RLMRealmConfiguration, RLMRealm, RLMObject, RLMSchema, RLMMigration, RLMNotificationToken, RLMThreadSafeReference, RLMAsyncOpenTask;
+struct RLMRealmPrivileges;
+struct RLMClassPrivileges;
+struct RLMObjectPrivileges;
 
 /**
  A callback block for opening Realms asynchronously.
@@ -118,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
        thread, accessing the returned Realm outside the callback block (even if
        accessed from `callbackQueue`) is unsafe.
  */
-+ (void)asyncOpenWithConfiguration:(RLMRealmConfiguration *)configuration
++ (RLMAsyncOpenTask *)asyncOpenWithConfiguration:(RLMRealmConfiguration *)configuration
                      callbackQueue:(dispatch_queue_t)callbackQueue
                           callback:(RLMAsyncOpenRealmCallback)callback;
 
@@ -323,9 +326,23 @@ typedef void (^RLMNotificationBlock)(RLMNotification notification, RLMRealm *rea
 /**
  Performs actions contained within the given block inside a write transaction.
 
- @see `[RLMRealm transactionWithBlock:error:]`
+ @see `[RLMRealm transactionWithoutNotifying:block:error:]`
  */
 - (void)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block NS_SWIFT_UNAVAILABLE("");
+
+/**
+ Performs actions contained within the given block inside a write transaction.
+
+ @see `[RLMRealm transactionWithoutNotifying:block:error:]`
+ */
+- (BOOL)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block error:(NSError **)error;
+
+/**
+ Performs actions contained within the given block inside a write transaction.
+
+ @see `[RLMRealm transactionWithoutNotifying:block:error:]`
+ */
+- (void)transactionWithoutNotifying:(NSArray<RLMNotificationToken *> *)tokens block:(__attribute__((noescape)) void(^)(void))block;
 
 /**
  Performs actions contained within the given block inside a write transaction.
@@ -340,6 +357,19 @@ typedef void (^RLMNotificationBlock)(RLMNotification notification, RLMRealm *rea
  generates notifications if applicable. This has no effect if the Realm
  was already up to date.
 
+ You can skip notifiying specific notification blocks about the changes made
+ in this write transaction by passing in their associated notification tokens.
+ This is primarily useful when the write transaction is saving changes already
+ made in the UI and you do not want to have the notification block attempt to
+ re-apply the same changes.
+
+ The tokens passed to this method must be for notifications for this specific
+ `RLMRealm` instance. Notifications for different threads cannot be skipped
+ using this method.
+
+ @param tokens An array of notification tokens which were returned from adding
+               callbacks which you do not want to be notified for the changes
+               made in this write transaction.
  @param block The block containing actions to perform.
  @param error If an error occurs, upon return contains an `NSError` object
               that describes the problem. If you are not interested in
@@ -347,7 +377,7 @@ typedef void (^RLMNotificationBlock)(RLMNotification notification, RLMRealm *rea
 
  @return Whether the transaction succeeded.
  */
-- (BOOL)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block error:(NSError **)error;
+- (BOOL)transactionWithoutNotifying:(NSArray<RLMNotificationToken *> *)tokens block:(__attribute__((noescape)) void(^)(void))block error:(NSError **)error;
 
 /**
  Updates the Realm and outstanding objects managed by the Realm to point to the
@@ -507,7 +537,7 @@ NS_REFINED_FOR_SWIFT;
  As with `addObject:`, the object cannot already be managed by a different
  Realm. Use `-[RLMObject createOrUpdateInRealm:withValue:]` to copy values to
  a different Realm.
- 
+
  If there is a property or KVC value on `object` whose value is nil, and it corresponds
  to a nullable property on an existing object being updated, that nullable property will
  be set to nil.
@@ -605,6 +635,88 @@ NS_REFINED_FOR_SWIFT;
  @see                 RLMMigration
  */
 + (BOOL)performMigrationForConfiguration:(RLMRealmConfiguration *)configuration error:(NSError **)error;
+
+#pragma mark - Privileges
+
+/**
+ Returns the computed privileges which the current user has for this Realm.
+
+ This combines all privileges granted on the Realm by all Roles which the
+ current User is a member of into the final privileges which will be enforced by
+ the server.
+
+ The privilege calculation is done locally using cached data, and inherently may
+ be stale. It is possible that this method may indicate that an operation is
+ permitted but the server will still reject it if permission is revoked before
+ the changes have been integrated on the server.
+
+ Non-synchronized Realms always have permission to perform all operations.
+
+ @warning This currently returns incorrect results for non-partially-synchronized read-only Realms.
+ @return The privileges which the current user has for the current Realm.
+ */
+- (struct RLMRealmPrivileges)privilegesForRealm;
+
+/**
+ Returns the computed privileges which the current user has for the given object.
+
+ This combines all privileges granted on the object by all Roles which the
+ current User is a member of into the final privileges which will be enforced by
+ the server.
+
+ The privilege calculation is done locally using cached data, and inherently may
+ be stale. It is possible that this method may indicate that an operation is
+ permitted but the server will still reject it if permission is revoked before
+ the changes have been integrated on the server.
+
+ Non-synchronized Realms always have permission to perform all operations.
+
+ The object must be a valid object managed by this Realm. Passing in an
+ invalidated object, an unmanaged object, or an object managed by a different
+ Realm will throw an exception.
+
+ @warning This currently returns incorrect results for non-partially-synchronized read-only Realms.
+ @return The privileges which the current user has for the given object.
+ */
+- (struct RLMObjectPrivileges)privilegesForObject:(RLMObject *)object;
+
+/**
+ Returns the computed privileges which the current user has for the given class.
+
+ This combines all privileges granted on the class by all Roles which the
+ current User is a member of into the final privileges which will be enforced by
+ the server.
+
+ The privilege calculation is done locally using cached data, and inherently may
+ be stale. It is possible that this method may indicate that an operation is
+ permitted but the server will still reject it if permission is revoked before
+ the changes have been integrated on the server.
+
+ Non-synchronized Realms always have permission to perform all operations.
+
+ @warning This currently returns incorrect results for non-partially-synchronized read-only Realms.
+ @return The privileges which the current user has for the given object.
+ */
+- (struct RLMClassPrivileges)privilegesForClass:(Class)cls;
+
+/**
+ Returns the computed privileges which the current user has for the named class.
+
+ This combines all privileges granted on the class by all Roles which the
+ current User is a member of into the final privileges which will be enforced by
+ the server.
+
+ The privilege calculation is done locally using cached data, and inherently may
+ be stale. It is possible that this method may indicate that an operation is
+ permitted but the server will still reject it if permission is revoked before
+ the changes have been integrated on the server.
+
+ Non-synchronized Realms always have permission to perform all operations.
+
+ @warning This currently returns incorrect results for non-partially-synchronized read-only Realms.
+ @return The privileges which the current user has for the given object.
+ */
+- (struct RLMClassPrivileges)privilegesForClassNamed:(NSString *)className;
 
 #pragma mark - Unavailable Methods
 

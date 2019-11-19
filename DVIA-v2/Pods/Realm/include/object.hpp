@@ -32,6 +32,18 @@ namespace _impl {
     class ObjectNotifier;
 }
 
+enum class CreatePolicy : int8_t {
+    // Do not create objects if given something that could be converted to a
+    // Realm object but isn't. Used for things like find().
+    Skip,
+    // Throw an exception if an object with the same PK already exists.
+    ForceCreate,
+    // If an object with the same PK already exists, set all fields in the input.
+    UpdateAll,
+    // If an object with the same PK already exists, only set fields which have changed.
+    UpdateModified
+};
+
 class Object {
 public:
     Object();
@@ -53,30 +65,38 @@ public:
 
     NotificationToken add_notification_callback(CollectionChangeCallback callback) &;
 
+    void ensure_user_in_everyone_role();
+    void ensure_private_role_exists_for_user();
+
     // The following functions require an accessor context which converts from
     // the binding's native data types to the core data types. See CppContext
     // for a reference implementation of such a context.
     //
-    // The actual definitions of these tempated functions is in object_accessor.hpp
+    // The actual definitions of these templated functions is in object_accessor.hpp
 
     // property getter/setter
     template<typename ValueType, typename ContextType>
     void set_property_value(ContextType& ctx, StringData prop_name,
-                            ValueType value, bool try_update);
+                            ValueType value, CreatePolicy policy = CreatePolicy::ForceCreate);
 
     template<typename ValueType, typename ContextType>
     ValueType get_property_value(ContextType& ctx, StringData prop_name);
+
+    template<typename ValueType, typename ContextType>
+    ValueType get_property_value(ContextType& ctx, const Property& property);
 
     // create an Object from a native representation
     template<typename ValueType, typename ContextType>
     static Object create(ContextType& ctx, std::shared_ptr<Realm> const& realm,
                          const ObjectSchema &object_schema, ValueType value,
-                         bool try_update = false, Row* = nullptr);
+                         CreatePolicy policy = CreatePolicy::ForceCreate,
+                         size_t current_row = size_t(-1), Row* = nullptr);
 
     template<typename ValueType, typename ContextType>
     static Object create(ContextType& ctx, std::shared_ptr<Realm> const& realm,
                          StringData object_type, ValueType value,
-                         bool try_update = false, Row* = nullptr);
+                         CreatePolicy policy = CreatePolicy::ForceCreate,
+                         size_t current_row = size_t(-1), Row* = nullptr);
 
     template<typename ValueType, typename ContextType>
     static Object get_for_primary_key(ContextType& ctx,
@@ -91,6 +111,8 @@ public:
                                       ValueType primary_value);
 
 private:
+    friend class Results;
+
     std::shared_ptr<Realm> m_realm;
     const ObjectSchema *m_object_schema;
     Row m_row;
@@ -99,7 +121,7 @@ private:
 
     template<typename ValueType, typename ContextType>
     void set_property_value_impl(ContextType& ctx, const Property &property,
-                                 ValueType value, bool try_update, bool is_default=false);
+                                 ValueType value, CreatePolicy policy, bool is_default);
     template<typename ValueType, typename ContextType>
     ValueType get_property_value_impl(ContextType& ctx, const Property &property);
 
@@ -138,6 +160,13 @@ struct ReadOnlyPropertyException : public std::logic_error {
     const std::string object_type;
     const std::string property_name;
 };
+
+struct ModifyPrimaryKeyException : public std::logic_error {
+    ModifyPrimaryKeyException(const std::string& object_type, const std::string& property_name);
+    const std::string object_type;
+    const std::string property_name;
+};
+
 } // namespace realm
 
 #endif // REALM_OS_OBJECT_HPP

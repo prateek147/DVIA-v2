@@ -258,7 +258,7 @@ void Permissions::perform_async_operation(const std::string& object_type,
 
     // Write the permission object.
     realm->begin_transaction();
-    auto raw = Object::create<util::Any>(context, realm, *realm->schema().find(object_type), std::move(props), false);
+    auto raw = Object::create<util::Any>(context, realm, *realm->schema().find(object_type), std::move(props));
     auto object = std::make_shared<_impl::NotificationWrapper<Object>>(std::move(raw));
     realm->commit_transaction();
 

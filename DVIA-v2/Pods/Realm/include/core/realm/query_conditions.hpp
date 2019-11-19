@@ -100,14 +100,21 @@ struct Like : public HackClass {
     {
         return v2.like(v1);
     }
+    bool operator()(BinaryData b1, const char*, const char*, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return s2.like(s1);
+    }
     bool operator()(StringData v1, StringData v2, bool = false, bool = false) const
     {
         return v2.like(v1);
     }
-    bool operator()(BinaryData, BinaryData, bool = false, bool = false) const
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
     {
-        REALM_ASSERT(false);
-        return false;
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return s2.like(s1);
     }
 
     template <class A, class B>
@@ -275,11 +282,7 @@ struct NotEqual {
     }
 
     template <class A, class B, class C, class D>
-    bool operator()(A, B, C, D) const
-    {
-        REALM_ASSERT(false);
-        return false;
-    }
+    bool operator()(A, B, C, D) const = delete;
 
     static std::string description()
     {
@@ -313,6 +316,12 @@ struct ContainsIns : public HackClass {
         std::string v1_upper = case_map(v1, true, IgnoreErrors);
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return search_case_fold(v2, v1_upper.c_str(), v1_lower.c_str(), v1.size()) != v2.size();
+    }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return this->operator()(s1, s2, false, false);
     }
     
     // Case insensitive Boyer-Moore version
@@ -365,6 +374,16 @@ struct LikeIns : public HackClass {
 
         return string_like_ins(v2, v1_lower, v1_upper);
     }
+    bool operator()(BinaryData b1, const char* b1_upper, const char* b1_lower, BinaryData b2, bool = false,
+                    bool = false) const
+    {
+        if (b2.is_null() || b1.is_null()) {
+            return (b2.is_null() && b1.is_null());
+        }
+        StringData s2(b2.data(), b2.size());
+
+        return string_like_ins(s2, b1_lower, b1_upper);
+    }
 
     // Slow version, used if caller hasn't stored an upper and lower case version
     bool operator()(StringData v1, StringData v2, bool = false, bool = false) const
@@ -376,6 +395,18 @@ struct LikeIns : public HackClass {
         std::string v1_upper = case_map(v1, true, IgnoreErrors);
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return string_like_ins(v2, v1_lower, v1_upper);
+    }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        if (b2.is_null() || b1.is_null()) {
+            return (b2.is_null() && b1.is_null());
+        }
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+
+        std::string s1_upper = case_map(s1, true, IgnoreErrors);
+        std::string s1_lower = case_map(s1, false, IgnoreErrors);
+        return string_like_ins(s2, s1_lower, s1_upper);
     }
 
     template <class A, class B>
@@ -425,6 +456,12 @@ struct BeginsWithIns : public HackClass {
         std::string v1_upper = case_map(v1, true, IgnoreErrors);
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return equal_case_fold(v2.prefix(v1.size()), v1_upper.c_str(), v1_lower.c_str());
+    }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return this->operator()(s1, s2, false, false);
     }
 
     template <class A, class B>
@@ -476,6 +513,12 @@ struct EndsWithIns : public HackClass {
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return equal_case_fold(v2.suffix(v1.size()), v1_upper.c_str(), v1_lower.c_str());
     }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return this->operator()(s1, s2, false, false);
+    }
 
     template <class A, class B>
     bool operator()(A, B) const
@@ -525,6 +568,12 @@ struct EqualIns : public HackClass {
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return equal_case_fold(v2, v1_upper.c_str(), v1_lower.c_str());
     }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return this->operator()(s1, s2, false, false);
+    }
 
     template <class A, class B>
     bool operator()(A, B) const
@@ -572,6 +621,12 @@ struct NotEqualIns : public HackClass {
         std::string v1_upper = case_map(v1, true, IgnoreErrors);
         std::string v1_lower = case_map(v1, false, IgnoreErrors);
         return !equal_case_fold(v2, v1_upper.c_str(), v1_lower.c_str());
+    }
+    bool operator()(BinaryData b1, BinaryData b2, bool = false, bool = false) const
+    {
+        StringData s1(b1.data(), b1.size());
+        StringData s2(b2.data(), b2.size());
+        return this->operator()(s1, s2, false, false);
     }
 
     template <class A, class B>

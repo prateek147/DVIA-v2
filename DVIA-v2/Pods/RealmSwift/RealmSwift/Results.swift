@@ -78,22 +78,13 @@ extension Int64: AddableType {}
 
  Results instances cannot be directly instantiated.
  */
-public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnumeration {
+public struct Results<Element: RealmCollectionValue>: Equatable {
 
     internal let rlmResults: RLMResults<AnyObject>
 
     /// A human-readable description of the objects represented by the results.
-    public override var description: String {
+    public var description: String {
         return RLMDescriptionWithMaxDepth("Results", rlmResults, RLMDescriptionMaxDepth)
-    }
-
-    // MARK: Fast Enumeration
-
-    /// :nodoc:
-    public func countByEnumerating(with state: UnsafeMutablePointer<NSFastEnumerationState>,
-                                   objects buffer: AutoreleasingUnsafeMutablePointer<AnyObject?>,
-                                   count len: Int) -> Int {
-        return Int(rlmResults.countByEnumerating(with: state, objects: buffer, count: UInt(len)))
     }
 
     /// The type of the objects described by the results.
@@ -174,7 +165,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
 
      - parameter key: The name of the property whose values are desired.
      */
-    public override func value(forKey key: String) -> Any? {
+    public func value(forKey key: String) -> Any? {
         return value(forKeyPath: key)
     }
 
@@ -183,7 +174,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
 
      - parameter keyPath: The key path to the property whose values are desired.
      */
-    public override func value(forKeyPath keyPath: String) -> Any? {
+    public func value(forKeyPath keyPath: String) -> Any? {
         return rlmResults.value(forKeyPath: keyPath)
     }
 
@@ -196,7 +187,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
      - parameter value: The object value.
      - parameter key:   The name of the property whose value should be set on each object.
      */
-    public override func setValue(_ value: Any?, forKey key: String) {
+    public func setValue(_ value: Any?, forKey key: String) {
         return rlmResults.setValue(value, forKeyPath: key)
     }
 
@@ -257,7 +248,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
 
     /**
      Returns a `Results` containing distinct objects based on the specified key paths
-     
+
      - parameter keyPaths:  The key paths used produce distinct results
      */
     public func distinct<S: Sequence>(by keyPaths: S) -> Results<Element>
@@ -337,7 +328,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
      will reflect the state of the Realm after the write transaction.
 
      ```swift
-     let results = realm.objects(Dog.self)
+     let dogs = realm.objects(Dog.self)
      print("dogs.count: \(dogs?.count)") // => 0
      let token = dogs.observe { changes in
          switch changes {
@@ -383,6 +374,13 @@ extension Results: RealmCollection {
         return RLMIterator(collection: rlmResults)
     }
 
+    /// :nodoc:
+    // swiftlint:disable:next identifier_name
+    public func _asNSFastEnumerator() -> Any {
+        return rlmResults
+
+    }
+
     // MARK: Collection Support
 
     /// The position of the first element in a non-empty collection.
@@ -418,3 +416,16 @@ extension Results: AssistedObjectiveCBridgeable {
         return (objectiveCValue: rlmResults, metadata: nil)
     }
 }
+
+// MARK: - Codable
+
+#if swift(>=4.1)
+extension Results: Encodable where Element: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.unkeyedContainer()
+        for value in self {
+            try container.encode(value)
+        }
+    }
+}
+#endif

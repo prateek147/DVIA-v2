@@ -46,7 +46,6 @@ static const NSString *const kRLMSyncValueKey           = @"value";
 @property (nonatomic, readwrite) NSString *path;
 @property (nonatomic, readwrite) NSTimeInterval expires;
 @property (nonatomic, readwrite) BOOL isAdmin;
-//@property (nonatomic, readwrite) NSArray *access;
 
 @end
 
@@ -97,6 +96,7 @@ static const NSString *const kRLMSyncValueKey           = @"value";
 
 @property (nonatomic, readwrite) RLMTokenModel *accessToken;
 @property (nonatomic, readwrite) RLMTokenModel *refreshToken;
+@property (nonatomic, readwrite) NSString *urlPrefix;
 
 @end
 
@@ -118,6 +118,7 @@ static const NSString *const kRLMSyncValueKey           = @"value";
         } else {
             RLM_SYNC_PARSE_OPTIONAL_MODEL(jsonDictionary, kRLMSyncRefreshTokenKey, RLMTokenModel, refreshToken);
         }
+        self.urlPrefix = jsonDictionary[@"sync_worker"][@"path"];
         return self;
     }
     return nil;
@@ -210,6 +211,20 @@ static const NSString *const kRLMSyncValueKey           = @"value";
         RLM_SYNC_PARSE_DOUBLE_OR_ABORT(jsonDictionary, kRLMSyncErrorCodeKey, code);
         RLM_SYNC_PARSE_OPTIONAL_STRING(jsonDictionary, kRLMSyncErrorTitleKey, title);
         RLM_SYNC_PARSE_OPTIONAL_STRING(jsonDictionary, kRLMSyncErrorHintKey, hint);
+
+        NSString *detail = jsonDictionary[@"detail"];
+        if ([detail isKindOfClass:[NSString class]]) {
+            _title = detail;
+        }
+
+        for (NSDictionary<NSString *, NSString *> *problem in jsonDictionary[@"invalid_params"]) {
+            NSString *name = problem[@"name"];
+            NSString *reason = problem[@"reason"];
+            if (name && reason) {
+                _title = [NSString stringWithFormat:@"%@ %@: %@;", _title, name, reason];
+            }
+        }
+
         return self;
     }
     return nil;

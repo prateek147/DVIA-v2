@@ -226,7 +226,7 @@ private:
     struct NodeChange {
         size_t ref1;
         size_t ref2;
-        enum ChangeType { none, insert_before, insert_after, split } type;
+        enum ChangeType { change_None, change_InsertBefore, change_InsertAfter, change_Split } type;
         NodeChange(ChangeType t, size_t r1 = 0, size_t r2 = 0)
             : ref1(r1)
             , ref2(r2)
@@ -236,7 +236,7 @@ private:
         NodeChange()
             : ref1(0)
             , ref2(0)
-            , type(none)
+            , type(change_None)
         {
         }
     };

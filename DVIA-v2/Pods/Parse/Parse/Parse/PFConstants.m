@@ -14,7 +14,7 @@ NSString *const kPFDeviceType = @"ios";
 #elif PF_TARGET_OS_OSX
 NSString *const kPFDeviceType = @"osx";
 #elif TARGET_OS_TV
-NSString *const kPFDeviceType = @"appletv";
+NSString *const kPFDeviceType = @"tvos";
 #elif TARGET_OS_WATCH
 NSString *const kPFDeviceType = @"applewatch";
 #endif
@@ -30,3 +30,4 @@ NSString *const PFNetworkDidReceiveURLResponseNotification = @"PFNetworkDidRecei
 NSString *const PFNetworkNotificationURLRequestUserInfoKey = @"PFNetworkNotificationURLRequestUserInfoKey";
 NSString *const PFNetworkNotificationURLResponseUserInfoKey = @"PFNetworkNotificationURLResponseUserInfoKey";
 NSString *const PFNetworkNotificationURLResponseBodyUserInfoKey = @"PFNetworkNotificationURLResponseBodyUserInfoKey";
+NSString *const PFInvalidSessionTokenNotification = @"PFInvalidSessionTokenNotification";

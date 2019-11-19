@@ -6,6 +6,10 @@
 //  Copyright © 2016 Flurry Inc. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "FlurryConsent.h"
+
+
 /*!
  *  @brief Enum for setting up log output level.
  *  @since 4.2.0
@@ -17,6 +21,9 @@ typedef enum {
     FlurryLogLevelDebug,            //Debug level, outputs critical and main log events
     FlurryLogLevelAll               //Highest level, outputs all log events
 } FlurryLogLevel;
+
+
+#if !TARGET_OS_WATCH
 
 
 @interface FlurrySessionBuilder : NSObject
@@ -95,7 +102,22 @@ typedef enum {
  */
 - (FlurrySessionBuilder*) withShowErrorInLog:(BOOL) value;
 
-#if !TARGET_OS_WATCH
+
+/*!
+ *  @brief Registers the consent information with the SDK. Consent information is used to determine if the gdpr laws are applicable
+ *  @since 8.5.0
+ *
+ *  Use this method to pass the consent information to the SDK
+ *
+ *  @note This method must be called prior to invoking #startSession:
+ *
+ *  @param consent  The consent information.
+ *                  @see (FlurryConsent#initWithGDPRScope:andConsentStrings:)
+ */
+
+- (FlurrySessionBuilder*) withConsent:(FlurryConsent*)consent;
+
+
 /*!
  *  @brief Enables implicit recording of Apple Store transactions.
  *  @since 7.9.0
@@ -120,9 +142,60 @@ typedef enum {
  */
 
 - (FlurrySessionBuilder*) withIncludeBackgroundSessionsInMetrics:(BOOL) value;
-#endif
+
+/*!
+ *  @brief Set the Session Origin for the Flurry session.
+ *  @since 10.0.0
+ *
+ *  This is an optional method that sets the session origin 
+ *
+ *  @param origin The session origin value.
+ */
+- (FlurrySessionBuilder*) withSessionOrigin:(NSString*) origin;
+
+/*!
+ *  @brief Set the Session Origin Version for the Flurry session.
+ *  @since 10.0.0
+ *
+ *  This is an optional method that sets the session origin version
+ *
+ *  @param version The session origin version value.
+ */
+- (FlurrySessionBuilder*) withSessionOriginVerion:(NSString*) version;
+
+/*!
+ *  @brief Set the Session OriginSets Paramters for the Flurry session.
+ *  @since 10.0.0
+ *
+ *  This is an optional method that sets the session origin parameters for origin sets (max key value pairs = 10)
+ *
+ *  @param parameters The session origin parameters.
+ */
+- (FlurrySessionBuilder*) withSessionOriginParameters:(NSDictionary*) parameters;
+
+/*!
+ *  @brief Set the Deeplink for the Flurry session.
+ *  @since 10.0.0
+ *
+ *  This is an optional method that sets the deeplink which started the app and Flurry Session
+ *
+ *  @param deeplink The session deeplink value.
+ */
+- (FlurrySessionBuilder*) withSessionDeeplink:(NSString*) deeplink;
+
+/*!
+ *  @brief Set the Session properties for the Flurry session.
+ *  @since 10.0.0
+ *
+ *  This is an optional method that sets the session properties
+ *
+ *  @param properties The session paramaters.
+ */
+- (FlurrySessionBuilder*) withSessionProperties:(NSDictionary*) properties;
+
 
 #if TARGET_OS_TV
+
 /*!
  *  @brief Sets the minimum duration (in minutes) before a partial session report is sent to Flurry.
  *  @since 7.7.0
@@ -132,7 +205,7 @@ typedef enum {
  *
  *  @note This method must be called prior to invoking #startSession:.
  *
- *  @param duration The period after which a partial session report is sent to Flurry.
+ *  @param value The period after which a partial session report is sent to Flurry.
  */
 - (FlurrySessionBuilder*) withTVSessionReportingInterval:(NSInteger) value;
 
@@ -145,9 +218,11 @@ typedef enum {
  *
  *  @note This method must be called prior to invoking #startSession:.
  *
- *  @param  count The number of events after which partial session report is sent to Flurry.
+ *  @param value The number of events after which partial session report is sent to Flurry.
  */
 - (FlurrySessionBuilder*) withTVEventCountThreshold:(NSInteger) value;
 #endif
 
 @end
+
+#endif

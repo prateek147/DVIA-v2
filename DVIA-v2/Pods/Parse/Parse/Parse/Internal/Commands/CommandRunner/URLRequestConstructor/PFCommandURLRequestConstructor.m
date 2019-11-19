@@ -51,6 +51,12 @@
                                                         path:command.httpPath
                                                        query:nil];
         NSDictionary *headers = task.result;
+        NSURLSessionConfiguration *configuration = Parse._currentManager.configuration.URLSessionConfiguration;
+        if (configuration && [configuration.HTTPAdditionalHeaders count]) {
+            NSMutableDictionary *sessionConfigurationHeaders = [configuration.HTTPAdditionalHeaders mutableCopy];
+            [sessionConfigurationHeaders addEntriesFromDictionary:headers];
+            headers = sessionConfigurationHeaders;
+        }
 
         NSString *requestMethod = command.httpMethod;
         NSDictionary *requestParameters = nil;
@@ -71,7 +77,9 @@
             } else {
                 parameters = command.parameters;
             }
-            requestParameters = [[PFPointerObjectEncoder objectEncoder] encodeObject:parameters];
+            NSError *error = nil;
+            requestParameters = [[PFPointerObjectEncoder objectEncoder] encodeObject:parameters error:&error];
+            PFPreconditionReturnFailedTask(requestParameters, error);
         }
 
         return [PFHTTPURLRequestConstructor urlRequestWithURL:url

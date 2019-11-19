@@ -3,7 +3,7 @@
 //  Flurry iOS Analytics Agent
 //
 //  Copyright 2016 Flurry, Inc. All rights reserved.
-//	
+//
 //	Methods in this header file are for use with Flurry Analytics
 
 #import <UIKit/UIKit.h>
@@ -43,9 +43,9 @@ typedef enum {
     
 }FlurrySyndicationEvent;
 
-extern NSString* const kSyndicationiOSDeepLink;
-extern NSString* const kSyndicationAndroidDeepLink;
-extern NSString* const kSyndicationWebDeepLink;
+extern NSString* _Nonnull const kSyndicationiOSDeepLink;
+extern NSString* _Nonnull const kSyndicationAndroidDeepLink;
+extern NSString* _Nonnull const kSyndicationWebDeepLink;
 
 
 typedef enum {
@@ -55,6 +55,7 @@ typedef enum {
     FlurryTransactionRecodingDisabled
 } FlurryTransactionRecordStatus;
 
+#if !TARGET_OS_WATCH
 
 /*!
  *  @brief Provides all available delegates for receiving callbacks related to Flurry analytics.
@@ -80,8 +81,10 @@ typedef enum {
  *  @see Flurry#startSession for details on session.
  *
  *  @param info A dictionary of session information: sessionID, apiKey
+ *  @note By default the callback is received on the global_queue with default priority. Optionally users can choose to receive on a specific queue by using
+ * + (void)setDelegate:(nonnull id<FlurryDelegate>)delegate withCallbackQueue:(dispatch_queue_t)flurryCallbackQueue;
  */
-- (void)flurrySessionDidCreateWithInfo:(NSDictionary*)info;
+- (void)flurrySessionDidCreateWithInfo:(nonnull NSDictionary*)info;
 
 @end
 
@@ -103,62 +106,12 @@ typedef enum {
 @interface Flurry : NSObject {
 }
 
+#pragma mark - Pre-Session Calls
+
 /** @name Pre-Session Calls
  *  Optional sdk settings that should be called before start session. 
  */
 //@{
-
-/*!
- *  @brief Explicitly specifies the App Version that Flurry will use to group Analytics data.
- *  @since 2.7
- *
- *  @deprecated since 7.7.0, please use FlurrySessionBuilder in place of calling this API.
- *  This method will be removed in a future version of the SDK.
- *
- *  This is an optional method that overrides the App Version Flurry uses for reporting. Flurry will
- *  use the CFBundleVersion in your info.plist file when this method is not invoked.
- *
- *  @note There is a maximum of 605 versions allowed for a single app. \n
- *  This method must be called prior to invoking #startSession:.
- *
- *  @param version The custom version name.
- */
-+ (void)setAppVersion:(NSString*) version __attribute__ ((deprecated));
-
-
-#if TARGET_OS_TV
-/*!
- *  @brief Sets the minimum number of events before a partial session report is sent to Flurry.
- *  @since 1.0.0
- *
- *  @deprecated since 7.7.0, please use FlurrySessionBuilder in place of calling this API.
- *  This method will be removed in a future version of the SDK.
- *
- *  This is an optional method that sets the minimum number of events before a partial session report is sent to Flurry.
- *  The acceptable values are between 5 and 50.
- *
- *  @note This method must be called prior to invoking #startSession:.
- *
- *  @param  count The number of events after which partial session report is sent to Flurry.
- */
-+ (void)setTVEventFlushCount:(short)count __attribute__ ((deprecated));
-
-/*!
- *  @brief Sets the minimum duration (in minutes) before a partial session report is sent to Flurry.
- *  @since 1.0.0
- *
- *  @deprecated since 7.7.0, please use FlurrySessionBuilder in place of calling this API.
- *  This method will be removed in a future version of the SDK.
- *
- *  This is an optional method that sets the minimum duration (in minutes) before a partial session report is sent to Flurry.
- *  The acceptable values are between 5 and 60 minutes.
- *
- *  @note This method must be called prior to invoking #startSession:.
- *
- *  @param duration The period after which a partial session report is sent to Flurry.
- */
-+ (void)setTVSessionReportingInterval:(short)duration __attribute__ ((deprecated));
-#endif
 
 /*!
  *  @brief Retrieves the Flurry Agent Build Version.
@@ -173,7 +126,7 @@ typedef enum {
  *  @return The agent version of the Flurry SDK.
  *
  */
-+ (NSString *)getFlurryAgentVersion;
++ (nonnull NSString *)getFlurryAgentVersion;
 
 /*!
  *  @brief Displays an exception in the debug log if thrown during a Session.
@@ -196,71 +149,66 @@ typedef enum {
 
 /*!
  *  @brief Generates debug logs to console.
- *  @since 2.7
- *
- *  @deprecated since 7.7.0, please use setLogLevel or FlurrySessionBuilder in place of calling this API.
- *  This method will be removed in a future version of the SDK.
- *
- *  This is an optional method that displays debug information related to the Flurry SDK.
- *  display information to the console. The default setting for this method is @c NO 
- *  which sets the log level to @c FlurryLogLevelCriticalOnly.
- *  When set to @c YES the debug log level is set to @c FlurryLogLevelDebug
- *
- *  @param value @c YES to show debug logs, @c NO to omit debug logs.
- *
- */
-+ (void)setDebugLogEnabled:(BOOL)value __attribute__ ((deprecated));
-
-/*!
- *  @brief Generates debug logs to console.
  *  @since 4.2.2
  *
  *  This is an optional method that displays debug information related to the Flurry SDK.
  *  display information to the console. The default setting for this method is @c FlurryLogLevelCriticalOnly.
  *
- *  @note The log level can be changed at any point in the execution of your application and 
+ *  @note The log level can be changed at any point in the execution of your application and
  *  the level that is set will take effect for SDK activity after this call.
  *
  *  @param value Log level
  *
  */
 + (void)setLogLevel:(FlurryLogLevel)value;
-
-/*!
- *  @brief Set the timeout for expiring a Flurry session.
- *  @since 2.7
- *
- *  @deprecated since 7.7.0, please use FlurrySessionBuilder in place of calling this API.
- *  This method will be removed in a future version of the SDK.
- * 
- *  This is an optional method that sets the time the app may be in the background before 
- *  starting a new session upon resume.  The default value for the session timeout is 10 
- *  seconds in the background.
- * 
- *  @note This method must be called prior to invoking #startSession:.
- * 
- *  @param seconds The time in seconds to set the session timeout to.
- */
-+ (void)setSessionContinueSeconds:(int)seconds __attribute__ ((deprecated));
-
-
-#if !TARGET_OS_TV
-/*!
- *  @brief Enable automatic collection of crash reports.
- *  @since 4.1
- *  @deprecated since 7.7.0, please use FlurrySessionBuilder in place of calling this API.
- *
- *  This is an optional method that collects crash reports when enabled. The
- *  default value is @c NO.
- *
- *  @note This method must be called prior to invoking #startSession:.
- *
- *  @param value @c YES to enable collection of crash reports.
- */
-+ (void)setCrashReportingEnabled:(BOOL)value __attribute__ ((deprecated));
-#endif
-
 //@}
+
+
+
+#pragma mark - Flurry Delegate setters
+
+/*!
+ *  @brief Set Flurry delegate for callback on session creation.
+ *  @since 6.3.0
+ *
+ * @code
+ *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+ {
+ // Optional Flurry startup methods
+ // If self implements protocol, FlurryDelegate
+ [Flurry setDelegate:self];
+ // ....
+ }
+ * @endcode
+ *
+ 
+ */
++ (void)setDelegate:(nonnull id<FlurryDelegate>)delegate;
+
+/*!
+ *  @brief Set Flurry delegate for callback on session creation with a callback queue.
+ *  @since 8.4.4
+ *
+ * @code
+ *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+ {
+ // Optional Flurry startup methods
+ // If self implements protocol, FlurryDelegate
+ [Flurry setDelegate:self withCallbackQueue:queue];
+ // ....
+ }
+ * @endcode
+ *
+ */
++ (void)setDelegate:(nonnull id<FlurryDelegate>)delegate withCallbackQueue:(nonnull dispatch_queue_t)flurryCallbackQueue;
+
+#pragma mark - start session APIs'
+
+/** @name startSession APIs'
+ *  API to start session by passing API key, optionally passing launchOptions and/or customizing the session settings/options
+ *  Only one of the API must be called to start the session
+ */
+//@{
 
 /*!
  *  @brief Start a Flurry session for the project denoted by @c apiKey.
@@ -269,16 +217,16 @@ typedef enum {
  *  This method serves as the entry point to Flurry Analytics collection.  It must be
  *  called in the scope of @c applicationDidFinishLaunching.  The session will continue 
  *  for the period the app is in the foreground until your app is backgrounded for the 
- *  time specified in #setSessionContinueSeconds:. If the app is resumed in that period
+ *  time specified in #withSessionContinueSeconds:. If the app is resumed in that period
  *  the session will continue, otherwise a new session will begin.
  *
- *  Crash reporting will not be enabled. See #setCrashReportingEnabled: for
+ *  Crash reporting will not be enabled. See #withCrashReporting: in FlurrySessionBuilder for
  *  more information.
  * 
  *  @note If testing on a simulator, please be sure to send App to background via home
  *  button. Flurry depends on the iOS lifecycle to be complete for full reporting.
  * 
- * @see #setSessionContinueSeconds: for details on setting a custom session timeout.
+ * @see #withSessionContinueSeconds: for details on setting a custom session timeout in FlurrySessionBuilder.
  *
  * @code
  *  - (void)applicationDidFinishLaunching:(UIApplication *)application 
@@ -292,24 +240,27 @@ typedef enum {
  * @param apiKey The API key for this project.
  */
 
-+ (void)startSession:(NSString *)apiKey;
++ (void)startSession:(nonnull NSString *)apiKey;
 
 
 /*!
- *  @brief Start a Flurry session for the project denoted by @c apiKey.
+ *  @brief Start a Flurry session for the project denoted by @c apiKey. Gather more information by passing in the launchOptions.
  *  @since 4.0.8
  *
- *  This method serves as the entry point to Flurry Analytics collection.  It must be
+ *  This method overloads on the #startSession: and serves as the entry point to Flurry Analytics collection.  It must be
  *  called in the scope of @c applicationDidFinishLaunching passing in the launchOptions param.
  *  The session will continue
  *  for the period the app is in the foreground until your app is backgrounded for the
- *  time specified in #setSessionContinueSeconds:. If the app is resumed in that period
+ *  time specified in #withSessionContinueSeconds:. If the app is resumed in that period
  *  the session will continue, otherwise a new session will begin.
+ *
+ *  Crash reporting will not be enabled. See #withCrashReporting: in FlurrySessionBuilder for
+ *  more information.
  *
  *  @note If testing on a simulator, please be sure to send App to background via home
  *  button. Flurry depends on the iOS lifecycle to be complete for full reporting.
  *
- * @see #setSessionContinueSeconds: for details on setting a custom session timeout.
+ * @see #withSessionContinueSeconds: for details on setting a custom session timeout in FlurrySessionBuilder.
  *
  * @code
  *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -324,24 +275,26 @@ typedef enum {
  * @param options passed launchOptions from the applicatin's didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
  
  */
-+ (void) startSession:(NSString *)apiKey withOptions:(id)options;
++ (void) startSession:(nonnull NSString *)apiKey withOptions:(nullable id)options;
 
 
 /*!
- *  @brief Start a Flurry session for the project denoted by @c apiKey.
+ *  @brief Start a Flurry session for the project denoted by @c apiKey by specifying the desired session construction options.
+ *  Gather more information by passing in the launchOptions.
+ *
  *  @since 7.7.0
  *
- *  This method serves as the entry point to Flurry Analytics collection.  It must be
+ *  This method overloads on the #startSession:withOptions: and serves as the entry point to Flurry Analytics collection.  It must be
  *  called in the scope of @c applicationDidFinishLaunching passing in the launchOptions param.
  *  The session will continue
  *  for the period the app is in the foreground until your app is backgrounded for the
- *  time specified in #setSessionContinueSeconds:. If the app is resumed in that period
+ *  time specified in #withSessionContinueSeconds:. If the app is resumed in that period
  *  the session will continue, otherwise a new session will begin.
  *
  *  @note If testing on a simulator, please be sure to send App to background via home
  *  button. Flurry depends on the iOS lifecycle to be complete for full reporting.
  *
- * @see #setSessionContinueSeconds: for details on setting a custom session timeout.
+ * @see #withSessionContinueSeconds: for details on setting a custom session timeout in FlurrySessionBuilder.
  *
  * @code
  *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -362,24 +315,24 @@ typedef enum {
  * @param sessionBuilder pass in the session builder object to specify that session construction options
  
  */
-+ (void) startSession:(NSString *)apiKey withOptions:(id)options withSessionBuilder:(FlurrySessionBuilder*) sessionBuilder;
++ (void) startSession:(nonnull NSString *)apiKey withOptions:(nullable id)options withSessionBuilder:(nullable FlurrySessionBuilder*) sessionBuilder;
 
 
 /*!
- *  @brief Start a Flurry session for the project denoted by @c apiKey.
+ *  @brief Start a Flurry session for the project denoted by @c apiKey by specifying the desired session construction options.
  *  @since 7.7.0
  *
- *  This method serves as the entry point to Flurry Analytics collection.  It must be
- *  called in the scope of @c applicationDidFinishLaunching passing in the launchOptions param.
+ *  This method overloads on the #startSession: and serves as the entry point to Flurry Analytics collection. It must be
+ *  called in the scope of @c applicationDidFinishLaunching.
  *  The session will continue
  *  for the period the app is in the foreground until your app is backgrounded for the
- *  time specified in #setSessionContinueSeconds:. If the app is resumed in that period
+ *  time specified in #withSessionContinueSeconds:. If the app is resumed in that period
  *  the session will continue, otherwise a new session will begin.
  *
  *  @note If testing on a simulator, please be sure to send App to background via home
  *  button. Flurry depends on the iOS lifecycle to be complete for full reporting.
  *
- * @see #setSessionContinueSeconds: for details on setting a custom session timeout.
+ * @see #withSessionContinueSeconds: for details on setting a custom session timeout in FlurrySessionBuilder.
  *
  * @code
  *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -398,7 +351,10 @@ typedef enum {
  * @param apiKey The API key for this project.
  * @param sessionBuilder pass in the session builder object to specify that session construction options
  */
-+ (void) startSession:(NSString *)apiKey withSessionBuilder:(FlurrySessionBuilder *)sessionBuilder;
++ (void) startSession:(nonnull NSString *)apiKey withSessionBuilder:(nullable FlurrySessionBuilder *)sessionBuilder;
+//@}
+
+#pragma mark - Session Details
 
 /*!
  *  @brief Returns true if a session currently exists and is active.
@@ -431,56 +387,190 @@ typedef enum {
  *
  
  */
-+ (NSString*)getSessionID;
++ (nonnull NSString*)getSessionID;
 
-
-/*!
- *  @brief Set Flurry delegate for callback on session creation.
- *  @since 6.3.0
- *
- * @code
- *  - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-    {
-        // Optional Flurry startup methods
-        // If self implements protocol, FlurryDelegate
-        [Flurry setDelegate:self];
-        // ....
-    }
- * @endcode
- *
- 
- */
-+ (void)setDelegate:(id<FlurryDelegate>)delegate;
-
+#pragma mark - Manual session pausing
 
 #if !TARGET_OS_TV
 /*!
  *  @brief Pauses a Flurry session left running in background.
  *  @since 4.2.2
  *
- *  This method should be used in case of #setBackgroundSessionEnabled: set to YES. It can be
- *  called when application finished all background tasks (such as playing music) to pause session.
+ *  This method can be called when application finished all background tasks (such as playing music) to pause session.
  *
- * @see #setBackgroundSessionEnabled: for details on setting a custom behaviour on resigning activity.
- *
- * @code
+ *  @code
  *  - (void)allBackgroundTasksFinished
     {
         // ....
         [Flurry pauseBackgroundSession];
         // ....
     }
- * @endcode
+ *  @endcode
  *
  */
 + (void)pauseBackgroundSession;
 #endif
 
+#pragma mark - User Info Setters and Getters
+
+/** @name User Info
+ *  Methods to set user information.
+ */
+//@{
+
+/*!
+ *  @brief Assign a unique id for a user in your app.
+ *  @since 2.7
+ *
+ *  @note Please be sure not to use this method to pass any private or confidential information
+ *  about the user.
+ *
+ *  @param userID The app id for a user.
+ */
++ (void)setUserID:(nullable NSString *)userID;
+
+/*!
+ *  @brief Set your user's age in years.
+ *  @since 2.7
+ *
+ *  Use this method to capture the age of your user. Only use this method if you collect this
+ *  information explictly from your user (i.e. - there is no need to set a default value).
+ *
+ *  @note The age is aggregated across all users of your app and not available on a per user
+ *  basis.
+ *
+ *  @param age Reported age of user.
+ *
+ */
++ (void)setAge:(int)age;
+
+/*!
+ *  @brief Set your user's gender.
+ *  @since 2.7
+ *
+ *  Use this method to capture the gender of your user. Only use this method if you collect this
+ *  information explictly from your user (i.e. - there is no need to set a default value). Allowable
+ *  values are @c @"m" or @c @"f"
+ *
+ *  @note The gender is aggregated across all users of your app and not available on a per user
+ *  basis.
+ *
+ *  @param gender Reported gender of user.
+ *
+ */
++ (void)setGender:(nonnull NSString *)gender;    // user's gender m or f
+
+//@}
+
+/** @name Location Reporting
+ *  Opt-out Methods for setting location information.
+ */
+//@{
+/*!
+ *  @brief Turn on/off location information of the session (default is on).
+ *  @since 8.4.0
+ *
+ *  Use CLLocationManager to start the location tracking of the session. Flurry does not
+ *  prompt users for location permission, we fetch the available location in device daemon.
+ *
+ *  @note Only the last location in cache is captured per session. \n
+ *  Regardless of accuracy specified, the Flurry SDK will only report location at city level or higher. \n
+ *  Location is aggregated across all users of your app and not available on a per user basis. \n
+ *  This information should only be captured if it is germaine to the use of your app.
+ *
+ *  @code
+ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+ [locationManager startUpdatingLocation];
+ *  @endcode
+ *
+ *  It is on by default. After starting the location manager, you can turn off
+ *  opt-out location tracking by calling this method.
+ *
+ *  @code
+ [Flurry  trackPreciseLocation:NO];
+ *  @endcode
+ *  @param state The boolean to switch on/off for location tracking
+ *  @return a boolean, if the state is YES, it tests device/app permission. If permission
+ *   is granted, it returns NO. If permission is valid, it returns YES. If the
+ *   state is NO, it always returns NO.
+ */
++ (BOOL)trackPreciseLocation:(BOOL)state;
+
+//@}
+
+/** @name Session Reporting Calls
+ *  Optional methods that can be called at any point to control session reporting.
+ */
+//@{
+
+/*!
+ *  @brief Set session to report when app closes.
+ *  @since 2.7
+ *  @deprecated since 10.0.2.
+ *
+ *  Use this method report session data when the app is closed. The default value is @c YES.
+ *
+ *  @note This method is rarely invoked in iOS >= 3.2 due to the updated iOS lifecycle.
+ *
+ *  @see #setSessionReportsOnPauseEnabled:
+ *
+ *  @param sendSessionReportsOnClose YES to send on close, NO to omit reporting on close.
+ *
+ */
++ (void)setSessionReportsOnCloseEnabled:(BOOL)sendSessionReportsOnClose __attribute__ ((deprecated));
+
+/*!
+ *  @brief Set session to report when app is sent to the background.
+ *  @since 2.7
+ *  @deprecated since 10.0.2.
+ *
+ *  Use this method report session data when the app is paused. The default value is @c YES.
+ *
+ *  @param setSessionReportsOnPauseEnabled YES to send on pause, NO to omit reporting on pause.
+ *
+ */
++ (void)setSessionReportsOnPauseEnabled:(BOOL)setSessionReportsOnPauseEnabled __attribute__ ((deprecated));
+
+/*!
+ *  @brief Enables implicit recording of Apple Store transactions.
+ *  @since 7.9.0
+ *
+ *  This method needs to be called before any transaction is finialized.
+ *  @note: Needs a 'required' dependency on StoreKit for this API to function correctly.
+ *
+ *  @param value YES to enable transaction logging, NO to stop transaction logging.
+ *
+ */
++ (void) setIAPReportingEnabled:(BOOL)value;
+
+
+#pragma mark - Add sessionOrigin, originAttributes and sessionProperties
+
+/*!
+ *  @brief Adds an session origin attached to each session specified by @c sessionOriginName.
+ *  @since 6.5.0
+ *
+ *  This method allows you to specify session origin for each session. This is different than #addOrigin:withVersion: (originAttributes) which is used for third party
+ *  wrappers after every session start.
+ *
+ *  @code
+ *  - (void)interestingMethod
+ {
+ // ... after calling startSession
+ [Flurry addSessionOrigin:@"facebuk"];
+ // more code ...
+ }
+ *  @endcode
+ *
+ *  @param sessionOriginName    Name of the origin.
+ */
++ (void)addSessionOrigin:(nonnull NSString *)sessionOriginName;
+
 /*!
  *  @brief Adds an session origin and deep link attached to each session specified by @c sessionOriginName and  @c deepLink.
  *  @since 6.5.0
  *
- *  This method allows you to specify session origin and deep link for each session. This is different than addOrigin which is used for third party
+ *  This method allows you to specify session origin and deep link for each session. This is different than addOrigin:withVersion: (originAttributes) which is used for third party
  *  wrappers after every session start.
  *
  *
@@ -488,7 +578,7 @@ typedef enum {
  *  - (void)interestingMethod
     {
         // ... after calling startSession
-        [Flurry addSessionOrigin:@"facebuk"];
+        [Flurry addSessionOrigin:@"facebuk" withDeepLink:@"https://www.facebuk.com/xyz/"];
         // more code ...
     }
  *  @endcode
@@ -496,50 +586,39 @@ typedef enum {
  *  @param sessionOriginName    Name of the origin.
  *  @param deepLink             Url of the deep Link.
  */
-+ (void)addSessionOrigin:(NSString *)sessionOriginName  withDeepLink:(NSString*)deepLink;
-
-/*!
- *  @brief Adds an session origin attached to each session specified by @c sessionOriginName.
- *  @since 6.5.0
- *
- *  This method allows you to specify session origin for each session. This is different than addOrigin which is used for third party
- *  wrappers after every session start.
- *
- *
- *  @code
- *  - (void)interestingMethod
-    {
-        // ... after calling startSession
-        [Flurry addSessionOrigin:@"facebuk"];
-        // more code ...
-    }
- *  @endcode
- *
- *  @param sessionOriginName    Name of the origin.
- */
-+ (void)addSessionOrigin:(NSString *)sessionOriginName;
++ (void)addSessionOrigin:(nonnull NSString *)sessionOriginName
+            withDeepLink:(nonnull NSString *)deepLink;
 
 /*!
  *  @brief Adds a custom parameterized session parameters @c parameters.
  *  @since 6.5.0
  *
- *  This method allows you to associate parameters with an session. Parameters
- *  are valuable as they allow you to store characteristics of an session.
+ *  This method allows you to associate parameters with a session. Parameters
+ *  are valuable as they allow you to store characteristics of a session.
  *
  *  @note You should not pass private or confidential information about your origin info in a
  *  custom origin. \n
- *  A maximum of 20 parameter names may be associated with any origin. Sending
- *  over 20 parameter names with a single origin will result in no parameters being logged
+ *  A maximum of 10 parameter names may be associated with any origin. Sending
+ *  over 10 parameter names with a single origin will result in no parameters being logged
  *  for that origin.
  *
  *
  *  @code
-
+ * - (void)interestingMethod
+    {
+        // ... after calling startSession
+         NSDictionary *params =
+         [NSDictionary dictionaryWithObjectsAndKeys:@"Session Info Item", // Parameter Value
+         @"Session Info Item Key", // Parameter Name
+         nil];
+         [Flurry sessionProperties:params];
+         // more code ...
+    }
  *  @endcode
  *
  *  @param parameters An immutable copy of map containing Name-Value pairs of parameters.
  */
-+ (void)sessionProperties:(NSDictionary *)parameters;
++ (void)sessionProperties:(nonnull NSDictionary *)parameters;
 
 /*!
  *  @brief Adds an SDK origin specified by @c originName and @c originVersion.
@@ -562,7 +641,8 @@ typedef enum {
  *  @param originName    Name of the origin.
  *  @param originVersion Version string of the origin wrapper
  */
-+ (void)addOrigin:(NSString *)originName withVersion:(NSString*)originVersion;
++ (void)addOrigin:(nonnull NSString *)originName
+      withVersion:(nonnull NSString *)originVersion;
 
 /*!
  *  @brief Adds a custom parameterized origin specified by @c originName with @c originVersion and @c parameters.
@@ -586,7 +666,7 @@ typedef enum {
             @"Origin Info Item Key", // Parameter Name
             nil];
         // ... after calling startSession
-        [Flurry addOrigin:@"Interesting_Wrapper" withVersion:@"1.0.0"];
+         [Flurry addOrigin:@"Interesting_Wrapper" withVersion:@"1.0.0" withParameters:params];
         // more code ...
     }
  *  @endcode
@@ -595,7 +675,11 @@ typedef enum {
  *  @param originVersion Version string of the origin wrapper
  *  @param parameters An immutable copy of map containing Name-Value pairs of parameters.
  */
-+ (void)addOrigin:(NSString *)originName withVersion:(NSString*)originVersion withParameters:(NSDictionary *)parameters;
++ (void)addOrigin:(nonnull NSString *)originName
+      withVersion:(nonnull NSString*)originVersion
+   withParameters:(nullable NSDictionary *)parameters;
+
+#pragma mark - Event Logging
 
 /** @name Event and Error Logging
  *  Methods for reporting custom events and errors during the session. 
@@ -638,7 +722,7 @@ typedef enum {
  *
  *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
  */
-+ (FlurryEventRecordStatus)logEvent:(NSString *)eventName;
++ (FlurryEventRecordStatus)logEvent:(nonnull NSString *)eventName;
 
 /*!
  *  @brief Records a custom parameterized event specified by @c eventName with @c parameters.
@@ -684,58 +768,76 @@ typedef enum {
  *
  *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
  */
-+ (FlurryEventRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
++ (FlurryEventRecordStatus)logEvent:(nonnull NSString *)eventName
+                     withParameters:(nullable NSDictionary *)parameters;
 
 /*!
- *  @brief Records an app exception. Commonly used to catch unhandled exceptions.
- *  @since 2.7
- * 
- *  This method captures an exception for reporting to Flurry. We recommend adding an uncaught
- *  exception listener to capture any exceptions that occur during usage that is not
- *  anticipated by your app.
- * 
- *  @see #logError:message:error: for details on capturing errors.
+ *  @brief Records a syndicated event specified by @c syndicationEvent.
+ *  @since 6.7.0
+ *
+ *  This method is excusively for use by the Tumblr App, calls from others app will be ignored.
  *
  *  @code
- *  - (void) uncaughtExceptionHandler(NSException *exception) 
-    {
-        [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
-    }
- 
-    - (void)applicationDidFinishLaunching:(UIApplication *)application
-    {
-        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-        [Flurry startSession:@"YOUR_API_KEY"];
-        // ....
-    }
+ - (void) reblogButtonHandler
+ {
+ [Flurry logEvent:Reblog syndicationID:@"123", parameters:nil];
+ // Perform
+ }
  *  @endcode
- * 
- *  @param errorID Name of the error.
- *  @param message The message to associate with the error.
- *  @param exception The exception object to report.
+ *
+ *  @param syndicationEvent syndication event.
+ *  @param syndicationID syndication ID that is associated with the event
+ *  @param parameters use this to pass in syndication parameters such as
+ *         kSyndicationiOSDeepLink, kSyndicationAndroidDeepLink, kSyndicationWebLinkDeepLink
+ *
+ *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
  */
-+ (void)logError:(NSString *)errorID message:(NSString *)message exception:(NSException *)exception;
++ (FlurryEventRecordStatus) logEvent:(FlurrySyndicationEvent) syndicationEvent
+                       syndicationID:(nonnull NSString *) syndicationID
+                          parameters:(nullable NSDictionary *) parameters;
 
 /*!
- *  @brief Records an app error.
- *  @since 2.7
- * 
- *  This method captures an error for reporting to Flurry.
- * 
- *  @see #logError:message:exception: for details on capturing exceptions.
+ *  @brief Records an Apple Store transaction.
+ *  @since 7.8.0
  *
- *  @code
- *  - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error 
-    {
-        [Flurry logError:@"WebView No Load" message:[error localizedDescription] error:error];
-    }
- *  @endcode
- * 
- *  @param errorID Name of the error.
- *  @param message The message to associate with the error.
- *  @param error The error object to report.
+ *  This method needs to be called before a transaction is finished and finalized.
+ *  @note: Needs a 'required' dependency on StoreKit for this API to function correctly.
+ *
+ *  @param transaction an SKPaymentTransaction.
+ *  @param statusCallback a callback gettign called when the status of  ID that is associated with the event
+ *
  */
-+ (void)logError:(NSString *)errorID message:(NSString *)message error:(NSError *)error;
++ (void) logPaymentTransaction:(nonnull SKPaymentTransaction *)transaction
+                statusCallback:(nullable void(^)(FlurryTransactionRecordStatus))statusCallback;
+
+/*!
+ *  @brief Records Apple store IAP transaction params and user defined transaction params manually.
+ *  @since 10.0.0
+ *
+ *  @param transactionId a string Id for this IAP transaction
+ *  @param productId a string Id for this IAP transaction product
+ *  @param quantity a string representation of quantity of items purchased
+ *  @param price a string representation of price of the item
+ *  @param currency a string representation of currency of the transaction
+ *  @param productName a string representation of product name
+ *  @param transactionState a string representation of 0 - 4 representing transaction state: 0:Purchasing, 1:Success, 2:Failure, 3:Restored, 4:Deferred
+ *  @param transactionParams a dictionary of user defined transaction params to record
+ *  @param statusCallback a callback gettign called when the status of ID that is associated with the event
+ *
+ */
+
++ (void) logPaymentTransactionParamsWithTransactionId:(nonnull NSString *)transactionId
+                                            productId:(nonnull NSString *)productId
+                                             quantity:(nonnull NSString *)quantity
+                                                price:(nonnull NSString *)price
+                                             currency:(nonnull NSString *)currency
+                                          productName:(nonnull NSString *)productName
+                                     transactionState:(nonnull NSString *)transactionState
+                                    userDefinedParams:(nullable NSDictionary*)transactionParams
+                                       statusCallback:(nullable void(^)(FlurryTransactionRecordStatus))statusCallback;
+
+
+#pragma mark - Timed Event Logging
 
 /*!
  *  @brief Records a timed event specified by @c eventName.
@@ -776,7 +878,7 @@ typedef enum {
  *
  *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
  */
-+ (FlurryEventRecordStatus)logEvent:(NSString *)eventName timed:(BOOL)timed;
++ (FlurryEventRecordStatus)logEvent:(nonnull NSString *)eventName timed:(BOOL)timed;
 
 /*!
  *  @brief Records a custom parameterized timed event specified by @c eventName with @c parameters.
@@ -825,7 +927,7 @@ typedef enum {
  *
  *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
  */
-+ (FlurryEventRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters timed:(BOOL)timed;
++ (FlurryEventRecordStatus)logEvent:(nonnull NSString *)eventName withParameters:(nullable NSDictionary *)parameters timed:(BOOL)timed;
 
 /*!
  *  @brief Ends a timed event specified by @c eventName and optionally updates parameters with @c parameters.
@@ -872,10 +974,145 @@ typedef enum {
  *  that can be easily understood by non-technical people in your business domain.
  *  @param parameters An immutable copy of map containing Name-Value pairs of parameters.
  */
-+ (void)endTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;	// non-nil parameters will update the parameters
++ (void)endTimedEvent:(nonnull NSString *)eventName withParameters:(nullable NSDictionary *)parameters;    // non-nil parameters will update the parameters
 
+#pragma mark - Exceptions Logging
+
+/*!
+ *  @brief Records an app exception. Commonly used to catch unhandled exceptions.
+ *  @since 2.7
+ *
+ *  This method captures an exception for reporting to Flurry. We recommend adding an uncaught
+ *  exception listener to capture any exceptions that occur during usage that is not
+ *  anticipated by your app.
+ *
+ *  @see #logError:message:error: for details on capturing errors.
+ *
+ *  @code
+ *  - (void) uncaughtExceptionHandler(NSException *exception)
+ {
+ [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
+ }
+ 
+ - (void)applicationDidFinishLaunching:(UIApplication *)application
+ {
+ NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+ [Flurry startSession:@"YOUR_API_KEY"];
+ // ....
+ }
+ *  @endcode
+ *
+ *  @param errorID Name of the error.
+ *  @param message The message to associate with the error.
+ *  @param exception The exception object to report.
+ */
++ (void)logError:(nonnull NSString *)errorID
+         message:(nullable NSString *)message
+       exception:(nullable NSException *)exception;
+
+/*!
+ *  @brief Records an app exception. Commonly used to catch unhandled exceptions.
+ *  @since 8.4.0
+ *
+ *  This method overloads on logError:message:exception: to capture an exception with parameters for reporting to Flurry. We recommend adding an uncaught
+ *  exception listener to capture any exceptions that occur during usage that is not
+ *  anticipated by your app.
+ *
+ *  @see #logError:message:error:withParameters: for details on capturing errors.
+ *
+ *  @code
+ *  - (void) uncaughtExceptionHandler(NSException *exception)
+ {
+ NSDictionary* crashParameters =  [NSDictionary dictionaryWithObjectsAndKeys:@"AppVersion", @"3.2", nil];
+ [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception withParameters:crashParameters];
+ }
+ 
+ - (void)applicationDidFinishLaunching:(UIApplication *)application
+ {
+ NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+ [Flurry startSession:@"YOUR_API_KEY"];
+ // ....
+ }
+ *  @endcode
+ *
+ *  @param errorID Name of the error.
+ *  @param message The message to associate with the error.
+ *  @param exception The exception object to report.
+ *  @param parameters Custom parameters associated with the exception
+ */
++ (void)logError:(nonnull NSString *)errorID
+         message:(nullable NSString *)message
+       exception:(nullable NSException *)exception
+  withParameters:(nullable NSDictionary*)parameters;
+
+#pragma mark - Error Logging
+
+/*!
+ *  @brief Records an app error for reporting to Flurry.
+ *  @since 2.7
+ *
+ *  @see #logError:message:exception: for details on capturing exceptions.
+ *
+ *  @code
+ *  - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+ {
+ [Flurry logError:@"WebView No Load" message:[error localizedDescription] error:error];
+ }
+ *  @endcode
+ *
+ *  @param errorID Name of the error.
+ *  @param message The message to associate with the error.
+ *  @param error The error object to report.
+ */
++ (void)logError:(nonnull NSString *)errorID
+         message:(nullable NSString *)message
+           error:(nullable NSError *)error;
+
+/*!
+ *  @brief Records an app error.
+ *  @since 8.4.0
+ *  This method overloads on logError:message:error: to capture an error for reporting to Flurry.
+ *
+ *  @see #logError:message:exception:withParameters: for details on capturing exceptions.
+ *
+ *  @code
+ *  - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+ {
+ [Flurry logError:@"WebView No Load" message:[error localizedDescription] error:error];
+ }
+ *  @endcode
+ *
+ *  @param errorID Name of the error.
+ *  @param message The message to associate with the error.
+ *  @param error The error object to report.
+ *  @param parameters Custom parameters associated with the error
+ */
++ (void)logError:(nonnull NSString *)errorID
+         message:(nullable NSString *)message
+           error:(nullable NSError *)error
+  withParameters:(nullable NSDictionary*)parameters;
+
+/*!
+ *  @brief Leave a breadcrumb.
+ *  @since 8.4.0
+ *  This method captures breadcrumbs of 250 characters. The last 207 recorded
+ *  breadcrumbs are included in crash and error logs.
+ *  Breadcrumbs are reset at every application launch.
+ *
+ *  @code
+ *  - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+ {
+ [Flurry leaveBreadcrumb:@"WebView not loading"];
+ }
+ *  @endcode
+ *
+ *  @param breadcrumb string.
+ *
+ */
++ (void)leaveBreadcrumb:(nonnull NSString*)breadcrumb;
 //@}
 
+#pragma mark - Page view methods
 
 #if !TARGET_OS_TV
 /** @name Page View Methods
@@ -884,16 +1121,12 @@ typedef enum {
 //@{
 
 /*!
- *  @deprecated
- *  @brief see +(void)logAllPageViewsForTarget:(id)target; for details
- *  @since 2.7
- *  This method does the same as +(void)logAllPageViewsForTarget:(id)target method and is left for backward compatibility
- */
-+ (void)logAllPageViews:(id)target __attribute__ ((deprecated));		
-/*!
  *  @brief Automatically track page views on a @c UINavigationController or @c UITabBarController.
  *  @since 4.3
- * 
+ *
+ *  @deprecated since 10.0.0.
+ *  This method will be removed in a future version of the SDK.
+ *
  *  This method increments the page view count for a session based on traversing a UINavigationController
  *  or UITabBarController. The page view count is only a counter for the number of transitions in your
  *  app. It does not associate a name with the page count. To associate a name with a count of occurences
@@ -912,11 +1145,14 @@ typedef enum {
  * 
  *  @param target The navigation or tab bar controller.
  */
-+ (void)logAllPageViewsForTarget:(id)target;
++ (void)logAllPageViewsForTarget:(nullable id)target __attribute__ ((deprecated));
 
 /*!
  *  @brief Stops logging page views on previously observed with logAllPageViewsForTarget: @c UINavigationController or @c UITabBarController.
  *  @since 4.3
+ *
+ *  @deprecated since 10.0.0.
+ *  This method will be removed in a future version of the SDK.
  * 
  *  Call this method before instance of @c UINavigationController or @c UITabBarController observed with logAllPageViewsForTarget: is released.
  *
@@ -931,11 +1167,14 @@ typedef enum {
  * 
  *  @param target The navigation or tab bar controller.
  */
-+ (void)stopLogPageViewsForTarget:(id)target;
++ (void)stopLogPageViewsForTarget:(nullable id)target __attribute__ ((deprecated));
 
 /*!
  *  @brief Explicitly track a page view during a session.
  *  @since 2.7
+ *
+ *  @deprecated since 10.0.0.
+ *  This method will be removed in a future version of the SDK.
  * 
  *  This method increments the page view count for a session when invoked. It does not associate a name
  *  with the page count. To associate a name with a count of occurences see #logEvent:.
@@ -951,270 +1190,12 @@ typedef enum {
  *  @endcode
  *
  */
-+ (void)logPageView;
++ (void)logPageView __attribute__ ((deprecated));
 
 //@}
 #endif
 
-
-
-/** @name User Info
- *  Methods to set user information. 
- */
-//@{
-
-/*!
- *  @brief Assign a unique id for a user in your app.
- *  @since 2.7
- * 
- *  @note Please be sure not to use this method to pass any private or confidential information
- *  about the user.
- *
- *  @param userID The app id for a user.
- */
-+ (void)setUserID:(NSString *)userID;
-
-/*!
- *  @brief Set your user's age in years.
- *  @since 2.7
- * 
- *  Use this method to capture the age of your user. Only use this method if you collect this
- *  information explictly from your user (i.e. - there is no need to set a default value).
- *
- *  @note The age is aggregated across all users of your app and not available on a per user
- *  basis.
- *
- *  @param age Reported age of user.
- *
- */
-+ (void)setAge:(int)age;
-
-/*!
- *  @brief Set your user's gender.
- *  @since 2.7
- * 
- *  Use this method to capture the gender of your user. Only use this method if you collect this
- *  information explictly from your user (i.e. - there is no need to set a default value). Allowable
- *  values are @c @"m" or @c @"f"
- *
- *  @note The gender is aggregated across all users of your app and not available on a per user
- *  basis.
- *
- *  @param gender Reported gender of user.
- *
- */
-+ (void)setGender:(NSString *)gender;	// user's gender m or f
-
-//@}
-
-/** @name Location Reporting
- *  Methods for setting location information. 
- */
-//@{
-/*!
- *  @brief Set the location of the session.
- *  @since 2.7
- * 
- *  Use information from the CLLocationManager to specify the location of the session. Flurry does not
- *  automatically track this information or include the CLLocation framework.
- *
- *  @note Only the last location entered is captured per session. \n
- *  Regardless of accuracy specified, the Flurry SDK will only report location at city level or higher. \n
- *  Location is aggregated across all users of your app and not available on a per user basis. \n
- *  This information should only be captured if it is germaine to the use of your app.
- *
- *  @code
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    [locationManager startUpdatingLocation];
- *  @endcode
- *
- *  After starting the location manager, you can set the location with Flurry. You can implement
- *  CLLocationManagerDelegate to be aware of when the location is updated. Below is an example 
- *  of how to use this method, after you have recieved a location update from the locationManager.
- *
- *  @code
-    CLLocation *location = locationManager.location;
-        [Flurry  setLatitude:location.coordinate.latitude
-                   longitude:location.coordinate.longitude
-          horizontalAccuracy:location.horizontalAccuracy
-            verticalAccuracy:location.verticalAccuracy];
- *  @endcode
- *  @param latitude The latitude.
- *  @param longitude The longitude.
- *  @param horizontalAccuracy The radius of uncertainty for the location in meters.
- *  @param verticalAccuracy The accuracy of the altitude value in meters.
- *
- */
-+ (void)setLatitude:(double)latitude longitude:(double)longitude horizontalAccuracy:(float)horizontalAccuracy verticalAccuracy:(float)verticalAccuracy __attribute__ ((deprecated));;
-
-
-//@}
-
-/** @name Location Reporting
- *  Opt-out Methods for setting location information.
- */
-//@{
-/*!
- *  @brief Turn on/off location information of the session (default is on).
- *  @since 8.4.0
- *
- *  Use CLLocationManager to start the location tracking of the session. Flurry does not
- *  prompt users for location permission, we fetch the available location in device daemon.
- *
- *  @note Only the last location in cache is captured per session. \n
- *  Regardless of accuracy specified, the Flurry SDK will only report location at city level or higher. \n
- *  Location is aggregated across all users of your app and not available on a per user basis. \n
- *  This information should only be captured if it is germaine to the use of your app.
- *
- *  @code
- CLLocationManager *locationManager = [[CLLocationManager alloc] init];
- [locationManager startUpdatingLocation];
- *  @endcode
- *
- *  It is on by default. After starting the location manager, you can turn off
- *  opt-out location tracking by calling this method.
- *
- *  @code
- [Flurry  trackPreciseLocation:NO];
- *  @endcode
- *  @param state The boolean to switch on/off for location tracking
- *  @return a boolean, if the state is YES, it tests device/app permission. If permission
- *   is granted, it returns NO. If permission is valid, it returns YES. If the
- *   state is NO, it always returns NO.
- */
-+ (BOOL)trackPreciseLocation:(BOOL)state;
-
-//@}
-
-/** @name Session Reporting Calls
- *  Optional methods that can be called at any point to control session reporting. 
- */
-//@{
-
-/*!
- *  @brief Set session to report when app closes.
- *  @since 2.7
- * 
- *  Use this method report session data when the app is closed. The default value is @c YES.
- *
- *  @note This method is rarely invoked in iOS >= 3.2 due to the updated iOS lifecycle.
- *
- *  @see #setSessionReportsOnPauseEnabled:
- *
- *  @param sendSessionReportsOnClose YES to send on close, NO to omit reporting on close.
- *
- */
-+ (void)setSessionReportsOnCloseEnabled:(BOOL)sendSessionReportsOnClose;
-
-/*!
- *  @brief Set session to report when app is sent to the background.
- *  @since 2.7
- * 
- *  Use this method report session data when the app is paused. The default value is @c YES.
- *
- *  @param setSessionReportsOnPauseEnabled YES to send on pause, NO to omit reporting on pause.
- *
- */
-+ (void)setSessionReportsOnPauseEnabled:(BOOL)setSessionReportsOnPauseEnabled;
-
-/*!
- *  @brief Set session to support background execution.
- *  @since 4.2.2
- *
- *  Use this method to enable reporting of errors and events when application is 
- *  running in backgorund (such applications have  UIBackgroundModes in Info.plist).
- *  You should call #pauseBackgroundSession when appropriate in background mode to 
- *  pause the session (for example when played song completed in background)
- *
- *  Default value is @c NO
- *
- *  @see #pauseBackgroundSession for details
- *
- *  @param setBackgroundSessionEnabled YES to enbale background support and 
- *  continue log events and errors for running session.
- */
-+ (void)setBackgroundSessionEnabled:(BOOL)setBackgroundSessionEnabled;
-
-/*!
- *  @brief Enable custom event logging.
- *  @since 2.7
- * 
- *  @deprecated since 7.9.0.
- *  This method will be removed in a future version of the SDK.
- *
- *  Use this method to allow the capture of custom events. The default value is @c YES.
- *
- *  @param value YES to enable event logging, NO to stop custom logging.
- *
- */
-+ (void)setEventLoggingEnabled:(BOOL)value __attribute__ ((deprecated));
-
-#if !TARGET_OS_TV
-/*!
- *  @brief Enables Flurry Pulse
- *  @since 6.3.0
- *
- *  @note: Please see https://developer.yahoo.com/flurry-pulse/ for more details
- *
- *  @param value YES to enable event logging, NO to stop custom logging.
- *
- */
-+ (void)setPulseEnabled:(BOOL)value;
-#endif
-
-
-/*!
- *  @brief Records a syndicated event specified by @c syndicationEvent.
- *  @since 6.7.0
- *
- *  This method is excusively for use by the Tumblr App, calls from others app will be ignored.
- *
- *  @code
-    - (void) reblogButtonHandler
-    {
-        [Flurry logEvent:Reblog syndicationID:@"123", parameters:nil];
-        // Perform
-    }
- *  @endcode
- *
- *  @param syndicationEvent syndication event.
- *  @param syndicationID syndication ID that is associated with the event
- *  @param parameters use this to pass in syndication parameters such as
- *         kSyndicationiOSDeepLink, kSyndicationAndroidDeepLink, kSyndicationWebLinkDeepLink
- *
- *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
- */
-+ (FlurryEventRecordStatus) logEvent:(FlurrySyndicationEvent) syndicationEvent syndicationID:(NSString*) syndicationID parameters:(NSDictionary*) parameters;
-
-#if !TARGET_OS_WATCH
-/*!
- *  @brief Records an Apple Store transaction.
- *  @since 7.8.0
- *
- *  This method needs to be called before a transaction is finished and finalized.
- *  @note: Needs a 'required' dependency on StoreKit for this API to function correctly.
- *
- *  @param transaction an SKPaymentTransaction.
- *  @param statusCallback a callback gettign called when the status of  ID that is associated with the event
- *
- */
-+ (void) logPaymentTransaction:(SKPaymentTransaction*)transaction statusCallback:(void(^)(FlurryTransactionRecordStatus))statusCallback;
-#endif
-
-#if !TARGET_OS_WATCH
-/*!
- *  @brief Enables implicit recording of Apple Store transactions.
- *  @since 7.9.0
- *
- *  This method needs to be called before any transaction is finialized.
- *  @note: Needs a 'required' dependency on StoreKit for this API to function correctly.
- *
- *  @param value YES to enable transaction logging, NO to stop transaction logging.
- *
- */
-+ (void) setIAPReportingEnabled:(BOOL)value;
-#endif
-
+#pragma mark - TVML JSContext
 
 #if TARGET_OS_TV
 /*!
@@ -1222,11 +1203,37 @@ typedef enum {
  *  @since 1.0.0
  *  
  *
- *  @param appController The TVApplicationController object
- *  @param jsContext The JavaScript context object passed in
+ *  appController The TVApplicationController object
+ *  jsContext The JavaScript context object passed in
  *
  *  This method is exclusively for use by the Client-Server TV apps. This method will internally register
  *  JavaScript APIs exposed on the TVJS domain with the Flurry SDK. The JavaScript methods available are:
+ *
+ *  Flurry.logEvent(eventId: string);
+ *  Flurry.logEvent(eventId: string, timed: boolean);
+ *  Flurry.logEvent(eventId: string, parameters: object);
+ *  Flurry.logEvent(eventId: string, parameters: object, timed: boolean);
+ *
+ *  Flurry.endTimedEvent(eventId: string);
+ *  Flurry.endTimedEvent(eventId: string, parameters: object);
+ *
+ *  Flurry.onError(errorId: string, message: string, errorClass: string);
+ *  Flurry.onError(errorId: string, message: string, errorClass: string, errorParams: object);
+ *
+ *  Flurry.setAge(age: number);
+ *  Flurry.setGender(gender: string);
+ *  Flurry.setUserId(userId: string);
+ *
+ *  Flurry.setSessionOrigin(originName: string, deepLink: string);
+ *  Flurry.addOrigin(originName: string, originVersion: string);
+ *  Flurry.addOrigin(originName: string, originVersion: string, originParameters: object);
+ *  Flurry.addSessionProperty(name: string, value: string);
+ *
+ *  Flurry.setIAPReportingEnabled(enableIAP: boolean);
+ *  Flurry.getVersions(): object;
+ *
+ *  Deprecated TVML JavaScript APIs:
+ *
  *  flurryLogEvent({String} eventName)
  *  flurryLogEvent({String} eventName, {object} params)
  *  flurryLogTimedEvent({String} eventName)
@@ -1241,7 +1248,6 @@ typedef enum {
  *  flurrySetUserID({String} userID)
  *  flurrySetGender({String} gender)
  *  flurrySetAge({Number} age)
- *  flurrySetLocation({Number} latitude, {Number} longitude, {Number} horizontalAccuracy, {Number} verticalAccuracy)
  *
  *  @code
  - (void)appController:(TVApplicationController *)appController evaluateAppJavaScriptInContext:(JSContext *)jsContext {
@@ -1252,8 +1258,23 @@ typedef enum {
  *  @param  jscontext JavaScript context passed in by the -appController:evaluateAppJavaScriptInContext method
  */
  
-+ (void)registerJSContextWithContext:(JSContext*)jscontext;
++ (void)registerJSContextWithContext:(JSContext * _Nonnull)jscontext;
 #endif
 
+#pragma mark - Privacy dashboard
+
+/*!
+ *  @brief Open privacy dashboard in Safari Browser async with a completion handler callback
+ *  @since 8.5.0
+ *
+ *  This method is used to open a web page of privacy dashboard in external browser for user to access and edit their data under the scope of GDPR, in the callback, you are able to check whether privacy dashboard is successfully opened, and apply fallback logics.
+ *  @note: Call this method after invoking #startSession:
+ *
+ *  @param completionHandler a callback getting called when SDK finishes the attempt to openURL the privacy dashboard, the success boolean provided for checks and fallbacks.
+ *
+ */
++ (void)openPrivacyDashboard:(nullable void(^)(BOOL success))completionHandler;
 
 @end
+
+#endif

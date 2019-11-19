@@ -82,16 +82,22 @@ static inline T *RLMDynamicCast(__unsafe_unretained id obj) {
     return nil;
 }
 
-template<typename T>
-static inline T RLMCoerceToNil(__unsafe_unretained T obj) {
+static inline id RLMCoerceToNil(__unsafe_unretained id obj) {
     if (static_cast<id>(obj) == NSNull.null) {
         return nil;
     }
     else if (__unsafe_unretained auto optional = RLMDynamicCast<RLMOptionalBase>(obj)) {
-        return RLMCoerceToNil(optional.underlyingValue);
+        return RLMCoerceToNil(RLMGetOptional(optional));
     }
     return obj;
 }
+
+template<typename T>
+static inline T RLMCoerceToNil(__unsafe_unretained T obj) {
+    return RLMCoerceToNil(static_cast<id>(obj));
+}
+
+id<NSFastEnumeration> RLMAsFastEnumeration(id obj);
 
 // String conversion utilities
 static inline NSString * RLMStringDataToNSString(realm::StringData stringData) {
@@ -171,3 +177,6 @@ id RLMMixedToObjc(realm::Mixed const& value);
 // Given a bundle identifier, return the base directory on the disk within which Realm database and support files should
 // be stored.
 NSString *RLMDefaultDirectoryForBundleIdentifier(NSString *bundleIdentifier);
+
+// Get a NSDateFormatter for ISO8601-formatted strings
+NSDateFormatter *RLMISO8601Formatter();

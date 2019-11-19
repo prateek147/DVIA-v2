@@ -75,7 +75,7 @@ extension SortDescriptor: Equatable {
     /// Returns whether the two sort descriptors are equal.
     public static func == (lhs: SortDescriptor, rhs: SortDescriptor) -> Bool {
         return lhs.keyPath == rhs.keyPath &&
-            lhs.ascending == lhs.ascending
+            lhs.ascending == rhs.ascending
     }
 }
 
@@ -112,14 +112,4 @@ extension SortDescriptor: ExpressibleByStringLiteral {
     public init(stringLiteral value: StringLiteralType) {
         self.init(keyPath: value)
     }
-}
-
-// MARK: Unavailable
-
-extension SortDescriptor {
-    @available(*, unavailable, renamed: "init(keyPath:ascending:)")
-    public init(property: String, ascending: Bool = true) { fatalError() }
-
-    @available(*, unavailable, renamed: "keyPath")
-    public var property: String { fatalError() }
 }

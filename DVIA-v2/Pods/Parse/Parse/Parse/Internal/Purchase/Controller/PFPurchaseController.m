@@ -20,7 +20,7 @@
 #import "PFConstants.h"
 #import "PFDecoder.h"
 #import "PFFileManager.h"
-#import "PFFile_Private.h"
+#import "PFFileObject_Private.h"
 #import "PFHTTPRequest.h"
 #import "PFMacros.h"
 #import "PFPaymentTransactionObserver.h"
@@ -78,10 +78,10 @@
         @strongify(self);
         Class requestClass = self.productsRequestClass ?: [SKProductsRequest class];
         SKProductsRequest *request = [[requestClass alloc] initWithProductIdentifiers:productIdentifiers];
-        _currentProductsRequestHandler = [[PFProductsRequestHandler alloc] initWithProductsRequest:request];
-        return [_currentProductsRequestHandler findProductsAsync];
+        self->_currentProductsRequestHandler = [[PFProductsRequestHandler alloc] initWithProductsRequest:request];
+        return [self->_currentProductsRequestHandler findProductsAsync];
     }] continueWithSuccessBlock:^id(BFTask *task) {
-        _currentProductsRequestHandler = nil;
+        self->_currentProductsRequestHandler = nil;
         return task;
     }];
 }
@@ -157,19 +157,20 @@
     }
 
     NSDictionary *params = [[PFEncoder objectEncoder] encodeObject:@{ @"receipt" : appStoreReceipt,
-                                                                      @"productIdentifier" : productIdentifier }];
+                                                                      @"productIdentifier" : productIdentifier } error:nil];
     PFRESTCommand *command = [PFRESTCommand commandWithHTTPPath:@"validate_purchase"
                                                      httpMethod:PFHTTPRequestMethodPOST
                                                      parameters:params
-                                                   sessionToken:sessionToken];
+                                                   sessionToken:sessionToken
+                                                          error:nil];
     BFTask *task = [self.dataSource.commandRunner runCommandAsync:command withOptions:PFCommandRunningOptionRetryIfFailed];
     @weakify(self);
     return [task continueWithSuccessBlock:^id(BFTask *task) {
         @strongify(self);
 
         PFCommandResult *result = task.result;
-        PFFile *file = [[PFDecoder objectDecoder] decodeObject:result.result];
-        if (![file isKindOfClass:[PFFile class]]) {
+        PFFileObject *file = [[PFDecoder objectDecoder] decodeObject:result.result];
+        if (![file isKindOfClass:[PFFileObject class]]) {
             return [BFTask taskWithError:[NSError errorWithDomain:PFParseErrorDomain
                                                              code:kPFErrorInvalidPurchaseReceipt
                                                          userInfo:result.result]];

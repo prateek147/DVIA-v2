@@ -371,12 +371,17 @@ public:
     /// \param encryption_key 32-byte key used to encrypt the database file,
     /// or nullptr to disable encryption.
     ///
+    /// \param version If different from 0, the new file will be a full fledged
+    /// realm file with free list and history info. The version of the commit
+    /// will be set to the value given here.
+    ///
     /// \throw util::File::AccessError If the file could not be
     /// opened. If the reason corresponds to one of the exception
     /// types that are derived from util::File::AccessError, the
     /// derived exception type is thrown. In particular,
     /// util::File::Exists will be thrown if the file exists already.
-    void write(const std::string& file, const char* encryption_key = nullptr) const;
+    void write(const std::string& file, const char* encryption_key = nullptr, uint64_t version = 0,
+               bool write_history = true) const;
 
     /// Write this database to a memory buffer.
     ///
@@ -509,6 +514,13 @@ public:
         return !(*this == g);
     }
 
+    /// Control of what to include when computing memory usage
+    enum SizeAggregateControl {
+        size_of_state = 1, ///< size of tables, indexes, toplevel array
+        size_of_history = 2, ///< size of the in-file history compartment
+        size_of_freelists = 4, ///< size of the freelists
+        size_of_all = 7
+    };
     /// Compute the sum of the sizes in number of bytes of all the array nodes
     /// that currently make up this group. When this group represents a snapshot
     /// in a Realm file (such as during a read transaction via a SharedGroup
@@ -517,13 +529,18 @@ public:
     ///
     /// If this group accessor is the detached state, this function returns
     /// zero.
-    size_t compute_aggregated_byte_size() const noexcept;
+    size_t compute_aggregated_byte_size(SizeAggregateControl ctrl = SizeAggregateControl::size_of_all) const noexcept;
+    /// Return the size taken up by the current snapshot. This is in contrast to
+    /// the number returned by SharedGroup::get_stats() which will return the
+    /// size of the last snapshot done in that SharedGroup. If the snapshots are
+    /// identical, the numbers will of course be equal.
+    size_t get_used_space() const noexcept;
 
     void verify() const;
 #ifdef REALM_DEBUG
     void print() const;
     void print_free() const;
-    MemStats stats();
+    MemStats get_stats();
     void enable_mem_diagnostics(bool enable = true)
     {
         m_alloc.enable_debug(enable);
@@ -679,9 +696,8 @@ private:
 
     void mark_all_table_accessors() noexcept;
 
-    void write(const std::string& file, const char* encryption_key, uint_fast64_t version_number) const;
-    void write(util::File& file, const char* encryption_key, uint_fast64_t version_number) const;
-    void write(std::ostream&, bool pad, uint_fast64_t version_numer) const;
+    void write(util::File& file, const char* encryption_key, uint_fast64_t version_number, bool write_history) const;
+    void write(std::ostream&, bool pad, uint_fast64_t version_numer, bool write_history) const;
 
     Replication* get_replication() const noexcept;
     void set_replication(Replication*) noexcept;
@@ -781,6 +797,7 @@ private:
     void set_history_schema_version(int version);
     void set_history_parent(Array& history_root) noexcept;
     void prepare_history_parent(Array& history_root, int history_type, int history_schema_version);
+    static void validate_top_array(const Array& arr, const SlabAlloc& alloc);
 
     friend class Table;
     friend class GroupWriter;
@@ -1119,8 +1136,15 @@ inline void Group::set_history_parent(Array& history_root) noexcept
 
 class Group::TableWriter {
 public:
+    struct HistoryInfo {
+        ref_type ref = 0;
+        int type = 0;
+        int version = 0;
+    };
+
     virtual ref_type write_names(_impl::OutputStream&) = 0;
     virtual ref_type write_tables(_impl::OutputStream&) = 0;
+    virtual HistoryInfo write_history(_impl::OutputStream&) = 0;
     virtual ~TableWriter() noexcept
     {
     }

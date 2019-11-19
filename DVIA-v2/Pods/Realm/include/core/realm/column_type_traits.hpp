@@ -99,6 +99,13 @@ struct ColumnTypeTraits<OldDateTime> : ColumnTypeTraits<int64_t> {
 };
 
 template <>
+struct ColumnTypeTraits<Timestamp> {
+    using column_type = TimestampColumn;
+    static const DataType id = type_Timestamp;
+    static const ColumnType column_id = col_type_Timestamp;
+};
+
+template <>
 struct ColumnTypeTraits<util::Optional<OldDateTime>> : ColumnTypeTraits<util::Optional<int64_t>> {
     static const DataType id = type_OldDateTime;
     static const ColumnType column_id = col_type_OldDateTime;
@@ -106,6 +113,7 @@ struct ColumnTypeTraits<util::Optional<OldDateTime>> : ColumnTypeTraits<util::Op
 
 template <>
 struct ColumnTypeTraits<StringData> {
+    using column_type = StringColumn;
     static const DataType id = type_String;
     static const ColumnType column_id = col_type_String;
 };

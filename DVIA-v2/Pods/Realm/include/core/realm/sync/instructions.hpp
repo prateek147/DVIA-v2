@@ -44,7 +44,7 @@ namespace sync {
 // protocol-breaking change!
 #define REALM_FOR_EACH_INSTRUCTION_TYPE(X) \
     X(SelectTable) \
-    X(SelectContainer) \
+    X(SelectField) \
     X(AddTable) \
     X(EraseTable) \
     X(CreateObject) \
@@ -56,14 +56,21 @@ namespace sync {
     X(ClearTable) \
     X(AddColumn) \
     X(EraseColumn) \
-    X(ContainerSet) \
-    X(ContainerInsert) \
-    X(ContainerMove) \
-    X(ContainerSwap) \
-    X(ContainerErase) \
-    X(ContainerClear) \
+    X(ArraySet) \
+    X(ArrayInsert) \
+    X(ArrayMove) \
+    X(ArraySwap) \
+    X(ArrayErase) \
+    X(ArrayClear) \
 
-enum class ContainerType { none=0, links=1, array=2, dict=3 };
+
+enum class ContainerType {
+    None = 0,
+    Reserved0 = 1,
+    Array = 2,
+    Set = 3,
+    Dictionary = 4,
+};
 
 struct Instruction {
     // Base classes for instructions with common fields. They enable the merge
@@ -88,28 +95,31 @@ struct Instruction {
     template <class T> struct GetInstructionType;
 
     Instruction() {}
-    template <class T>
-    Instruction(T instr);
+    template<class T> Instruction(T instr);
 
-    static const size_t max_instruction_size = 63;
-    std::aligned_storage_t<max_instruction_size, 8> m_storage;
+    static const size_t max_instruction_size = 64;
+    std::aligned_storage_t<max_instruction_size> m_storage;
     Type type;
 
-    template <class F>
-    void visit(F&& lambda);
-    template <class F>
-    void visit(F&& lambda) const;
+    template<class F> auto visit(F&& lambda);
+    template<class F> auto visit(F&& lambda) const;
 
-    template <class T> T& get_as()
+    template<class T> T& get_as()
     {
         REALM_ASSERT(type == GetInstructionType<T>::value);
         return *reinterpret_cast<T*>(&m_storage);
     }
 
-    template <class T>
-    const T& get_as() const
+    template<class T> const T& get_as() const
     {
         return const_cast<Instruction*>(this)->template get_as<T>();
+    }
+
+    bool operator==(const Instruction& other) const noexcept;
+
+    bool operator!=(const Instruction& other) const noexcept
+    {
+        return !(*this == other);
     }
 };
 
@@ -124,20 +134,18 @@ static constexpr uint8_t InstrTypeMultiInstruction = 0xff;
 
 struct StringBufferRange {
     uint32_t offset, size;
-
-    bool operator==(const StringBufferRange&) = delete;
-    bool operator!=(const StringBufferRange&) = delete;
 };
 
 struct InternString {
     static const InternString npos;
-    explicit constexpr InternString(uint32_t v = uint32_t(-1)): value(v) {}
+    explicit constexpr InternString(uint32_t v = uint32_t(-1)) noexcept : value(v) {}
 
     uint32_t value;
 
-    // Disabling comparison for safety, because it is usually not what you want.
-    bool operator==(const InternString&) = delete;
-    bool operator!=(const InternString&) = delete;
+    bool operator==(const InternString& other) const noexcept { return value == other.value; }
+    bool operator<(const InternString& other) const noexcept { return value < other.value; }
+
+    explicit operator bool() const noexcept { return (value != npos.value); }
 };
 
 struct Instruction::Payload {
@@ -167,11 +175,14 @@ struct Instruction::Payload {
     explicit Payload(int64_t value)   noexcept: type(type_Int) { data.integer = value; }
     explicit Payload(float value)     noexcept: type(type_Float) { data.fnum = value; }
     explicit Payload(double value)    noexcept: type(type_Double) { data.dnum = value; }
-    explicit Payload(Timestamp value) noexcept: type(type_Timestamp) { data.timestamp = value; }
     explicit Payload(Link value)      noexcept: type(type_Link) { data.link = value; }
     explicit Payload(StringBufferRange value) noexcept: type(type_String) { data.str = value; }
     explicit Payload(realm::util::None, bool implicit_null = false) noexcept {
         type = (implicit_null ? -2 : -1);
+    }
+    explicit Payload(Timestamp value) noexcept: type(value.is_null() ? -1 : type_Timestamp)
+    {
+        data.timestamp = value;
     }
 
     Payload(const Payload&) noexcept = default;
@@ -196,12 +207,11 @@ struct Instruction::PayloadInstructionBase {
 };
 
 
-
 struct Instruction::SelectTable {
     InternString table;
 };
 
-struct Instruction::SelectContainer
+struct Instruction::SelectField
     : Instruction::FieldInstructionBase
 {
     InternString link_target_table;
@@ -260,13 +270,13 @@ struct Instruction::EraseSubstring
 struct Instruction::ClearTable {
 };
 
-struct Instruction::ContainerSet {
+struct Instruction::ArraySet {
     Instruction::Payload payload;
     uint32_t ndx;
     uint32_t prior_size;
 };
 
-struct Instruction::ContainerInsert {
+struct Instruction::ArrayInsert {
     // payload carries the value in case of LinkList
     // payload is empty in case of Array, Dict or any other container type
     Instruction::Payload payload;
@@ -274,25 +284,26 @@ struct Instruction::ContainerInsert {
     uint32_t prior_size;
 };
 
-struct Instruction::ContainerMove {
+struct Instruction::ArrayMove {
     uint32_t ndx_1;
     uint32_t ndx_2;
 };
 
-struct Instruction::ContainerErase {
+struct Instruction::ArrayErase {
     uint32_t ndx;
     uint32_t prior_size;
     bool implicit_nullify;
 };
 
-struct Instruction::ContainerSwap {
+struct Instruction::ArraySwap {
     uint32_t ndx_1;
     uint32_t ndx_2;
 };
 
-struct Instruction::ContainerClear {
+struct Instruction::ArrayClear {
     uint32_t prior_size;
 };
+
 
 // If container_type != ContainerType::none, creates a subtable:
 // +---+---+-------+
@@ -337,39 +348,25 @@ struct InstructionHandler {
 
 /// Implementation:
 
-#if !defined(__GNUC__) || defined(__clang__) || __GNUC__ > 4 // GCC 4.x does not support std::is_trivially_copyable
-#define REALM_CHECK_TRIVIALLY_COPYABLE(X) static_assert(std::is_trivially_copyable<Instruction::X>::value, #X" Instructions must be trivially copyable.");
-    REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_CHECK_TRIVIALLY_COPYABLE)
-#undef REALM_CHECK_TRIVIALLY_COPYABLE
-#endif // __GNUC__
-
-#ifdef _WIN32 // FIXME: Fails in VS. 
-#define REALM_CHECK_INSTRUCTION_SIZE(X)
-#else
-#define REALM_CHECK_INSTRUCTION_SIZE(X) static_assert(sizeof(Instruction::X) <= Instruction::max_instruction_size, #X" Instruction too big.");
-    REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_CHECK_INSTRUCTION_SIZE)
-#undef REALM_CHECK_INSTRUCTION_SIZE
-#endif
-
 #define REALM_DEFINE_INSTRUCTION_GET_TYPE(X) \
     template <> struct Instruction::GetType<Instruction::Type::X> { using Type = Instruction::X; }; \
     template <> struct Instruction::GetInstructionType<Instruction::X> { static const Instruction::Type value = Instruction::Type::X; };
     REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_DEFINE_INSTRUCTION_GET_TYPE)
 #undef REALM_DEFINE_INSTRUCTION_GET_TYPE
 
-
 template <class T>
-Instruction::Instruction(T instr): type(GetInstructionType<T>::value)
+Instruction::Instruction(T instr) : type(GetInstructionType<T>::value)
 {
     new(&m_storage) T(std::move(instr));
 }
 
 template <class F>
-void Instruction::visit(F&& lambda)
+inline auto Instruction::visit(F&& lambda)
 {
     switch (type) {
 #define REALM_VISIT_INSTRUCTION(X) \
-        case Type::X: return lambda(get_as<Instruction::X>());
+        case Type::X: \
+            return lambda(get_as<Instruction::X>());
         REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_VISIT_INSTRUCTION)
 #undef REALM_VISIT_INSTRUCTION
     }
@@ -377,9 +374,43 @@ void Instruction::visit(F&& lambda)
 }
 
 template <class F>
-void Instruction::visit(F&& lambda) const
+inline auto Instruction::visit(F&& lambda) const
 {
-    const_cast<Instruction*>(this)->visit(std::forward<F>(lambda));
+    switch (type) {
+#define REALM_VISIT_INSTRUCTION(X) \
+        case Type::X: \
+            return lambda(get_as<Instruction::X>());
+        REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_VISIT_INSTRUCTION)
+#undef REALM_VISIT_INSTRUCTION
+    }
+    REALM_UNREACHABLE();
+}
+
+inline bool Instruction::operator==(const Instruction& other) const noexcept
+{
+    if (type != other.type)
+        return false;
+    size_t valid_size;
+    switch (type) {
+#define REALM_COMPARE_INSTRUCTION(X) \
+        case Type::X: valid_size = sizeof(Instruction::X); break;
+        REALM_FOR_EACH_INSTRUCTION_TYPE(REALM_COMPARE_INSTRUCTION)
+#undef REALM_COMPARE_INSTRUCTION
+        default: REALM_UNREACHABLE();
+    }
+
+    // This relies on all instruction types being PODs to work.
+    return std::memcmp(&m_storage, &other.m_storage, valid_size) == 0;
+}
+
+inline bool Instruction::Payload::is_null() const
+{
+    return type < 0;
+}
+
+inline bool Instruction::Payload::is_implicit_null() const
+{
+    return type == -2;
 }
 
 std::ostream& operator<<(std::ostream&, Instruction::Type);

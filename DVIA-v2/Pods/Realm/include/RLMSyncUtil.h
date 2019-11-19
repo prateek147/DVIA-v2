@@ -157,6 +157,12 @@ typedef RLM_ERROR_ENUM(NSInteger, RLMSyncAuthError, RLMSyncAuthErrorDomain) {
     /// An error that indicates a problem with the session (a specific Realm opened for sync).
     RLMSyncAuthErrorClientSessionError              = 4,
 
+    /// An error that indicates that the provided credentials are ill-formed.
+    RLMSyncAuthErrorInvalidParameters               = 601,
+
+    /// An error that indicates that no Realm path was included in the URL.
+    RLMSyncAuthErrorMissingPath                     = 602,
+
     /// An error that indicates that the provided credentials are invalid.
     RLMSyncAuthErrorInvalidCredential               = 611,
 
@@ -180,37 +186,6 @@ typedef RLM_ERROR_ENUM(NSInteger, RLMSyncAuthError, RLMSyncAuthErrorDomain) {
 
     /// An error that indicates the file at the given path can't be shared.
     RLMSyncAuthErrorFileCannotBeShared              = 703,
-};
-
-/**
- An error related to the permissions subsystem.
- */
-typedef RLM_ERROR_ENUM(NSInteger, RLMSyncPermissionError, RLMSyncPermissionErrorDomain) {
-    /**
-     An error that indicates a permission change operation failed. The `userInfo`
-     dictionary contains the underlying error code and a message (if any).
-     */
-    RLMSyncPermissionErrorChangeFailed          = 1,
-
-    /**
-     An error that indicates that attempting to retrieve permissions failed.
-     */
-    RLMSyncPermissionErrorGetFailed             = 2,
-
-    /**
-     An error that indicates that trying to create a permission offer failed.
-     */
-    RLMSyncPermissionErrorOfferFailed           = 3,
-
-    /**
-     An error that indicates that trying to accept a permission offer failed.
-     */
-    RLMSyncPermissionErrorAcceptOfferFailed     = 4,
-
-    /**
-     An error that indicates that an internal error occurred.
-     */
-    RLMSyncPermissionErrorInternal              = 5,
 };
 
 NS_ASSUME_NONNULL_END

@@ -29,6 +29,7 @@
 #import "PFRESTCommand.h"
 #import "PFURLConstructor.h"
 #import "PFURLSession.h"
+#import "Parse_Private.h"
 
 @interface PFURLSessionCommandRunner () <PFURLSessionDelegate>
 
@@ -147,9 +148,11 @@
                                    withOptions:(PFCommandRunningOptions)options
                              cancellationToken:(BFCancellationToken *)cancellationToken {
     return [self _performCommandRunningBlock:^id {
-        [command resolveLocalIds];
+        NSError *error;
+        BOOL success = [command resolveLocalIds:&error];
+        PFPreconditionReturnFailedTask(success, error);
         return [[self.requestConstructor getDataURLRequestAsyncForCommand:command] continueWithSuccessBlock:^id(BFTask <NSURLRequest *>*task) {
-            return [_session performDataURLRequestAsync:task.result forCommand:command cancellationToken:cancellationToken];
+            return [self->_session performDataURLRequestAsync:task.result forCommand:command cancellationToken:cancellationToken];
         }];
     } withOptions:options cancellationToken:cancellationToken];
 }
@@ -168,11 +171,13 @@
     return [self _performCommandRunningBlock:^id {
         @strongify(self);
 
-        [command resolveLocalIds];
+        NSError *error;
+        BOOL success = [command resolveLocalIds:&error];
+        PFPreconditionReturnFailedTask(success, error);
         return [[self.requestConstructor getFileUploadURLRequestAsyncForCommand:command
                                                                 withContentType:contentType
                                                           contentSourceFilePath:sourceFilePath] continueWithSuccessBlock:^id(BFTask<NSURLRequest *> *task) {
-            return [_session performFileUploadURLRequestAsync:task.result
+            return [self->_session performFileUploadURLRequestAsync:task.result
                                                    forCommand:command
                                     withContentSourceFilePath:sourceFilePath
                                             cancellationToken:cancellationToken
@@ -187,7 +192,7 @@
                                                         progressBlock:(nullable PFProgressBlock)progressBlock {
     return [self _performCommandRunningBlock:^id {
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        return [_session performFileDownloadURLRequestAsync:request
+        return [self->_session performFileDownloadURLRequestAsync:request
                                                toFileAtPath:filePath
                                       withCancellationToken:cancellationToken
                                               progressBlock:progressBlock];
@@ -236,7 +241,7 @@
         if ([task.error.userInfo[@"temporary"] boolValue] && attempts > 1) {
             PFLogError(PFLoggingTagCommon,
                        @"Network connection failed. Making attempt %lu after sleeping for %f seconds.",
-                       (unsigned long)(_retryAttempts - attempts + 1), (double)delay);
+                       (unsigned long)(self->_retryAttempts - attempts + 1), (double)delay);
 
             return [[BFTask taskWithDelay:(int)(delay * 1000)] continueWithBlock:^id(BFTask *task) {
                 return [self _performCommandRunningBlock:block
@@ -244,6 +249,8 @@
                                                    delay:delay * 2.0
                                              forAttempts:attempts - 1];
             } cancellationToken:cancellationToken];
+        } else if (task.error && task.error.code == kPFErrorInvalidSessionToken) {
+            [self.notificationCenter postNotificationName:PFInvalidSessionTokenNotification object:task userInfo:nil];
         }
         return task;
     } cancellationToken:cancellationToken];
@@ -255,7 +262,7 @@
 
 + (NSURLSessionConfiguration *)_urlSessionConfigurationForApplicationId:(NSString *)applicationId
                                                               clientKey:(nullable NSString *)clientKey {
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSessionConfiguration *configuration = Parse._currentManager.configuration.URLSessionConfiguration;
 
     // No cookies, they are bad for you.
     configuration.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicyNever;
@@ -270,6 +277,12 @@
     NSDictionary *headers = [PFCommandURLRequestConstructor defaultURLRequestHeadersForApplicationId:applicationId
                                                                                            clientKey:clientKey
                                                                                               bundle:bundle];
+    if (configuration && [configuration.HTTPAdditionalHeaders count]) {
+        NSMutableDictionary *sessionConfigurationHeaders = [configuration.HTTPAdditionalHeaders mutableCopy];
+        [sessionConfigurationHeaders addEntriesFromDictionary:headers];
+        headers = sessionConfigurationHeaders;
+    }
+
     configuration.HTTPAdditionalHeaders = headers;
 
     return configuration;
@@ -281,7 +294,7 @@
 
 - (void)urlSession:(PFURLSession *)session willPerformURLRequest:(NSURLRequest *)request {
     [[BFExecutor defaultPriorityBackgroundExecutor] execute:^{
-        NSDictionary *userInfo = ([PFLogger sharedLogger].logLevel == PFLogLevelDebug ?
+        NSDictionary *userInfo = ([PFSystemLogger sharedLogger].logLevel == PFLogLevelDebug ?
                                   @{ PFNetworkNotificationURLRequestUserInfoKey : request } : nil);
         [self.notificationCenter postNotificationName:PFNetworkWillSendURLRequestNotification
                                                object:self
@@ -295,7 +308,7 @@ didPerformURLRequest:(NSURLRequest *)request
     responseString:(nullable NSString *)responseString {
     [[BFExecutor defaultPriorityBackgroundExecutor] execute:^{
         NSMutableDictionary *userInfo = nil;
-        if ([PFLogger sharedLogger].logLevel == PFLogLevelDebug) {
+        if ([PFSystemLogger sharedLogger].logLevel == PFLogLevelDebug) {
             userInfo = [NSMutableDictionary dictionaryWithObject:request
                                                           forKey:PFNetworkNotificationURLRequestUserInfoKey];
             if (response) {

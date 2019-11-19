@@ -30,6 +30,12 @@ namespace sync {
 
 class InstructionReplication: public TrivialReplication, public ObjectIDProvider {
 public:
+    enum class TableBehavior {
+        Class,
+        Array,
+        Ignore
+    };
+
     explicit InstructionReplication(const std::string& realm_path);
     void set_short_circuit(bool) noexcept;
     bool is_short_circuited() const noexcept;
@@ -40,6 +46,7 @@ public:
     virtual void reset();
 
     ChangesetEncoder& get_instruction_encoder() noexcept;
+    const ChangesetEncoder& get_instruction_encoder() const noexcept;
 
     //@{
     /// Generate instructions for Object Store tables. These must be called
@@ -64,6 +71,7 @@ public:
     void create_object_with_primary_key(const Table*, ObjectID, StringData);
     void create_object_with_primary_key(const Table*, ObjectID, int_fast64_t);
     void create_object_with_primary_key(const Table*, ObjectID, realm::util::None);
+    void prepare_erase_table(StringData table_name);
     //@}
 
     // TrivialReplication interface:
@@ -116,9 +124,15 @@ public:
     void nullify_link(const Table*, size_t col_ndx, size_t ndx) override;
     void link_list_nullify(const LinkView&, size_t ndx) override;
 
+    template <class T>
+    void emit(T instruction);
+
+    TableBehavior select_table(const Table*);
+    const Table* selected_table() const noexcept;
+
 protected:
     // Replication interface:
-    void do_initiate_transact(version_type current_version, bool history_updated) override;
+    void do_initiate_transact(TransactionType, version_type current_version) override;
 private:
     bool m_short_circuit = false;
 
@@ -126,25 +140,21 @@ private:
     SharedGroup* m_sg = nullptr;
     std::unique_ptr<TableInfoCache> m_cache;
 
-    enum class TableBehavior {
-        Class,
-        Array,
-        Ignore
-    };
 
     // FIXME: The base class already caches this.
-    const Table* m_selected_table = nullptr;
+    ConstTableRef m_selected_table;
     TableBehavior m_selected_table_behavior; // cache
-    const LinkView* m_selected_link_list = nullptr;
+    ConstLinkViewRef m_selected_link_list = nullptr;
 
     // Consistency checks:
     std::string m_table_being_created;
     std::string m_table_being_created_primary_key;
+    std::string m_table_being_erased;
     util::Optional<ObjectID> m_object_being_created;
 
-    void unsupported_instruction(); // Throws TransformError
-    TableBehavior select_table(const Table*);
+    REALM_NORETURN void unsupported_instruction(); // Throws TransformError
     TableBehavior select_table(const Descriptor&);
+    TableBehavior select_table_inner(const Table* table);
     bool select_link_list(const LinkView&); // returns true if table behavior != ignored
 
     TableBehavior get_table_behavior(const Table*) const;
@@ -157,8 +167,6 @@ private:
                 _impl::Instruction variant);
     template <class T>
     auto as_payload(T value);
-    template <class T>
-    void emit(T instruction);
 };
 
 inline void InstructionReplication::set_short_circuit(bool b) noexcept
@@ -176,6 +184,31 @@ inline ChangesetEncoder& InstructionReplication::get_instruction_encoder() noexc
     return m_encoder;
 }
 
+inline const ChangesetEncoder& InstructionReplication::get_instruction_encoder() const noexcept
+{
+    return m_encoder;
+}
+
+template <class T>
+inline void InstructionReplication::emit(T instruction)
+{
+    REALM_ASSERT(!m_short_circuit);
+    m_encoder(instruction);
+}
+
+inline auto InstructionReplication::select_table(const Table* table) -> TableBehavior
+{
+    if (m_selected_table == table) {
+        return m_selected_table_behavior;
+    }
+    return select_table_inner(table);
+}
+
+inline const Table* InstructionReplication::selected_table() const noexcept
+{
+    return m_selected_table.get();
+}
+
 // Temporarily short-circuit replication
 class TempShortCircuitReplication {
 public:
@@ -185,8 +218,14 @@ public:
         bridge.set_short_circuit(true);
     }
 
-    ~TempShortCircuitReplication() {
+    ~TempShortCircuitReplication()
+    {
         m_bridge.set_short_circuit(m_was_short_circuited);
+    }
+
+    bool was_short_circuited() const noexcept
+    {
+        return m_was_short_circuited;
     }
 private:
     InstructionReplication& m_bridge;

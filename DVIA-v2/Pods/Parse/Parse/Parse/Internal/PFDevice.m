@@ -77,7 +77,7 @@ static NSString *PFDeviceSysctlByName(NSString *name) {
     if (!name) {
 #if TARGET_OS_WATCH
         name = [WKInterfaceDevice currentDevice].model;
-#elif TARGET_OS_IOS
+#elif TARGET_OS_IOS || TARGET_OS_TV
         name = [UIDevice currentDevice].model;
 #elif TARGET_OS_MAC
         name = @"Mac";
@@ -105,7 +105,7 @@ static NSString *PFDeviceSysctlByName(NSString *name) {
             (int)version.patchVersion];
 #elif PF_TARGET_OS_OSX
     NSProcessInfo *info = [NSProcessInfo processInfo];
-    if ([info respondsToSelector:@selector(operatingSystemVersion)]) {
+    if (@available(macOS 10.10, *)) {
         NSOperatingSystemVersion version = info.operatingSystemVersion;
         return [NSString stringWithFormat:@"%d.%d.%d",
                 (int)version.majorVersion,

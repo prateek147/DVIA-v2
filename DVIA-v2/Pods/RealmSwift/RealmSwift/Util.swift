@@ -35,37 +35,12 @@ internal func noWarnUnsafeBitCast<T, U>(_ x: T, to type: U.Type) -> U {
 /// replace them with the underlying value or NSNull.
 internal func unwrapOptionals(in varargs: [Any]) -> [Any] {
     return varargs.map { arg in
-#if swift(>=3.1)
         if let someArg = arg as Any? {
             return someArg
         }
         return NSNull()
-#else
-        if let optionalArg = arg as? RealmAnyOptionalUnboxingWorkaround {
-            return optionalArg.rlm_unwrappedValue()
-        } else {
-            return arg
-        }
-#endif
     }
 }
-
-// FIXME: Kill this when we drop Xcode 8.0 support.
-#if swift(>=3.1)
-#else
-private protocol RealmAnyOptionalUnboxingWorkaround {
-    func rlm_unwrappedValue() -> Any
-}
-
-extension Optional: RealmAnyOptionalUnboxingWorkaround {
-    func rlm_unwrappedValue() -> Any {
-        switch self {
-        case .none: return NSNull()
-        case let .some(underlying): return underlying
-        }
-    }
-}
-#endif
 
 internal func notFoundToNil(index: UInt) -> Int? {
     if index == UInt(NSNotFound) {
@@ -74,8 +49,9 @@ internal func notFoundToNil(index: UInt) -> Int? {
     return Int(index)
 }
 
-internal func throwRealmException(_ message: String, userInfo: [AnyHashable: Any]? = nil) {
+internal func throwRealmException(_ message: String, userInfo: [AnyHashable: Any]? = nil) -> Never {
     NSException(name: NSExceptionName(rawValue: RLMExceptionName), reason: message, userInfo: userInfo).raise()
+    fatalError() // unreachable
 }
 
 internal func throwForNegativeIndex(_ int: Int, parameterName: String = "index") {
@@ -108,19 +84,25 @@ extension Object {
 
 // MARK: CustomObjectiveCBridgeable
 
-internal func dynamicBridgeCast<T>(fromObjectiveC x: Any) -> T {
+/// :nodoc:
+public func dynamicBridgeCast<T>(fromObjectiveC x: Any) -> T {
     if T.self == DynamicObject.self {
         return unsafeBitCast(x as AnyObject, to: T.self)
-    } else if let BridgeableType = T.self as? CustomObjectiveCBridgeable.Type {
-        return BridgeableType.bridging(objCValue: x) as! T
+    } else if let bridgeableType = T.self as? CustomObjectiveCBridgeable.Type {
+        return bridgeableType.bridging(objCValue: x) as! T
+    } else if let bridgeableType = T.self as? RealmEnum.Type {
+        return bridgeableType._rlmFromRawValue(x) as! T
     } else {
         return x as! T
     }
 }
 
-internal func dynamicBridgeCast<T>(fromSwift x: T) -> Any {
+/// :nodoc:
+public func dynamicBridgeCast<T>(fromSwift x: T) -> Any {
     if let x = x as? CustomObjectiveCBridgeable {
         return x.objCValue
+    } else if let bridgeableType = T.self as? RealmEnum.Type {
+        return bridgeableType._rlmToRawValue(x)
     } else {
         return x
     }

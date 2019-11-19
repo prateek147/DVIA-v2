@@ -55,13 +55,13 @@ static NSString *const PFConfigCurrentConfigFileName_ = @"config";
 
 - (BFTask *)getCurrentConfigAsync {
     return [_dataTaskQueue enqueue:^id(BFTask *_) {
-        if (!_currentConfig) {
+        if (!self->_currentConfig) {
             return [[self _loadConfigAsync] continueWithSuccessBlock:^id(BFTask<PFConfig *> *task) {
-                _currentConfig = task.result;
-                return _currentConfig;
+                self->_currentConfig = task.result;
+                return self->_currentConfig;
             }];
         }
-        return _currentConfig;
+        return self->_currentConfig;
     }];
 }
 
@@ -69,10 +69,14 @@ static NSString *const PFConfigCurrentConfigFileName_ = @"config";
     @weakify(self);
     return [_dataTaskQueue enqueue:^id(BFTask *_) {
         @strongify(self);
-        _currentConfig = config;
+        self->_currentConfig = config;
 
         NSDictionary *configParameters = @{ PFConfigParametersRESTKey : (config.parametersDictionary ?: @{}) };
-        id encodedObject = [[PFPointerObjectEncoder objectEncoder] encodeObject:configParameters];
+        NSError *error;
+        id encodedObject = [[PFPointerObjectEncoder objectEncoder] encodeObject:configParameters error:&error];
+        if (!encodedObject) {
+            return [BFTask taskWithError:error];
+        }
         NSData *jsonData = [PFJSONSerialization dataFromJSONObject:encodedObject];
         return [[self _getPersistenceGroupAsync] continueWithSuccessBlock:^id(BFTask<id<PFPersistenceGroup>> *task) {
             return [task.result setDataAsync:jsonData forKey:PFConfigCurrentConfigFileName_];
@@ -84,7 +88,7 @@ static NSString *const PFConfigCurrentConfigFileName_ = @"config";
     @weakify(self);
     return [_dataTaskQueue enqueue:^id(BFTask *_) {
         @strongify(self);
-        _currentConfig = nil;
+        self->_currentConfig = nil;
         return [[self.dataSource.persistenceController getPersistenceGroupAsync] continueWithSuccessBlock:^id(BFTask<id<PFPersistenceGroup>> *task) {
             return [task.result removeDataAsyncForKey:PFConfigCurrentConfigFileName_];
         }];
@@ -93,7 +97,7 @@ static NSString *const PFConfigCurrentConfigFileName_ = @"config";
 
 - (BFTask *)clearMemoryCachedCurrentConfigAsync {
     return [_dataTaskQueue enqueue:^id(BFTask *_) {
-        _currentConfig = nil;
+        self->_currentConfig = nil;
         return nil;
     }];
 }

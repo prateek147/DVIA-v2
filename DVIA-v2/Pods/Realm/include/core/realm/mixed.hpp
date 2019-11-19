@@ -138,6 +138,9 @@ public:
         return m_type;
     }
 
+    template <class T>
+    T get() const noexcept;
+
     int64_t get_int() const noexcept;
     bool get_bool() const noexcept;
     float get_float() const noexcept;
@@ -348,6 +351,55 @@ inline Timestamp Mixed::get_timestamp() const noexcept
     REALM_ASSERT(m_type == type_Timestamp);
     return m_timestamp;
 }
+
+template <>
+inline int64_t Mixed::get<Int>() const noexcept
+{
+    return get_int();
+}
+
+template <>
+inline bool Mixed::get<bool>() const noexcept
+{
+    return get_bool();
+}
+
+template <>
+inline float Mixed::get<float>() const noexcept
+{
+    return get_float();
+}
+
+template <>
+inline double Mixed::get<double>() const noexcept
+{
+    return get_double();
+}
+
+template <>
+inline OldDateTime Mixed::get<OldDateTime>() const noexcept
+{
+    return get_olddatetime();
+}
+
+template <>
+inline StringData Mixed::get<StringData>() const noexcept
+{
+    return get_string();
+}
+
+template <>
+inline BinaryData Mixed::get<BinaryData>() const noexcept
+{
+    return get_binary();
+}
+
+template <>
+inline Timestamp Mixed::get<Timestamp>() const noexcept
+{
+    return get_timestamp();
+}
+
 
 inline void Mixed::set_int(int64_t v) noexcept
 {

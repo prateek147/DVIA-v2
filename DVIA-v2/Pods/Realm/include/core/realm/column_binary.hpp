@@ -101,6 +101,12 @@ public:
     void verify() const override;
     void to_dot(std::ostream&, StringData title) const override;
     void do_dump_node_structure(std::ostream&, int) const override;
+    void find_all(IntegerColumn&, BinaryData, size_t, size_t) const
+    {
+        // Dummy implementation
+        REALM_ASSERT(false);
+    }
+
 
 private:
     /// \param row_ndx Must be `realm::npos` if appending.
