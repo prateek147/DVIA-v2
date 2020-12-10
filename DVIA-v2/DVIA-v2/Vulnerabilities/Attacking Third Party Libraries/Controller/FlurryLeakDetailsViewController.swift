@@ -40,7 +40,13 @@ class FlurryLeakDetailsViewController: UIViewController, UITextFieldDelegate {
             "uuid" : strippeduuid
             ] as [String : Any]
         Flurry.logEvent("PhoneEntered", withParameters:params as Any as! [AnyHashable : Any])
+        
+        let queryItem = URLQueryItem(name: "q", value: "\(textField.text!)")
+        let url = URL(string: "http://google.com?\(queryItem)")
+        let request = URLRequest(url: url!)
+        var connection = NSURLConnection(request: request, delegate: nil, startImmediately: true)
                 return true
+        
     }
     
     /*
