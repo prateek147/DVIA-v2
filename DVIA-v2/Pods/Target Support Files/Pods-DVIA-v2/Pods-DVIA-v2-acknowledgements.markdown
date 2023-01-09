@@ -41,7 +41,7 @@ Developer's use of the SDK is governed by the license in the applicable Flurry T
 
 ## GoogleAnalytics
 
-Copyright 2016 Google
+Copyright 2021 Google
 
 ## Parse
 

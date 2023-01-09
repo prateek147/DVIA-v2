@@ -18,29 +18,30 @@ import Flurry_iOS_SDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor(red: 0.9, green: 0.13, blue: 0.28, alpha: 1.0)
-        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white , NSAttributedStringKey.font: UIFont(name: "Helvetica-Bold", size: 20)!]
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white , NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 20)!]
         navigationBarAppearace.titleTextAttributes = textAttributes
         
         //Flurry Analytics code for Thirty Party Data Leakage section
-        Flurry.startSession("8RM5WHP628853HQXFKDX", with: FlurrySessionBuilder
+        Flurry.startSession(apiKey: "8RM5WHP628853HQXFKDX", sessionBuilder: FlurrySessionBuilder
             .init()
-            .withCrashReporting(true)
-            .withLogLevel(FlurryLogLevelAll))
+            .build(crashReportingEnabled: true)
+            //.withLogLevel(FlurryLogLevelAll)
+        )
         
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     
         let splitUrl = url.absoluteString.components(separatedBy: "/phone/call_number/")
         if ((Int(splitUrl[1])) != nil){
             //Valid URL, since the argument is a number
             let alertController = UIAlertController(title: "Success!", message: "Calling \(splitUrl[1]). Ring Ring !!!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alertController.addAction(okAction)
             window?.rootViewController?.present(alertController, animated: true, completion: nil)
         }

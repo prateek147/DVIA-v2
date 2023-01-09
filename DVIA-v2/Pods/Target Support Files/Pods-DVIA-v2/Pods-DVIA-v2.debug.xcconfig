@@ -1,13 +1,16 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bolts" "${PODS_CONFIGURATION_BUILD_DIR}/Flurry-iOS-SDK" "${PODS_CONFIGURATION_BUILD_DIR}/Parse" "${PODS_CONFIGURATION_BUILD_DIR}/Realm" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift" "${PODS_ROOT}/couchbase-lite-ios"
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bolts" "${PODS_CONFIGURATION_BUILD_DIR}/Parse" "${PODS_CONFIGURATION_BUILD_DIR}/Realm" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift" "${PODS_ROOT}/Flurry-iOS-SDK" "${PODS_ROOT}/GoogleAnalytics/Frameworks" "${PODS_ROOT}/couchbase-lite-ios" "${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/CrashReporter" "${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/FlurrySDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAnalytics"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bolts/Bolts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Realm/Realm.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift/RealmSwift.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAnalytics" "${PODS_ROOT}/Headers/Public/couchbase-lite-ios"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Flurry-iOS-SDK/Flurry" "${PODS_ROOT}/GoogleAnalytics/Libraries" "${PODS_ROOT}/Realm/core" "${PODS_ROOT}/couchbase-lite-ios/Extras"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CBLJSViewCompiler" -l"GoogleAnalytics" -l"c++" -l"sqlite3" -l"z" -framework "AudioToolbox" -framework "Bolts" -framework "CFNetwork" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "CouchbaseLite" -framework "CouchbaseLiteListener" -framework "Flurry_iOS_SDK" -framework "Foundation" -framework "JavaScriptCore" -framework "Parse" -framework "QuartzCore" -framework "Realm" -framework "RealmSwift" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "Social"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bolts/Bolts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Realm/Realm.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift/RealmSwift.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/couchbase-lite-ios"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" "${PODS_ROOT}/Realm/core" "${PODS_ROOT}/couchbase-lite-ios/Extras" /usr/lib/swift
+ONLY_ACTIVE_ARCH = YES
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CBLJSViewCompiler" -l"c++" -l"sqlite3" -l"z" -framework "AudioToolbox" -framework "Bolts" -framework "CFNetwork" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "CouchbaseLite" -framework "CouchbaseLiteListener" -framework "CrashReporter" -framework "Flurry_iOS_SDK" -framework "Foundation" -framework "GoogleAnalytics" -framework "JavaScriptCore" -framework "Parse" -framework "QuartzCore" -framework "Realm" -framework "RealmSwift" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "Social"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
