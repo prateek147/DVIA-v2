@@ -22,7 +22,7 @@ DEPENDENCIES:
   - Flurry-iOS-SDK/FlurrySDK
   - GoogleAnalytics
   - Parse
-  - RealmSwift (= 4.1.1)
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
 
-PODFILE CHECKSUM: 194b25b40b793250d8e8b897aea95adf43d0b424
+PODFILE CHECKSUM: 8fcd9b3343b88122f169acd393ed9472dced1386
 
 COCOAPODS: 1.11.3
