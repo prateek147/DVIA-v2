@@ -1,0 +1,7 @@
+framework module GoogleAnalytics {
+umbrella header "GoogleAnalytics-umbrella.h"
+export *
+module * { export * }
+  link "sqlite3"
+  link "z"
+}

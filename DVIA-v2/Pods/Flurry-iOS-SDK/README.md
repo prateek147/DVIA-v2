@@ -48,14 +48,6 @@ pod 'Flurry-iOS-SDK/FlurryMessaging'
 
 ### watchOS
 
-To use FlurrySDK for Apple Watch 1.x Extension:   
-
-```ruby
-target 'Your Apple Watch 1.x Extension Target' do 
-  pod 'Flurry-iOS-SDK/FlurryWatchSDK'
-end   
-```
-
 To use FlurrySDK for Apple Watch 2.x Extension:    
 
 ```ruby
@@ -71,7 +63,7 @@ To use FlurrySDK for tvOS apps:
 
 ```ruby
 target 'Your tvOS Application' do
-  platform :tvos, '9.0'
+  platform :tvos, '10.0'
   pod 'Flurry-iOS-SDK/FlurrySDK'
 end
 ```
@@ -84,9 +76,9 @@ pod 'Flurry-iOS-SDK/FlurryMessaging'
 
 ## Requirements
 
-* iOS 8.0+
-* tvOS 9.0+
-* watchOS 1.0+
+* iOS 10.0+
+* tvOS 10.0+
+* watchOS 3.0+
 
 ## Examples
 
@@ -100,12 +92,13 @@ Listed below are brief examples of initializing and using Flurry in your project
 
   ```swift
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      let sessionBuilder = FlurrySessionBuilder()
-          .withLogLevel(FlurryLogLevelAll)
-          .withCrashReporting(true)
-          .withAppVersion("1.0")
-          .withIAPReportingEnabled(true)
-      Flurry.startSession("Your API Key", with: sessionBuilder)
+      let sb = FlurrySessionBuilder()
+            .build(logLevel: FlurryLogLevel.all)
+            .build(crashReportingEnabled: true)
+            .build(appVersion: "1.0")
+            .build(iapReportingEnabled: true)
+        
+      Flurry.startSession(apiKey: "YOUR_API_KEY", sessionBuilder: sb)
       return true
   }
   ```
@@ -122,12 +115,23 @@ Use this to log normal events and timed events in your app.
 
   ```swift
   // Normal events
-  Flurry.logEvent("Event", withParameters: ["Key": "Value"])
-
+  Flurry.log(eventName: "Event", parameters: ["Key": "Value"])
+        
   // Timed events
-  Flurry.logEvent("Event", withParameters: ["Key": "Value"], timed: true)
-  Flurry.endTimedEvent("Event", withParameters: ["Key": "Value"])
+  Flurry.log(eventName: "Event", parameters: ["Key": "Value"], timed: true)
+  Flurry.endTimedEvent(eventName: "Event", parameters: ["Key": "Value"])
+        
+  // Standard events
+  let param = FlurryParamBuilder()
+      .set(doubleVal: 34.99, param: FlurryParamBuilder.totalAmount())
+      .set(booleanVal: true, param: FlurryParamBuilder.success())
+      .set(stringVal: "book 1", param: FlurryParamBuilder.itemName())
+      .set(stringVal: "This is an awesome book to purchase !!!", key: "note")
+        
+  Flurry.log(standardEvent: FlurryEvent.purchased, param: param)
   ```
+  Please see our [sample project here](https://github.com/flurry/iOS-StandardEventSample).
+
 
 * watchOS
 
@@ -140,7 +144,7 @@ Use this to log normal events and timed events in your app.
 Use this to log exceptions and/or errors that occur in your app. Flurry will report the first 10 errors that occur in each session.
 
 ```swift
-Flurry.logError("ERROR_NAME", message: "ERROR_MESSAGE", exception: e)
+Flurry.log(errorId: "ERROR_NAME", message: "ERROR_MESSAGE", exception: e)
 ```
 
 ### Track User Demographics (iOS/tvOS)
@@ -148,9 +152,9 @@ Flurry.logError("ERROR_NAME", message: "ERROR_MESSAGE", exception: e)
 After identifying the user, use this to log the user’s assigned ID, username, age and gender in your system.
 
 ```swift
-Flurry.setUserID("USER_ID")
-Flurry.setAge(20)
-Flurry.setGender("f") // "f" for female and "m" for male
+Flurry.set(userId: "USER_ID")
+Flurry.set(age: 20)
+Flurry.set(gender: "f") // "f" for female and "m" for male
 ```
 
 ### Session Origins and Attributes (iOS/tvOS)
@@ -158,11 +162,11 @@ Flurry.setGender("f") // "f" for female and "m" for male
 This allows you to specify session origin and deep link attached to each session, or add a custom parameterized session parameters. You can also add an SDK origin specified by origin name and origin version.
 
 ```swift
-Flurry.addSessionOrigin("SESSION_ORIGIN")
-Flurry.addSessionOrigin("SESSION_ORIGIN", withDeepLink: "DEEPLINK")
+Flurry.add(sessionOriginName: "SESSION_ORIGIN")
+Flurry.add(sessionOriginName: "SESSION_ORIGIN", deepLink: "DEEP_LINK")
 Flurry.sessionProperties(["key": "value"])
-Flurry.addOrigin("ORIGIN_NAME", withVersion: "ORIGIN_VERSION")
-Flurry.addOrigin("ORIGIN_NAME", withVersion: "ORIGIN_VERSION", withParameters: ["key": "value"])
+Flurry.add(originName: "ORIGIN_NAME", originVersion: "ORIGIN_VERSION")
+Flurry.add(originName: "ORIGIN_NAME", originVersion: "ORIGIN_VERSION", parameters: ["key": "value"])
 ```
 
 ## Support
@@ -173,6 +177,7 @@ Flurry.addOrigin("ORIGIN_NAME", withVersion: "ORIGIN_VERSION", withParameters: [
 
 ## License
 
-Copyright 2019 Flurry by Verizon Media
+Copyright (c) 2021 Yahoo. All rights reserved.
 
 This project is licensed under the terms of the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) open source license. Please refer to [LICENSE](LICENSE) for the full terms. Your use of Flurry is governed by [Flurry Terms of Service](https://developer.yahoo.com/flurry/legal-privacy/terms-service/).
+

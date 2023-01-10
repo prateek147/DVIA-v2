@@ -1,14 +1,16 @@
 PODS:
-  - Bolts/Tasks (1.9.0)
+  - Bolts/Tasks (1.9.1)
   - couchbase-lite-ios (1.4.4):
     - couchbase-lite-ios/SQLite (= 1.4.4)
   - couchbase-lite-ios/SQLite (1.4.4)
-  - Flurry-iOS-SDK/FlurrySDK (10.0.2)
-  - GoogleAnalytics (3.17.0)
-  - Parse (1.17.3):
-    - Parse/Core (= 1.17.3)
-  - Parse/Core (1.17.3):
-    - Bolts/Tasks (~> 1.9)
+  - Flurry-iOS-SDK/CrashReporter (12.1.4)
+  - Flurry-iOS-SDK/FlurrySDK (12.1.4):
+    - Flurry-iOS-SDK/CrashReporter
+  - GoogleAnalytics (3.20.0)
+  - Parse (1.19.4):
+    - Parse/Core (= 1.19.4)
+  - Parse/Core (1.19.4):
+    - Bolts/Tasks (= 1.9.1)
   - Realm (4.1.1):
     - Realm/Headers (= 4.1.1)
   - Realm/Headers (4.1.1)
@@ -20,7 +22,7 @@ DEPENDENCIES:
   - Flurry-iOS-SDK/FlurrySDK
   - GoogleAnalytics
   - Parse
-  - RealmSwift
+  - RealmSwift (= 4.1.1)
 
 SPEC REPOS:
   trunk:
@@ -33,14 +35,14 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   couchbase-lite-ios: 6b586fca2c8a59c85e31df89a2528c92c40fc4dc
-  Flurry-iOS-SDK: 71da0ebf2088b15d8899da71050efc8b33bfd21f
-  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
-  Parse: c1ad2a04d2cab2b54b6fb7da05f741abf2cf57d1
+  Flurry-iOS-SDK: 8e6d7d9323ad24da06f24943ed738e36039631e9
+  GoogleAnalytics: 01e4c5a04544a3608f93e970ce0817836897c5a5
+  Parse: 6d572042e2c171414c677acabcd9bab7bbf51264
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
 
-PODFILE CHECKSUM: b60974117d0c7906e3b0e527da28a6bce45d1f02
+PODFILE CHECKSUM: 194b25b40b793250d8e8b897aea95adf43d0b424
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.3
