@@ -2014,7 +2014,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UAVZNE8PJA;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2039,7 +2039,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UAVZNE8PJA;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "DVIA-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = "Flurry-iOS-SDK";
+			productName = "Flurry-iOS-SDK";
 		};
 		968D06ADB152B8D9FA77D570E2335002 /* GoogleAnalytics */ = {
 			isa = PBXAggregateTarget;
@@ -26,6 +27,7 @@
 			dependencies = (
 			);
 			name = GoogleAnalytics;
+			productName = GoogleAnalytics;
 		};
 		B416EAF799B3E43050D619BC954F3C3D /* couchbase-lite-ios */ = {
 			isa = PBXAggregateTarget;
@@ -35,6 +37,7 @@
 			dependencies = (
 			);
 			name = "couchbase-lite-ios";
+			productName = "couchbase-lite-ios";
 		};
 /* End PBXAggregateTarget section */
 
@@ -223,7 +226,7 @@
 		49DEE8439026E2294FC15327D16B1EBE /* PFACLState.m in Sources */ = {isa = PBXBuildFile; fileRef = BA95085DEC93F635F3B1D9D98B2A5AD6 /* PFACLState.m */; };
 		49E617A134E4E5D48A49400DBE8E1FB9 /* PFAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DD696EBCBB4E7433AB34D11DE74112 /* PFAssert.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A40A8D31116AF369C010DBF231FCC7D /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1535BED8589CC800BAEAA52831D86 /* BFTask.m */; };
-		4A40D27059D49C5A67B9AEE47993B364 /* Parse-Parse in Resources */ = {isa = PBXBuildFile; fileRef = ED7ADA84A7005589821D254428CD2D26 /* Parse-Parse */; };
+		4A40D27059D49C5A67B9AEE47993B364 /* Parse.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ED7ADA84A7005589821D254428CD2D26 /* Parse.bundle */; };
 		4A47E0FDAAACCD45F7DCE5CA94B37B84 /* PFSQLiteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = A8046378FBF43A6B47D249BD9DBF688A /* PFSQLiteStatement.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A4E6BE10B177250921F177FE122665B /* PFPropertyInfo_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAFA856C684E5E69A0096545FB2CCEC /* PFPropertyInfo_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4ADFB146892B2BE33452110E2F440E5B /* weak_realm_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02CA43AFAAB0649D2F6DF842353E4624 /* weak_realm_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"4.1.1\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -794,13 +797,13 @@
 		011E92E36F1AB96597D607ECA8F8B849 /* PFBaseState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFBaseState.h; path = Parse/Parse/Internal/PFBaseState.h; sourceTree = "<group>"; };
 		013C7DCC46F5974BA66100B6A260AF07 /* Bolts-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Bolts-Info.plist"; sourceTree = "<group>"; };
 		019AD367430FB5EC3119AA64D01339BD /* PFRESTAnalyticsCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTAnalyticsCommand.h; path = Parse/Parse/Internal/Commands/PFRESTAnalyticsCommand.h; sourceTree = "<group>"; };
-		01E7004F5A0FF7D41529430D6F4B53D3 /* RLMSyncConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncConfiguration.mm; path = Realm/RLMSyncConfiguration.mm; sourceTree = "<group>"; };
+		01E7004F5A0FF7D41529430D6F4B53D3 /* RLMSyncConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncConfiguration.mm; path = Realm/RLMSyncConfiguration.mm; sourceTree = "<group>"; };
 		02217E26E06DD3FDC95442F52396F090 /* PFRESTConfigCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTConfigCommand.m; path = Parse/Parse/Internal/Commands/PFRESTConfigCommand.m; sourceTree = "<group>"; };
 		02CA43AFAAB0649D2F6DF842353E4624 /* weak_realm_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = weak_realm_notifier.cpp; path = Realm/ObjectStore/src/impl/weak_realm_notifier.cpp; sourceTree = "<group>"; };
 		033BAA2893D526111D9AE2512F1A79C2 /* collection_notifications.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = collection_notifications.cpp; path = Realm/ObjectStore/src/collection_notifications.cpp; sourceTree = "<group>"; };
 		03476793AFD9089F11D3CBEFCA5E54B5 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 		03881990A4DA920436EFDBE6980BF69F /* PFOfflineQueryLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOfflineQueryLogic.m; path = Parse/Parse/Internal/LocalDataStore/OfflineQueryLogic/PFOfflineQueryLogic.m; sourceTree = "<group>"; };
-		0408B744A3BDBF743AC36A676DBDEBAF /* RLMSyncSubscription.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncSubscription.mm; path = Realm/RLMSyncSubscription.mm; sourceTree = "<group>"; };
+		0408B744A3BDBF743AC36A676DBDEBAF /* RLMSyncSubscription.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncSubscription.mm; path = Realm/RLMSyncSubscription.mm; sourceTree = "<group>"; };
 		042A469FC35859E425B5613376AF1D8A /* PFURLSessionCommandRunner_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSessionCommandRunner_Private.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/PFURLSessionCommandRunner_Private.h; sourceTree = "<group>"; };
 		046DDF6BE8BDA62FBC0CD0E40736E674 /* transact_log_handler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = transact_log_handler.cpp; path = Realm/ObjectStore/src/impl/transact_log_handler.cpp; sourceTree = "<group>"; };
 		0539D405B12DA650AEB77927ECAF4658 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = RealmSwift/Property.swift; sourceTree = "<group>"; };
@@ -829,7 +832,7 @@
 		0E4027E244BD66E4A87FD1096E1F22B1 /* PFPushUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPushUtilities.m; path = Parse/Parse/Internal/Push/Utilites/PFPushUtilities.m; sourceTree = "<group>"; };
 		107420131866D9F2BF4C6710C2B38CF2 /* PFFileState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileState.h; path = Parse/Parse/Internal/File/State/PFFileState.h; sourceTree = "<group>"; };
 		107BE7F8D82B300B6F91E14BA19399E6 /* PFObjectFilePersistenceController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectFilePersistenceController.m; path = Parse/Parse/Internal/Object/FilePersistence/PFObjectFilePersistenceController.m; sourceTree = "<group>"; };
-		109B964C86988852FB51954AFF58F7AC /* RLMManagedArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMManagedArray.mm; path = Realm/RLMManagedArray.mm; sourceTree = "<group>"; };
+		109B964C86988852FB51954AFF58F7AC /* RLMManagedArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMManagedArray.mm; path = Realm/RLMManagedArray.mm; sourceTree = "<group>"; };
 		10B1BDF51DD52B9C13447A818D84ACC2 /* PFInstallationConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFInstallationConstants.m; path = Parse/Parse/Internal/Installation/Constants/PFInstallationConstants.m; sourceTree = "<group>"; };
 		10C59B39E7A7A21F2D8D1A2A6803388F /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse/Parse/PFSubclassing.h; sourceTree = "<group>"; };
 		10D97A7061210819122B1FEC1E18FDFF /* ParseClientConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseClientConfiguration.h; path = Parse/Parse/ParseClientConfiguration.h; sourceTree = "<group>"; };
@@ -845,7 +848,7 @@
 		14F1380AD6E4785470EA213C2180BBD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		150B3DF78B16C08B7AD8B96F3534BF1D /* PFPushChannelsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPushChannelsController.m; path = Parse/Parse/Internal/Push/ChannelsController/PFPushChannelsController.m; sourceTree = "<group>"; };
 		15687401919C1A3CE088E4D38B2A4479 /* PFPaymentTransactionObserver_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPaymentTransactionObserver_Private.h; path = Parse/Parse/Internal/Purchase/PaymentTransactionObserver/PFPaymentTransactionObserver_Private.h; sourceTree = "<group>"; };
-		16035E3F39DB5DAD89358E9ABB376573 /* RLMNetworkClient.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMNetworkClient.mm; path = Realm/RLMNetworkClient.mm; sourceTree = "<group>"; };
+		16035E3F39DB5DAD89358E9ABB376573 /* RLMNetworkClient.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMNetworkClient.mm; path = Realm/RLMNetworkClient.mm; sourceTree = "<group>"; };
 		16FDCF9E638E4ED3931B680E5BF25859 /* PFRESTSessionCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTSessionCommand.h; path = Parse/Parse/Internal/Commands/PFRESTSessionCommand.h; sourceTree = "<group>"; };
 		16FE3852C031A9A079E3F40CC0CD65BA /* PFMutablePushState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutablePushState.m; path = Parse/Parse/Internal/Push/State/PFMutablePushState.m; sourceTree = "<group>"; };
 		17225D29383426D0D6CDCF5607F4B510 /* PFTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTaskQueue.h; path = Parse/Parse/Internal/PFTaskQueue.h; sourceTree = "<group>"; };
@@ -854,7 +857,7 @@
 		1981EF56E3F1FDAF75706741EF570E2D /* PFFilePersistenceGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFilePersistenceGroup.m; path = Parse/Parse/Internal/Persistence/Group/PFFilePersistenceGroup.m; sourceTree = "<group>"; };
 		19AD628943EEC93AE503DF6E7B8C1644 /* PFUserController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserController.h; path = Parse/Parse/Internal/User/Controller/PFUserController.h; sourceTree = "<group>"; };
 		19B36F3F09A7D82B9C265861602E45E6 /* PFInstallationIdentifierStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallationIdentifierStore.h; path = Parse/Parse/Internal/Installation/InstallationIdentifierStore/PFInstallationIdentifierStore.h; sourceTree = "<group>"; };
-		19C4A4F81C996ECA56C3BC79153C6C74 /* RLMSyncManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncManager.mm; path = Realm/RLMSyncManager.mm; sourceTree = "<group>"; };
+		19C4A4F81C996ECA56C3BC79153C6C74 /* RLMSyncManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncManager.mm; path = Realm/RLMSyncManager.mm; sourceTree = "<group>"; };
 		19D61EA5C828D02EA220349332791F21 /* PFQuery+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFQuery+Synchronous.h"; path = "Parse/Parse/PFQuery+Synchronous.h"; sourceTree = "<group>"; };
 		19FBDCF6E8962E913C60DD68A458733F /* PFKeyValueCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFKeyValueCache.m; path = Parse/Parse/Internal/KeyValueCache/PFKeyValueCache.m; sourceTree = "<group>"; };
 		1A05EB51654ABE98BFC1253EA3CAB8E3 /* PFConfigController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFConfigController.m; path = Parse/Parse/Internal/Config/Controller/PFConfigController.m; sourceTree = "<group>"; };
@@ -863,7 +866,7 @@
 		1ACDFE09FA16B2B93A56D91FCBD89181 /* PFMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMacros.h; path = Parse/Parse/Internal/PFMacros.h; sourceTree = "<group>"; };
 		1B53B40C5BBE7881BA2DDA9B1AD88FB7 /* PFReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFReachability.h; path = Parse/Parse/Internal/PFReachability.h; sourceTree = "<group>"; };
 		1B93BFE746D515EE4E0C695C37D3360A /* PFJSONSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFJSONSerialization.m; path = Parse/Parse/Internal/PFJSONSerialization.m; sourceTree = "<group>"; };
-		1B94DB02EB856AFD042535367B7E5AB0 /* RLMObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObject.mm; path = Realm/RLMObject.mm; sourceTree = "<group>"; };
+		1B94DB02EB856AFD042535367B7E5AB0 /* RLMObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObject.mm; path = Realm/RLMObject.mm; sourceTree = "<group>"; };
 		1BCE310E65C13F54CD439474132D9419 /* PFSessionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSessionUtilities.m; path = Parse/Parse/Internal/Session/Utilities/PFSessionUtilities.m; sourceTree = "<group>"; };
 		1C1DEC9878DCF09A03A855FB2595791C /* PFAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAlertView.h; path = Parse/Parse/Internal/PFAlertView.h; sourceTree = "<group>"; };
 		1DAFA856C684E5E69A0096545FB2CCEC /* PFPropertyInfo_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPropertyInfo_Private.h; path = Parse/Parse/Internal/PropertyInfo/PFPropertyInfo_Private.h; sourceTree = "<group>"; };
@@ -897,7 +900,7 @@
 		2A0C1258FC8BFCAC58E23FF14037B68F /* PFSQLiteDatabaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSQLiteDatabaseController.h; path = Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseController.h; sourceTree = "<group>"; };
 		2A1A2B3E7FA4BC82FB24DB1CA14FB387 /* PFRESTObjectBatchCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTObjectBatchCommand.h; path = Parse/Parse/Internal/Commands/PFRESTObjectBatchCommand.h; sourceTree = "<group>"; };
 		2A5D19A45D4C3FE9A2C27D0EC36DC92A /* couchbase-lite-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "couchbase-lite-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		2AD2C2B4B764865F4A253A06AFA043DB /* RLMQueryUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMQueryUtil.mm; path = Realm/RLMQueryUtil.mm; sourceTree = "<group>"; };
+		2AD2C2B4B764865F4A253A06AFA043DB /* RLMQueryUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMQueryUtil.mm; path = Realm/RLMQueryUtil.mm; sourceTree = "<group>"; };
 		2B014EDC71DFC871EA21DD93E629C9C7 /* PFPaymentTransactionObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPaymentTransactionObserver.h; path = Parse/Parse/Internal/Purchase/PaymentTransactionObserver/PFPaymentTransactionObserver.h; sourceTree = "<group>"; };
 		2B96C79E16FFA623A802CF7B4C694D98 /* PFEventuallyQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFEventuallyQueue.m; path = Parse/Parse/Internal/PFEventuallyQueue.m; sourceTree = "<group>"; };
 		2C0725C0EABC08EDCC06F2104590AB2D /* PFURLSessionDataTaskDelegate_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSessionDataTaskDelegate_Private.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionDataTaskDelegate_Private.h; sourceTree = "<group>"; };
@@ -937,13 +940,13 @@
 		382A6DE90E41963C011D2DDB9E8D7256 /* PFURLSessionFileDownloadTaskDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSessionFileDownloadTaskDelegate.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionFileDownloadTaskDelegate.h; sourceTree = "<group>"; };
 		38D6EC065BE2A78F0CD700AAA17C4EDC /* PFDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDevice.m; path = Parse/Parse/Internal/PFDevice.m; sourceTree = "<group>"; };
 		39002293E6F3510BB3C4D654A69FE0BD /* PFAsyncTaskQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAsyncTaskQueue.m; path = Parse/Parse/Internal/PFAsyncTaskQueue.m; sourceTree = "<group>"; };
-		39EDB1A0DD86003E8468BA6A34EA04E2 /* RLMSyncPermission.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncPermission.mm; path = Realm/RLMSyncPermission.mm; sourceTree = "<group>"; };
+		39EDB1A0DD86003E8468BA6A34EA04E2 /* RLMSyncPermission.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncPermission.mm; path = Realm/RLMSyncPermission.mm; sourceTree = "<group>"; };
 		3A0945536EFF91B8DA117D2442FAEFF7 /* PFCommandResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandResult.h; path = Parse/Parse/Internal/PFCommandResult.h; sourceTree = "<group>"; };
 		3A0AA40F8E84D70A237D5E71C811B0E6 /* RLMCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMCollection.h; path = include/RLMCollection.h; sourceTree = "<group>"; };
 		3BA7F5F4599CF45D38A400F0F5461D57 /* PFRelationState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelationState.h; path = Parse/Parse/Internal/Relation/State/PFRelationState.h; sourceTree = "<group>"; };
 		3BDD54C94ADC794D730358990DAE68B4 /* Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Realm.release.xcconfig; sourceTree = "<group>"; };
 		3BE83B41342ABF2DD967A048A35F62D7 /* RLMSyncCredentials.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMSyncCredentials.m; path = Realm/RLMSyncCredentials.m; sourceTree = "<group>"; };
-		3C0B6CFEBC8492907EA3F7564CAA7127 /* RLMCollection.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMCollection.mm; path = Realm/RLMCollection.mm; sourceTree = "<group>"; };
+		3C0B6CFEBC8492907EA3F7564CAA7127 /* RLMCollection.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMCollection.mm; path = Realm/RLMCollection.mm; sourceTree = "<group>"; };
 		3D2FF525EAEDC9924C16E3AB7D9DC2C9 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
 		3DF6056D9D3457D46B333A6C69913004 /* RLMObjectSchema.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectSchema.h; path = include/RLMObjectSchema.h; sourceTree = "<group>"; };
 		3EB09EF961E4410D33480E9C6C0F66D8 /* PFRelationState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRelationState.m; path = Parse/Parse/Internal/Relation/State/PFRelationState.m; sourceTree = "<group>"; };
@@ -957,8 +960,8 @@
 		4150CECEFF64E0423D9696E5B2B3C6D2 /* sync_file.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sync_file.cpp; path = Realm/ObjectStore/src/sync/impl/sync_file.cpp; sourceTree = "<group>"; };
 		41DB890F1B22AE23345944C4AB29D92F /* PFRESTObjectBatchCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTObjectBatchCommand.m; path = Parse/Parse/Internal/Commands/PFRESTObjectBatchCommand.m; sourceTree = "<group>"; };
 		41F4BF3E0E9C371647A343653F96A711 /* PFFileObject_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileObject_Private.h; path = Parse/Parse/Internal/File/PFFileObject_Private.h; sourceTree = "<group>"; };
-		420D1AFAC741CC35846029F51D529D99 /* RLMClassInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMClassInfo.mm; path = Realm/RLMClassInfo.mm; sourceTree = "<group>"; };
-		421A7B07784B233231F4298F2DF1FEA4 /* CrashReporter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CrashReporter.xcframework; sourceTree = "<group>"; };
+		420D1AFAC741CC35846029F51D529D99 /* RLMClassInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMClassInfo.mm; path = Realm/RLMClassInfo.mm; sourceTree = "<group>"; };
+		421A7B07784B233231F4298F2DF1FEA4 /* CrashReporter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CrashReporter.xcframework; sourceTree = "<group>"; };
 		437919EE08EC6BFCCBAC3BD346309742 /* RealmSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RealmSwift; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4382B2A5C80A867250DACF22C3206B26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		4629619C3694A157249F2FAA36758A2B /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse/Parse/PFUser.h; sourceTree = "<group>"; };
@@ -975,7 +978,7 @@
 		4B842E9B0AD291E7F09F78C7912E5487 /* PFDateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDateFormatter.m; path = Parse/Parse/Internal/PFDateFormatter.m; sourceTree = "<group>"; };
 		4BF94C8C431879D3F8BCE1766F8185AC /* RLMSchema.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSchema.h; path = include/RLMSchema.h; sourceTree = "<group>"; };
 		4CA2CA05D6E65E541F57C1E069F31529 /* RLMOptionalBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMOptionalBase.h; path = include/RLMOptionalBase.h; sourceTree = "<group>"; };
-		4CCAFD8CE22B4BDB3ADACC53198DF633 /* RLMRealm.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMRealm.mm; path = Realm/RLMRealm.mm; sourceTree = "<group>"; };
+		4CCAFD8CE22B4BDB3ADACC53198DF633 /* RLMRealm.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealm.mm; path = Realm/RLMRealm.mm; sourceTree = "<group>"; };
 		4CFA647DE6552A07AB91230CCA23A13D /* PFInstallationConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallationConstants.h; path = Parse/Parse/Internal/Installation/Constants/PFInstallationConstants.h; sourceTree = "<group>"; };
 		4E789C45F412F84DB7FC8921569F60CD /* PFInstallationIdentifierStore_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallationIdentifierStore_Private.h; path = Parse/Parse/Internal/Installation/InstallationIdentifierStore/PFInstallationIdentifierStore_Private.h; sourceTree = "<group>"; };
 		4E7A624CB2395D2DB2639EF6A7DD5EEE /* PFDataProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFDataProvider.h; path = Parse/Parse/Internal/PFDataProvider.h; sourceTree = "<group>"; };
@@ -987,7 +990,7 @@
 		51E1BE59D76DAAA6F15E5F09278182D8 /* results.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = results.cpp; path = Realm/ObjectStore/src/results.cpp; sourceTree = "<group>"; };
 		52A2A91CA9DD8853E3A3C97A1C32DF59 /* RLMObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject.h; path = include/RLMObject.h; sourceTree = "<group>"; };
 		52F0F2D916BF973C3249288D63CE8250 /* PFPaymentTransactionObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPaymentTransactionObserver.m; path = Parse/Parse/Internal/Purchase/PaymentTransactionObserver/PFPaymentTransactionObserver.m; sourceTree = "<group>"; };
-		536FCD5366A28142E0E4CFD3155900D7 /* RLMRealmConfiguration+Sync.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "RLMRealmConfiguration+Sync.mm"; path = "Realm/RLMRealmConfiguration+Sync.mm"; sourceTree = "<group>"; };
+		536FCD5366A28142E0E4CFD3155900D7 /* RLMRealmConfiguration+Sync.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "RLMRealmConfiguration+Sync.mm"; path = "Realm/RLMRealmConfiguration+Sync.mm"; sourceTree = "<group>"; };
 		54AD16D5BD03E919E64E50107DF98304 /* PFUser+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFUser+Synchronous.h"; path = "Parse/Parse/PFUser+Synchronous.h"; sourceTree = "<group>"; };
 		55E491E9AECEAA331C4617BB7262FFD2 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
 		5611137507CAB6431A3F6F54F8BD908F /* PFCloud+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFCloud+Synchronous.h"; path = "Parse/Parse/PFCloud+Synchronous.h"; sourceTree = "<group>"; };
@@ -1001,7 +1004,7 @@
 		589C9D2E1FCBC4D8327A40531EF5B84C /* PFAnonymousUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnonymousUtils.m; path = Parse/Parse/PFAnonymousUtils.m; sourceTree = "<group>"; };
 		58AE5B28DA2FCA23C7E3B68B37CB9CA9 /* PFCurrentConfigController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCurrentConfigController.h; path = Parse/Parse/Internal/Config/Controller/PFCurrentConfigController.h; sourceTree = "<group>"; };
 		592BA78412A57E6F97AD84CD214909A2 /* PFRESTPushCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTPushCommand.h; path = Parse/Parse/Internal/Commands/PFRESTPushCommand.h; sourceTree = "<group>"; };
-		5A6FFBB2437272E726F9499A25D963A0 /* RLMOptionalBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMOptionalBase.mm; path = Realm/RLMOptionalBase.mm; sourceTree = "<group>"; };
+		5A6FFBB2437272E726F9499A25D963A0 /* RLMOptionalBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMOptionalBase.mm; path = Realm/RLMOptionalBase.mm; sourceTree = "<group>"; };
 		5B449453A5A58EB122CFA0332586FA9A /* PFFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileManager.h; path = Parse/Parse/Internal/PFFileManager.h; sourceTree = "<group>"; };
 		5B9DF1D7F4955C111DFFBC4CEBD2A582 /* PFHTTPURLRequestConstructor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFHTTPURLRequestConstructor.m; path = Parse/Parse/Internal/HTTPRequest/PFHTTPURLRequestConstructor.m; sourceTree = "<group>"; };
 		5BB179E7D976857778460C1FDFA87D63 /* PFObjectBatchController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectBatchController.m; path = Parse/Parse/Internal/Object/BatchController/PFObjectBatchController.m; sourceTree = "<group>"; };
@@ -1015,7 +1018,7 @@
 		60EEDC98693284C30468CFF6F99FB37E /* PFACLPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLPrivate.h; path = Parse/Parse/Internal/ACL/PFACLPrivate.h; sourceTree = "<group>"; };
 		614D39328980168659843274296D490E /* RLMSyncPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermission.h; path = include/RLMSyncPermission.h; sourceTree = "<group>"; };
 		62F53DD74C716A85AB4B9657DD8C674C /* PFObjectFileCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectFileCoder.m; path = Parse/Parse/Internal/Object/Coder/File/PFObjectFileCoder.m; sourceTree = "<group>"; };
-		631E758DB7DAC56622F75FD929DE741B /* RLMRealmConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMRealmConfiguration.mm; path = Realm/RLMRealmConfiguration.mm; sourceTree = "<group>"; };
+		631E758DB7DAC56622F75FD929DE741B /* RLMRealmConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealmConfiguration.mm; path = Realm/RLMRealmConfiguration.mm; sourceTree = "<group>"; };
 		6360C4B335B19BAECE4A63AAF8448ACC /* PFRESTPushCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTPushCommand.m; path = Parse/Parse/Internal/Commands/PFRESTPushCommand.m; sourceTree = "<group>"; };
 		63ACFD2FCB2057AFA3BA5CE2217F6438 /* PFAnalyticsUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsUtilities.h; path = Parse/Parse/Internal/Analytics/Utilities/PFAnalyticsUtilities.h; sourceTree = "<group>"; };
 		64191B66A08BAD30819D26671BA9E3CF /* thread_safe_reference.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = thread_safe_reference.cpp; path = Realm/ObjectStore/src/thread_safe_reference.cpp; sourceTree = "<group>"; };
@@ -1024,7 +1027,7 @@
 		65DF031CF357995243C61D909DB48F7B /* Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bolts-dummy.m"; sourceTree = "<group>"; };
 		65E41AEA5D0746FD79939F9437645464 /* PFPurchase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPurchase.m; path = Parse/Parse/PFPurchase.m; sourceTree = "<group>"; };
 		66506D60AA48A71A9E78DABEBF5FD0E0 /* PFCurrentObjectControlling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCurrentObjectControlling.h; path = Parse/Parse/Internal/Object/CurrentController/PFCurrentObjectControlling.h; sourceTree = "<group>"; };
-		66E787F7CE683A0AED1EF7B0DA8E9D5F /* RLMPredicateUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMPredicateUtil.mm; path = Realm/RLMPredicateUtil.mm; sourceTree = "<group>"; };
+		66E787F7CE683A0AED1EF7B0DA8E9D5F /* RLMPredicateUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMPredicateUtil.mm; path = Realm/RLMPredicateUtil.mm; sourceTree = "<group>"; };
 		67888895F018C5232442332053B8ADBC /* PFAnonymousUtils+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFAnonymousUtils+Deprecated.h"; path = "Parse/Parse/PFAnonymousUtils+Deprecated.h"; sourceTree = "<group>"; };
 		67DCF0CDA6F86A5273DB6D74C7F05999 /* PFInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallation.h; path = Parse/Parse/PFInstallation.h; sourceTree = "<group>"; };
 		6822A14996F8932A774D435C7E57FCC6 /* PFMultiProcessFileLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMultiProcessFileLock.h; path = Parse/Parse/Internal/MultiProcessLock/PFMultiProcessFileLock.h; sourceTree = "<group>"; };
@@ -1075,7 +1078,7 @@
 		7A6542D4E7704F082AA6E5EE53FCB1A9 /* PFMulticastDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMulticastDelegate.h; path = Parse/Parse/Internal/PFMulticastDelegate.h; sourceTree = "<group>"; };
 		7AB60540B334A6B7B96D8CFE1FFEAD4C /* PFKeyValueCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFKeyValueCache.h; path = Parse/Parse/Internal/KeyValueCache/PFKeyValueCache.h; sourceTree = "<group>"; };
 		7AC65EEFE2362DC33951081529F5608A /* Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Realm.debug.xcconfig; sourceTree = "<group>"; };
-		7AE102056964A9F25355FB8C1A7ADDCE /* RLMResults.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMResults.mm; path = Realm/RLMResults.mm; sourceTree = "<group>"; };
+		7AE102056964A9F25355FB8C1A7ADDCE /* RLMResults.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMResults.mm; path = Realm/RLMResults.mm; sourceTree = "<group>"; };
 		7AF1535BED8589CC800BAEAA52831D86 /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
 		7AF8A9766AC7E6D6817623E5EE8E2BA3 /* CBLRegisterJSViewCompiler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBLRegisterJSViewCompiler.h; path = Extras/CBLRegisterJSViewCompiler.h; sourceTree = "<group>"; };
 		7B0793915BD5B381FBB94D0EAF6CA53E /* PFObjectController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectController.m; path = Parse/Parse/Internal/Object/Controller/PFObjectController.m; sourceTree = "<group>"; };
@@ -1091,7 +1094,7 @@
 		7E8F5F240EFA7DE19FF823903807F3B0 /* PFPushState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushState.h; path = Parse/Parse/Internal/Push/State/PFPushState.h; sourceTree = "<group>"; };
 		7F039B746228C548200C05B933321D88 /* PFConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFConstants.m; path = Parse/Parse/PFConstants.m; sourceTree = "<group>"; };
 		7F0874B9A771DC85A9D0A2BA28CBCE88 /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse/Parse/PFGeoPoint.h; sourceTree = "<group>"; };
-		8059FDF6448FCE88C7AB854EDC542150 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
+		8059FDF6448FCE88C7AB854EDC542150 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
 		80D8AE320DE6BAD6DA0840318765B0BB /* CBLAuthenticator+OpenID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CBLAuthenticator+OpenID.h"; path = "CouchbaseLite.framework/Headers/CBLAuthenticator+OpenID.h"; sourceTree = "<group>"; };
 		81013EA86EA76B9B17CA279141505118 /* RLMRealmConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration_Private.h; path = include/RLMRealmConfiguration_Private.h; sourceTree = "<group>"; };
 		8162FC3781DBC9893B31C3E06393CD0D /* sync_user.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sync_user.cpp; path = Realm/ObjectStore/src/sync/sync_user.cpp; sourceTree = "<group>"; };
@@ -1099,7 +1102,7 @@
 		81A346FD4651BE0471C029507A9EFF45 /* PFObjectEstimatedData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectEstimatedData.h; path = Parse/Parse/Internal/Object/EstimatedData/PFObjectEstimatedData.h; sourceTree = "<group>"; };
 		82CE6C0CB27CB5374ECFF9E59B521297 /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse/Parse/PFACL.h; sourceTree = "<group>"; };
 		83233B7EC8C6A94C5CC90E0AE74AFB26 /* PFUser+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFUser+Deprecated.h"; path = "Parse/Parse/PFUser+Deprecated.h"; sourceTree = "<group>"; };
-		83952529BBEE3850EFFCC2129BED4992 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
+		83952529BBEE3850EFFCC2129BED4992 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
 		857D948DCC03673F4BE090671DCD80A8 /* ParseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Parse/Parse/Internal/ParseManager.m; sourceTree = "<group>"; };
 		8595A9279AAE586DE618CA58B08AAB32 /* PFCurrentConfigController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCurrentConfigController.m; path = Parse/Parse/Internal/Config/Controller/PFCurrentConfigController.m; sourceTree = "<group>"; };
 		861FE2A8AA6CF22F80663A68628C83B4 /* PFQueryState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryState.m; path = Parse/Parse/Internal/Query/State/PFQueryState.m; sourceTree = "<group>"; };
@@ -1133,7 +1136,7 @@
 		8FB5615E147ECBA0F956CFF1B1AC7CC4 /* PFObjectSubclassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectSubclassInfo.h; path = Parse/Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.h; sourceTree = "<group>"; };
 		8FEC2996E582D6BED1459084AA8449EC /* PFDateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFDateFormatter.h; path = Parse/Parse/Internal/PFDateFormatter.h; sourceTree = "<group>"; };
 		8FEF2ADF108342627825DA2743DB9987 /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse/Parse/PFConfig.h; sourceTree = "<group>"; };
-		91045166FA6FD5CEB0AE2902577BEB72 /* RLMSyncUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncUtil.mm; path = Realm/RLMSyncUtil.mm; sourceTree = "<group>"; };
+		91045166FA6FD5CEB0AE2902577BEB72 /* RLMSyncUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncUtil.mm; path = Realm/RLMSyncUtil.mm; sourceTree = "<group>"; };
 		912C7633630FFCFD459FF9283E924A1C /* BFTask+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BFTask+Private.m"; path = "Parse/Parse/Internal/BFTask+Private.m"; sourceTree = "<group>"; };
 		918A1CE4DE242D3F21529546E70FEA47 /* PFObjectState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectState.h; path = Parse/Parse/Internal/Object/State/PFObjectState.h; sourceTree = "<group>"; };
 		91C019A441B1296D96522CE3A27AB246 /* PFQueryConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryConstants.h; path = Parse/Parse/Internal/Query/PFQueryConstants.h; sourceTree = "<group>"; };
@@ -1152,9 +1155,9 @@
 		955795E74C879506AD7C40F5F2F39EC6 /* object_schema.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = object_schema.cpp; path = Realm/ObjectStore/src/object_schema.cpp; sourceTree = "<group>"; };
 		9575F33C477DCE36EF32505D29AE7467 /* PFOperationSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOperationSet.m; path = Parse/Parse/Internal/Object/OperationSet/PFOperationSet.m; sourceTree = "<group>"; };
 		95DF9A5E2C0AA408E23FE14EA5D1FA80 /* sync_manager.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sync_manager.cpp; path = Realm/ObjectStore/src/sync/sync_manager.cpp; sourceTree = "<group>"; };
-		963D6EAB417941AA2E6EEE670BA8F2C7 /* RLMMigration.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMMigration.mm; path = Realm/RLMMigration.mm; sourceTree = "<group>"; };
+		963D6EAB417941AA2E6EEE670BA8F2C7 /* RLMMigration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMMigration.mm; path = Realm/RLMMigration.mm; sourceTree = "<group>"; };
 		965410D43C8B3F4A7756390E79918E84 /* PFUserState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserState.m; path = Parse/Parse/Internal/User/State/PFUserState.m; sourceTree = "<group>"; };
-		9671737617F73D688E70B26C61D1834D /* GoogleAnalytics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleAnalytics.xcframework; path = Frameworks/GoogleAnalytics.xcframework; sourceTree = "<group>"; };
+		9671737617F73D688E70B26C61D1834D /* GoogleAnalytics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleAnalytics.xcframework; path = Frameworks/GoogleAnalytics.xcframework; sourceTree = "<group>"; };
 		97B474A268EDE005FB478FF4256B4B4D /* PFRESTUserCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTUserCommand.h; path = Parse/Parse/Internal/Commands/PFRESTUserCommand.h; sourceTree = "<group>"; };
 		97F95698F5CD065D0E15A8CF64255551 /* PFDefaultACLController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDefaultACLController.m; path = Parse/Parse/Internal/ACL/DefaultACLController/PFDefaultACLController.m; sourceTree = "<group>"; };
 		9815D0BB63B480859D16D4A559A377F6 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse/Parse/Parse.h; sourceTree = "<group>"; };
@@ -1170,7 +1173,7 @@
 		9D0A14E71596C033F1A07672DAA66DA0 /* ParseClientConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseClientConfiguration_Private.h; path = Parse/Parse/Internal/ParseClientConfiguration_Private.h; sourceTree = "<group>"; };
 		9D5910A6C92BE0FC1C42E8308415E120 /* PFURLConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLConstructor.h; path = Parse/Parse/Internal/HTTPRequest/PFURLConstructor.h; sourceTree = "<group>"; };
 		9D6E15302E54312077617A520FAFFAC0 /* CBLBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBLBase.h; path = CouchbaseLite.framework/Headers/CBLBase.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E99AB9E93E1385335AEE3A763C7B7B0 /* PFInstallationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFInstallationController.m; path = Parse/Parse/Internal/Installation/Controller/PFInstallationController.m; sourceTree = "<group>"; };
 		9EBB0D99EF6964B8010EF402272EB25B /* Pods-DVIA-v2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DVIA-v2.modulemap"; sourceTree = "<group>"; };
 		9F0C2B6B16E96BEEF598E19197C572BD /* PFWeakValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFWeakValue.h; path = Parse/Parse/Internal/PFWeakValue.h; sourceTree = "<group>"; };
@@ -1189,7 +1192,7 @@
 		A357E03B24B0BAFFED9EB871361655BE /* RLMRealm+Sync.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RLMRealm+Sync.h"; path = "include/RLMRealm+Sync.h"; sourceTree = "<group>"; };
 		A35F177D987A3FAC7805C8FE3E13DE5C /* Parse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Parse.release.xcconfig; sourceTree = "<group>"; };
 		A37C8861F1DD2B3C3D05DB5AC1AB440F /* PFFileStagingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileStagingController.h; path = Parse/Parse/Internal/File/Controller/PFFileStagingController.h; sourceTree = "<group>"; };
-		A468C332FAB818E39B7CC1ED77717527 /* RLMObjectStore.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObjectStore.mm; path = Realm/RLMObjectStore.mm; sourceTree = "<group>"; };
+		A468C332FAB818E39B7CC1ED77717527 /* RLMObjectStore.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectStore.mm; path = Realm/RLMObjectStore.mm; sourceTree = "<group>"; };
 		A48714A6FBD3B95B0A1FB90F2C4BF943 /* PFCloudCodeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloudCodeController.h; path = Parse/Parse/Internal/CloudCode/PFCloudCodeController.h; sourceTree = "<group>"; };
 		A4A9F69870811945E8853C5A88CA7611 /* PFObjectSubclassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectSubclassInfo.m; path = Parse/Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.m; sourceTree = "<group>"; };
 		A579F8D0BB2011F2B6C995A97490A08A /* PFPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPin.m; path = Parse/Parse/Internal/LocalDataStore/Pin/PFPin.m; sourceTree = "<group>"; };
@@ -1207,7 +1210,7 @@
 		A9402AC5A2F44CF3C8F82B6ECE83C1EA /* PFPush+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFPush+Synchronous.h"; path = "Parse/Parse/PFPush+Synchronous.h"; sourceTree = "<group>"; };
 		A96D35B9D31B8BD31E28BD10BA2C28B2 /* PFAnonymousUtils_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils_Private.h; path = Parse/Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousUtils_Private.h; sourceTree = "<group>"; };
 		A97E888DB788B31E823FFA93B8F4B201 /* Parse-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Parse-Info.plist"; sourceTree = "<group>"; };
-		A9BAF9D664E021B4512A35EFEE32FD3C /* RLMSyncSession.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncSession.mm; path = Realm/RLMSyncSession.mm; sourceTree = "<group>"; };
+		A9BAF9D664E021B4512A35EFEE32FD3C /* RLMSyncSession.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncSession.mm; path = Realm/RLMSyncSession.mm; sourceTree = "<group>"; };
 		AA03A40E82A2212CD4373CC0BCC20EBA /* CouchbaseLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CouchbaseLite.h; path = CouchbaseLite.framework/Headers/CouchbaseLite.h; sourceTree = "<group>"; };
 		AB0FEF62CE1F745985037DD5D78E424F /* PFRESTObjectCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTObjectCommand.h; path = Parse/Parse/Internal/Commands/PFRESTObjectCommand.h; sourceTree = "<group>"; };
 		AB5FB6165B931FBDA34C4AFF2D8E5EC7 /* Pods-DVIA-v2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DVIA-v2-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -1218,12 +1221,12 @@
 		AF8CB0032B9B00F15AE2992712F9591F /* PFAnonymousAuthenticationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousAuthenticationProvider.h; path = Parse/Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousAuthenticationProvider.h; sourceTree = "<group>"; };
 		AFB5129A02247658CA8DC11FDA7A56AD /* PFAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAlertView.m; path = Parse/Parse/Internal/PFAlertView.m; sourceTree = "<group>"; };
 		AFDDE8433B734C599A0025C93773DAD8 /* PFOfflineStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOfflineStore.m; path = Parse/Parse/Internal/LocalDataStore/OfflineStore/PFOfflineStore.m; sourceTree = "<group>"; };
-		B0D0206A04F02083721585B6C85A2EE5 /* RLMListBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMListBase.mm; path = Realm/RLMListBase.mm; sourceTree = "<group>"; };
-		B1ED088B10547AFD08B901102F992E45 /* RLMAnalytics.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMAnalytics.mm; path = Realm/RLMAnalytics.mm; sourceTree = "<group>"; };
+		B0D0206A04F02083721585B6C85A2EE5 /* RLMListBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMListBase.mm; path = Realm/RLMListBase.mm; sourceTree = "<group>"; };
+		B1ED088B10547AFD08B901102F992E45 /* RLMAnalytics.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAnalytics.mm; path = Realm/RLMAnalytics.mm; sourceTree = "<group>"; };
 		B207FEBB1DBE70716F1B19D5E9913213 /* PFUserAuthenticationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserAuthenticationDelegate.h; path = Parse/Parse/PFUserAuthenticationDelegate.h; sourceTree = "<group>"; };
 		B2EB61C7CB39CD77B716EBA7DDDA847B /* RLMSyncConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncConfiguration.h; path = include/RLMSyncConfiguration.h; sourceTree = "<group>"; };
 		B338DBE9721DA452A48545CEC85E6DE0 /* PFPushUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushUtilities.h; path = Parse/Parse/Internal/Push/Utilites/PFPushUtilities.h; sourceTree = "<group>"; };
-		B37271AC5B4EDAB71D594F97EAB00C7B /* RLMObjectSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObjectSchema.mm; path = Realm/RLMObjectSchema.mm; sourceTree = "<group>"; };
+		B37271AC5B4EDAB71D594F97EAB00C7B /* RLMObjectSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectSchema.mm; path = Realm/RLMObjectSchema.mm; sourceTree = "<group>"; };
 		B3927A05901395BF198FB371BF99B246 /* PFProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFProduct.m; path = Parse/Parse/PFProduct.m; sourceTree = "<group>"; };
 		B39A77BE9C1301960E55BD7ED6A1FD3D /* PFPushChannelsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushChannelsController.h; path = Parse/Parse/Internal/Push/ChannelsController/PFPushChannelsController.h; sourceTree = "<group>"; };
 		B3DBB8C9DC8F4998F0DCA2909444984B /* PFObjectFileCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFileCoder.h; path = Parse/Parse/Internal/Object/Coder/File/PFObjectFileCoder.h; sourceTree = "<group>"; };
@@ -1233,11 +1236,11 @@
 		B604C364707597686220F945A3EC0A58 /* PFRESTCloudCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTCloudCommand.m; path = Parse/Parse/Internal/Commands/PFRESTCloudCommand.m; sourceTree = "<group>"; };
 		B6AC1C2D246F980B05412C400C62F4B3 /* PFFieldOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFieldOperation.m; path = Parse/Parse/Internal/FieldOperation/PFFieldOperation.m; sourceTree = "<group>"; };
 		B6C1DB758F0296D125219EF5C641BA26 /* PFObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObject.m; path = Parse/Parse/PFObject.m; sourceTree = "<group>"; };
-		B7A4C15D64D96D9FAB521A947CD38836 /* RLMUpdateChecker.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMUpdateChecker.mm; path = Realm/RLMUpdateChecker.mm; sourceTree = "<group>"; };
+		B7A4C15D64D96D9FAB521A947CD38836 /* RLMUpdateChecker.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUpdateChecker.mm; path = Realm/RLMUpdateChecker.mm; sourceTree = "<group>"; };
 		B7D47287961D87E36F8DC573DA11DB11 /* RLMSyncCredentials.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncCredentials.h; path = include/RLMSyncCredentials.h; sourceTree = "<group>"; };
 		B81C986E5361FA52FEF0E0040599E869 /* RLMRealmConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration.h; path = include/RLMRealmConfiguration.h; sourceTree = "<group>"; };
 		B82C42F10FFF68AEBB25B2EDF414F607 /* PFMutableQueryState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableQueryState.m; path = Parse/Parse/Internal/Query/State/PFMutableQueryState.m; sourceTree = "<group>"; };
-		B835F6359B461FACD0E1CA3F5DAFF5B3 /* Flurry_iOS_SDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = Flurry_iOS_SDK.xcframework; sourceTree = "<group>"; };
+		B835F6359B461FACD0E1CA3F5DAFF5B3 /* Flurry_iOS_SDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = Flurry_iOS_SDK.xcframework; sourceTree = "<group>"; };
 		B83B2E87C6C30C3939EF6007E166580F /* NSError+RLMSync.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+RLMSync.h"; path = "include/NSError+RLMSync.h"; sourceTree = "<group>"; };
 		B8C7E3DD35AC9C6CA0673042844DC03F /* shared_realm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = shared_realm.cpp; path = Realm/ObjectStore/src/shared_realm.cpp; sourceTree = "<group>"; };
 		B93949C9179883283227AFC4AAA4B281 /* PFCategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCategoryLoader.m; path = Parse/Parse/Internal/PFCategoryLoader.m; sourceTree = "<group>"; };
@@ -1248,16 +1251,16 @@
 		BC3B87D6CC915FE714A2FCAD2D1AD21A /* PFSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSession.m; path = Parse/Parse/PFSession.m; sourceTree = "<group>"; };
 		BC6A9CF09EC2F95191D50B4FDC9F2BBF /* PFFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileState.m; path = Parse/Parse/Internal/File/State/PFFileState.m; sourceTree = "<group>"; };
 		BCE722DB71025FF986B459BDED70C132 /* PFThreadsafety.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFThreadsafety.h; path = Parse/Parse/Internal/ThreadSafety/PFThreadsafety.h; sourceTree = "<group>"; };
-		BCE7804C5F703E367EAC3CAAED2C2380 /* RLMRealm+Sync.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "RLMRealm+Sync.mm"; path = "Realm/RLMRealm+Sync.mm"; sourceTree = "<group>"; };
+		BCE7804C5F703E367EAC3CAAED2C2380 /* RLMRealm+Sync.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "RLMRealm+Sync.mm"; path = "Realm/RLMRealm+Sync.mm"; sourceTree = "<group>"; };
 		BD01FA8C2FD692614A0B6E2509438122 /* async_open_task.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = async_open_task.cpp; path = Realm/ObjectStore/src/sync/async_open_task.cpp; sourceTree = "<group>"; };
 		BD1A4EA6A38B4C7895427E518AC8A151 /* Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-prefix.pch"; sourceTree = "<group>"; };
-		BD5B2A7F0F831F05C837FBDA93DC4EDC /* RLMSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSchema.mm; path = Realm/RLMSchema.mm; sourceTree = "<group>"; };
+		BD5B2A7F0F831F05C837FBDA93DC4EDC /* RLMSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSchema.mm; path = Realm/RLMSchema.mm; sourceTree = "<group>"; };
 		BD87420267F18D3FFD039706EBEBBB49 /* PFCoreDataProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCoreDataProvider.h; path = Parse/Parse/Internal/PFCoreDataProvider.h; sourceTree = "<group>"; };
 		BDA53E0D47B5B2A1898614E73F4C3C88 /* PFUserFileCodingLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserFileCodingLogic.h; path = Parse/Parse/Internal/User/Coder/File/PFUserFileCodingLogic.h; sourceTree = "<group>"; };
 		BDC339C7507DF368ACD891B3F91AC363 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RealmSwift/Optional.swift; sourceTree = "<group>"; };
-		BE0582CD2B9CDEC7C731A4FC068A320D /* RLMSyncSessionRefreshHandle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncSessionRefreshHandle.mm; path = Realm/RLMSyncSessionRefreshHandle.mm; sourceTree = "<group>"; };
+		BE0582CD2B9CDEC7C731A4FC068A320D /* RLMSyncSessionRefreshHandle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncSessionRefreshHandle.mm; path = Realm/RLMSyncSessionRefreshHandle.mm; sourceTree = "<group>"; };
 		BE50DDCDCCF4201D4D52993EF691AB29 /* collection_change_builder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = collection_change_builder.cpp; path = Realm/ObjectStore/src/impl/collection_change_builder.cpp; sourceTree = "<group>"; };
-		BF3CF3A1BD749F3E82F11126C035F1DD /* RLMArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMArray.mm; path = Realm/RLMArray.mm; sourceTree = "<group>"; };
+		BF3CF3A1BD749F3E82F11126C035F1DD /* RLMArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMArray.mm; path = Realm/RLMArray.mm; sourceTree = "<group>"; };
 		BF6A6F0481A261F21D95817D882C63CC /* Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bolts.modulemap; sourceTree = "<group>"; };
 		BFA18A2641FE4C7C6FE589949BEDF91C /* PFKeyValueCache_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFKeyValueCache_Private.h; path = Parse/Parse/Internal/KeyValueCache/PFKeyValueCache_Private.h; sourceTree = "<group>"; };
 		BFBFD9D90380851F92A29B9BF46698BF /* PFObjectState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectState_Private.h; path = Parse/Parse/Internal/Object/State/PFObjectState_Private.h; sourceTree = "<group>"; };
@@ -1269,21 +1272,21 @@
 		C19CA0118C11D2B1E41B3E113133C365 /* PFPinningEventuallyQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPinningEventuallyQueue.m; path = Parse/Parse/Internal/PFPinningEventuallyQueue.m; sourceTree = "<group>"; };
 		C1BEA2F80AAA547E25B31F3868C60427 /* Bolts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-umbrella.h"; sourceTree = "<group>"; };
 		C251165E0A583D35B579A59D516D8AE9 /* PFFileController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileController.m; path = Parse/Parse/Internal/File/Controller/PFFileController.m; sourceTree = "<group>"; };
-		C2A12DF3190796235404378C42855C80 /* RLMUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMUtil.mm; path = Realm/RLMUtil.mm; sourceTree = "<group>"; };
+		C2A12DF3190796235404378C42855C80 /* RLMUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUtil.mm; path = Realm/RLMUtil.mm; sourceTree = "<group>"; };
 		C2F1CC593CC2EE3BDAD8DACD6CE01923 /* PFObjectPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectPrivate.h; path = Parse/Parse/Internal/Object/PFObjectPrivate.h; sourceTree = "<group>"; };
 		C479DD7EFAAF00D54A0C03EFDE0F5738 /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse/Parse/PFCloud.h; sourceTree = "<group>"; };
-		C49E5E3B946F847ACCB40495487131E4 /* RLMSyncUser.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncUser.mm; path = Realm/RLMSyncUser.mm; sourceTree = "<group>"; };
+		C49E5E3B946F847ACCB40495487131E4 /* RLMSyncUser.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSyncUser.mm; path = Realm/RLMSyncUser.mm; sourceTree = "<group>"; };
 		C5669FA0D462A14E29070BA678D7A163 /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse/Parse/PFObject.h; sourceTree = "<group>"; };
 		C5FF1A22BACE0A328DFCEAE8C5B77831 /* Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Parse-dummy.m"; sourceTree = "<group>"; };
 		C7307F7BB88755E3AC9101CBA71E7EFD /* object.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = object.cpp; path = Realm/ObjectStore/src/object.cpp; sourceTree = "<group>"; };
 		C853B4BF3B0E377E0F3F6B3E7FE28B79 /* placeholder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = placeholder.cpp; path = Realm/ObjectStore/src/placeholder.cpp; sourceTree = "<group>"; };
 		C87EEE3838BC19F1370330889C1A1736 /* RLMArray_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMArray_Private.h; path = include/RLMArray_Private.h; sourceTree = "<group>"; };
-		C8C9F791CB677ED8B8C547994CDF25A3 /* RLMObjectBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObjectBase.mm; path = Realm/RLMObjectBase.mm; sourceTree = "<group>"; };
+		C8C9F791CB677ED8B8C547994CDF25A3 /* RLMObjectBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectBase.mm; path = Realm/RLMObjectBase.mm; sourceTree = "<group>"; };
 		C97FCC529A3E4E8F9E5EA7F22EEDA963 /* RLMObjectStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectStore.h; path = include/RLMObjectStore.h; sourceTree = "<group>"; };
 		C9C14BF59DDFC9D8DC8FB22A31EE5401 /* PFUserFileCodingLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserFileCodingLogic.m; path = Parse/Parse/Internal/User/Coder/File/PFUserFileCodingLogic.m; sourceTree = "<group>"; };
 		C9E762D270019395763EC7225E5BF003 /* PFConfig_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig_Private.h; path = Parse/Parse/Internal/Config/PFConfig_Private.h; sourceTree = "<group>"; };
 		CA197C6A67F8543F0D9845D6CC5B2FC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		CA4FDEAEF9EA7AA9B550E80E6716156C /* RLMThreadSafeReference.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMThreadSafeReference.mm; path = Realm/RLMThreadSafeReference.mm; sourceTree = "<group>"; };
+		CA4FDEAEF9EA7AA9B550E80E6716156C /* RLMThreadSafeReference.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMThreadSafeReference.mm; path = Realm/RLMThreadSafeReference.mm; sourceTree = "<group>"; };
 		CA71DECD4888AA7DEB07D2DD05D8EE5A /* RLMObjectBase_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectBase_Private.h; path = include/RLMObjectBase_Private.h; sourceTree = "<group>"; };
 		CAE7C1268A59BA99E4393349463C70EC /* PFMutableACLState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableACLState.h; path = Parse/Parse/Internal/ACL/State/PFMutableACLState.h; sourceTree = "<group>"; };
 		CB14FD1A56455D7A9E2B0848782F13F9 /* PFCommandCache_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandCache_Private.h; path = Parse/Parse/Internal/PFCommandCache_Private.h; sourceTree = "<group>"; };
@@ -1356,7 +1359,7 @@
 		E9DBBFEC9464C8A4EF0D0B920D3738E0 /* PFObjectUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectUtilities.m; path = Parse/Parse/Internal/Object/Utilities/PFObjectUtilities.m; sourceTree = "<group>"; };
 		E9F81138EC4BD121F82B8EA0ACF9AD3F /* PFFileObject+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFFileObject+Synchronous.h"; path = "Parse/Parse/PFFileObject+Synchronous.h"; sourceTree = "<group>"; };
 		EA124CFA5CE22CBA30EBAAFDB7978AA0 /* PFACL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFACL.m; path = Parse/Parse/PFACL.m; sourceTree = "<group>"; };
-		EA3A258FD60F5702006D1D89CAFF5B25 /* RLMProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMProperty.mm; path = Realm/RLMProperty.mm; sourceTree = "<group>"; };
+		EA3A258FD60F5702006D1D89CAFF5B25 /* RLMProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMProperty.mm; path = Realm/RLMProperty.mm; sourceTree = "<group>"; };
 		EA5C87651BD72E9506451E0278E51A1B /* ResourceBundle-Parse-Parse-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Parse-Parse-Info.plist"; sourceTree = "<group>"; };
 		EB17C6071AEA088690A52D4B42A365CB /* PFPersistenceController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPersistenceController.h; path = Parse/Parse/Internal/Persistence/PFPersistenceController.h; sourceTree = "<group>"; };
 		EB439E62B4EE4237B02D49FD845B8B46 /* PFOperationSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFOperationSet.h; path = Parse/Parse/Internal/Object/OperationSet/PFOperationSet.h; sourceTree = "<group>"; };
@@ -1368,7 +1371,7 @@
 		ED0BAC0C717764F7600D7BCAA08BD2FF /* PFPinningObjectStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPinningObjectStore.h; path = Parse/Parse/Internal/Object/PinningStore/PFPinningObjectStore.h; sourceTree = "<group>"; };
 		ED1B202DB4510FAF8B3B14D28F415A58 /* PFKeychainStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFKeychainStore.h; path = Parse/Parse/Internal/PFKeychainStore.h; sourceTree = "<group>"; };
 		ED4FB631B84A0D15C5D647EACF15CAA3 /* SortDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SortDescriptor.swift; path = RealmSwift/SortDescriptor.swift; sourceTree = "<group>"; };
-		ED7ADA84A7005589821D254428CD2D26 /* Parse-Parse */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Parse-Parse"; path = Parse.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7ADA84A7005589821D254428CD2D26 /* Parse.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Parse.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9C67950C1FE8989277C35CD586BDCC /* PFMultiProcessFileLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMultiProcessFileLock.m; path = Parse/Parse/Internal/MultiProcessLock/PFMultiProcessFileLock.m; sourceTree = "<group>"; };
 		EE1976E8906C4A7FCD7F8302F700B991 /* PFAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalytics.h; path = Parse/Parse/PFAnalytics.h; sourceTree = "<group>"; };
 		EE1FB09EA59103888C011A7C6882E190 /* PFHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHash.h; path = Parse/Parse/Internal/PFHash.h; sourceTree = "<group>"; };
@@ -1390,7 +1393,7 @@
 		F4E84828A6CFB1591A79EE30534A1545 /* PFUserAuthenticationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserAuthenticationController.h; path = Parse/Parse/Internal/User/AuthenticationProviders/Controller/PFUserAuthenticationController.h; sourceTree = "<group>"; };
 		F5223A74FCDF0A22F60A95CCC6386CA0 /* PFPolygonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPolygonPrivate.h; path = Parse/Parse/Internal/PFPolygonPrivate.h; sourceTree = "<group>"; };
 		F5729B517D3745A1987C647E5327D393 /* PFFileStagingController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileStagingController.m; path = Parse/Parse/Internal/File/Controller/PFFileStagingController.m; sourceTree = "<group>"; };
-		F696AE3223BE6E355679B1F7F2BF944F /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
+		F696AE3223BE6E355679B1F7F2BF944F /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
 		F7074F987C704BC9CF0663D9BB61448D /* PFAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnalytics.m; path = Parse/Parse/PFAnalytics.m; sourceTree = "<group>"; };
 		F71AB05E6DE68281EF7B3525021704AD /* PFQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQuery.h; path = Parse/Parse/PFQuery.h; sourceTree = "<group>"; };
 		F73A6B5AD6A32044409770604A9F0DEA /* RealmSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-umbrella.h"; sourceTree = "<group>"; };
@@ -1414,7 +1417,7 @@
 		FD49CDF890018EA9C5740B5A50F628ED /* ObjectiveCSupport+Sync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObjectiveCSupport+Sync.swift"; path = "RealmSwift/ObjectiveCSupport+Sync.swift"; sourceTree = "<group>"; };
 		FD9C49F914DB370134557152F28211DF /* RLMResults_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults_Private.h; path = include/RLMResults_Private.h; sourceTree = "<group>"; };
 		FE93B62FD296FB5DF02C21303D0F0554 /* CBLModelFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBLModelFactory.h; path = CouchbaseLite.framework/Headers/CBLModelFactory.h; sourceTree = "<group>"; };
-		FFBC21647E81CEA1528A25CF2A7B3671 /* RLMRealmUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMRealmUtil.mm; path = Realm/RLMRealmUtil.mm; sourceTree = "<group>"; };
+		FFBC21647E81CEA1528A25CF2A7B3671 /* RLMRealmUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealmUtil.mm; path = Realm/RLMRealmUtil.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1530,7 +1533,6 @@
 				046B9FEFB79FA2F49376C1EB1705D07A /* FlurrySDK */,
 				417BD7CFFBA661B589CA974009C55DE4 /* Support Files */,
 			);
-			name = "Flurry-iOS-SDK";
 			path = "Flurry-iOS-SDK";
 			sourceTree = "<group>";
 		};
@@ -1634,7 +1636,7 @@
 			children = (
 				F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts */,
 				0652F2476C7C87C6C0F6CB68072EA25F /* Parse */,
-				ED7ADA84A7005589821D254428CD2D26 /* Parse-Parse */,
+				ED7ADA84A7005589821D254428CD2D26 /* Parse.bundle */,
 				F0EC375EFA4880D1FCEC94B2F0FAA68F /* Pods-DVIA-v2 */,
 				921BE4A82C4A7A5C72A0C6F8B8FEF200 /* Realm */,
 				437919EE08EC6BFCCBAC3BD346309742 /* RealmSwift */,
@@ -1648,7 +1650,6 @@
 				3FD5B8F73D402FA6C528A1755E4968CA /* SQLite */,
 				62E8BA42C97299A00BAA6F547ED08197 /* Support Files */,
 			);
-			name = "couchbase-lite-ios";
 			path = "couchbase-lite-ios";
 			sourceTree = "<group>";
 		};
@@ -2235,7 +2236,6 @@
 				3345EA76DE06C81AD5B7FB1CB8EFE3F1 /* Headers */,
 				1C7A945C6A65A3249B655D7CE8E8154E /* Support Files */,
 			);
-			name = Realm;
 			path = Realm;
 			sourceTree = "<group>";
 		};
@@ -2245,7 +2245,6 @@
 				A08DF267225A3F97A4D293E854BABEF1 /* Support Files */,
 				BEEE66FDE3E33EAB4D6E64F67694F5CD /* Tasks */,
 			);
-			name = Bolts;
 			path = Bolts;
 			sourceTree = "<group>";
 		};
@@ -2263,7 +2262,6 @@
 				7A184406B4BDFFFBF0F307EC7023BACA /* Core */,
 				3C4F29CF161C6A8388DBB19107F716C8 /* Support Files */,
 			);
-			name = Parse;
 			path = Parse;
 			sourceTree = "<group>";
 		};
@@ -2332,7 +2330,6 @@
 				E6086B13FC4E88970978428BBCDB4543 /* Util.swift */,
 				52B576487827544E9F6B79893CF3F012 /* Support Files */,
 			);
-			name = RealmSwift;
 			path = RealmSwift;
 			sourceTree = "<group>";
 		};
@@ -2369,7 +2366,6 @@
 				7FAE58237B841BECC53DB36DA00E0632 /* Frameworks */,
 				ABB90BCD83E3F846EAF530206CEC311F /* Support Files */,
 			);
-			name = GoogleAnalytics;
 			path = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
@@ -2816,7 +2812,7 @@
 			);
 			name = "Parse-Parse";
 			productName = Parse;
-			productReference = ED7ADA84A7005589821D254428CD2D26 /* Parse-Parse */;
+			productReference = ED7ADA84A7005589821D254428CD2D26 /* Parse.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -2895,7 +2891,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A40D27059D49C5A67B9AEE47993B364 /* Parse-Parse in Resources */,
+				4A40D27059D49C5A67B9AEE47993B364 /* Parse.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3339,6 +3335,7 @@
 			baseConfigurationReference = A35F177D987A3FAC7805C8FE3E13DE5C /* Parse.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Parse";
+				DEVELOPMENT_TEAM = UAVZNE8PJA;
 				IBSC_MODULE = Parse;
 				INFOPLIST_FILE = "Target Support Files/Parse/ResourceBundle-Parse-Parse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -3554,6 +3551,7 @@
 			baseConfigurationReference = E2667D52B33B8D001980B04C2F39271A /* Parse.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Parse";
+				DEVELOPMENT_TEAM = UAVZNE8PJA;
 				IBSC_MODULE = Parse;
 				INFOPLIST_FILE = "Target Support Files/Parse/ResourceBundle-Parse-Parse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -3652,8 +3650,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
