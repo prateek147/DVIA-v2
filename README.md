@@ -21,8 +21,9 @@ Damn Vulnerable iOS App (DVIA) is an iOS application that is damn vulnerable. It
 
 ## Installing DVIA on any iOS device 
 
-The best way to install DVIA is using <a href="www.cydiaimpactor.com/
-">Cydia Impactor</a>
+The best way to install DVIA from a Mac is using <a href="https://support.apple.com/en-ae/apple-configurator
+">Apple Configurator App</a>.
+If you are using Windows or Linux, you can use AltStore, Cydia Impactor etc. A paid developer account might be required in some cases.
 
 ### Steps
 1. Create an Apple ID https://appleid.apple.com/account
