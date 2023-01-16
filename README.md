@@ -25,12 +25,6 @@ The best way to install DVIA from a Mac is using <a href="https://support.apple.
 ">Apple Configurator App</a>.
 If you are using Windows or Linux, you can use AltStore, Cydia Impactor etc. A paid developer account might be required in some cases.
 
-### Steps
-1. Create an Apple ID https://appleid.apple.com/account
-2. Download <em>Impactor</em>, make sure the device you want to install the app on is connected to your computer. Now drag and drop the <em>IPA</em> file to <em>Impactor</em>.
-3. Enter your Apple ID credentials. App will install on the device
-4. Go to your device, <em>Settings -> General -> Device Management</em>. Select the Apple ID you used to install the app. Click on <em>Verify App</em> under DVIAv2.
-
 ## Compiling DVIA using Xcode
 
 ### Steps
