@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b91-A9-42w">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b91-A9-42w">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Network Layer Security-->
         <scene sceneID="Ck0-39-0dH">
@@ -27,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcc-If-QWU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcc-If-QWU">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IV-2e-JxI">
-                                        <rect key="frame" x="8" y="0.0" width="375" height="1200"/>
+                                        <rect key="frame" x="8" y="8" width="375" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-eG-Owi">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -44,14 +36,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a fake Card Number" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="AIh-Xu-u4Z">
-                                                <rect key="frame" x="20" y="241" width="231.5" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="20" y="245" width="231.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a fake Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgm-TS-INM">
-                                                <rect key="frame" x="20" y="199" width="335" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="20" y="199" width="335" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
@@ -111,11 +101,10 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fake CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eis-Ab-XWf">
-                                                <rect key="frame" x="271.5" y="241" width="83.5" height="30"/>
+                                                <rect key="frame" x="271.5" y="245" width="83.5" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="83.5" id="8zz-cF-AW3"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -129,7 +118,7 @@
                                             <constraint firstAttribute="trailing" secondItem="pHe-eG-Owi" secondAttribute="trailing" id="PeX-lG-O1r"/>
                                             <constraint firstAttribute="trailing" secondItem="rgm-TS-INM" secondAttribute="trailing" constant="20" id="Rta-KU-aR3"/>
                                             <constraint firstItem="pHe-eG-Owi" firstAttribute="top" secondItem="9IV-2e-JxI" secondAttribute="top" id="a9u-9s-VaP"/>
-                                            <constraint firstAttribute="height" constant="1200" id="iaT-3x-36e"/>
+                                            <constraint firstAttribute="height" constant="600" id="iaT-3x-36e"/>
                                             <constraint firstItem="pHe-eG-Owi" firstAttribute="leading" secondItem="9IV-2e-JxI" secondAttribute="leading" id="lgj-6G-Hi5"/>
                                             <constraint firstItem="rgm-TS-INM" firstAttribute="top" secondItem="pHe-eG-Owi" secondAttribute="bottom" constant="-1" id="pNq-Be-4nZ"/>
                                             <constraint firstItem="rgm-TS-INM" firstAttribute="leading" secondItem="9IV-2e-JxI" secondAttribute="leading" constant="20" id="qM6-9h-3gF"/>
@@ -141,13 +130,13 @@
                                     <constraint firstItem="9IV-2e-JxI" firstAttribute="top" secondItem="Bcc-If-QWU" secondAttribute="topMargin" id="2ES-FM-sdA"/>
                                     <constraint firstItem="9IV-2e-JxI" firstAttribute="leading" secondItem="Bcc-If-QWU" secondAttribute="leadingMargin" id="P5w-1J-oeF"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="9IV-2e-JxI" secondAttribute="bottom" id="VSk-bc-4oT"/>
-                                    <constraint firstItem="9IV-2e-JxI" firstAttribute="top" secondItem="Bcc-If-QWU" secondAttribute="top" id="ofA-z8-ynU"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="9IV-2e-JxI" secondAttribute="trailing" id="vkt-nd-Jbg"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9IV-2e-JxI" firstAttribute="centerX" secondItem="BnA-6G-QMX" secondAttribute="centerX" id="GxH-8g-Gwf"/>
                             <constraint firstItem="0W9-ft-ywt" firstAttribute="top" secondItem="Bcc-If-QWU" secondAttribute="bottom" id="KI6-ey-fBL"/>
                             <constraint firstItem="9IV-2e-JxI" firstAttribute="width" secondItem="BnA-6G-QMX" secondAttribute="width" id="MSE-RB-geT"/>
                             <constraint firstAttribute="trailing" secondItem="Bcc-If-QWU" secondAttribute="trailing" id="OIM-4u-GZt"/>

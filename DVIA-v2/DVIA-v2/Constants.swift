@@ -14,6 +14,10 @@
 
 import Foundation
 
+enum Constants {
+    static let navbarColor = UIColor(red: 0.9, green: 0.13, blue: 0.28, alpha: 1.0)
+}
+
 enum UrlLinks {
     case insecureDataStorageArticle
     case homePage
