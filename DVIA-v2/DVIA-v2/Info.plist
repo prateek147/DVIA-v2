@@ -39,6 +39,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>To demonstrate the misuse of Camera, please grant it permission once.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>The app needs FaceID permission</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Root</string>
 	<key>UIRequiredDeviceCapabilities</key>
